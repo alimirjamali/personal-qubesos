@@ -1,0 +1,454 @@
+#!/bin/bash
+#
+# Ali's personal Qubes OS improvements, http://www.mirjamali.com
+#
+# Copyright (C) 2024  Ali Mirjamai <ali@mirjamali.com>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+set -o noglob
+
+### Configs
+
+# Lockfile path
+lock_file="/tmp/qubes-template-update.lck"
+
+### End configs
+
+declare syntax="\
+This tool is a package manager helper for Qubes OS templates. It could check for
+availability of updates, download updates without installation, perform updates;
+search, install or remove individual packages from one or more templates.
+It is currently compatible with templates using apt(8), dnf(8) emerge(1) and 
+pacman(8) as their primary package manager. Use it at your own risk!
+
+usage: qubes-template-update [--verbose|--quiet] [--assume-yes|assume-no]
+                             [--refresh] [--skip-broken] [--download-only]
+                             [--dry-run] [--shutdown ...] [qvm-run(1) options]
+                             [--apt OPTIONS] [--dnf OPTIONS]
+                             [--emerge OPTIONS] [--pacman OPTIONS] [--help]
+                             TEMPLATE|--all COMMAND ...
+
+options:
+  -v, --verbose             verbose operation
+  -q, --quiet               quiet operation
+  -h, --help                show command help
+  -y, --assume-yes          automatically answer yes to all questions
+  -n, --assume-no           automatically answer no to all questions
+  --refresh                 update list of available packages within template
+  --skip-broken             resolve depsolve problems by skipping packages or
+                            ignoring conflicts. usually a terrible idea,
+                            unless used together with '--download-only' option
+  --download-only           download packages without installation.
+  --all, '*'                perform operation on all templates
+  --dry-run                 do not execute the actual command(s) but print them
+                            This option ignores --quiet & prints update command
+  --shutdown [OPTIONS]      shutdown template after task is complete.
+                            following options will be passed to qvm-shutdown(1):
+                            --wait, --timeout TIMEOUT, --force-shutdown
+  --apt OPTIONS             Custom options for apt(8)
+  --dnf OPTIONS             Custom options for dnf(8)
+  --emerge OPTIONS          Custom options for emerge(1)
+  --pacman OPTIONS          Custom options for pacman(8)
+
+qvm-run(1) options:
+  The following options will be forwarded to qvm-run(1):
+  --autostart, --auto, --no-autostart, --no-auto, --gui, --no-gui, --nogui,
+  --colour-output COLOUR, --color-output COLOUR, 
+  --colour-stderr COLOUR, --color-stderr COLOUR,
+  --no-colour-output, --no-color-output, --no-colour-stderr, --no-color-stderr,
+  --filter-escape-chars, --no-filter-escape-chars, --no-shell
+  Refer to qvm-run(1) manual for more information 
+
+TEMPLATE
+   At least one template. Comma-separated list is OK. Space separated list of
+   templates inside quotation marks is accepted. Wildcards inside quotes are OK.
+   --all implies all templates.
+
+subcommands:
+   check-only               Check if any update is available for the
+                            template(s), then notify DOM0.
+   salt-update              Update template(s) via Salt interface (experimental)
+   update                   Download and/or Install updates for the template(s)
+                            This is obsolete and highly discouraged.
+                            Unless used with --download-only option
+   install <PACKAGE> ...    Install package(s) on the template(s) 
+   remove <PACKAGE> ...     Remove the specified package(s) from template(s)
+   search <keywords>        Search for packages
+   custom ...               Used together with --dnf, --apt, --emerge & --pacman
+                            This option is for advanced users! Check it with
+                            '--dry-run' before running the actual command.
+"
+
+declare VERBOSE=false
+declare QUIET=false
+declare ASSUMEYES=false
+declare ASSUMENO=false
+declare REFRESH=false
+declare SKIPBROKEN=false
+declare DOWNLOADONLY=false
+declare ALLTEMPLATES=false
+declare DRYRUN=false
+declare SHUTDOWN=false
+declare SUBCOMMAND=""
+
+declare -a template_patterns=()
+declare -a cmd_apt=(apt-get)
+declare -a cmd_dnf=(dnf)
+declare -a cmd_emerge=(emerge --color n)
+declare -a cmd_pacman=(pacman)
+declare -a cmd_qvm_run=(qvm-run --user root --pass-io)
+declare -a cmd_qvm_shutdown=(qvm-shutdown)
+declare -a cmd_qubesctl=(qubesctl)
+
+declare SELF=${0##*/}
+
+# Synopsis: print_usage [EXIT_CODE]
+print_usage() {
+	! $QUIET && echo "${syntax}"
+	[ ! -z ${1} ] && exit ${1}
+}
+
+# Synopsis: message MESSAGE
+message() {
+	! $QUIET && echo "${@}"
+}
+
+# Synopsis: abort EXIT_CODE MESSAGE
+abort() {
+	message "error: ${2}"
+	message "Please see --help for more information."
+	exit ${1}
+}
+
+# Synopsis: parse_cmd_parameters [OPTIONS] COMMAND ...
+parse_cmd_parameters() {
+	arguments=$(getopt -n "${SELF}" --options vqhyn \
+		--longoptions verbose,quiet,help,assume-yes,assume-no \
+		--longoptions refresh,skip-broken,download-only,all,dry-run \
+		--longoptions autostart,auto,no-autostart,no-auto \
+		--longoptions gui,no-gui,nogui,no-shell \
+		--longoptions no-colour-output,no-color-output \
+		--longoptions no-colour-stderr,no-color-stderr \
+		--longoptions filter-escape-chars,no-filter-escape-chars \
+		--longoptions colour-output:,color-output: \
+		--longoptions colour-stderr:,color-stderr: \
+		--longoptions shutdown,wait,timeout:,force-shutdown \
+		--longoptions apt:,dnf:,emerge:,pacman: -- "${@}")
+
+	[[ ${?} -ne 0 ]] && abort 22 "Invalid option!"
+
+	eval set -- "${arguments}"
+	unset arguments
+
+	while true
+	do
+		case $1 in
+			-v|--verbose) VERBOSE=true;;
+			-q|--quiet) QUIET=true;;
+			-h|--help) print_usage 0;;
+			-y|--assume-yes) ASSUMEYES=true;;
+			-n|--assume-no) ASSUMENO=true;;
+			--refresh) REFRESH=true;;
+			--skip-broken) SKIPBROKEN=true;;
+			--download-only) DOWNLOADONLY=true;;
+			--all) ALLTEMPLATES=true;;
+			--dry-run) DRYRUN=true;;
+			--autostart|--auto|--no-autostart|--no-auto|\
+			--gui|--no-gui|--nogui|--no-shell|\
+			--no-colour-output|--no-color-output|\
+			--no-colour-stderr|--no-color-stderr|\
+			--filter-escape-chars|--no-filter-escape-chars)
+				cmd_qvm_run+=(${1});;
+			--colour-output|--color-output|\
+			--colour-stderr|--color-stderr)
+				cmd_qvm_run+=("${1}=${2}"); shift;;
+			--shutdown) SHUTDOWN=true;;
+			--wait) cmd_qvm_shutdown+=(--wait);;
+			--timeout) cmd__qvm_shutdown+=(${2}); shift;;
+			--force-shutdown) cmd_qvm_shutdown+=(--force);;
+			--apt) cmd_apt+=(${2}); shift;;
+			--dnf) cmd_dnf+=(${2}); shift;;
+			--emerge) cmd_emerge+=(${2}); shift;;
+			--pacman) cmd_pacman+=(${2}); shift;;
+			--) shift; break;;
+			*) abort 22 "Invalid argument: $1";;
+		esac
+		shift	
+	done
+
+	if $QUIET && $VERBOSE
+	then
+		QUIET=false
+		abort 22 "Could not be Quiet and Verbose at the same time!"
+	fi
+
+	if $ASSUMEYES && $ASSUMENO
+	then
+		QUIET=false
+		abort 22 "Could not assume YES and NO at the same time!"
+	fi
+
+	if ${ALLTEMPLATES}; then
+		template_patterns=("*")
+	else
+		IFS=", " read -ra template_patterns <<< "${1}"
+		shift
+	fi
+
+	[[ $# -lt 1 ]] && abort 2 "Subcommand missing!"
+	synthesize_template_cmds "${@}"
+}
+
+# Synopsys synthesize_template_cmds COMMAND
+synthesize_template_cmds() {
+	if ${QUIET}; then
+		cmd_qvm_run+=(--quiet)
+		cmd_qvm_shutdown+=(--quiet)
+		cmd_apt+=(-qqq)
+		cmd_dnf+=(--quiet)
+		cmd_emerge+=(--quiet)
+		cmd_pacman+=(--quiet)
+	fi
+
+	if ${VERBOSE}; then
+		cmd_qvm_run+=(--verbose)
+		cmd_qvm_shutdown+=(--verbose)
+		cmd_dnf+=(--verbose)
+		cmd_emerge+=(--verbose)
+		cmd_pacman+=(--verbose)
+		cmd_qubesctl+=(--show-output)
+	fi
+
+	SUBCOMMAND="$1"
+
+	case ${SUBCOMMAND} in
+		check-only)
+			# Check-only does not need more arguments
+			[[ $# -gt 1 ]] && abort 7 "Invalid argument: ${2}"
+			# Note: Special case! No need to handle per distro
+			# 'upgrades-status-notify' does the job for this task
+			cmd_all=("/usr/lib/qubes/upgrades-status-notify")
+			cmd_apt=("${cmd_all}")
+			cmd_dnf=("${cmd_all}")
+			cmd_emerge=("${cmd_all}")
+			cmd_pacman=("${cmd_all}")
+			return
+			;;
+		salt-update)
+			# salt-update does not need more arguments
+			[[ $# -gt 1 ]] && abort 7 "Invalid argument: ${2}"
+			abort 38 "Salt update functionality is not implemented"
+			;;
+		update)
+			# Update does not need more arguments
+			[[ $# -gt 1 ]] && abort 7 "Invalid argument: ${2}"
+			cmd_apt+=(full-upgrade)
+			cmd_dnf+=(upgrade)
+			${DOWNLOADONLY} && cmd_emerge+=(--fetchonly)
+			cmd_emerge+=(--update --deep --newuse --changed-use \
+				@world)
+			cmd_pacman+=(--sync --sysupgrade)
+			;;
+		install)
+			# We need a list of one or more packages to install
+			[[ $# -lt 2 ]] && abort 7 "Arguments missing!"
+			shift
+			cmd_apt+=(install "${@}")
+			cmd_dnf+=(install "${@}")
+			${DOWNLOADONLY} && cmd_emerge+=(--fetchonly)
+			cmd_emerge+=("--update ${@}")
+			cmd_pacman+=(--sync --needed "${@}")
+			;;
+		remove)
+			# We need a list of one or more packages to remove
+			[[ $# -lt 2 ]] && abort 7 "Arguments missing!"
+			shift
+			cmd_apt+=(remove "${@}")
+			cmd_dnf+=(remove "${@}")
+			cmd_emerge+=("--depclean ${@}")
+			cmd_pacman+=(--remove "${@}")
+			;;
+		search)
+			# We need keywords to search for
+			# We need a list of one or more packages to search for
+			[[ $# -lt 2 ]] && abort 7 "Arguments missing!"
+			shift
+			cmd_apt[0]="apt-cache"
+			cmd_apt+=(search "${@}")
+			cmd_dnf+=(search "${@}")
+			cmd_emerge+=(--search "${@}")
+			cmd_pacman+=(--sync --search "${@}")
+			;;
+		custom)
+			shift
+			# Using "apt" instead of "apt-get" for custom query
+			cmd_apt[0]="apt"
+			cmd_apt+=("${@}")
+			cmd_dnf+=("${@}")
+			cmd_emerge+=("${@}")
+			cmd_pacman+=("${@}")
+			;;
+		*)
+			abort 22 "Invalid command: ${1}";;
+	esac
+
+	if ${REFRESH}; then
+		# Special refresh case for apt(9) should be prepended to cmd
+		if ${QUIET}; then
+			cmd_apt=("apt-get -qqq update;" "${cmd_apt[@]}")
+		else
+			cmd_apt=("apt-get update;" "${cmd_apt[@]}")
+		fi
+		cmd_dnf+=(--refresh)
+		cmd_emerge=("emaint --auto sync;" "${cmd_emerge[@]}")
+		cmd_pacman+=(--refresh)
+	fi
+
+	if ${ASSUMEYES}; then
+		cmd_apt+=(--assume-yes)
+		cmd_dnf+=(--assumeyes)
+		cmd_pacman+=(--noconfirm)
+	fi
+
+	if ${ASSUMENO}; then
+		cmd_apt+=(--assume-no)
+		cmd_dnf+=(--assumeno)
+		cmd_emerge+=(--pretend)
+		cmd_pacman+=(--confirm)
+	fi
+
+	if ${SKIPBROKEN}; then
+		cmd_apt+=(--ignore-missing)
+		cmd_dnf+=(--skip-broken)
+		cmd_pacman+=(--nodeps)
+	fi
+
+	if ${DOWNLOADONLY}; then
+		cmd_apt+=(--download-only)
+		cmd_dnf+=(--downloadonly --nobest)
+		cmd_pacman+=(--downloadonly)
+	fi
+
+	${DRYRUN} && cmd_qvm_shutdown+=(--dry-run)
+}
+
+# Synopsis: update_template TEMPLATE
+update_template() {
+	local template="${1}"
+	local cmd_update
+	local -l ID
+	message "Working on ${template} template."
+	# Note: Qubes OS 4.2 templates provide /etc/os-release
+	# This was tested in February 2024
+	ID=$(${cmd_qvm_run[@]} ${template} -- "cat /etc/os-release" | \
+		awk -F= '/^ID=/ {print $2}')
+	case "${ID}" in
+		*alpine*)
+			message "Alpine update is not yet implemented";;
+		*arch*|*manjaro*)
+			cmd_update="${cmd_pacman[@]}";;
+		*debian*|*kali*|*mint*|pop|*buntu*)
+			cmd_update="${cmd_apt[@]}";;
+		*fedora*|*centos*|*rocky*)
+			cmd_update="${cmd_dnf[@]}";;
+		*gentoo*)
+			# Since emerge does not detect qvm-run -p as valid tty,
+			# Sadly it does not honor --ask option.
+			if ${ASSUMEYES} || \
+			[[ ${SUBCOMMAND} =~ ^(check-only|search|custom)$ ]];
+			then
+				cmd_update="${cmd_emerge[@]}"
+			else
+				message "Gentoo deserve user intervention"
+				message "add --assume-yes to override safety!"
+			fi;;
+		*nixos*)
+			message "NixOS update is not yet implemented";;
+		*opensuse*)
+			message "openSUSE update is not yet implemented";;
+		*openwrt*)
+			message "OpenWrt update is not yet implemented";;
+		*slackware*)
+			message "Slackware update is not yet implemented";;
+		*)
+			message "Release: ${release} unknown! Skipping";;
+	esac
+	if ! ${DRYRUN}; then
+		if [ ! -z "$cmd_update" ]; then
+			"${cmd_qvm_run[@]}" ${template} -- "${cmd_update}"
+		fi
+	else
+		tmp=${QUIET}
+		QUIET=false
+		message "Dry-run:" \
+			"${cmd_qvm_run[@]}" ${template} -- "${cmd_update}"
+		QUIET=${tmp}
+	fi
+	${SHUTDOWN} && "${cmd_qvm_shutdown[@]}" ${template}
+}
+
+# Synopsis: update_templates TEMPLATE_PATTERNS
+update_templates() {
+	# We could check 'qvm-prefs $vm_name updateable' property to find
+	# updateable VMs. To include Standalone VMs. For future considration
+	local -a patterns=(${@}) templates=()
+	local all_vms=$(qvm-ls --raw-data --fields NAME,FLAGS)
+	local vm vm_name vm_fags template_qrexec template
+	local -l vm_type template_os
+	# Iterating through all Qubes VMs, add templates to templates variable 
+	for vm in $all_vms; do
+		vm_name=${vm%\|*}
+		vm_flags=${vm##*\|}
+		vm_type=${vm_flags:0:1}
+		[ ! ${vm_type} = "t" ] && continue
+		for pattern in ${patterns[@]}; do
+			if [[ ${vm_name} == ${pattern} ]]; then
+				templates+=(${vm_name})
+			fi
+		done
+	done
+	for template in ${templates[@]}; do 
+		template_os=$(qvm-features --quiet ${template} os)
+		if [[ ! ${template_os} = "linux" ]]; then
+			message "${template} is not Linux based. Ignoring."
+			# Windows updates could be implemented via powershell
+			# and 'wuauclt.exe /updatenow'.
+			# Only if we had a workign qrexec. Work in progress...
+			continue
+		fi
+		template_qrexec=$(qvm-features --quiet ${template} qrexec)
+		if [[ ! ${template_qrexec} = "1" ]]; then
+			message "${template} does not support qrexec. Ignoring."
+			continue
+		fi
+		# We have a matching and supported template!
+		update_template ${template}
+	done
+}
+
+# Synopsis: main ALL_ARGS
+main() {
+	parse_cmd_parameters "${@}"
+	touch "${lock_file}"
+	exec {FD}<>"${lock_file}"
+	if ! flock --nonblock --exclusive $FD; then
+		abort 114 "Another instance of ${SELF} is probably running."
+	fi
+	update_templates ${template_patterns[@]}
+}
+
+main "${@}"
+exit 0
