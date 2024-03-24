@@ -67,12 +67,13 @@ options:
                             guessed based on template name
   --autostart, --auto       option ignored, this is default
   --no-autostart, --no-auto do not autostart template(s)
-  --if-updates-available    only perform update task if template is tagged for
+  --if-updates-available, --if-updates
+                            only perform update task if template is tagged for
                             updates availability. better used after 'check-only'
   --after-update, --after   by default, template status will be reverted to the
                             situation before update task (revert-state). this
                             behavior could be changed to 'shutdown' or keep
-                            them 'running' after update.
+                            them 'running|keep-running' after update.
                             paused or transient templates will not be touched!
   --apt OPTIONS             Additional custom options for apt(8)
   --dnf OPTIONS             Additional custom options for dnf(8)
@@ -203,6 +204,7 @@ parse_cmd_parameters() {
 		shift
 	fi
 
+	[ ${AFTERUPDATE} = "keep-running" ] && AFTERUPDATE="running"
 	if ! [[ ${AFTERUPDATE} =~ ^(shutdown|running|revert-state)$ ]]; then
 		QUIET=false
 		abort 22 "Invalid option: ${AFTERUPDATE} for --after-update!"
