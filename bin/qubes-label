@@ -1,0 +1,296 @@
+#!/bin/bash
+#
+# Ali's personal Qubes OS improvements, http://www.mirjamali.com
+#
+# Copyright (C) 2024  Ali Mirjamai <ali@mirjamali.com>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+set -o noglob
+
+declare syntax="\
+This tool is a simple command line utility to manage Qubes OS labels. It could
+list, create, get value, print index or remove labels from Qubes OS database.
+In order to avoid possible conflicts with any probable official labels which 
+might be introduced in the future, it is advisable to prepend a suffix to new
+custom labels. Good examples are 'custom', 'user', 'personal', etc. 
+Also never ever remove standard labels!
+
+usage: qubes-label [--verbose] [-assume-yes] [--help] [--ANSI] COMMAND ...
+
+options:
+  -v, --verbose             verbose operation
+  -h, --help                show command help
+  -y, --assume-yes          automatically answer yes to all questions
+  --ANSI                    print label values in color with ANSI X3.64
+                            (ISO/IEC 6429) escape codes in terminal. it requires
+                            color capable tty such as xterm or xfce4-terminal
+  --raw-data                output data in easy to parse format without headers
+                            intended for bash-parsing. this will disable ANSI &
+                            verbose options.
+
+subcommands:
+   list                     List all labels and their values
+   create <LABEL> <VALUE>   Create a new label with the provided color value.
+                            Value should be in '0xRRGGBB' format.
+   get <LABEL|INDEX>        Print hexadecimal value of label
+   index <LABEL>            Print index of the label in Qubes database
+   remove <LABEL|INDEX>     Remove label from Qubes database.
+"
+
+# Note to self:
+#
+# Enquire about maximum length of labels supported by the API.
+# Enquire supported characters for labels.
+# Enquire if string sanitization is needed at client side.
+
+declare VERBOSE=false
+declare ASSUMEYES=false
+declare ANSI=false
+declare RAWDATA=false
+
+declare SUBCOMMAND=""
+declare LABEL=""
+declare VALUE=""
+declare SELF=${0##*/}
+declare HOSTNAME=$(hostname)
+
+# Synopsis: print_usage [EXIT_CODE]
+print_usage() {
+	echo "${syntax}"
+	[ ! -z ${1} ] && exit ${1}
+}
+
+# Synopsis: abort EXIT_CODE MESSAGE
+abort() {
+	echo "error: ${2}" 1>&2
+	echo "Please see --help for more information." 1>&2
+	exit ${1}
+}
+
+# Synopsis ANSI <COLOR> <TEXT>
+ANSI() {
+	local color="${1}"
+	shift
+	printf '\e[48;2;%d;%d;%dm' 0x${color:2:2} 0x${color:4:2} 0x${color:6:2}
+	echo -n "$@"
+	printf '\e[0m'
+}
+
+# Synopsis: parse_cmd_parameters [OPTIONS] COMMAND ...
+parse_cmd_parameters() {
+	local arguments=$(getopt -n "${SELF}" --options vhy \
+		--longoptions verbose,help,assume-yes,ANSI,raw-data -- "${@}")
+
+	[[ ${?} -ne 0 ]] && abort 22 "Invalid option!"
+	eval set -- "${arguments}"
+	unset arguments
+
+	while true
+	do
+		case ${1} in
+			-v|--verbose) VERBOSE=true;;
+			-h|--help) print_usage 0;;
+			-y|--assume-yes) ASSUMEYES=true;;
+			--ANSI) ANSI=true;;
+			--raw-data)
+				RAWDATA=true
+				VERBOSE=false
+				ANSI=false;;
+			--) shift; break;;
+			*) abort 22 "Invalid argument: $1";;
+		esac
+		shift
+	done
+
+	[[ $# -lt 1 ]] && abort 22 "Subcommand missing!"
+	SUBCOMMAND="${1}"; shift
+
+	case "${SUBCOMMAND}" in
+		list)
+			[[ $# -gt 0 ]] && abort 7 "Invalid argument: ${@}"
+			;;
+		create)
+			[[ $# -ne 2 ]] && abort 22 "Invalid syntax!"
+			LABEL="${1}"
+			VALUE="${2}"
+			if ! [[ ${VALUE} =~ ^0x([0-9a-fA-F]){6}$ ]];
+			then
+				abort 22 "Invalid color: ${VALUE}"
+			fi
+			;;
+		get|index|remove)
+			[[ $# -ne 1 ]] && abort 22 "Invalid syntax!"
+			LABEL="${1}"
+			;;
+		*) abort 22 "Invalid command: ${SUBCOMMAND}";;
+	esac
+}
+
+# Synopsis: qubesd_admin_api <CALL> <DEST> [ARGUMENTS]
+qubesd_admin_api() {
+	local -a returned_message
+	local -i message_type
+	local CALL="${1}" DEST="${2}"
+	shift; shift
+	if [ $# -le 1 ]; then
+		readarray -t returned_message < <(qubesd-query --empty --null \
+			${HOSTNAME} ${CALL} ${DEST} ${@} | tr '\0' '\n')
+	else
+		local ARGUMENT="${1}"
+		shift
+		local INSIDE="${@}"
+		readarray -t returned_message < <(qubesd-query --null \
+			${HOSTNAME} ${CALL} ${DEST} ${ARGUMENT} <<< "${INSIDE}"\
+			| tr '\0' '\n')
+	fi
+	message_type=${returned_message[0]}
+	unset returned_message[0]
+	printf '%s\n' "${returned_message[@]}"
+	return ${message_type}
+}
+
+# Synopsis label_list
+label_list() {
+	local -a LABELS
+	local LABEL INDEX VALUE
+	local PRINTFORMAT
+	$VERBOSE && echo "Fetching list of all labels..." 
+	if $RAWDATA; then
+		PRINTFORMAT="%s|%s|%s"
+	else
+		PRINTFORMAT="%-25s %-6s %-8s"
+		printf "${PRINTFORMAT}\n" Label Index Value
+	fi
+	LABELS=($(qubesd_admin_api admin.label.List dom0 ${LABEL}))
+	[[ ${?} -ne 0 ]] && abort 11 "Admin API query failed!"
+	for LABEL in "${LABELS[@]}"; do
+		local V
+		INDEX=$(qubesd_admin_api admin.label.Index dom0 ${LABEL})
+		[[ ${?} -ne 0 ]] && abort 11 "Admin API query failed!"
+		V=$(qubesd_admin_api admin.label.Get dom0 ${LABEL})
+		[[ ${?} -ne 0 ]] && abort 11 "Admin API query failed!"
+		$ANSI && V=$(ANSI "${V}" "${V}")
+		printf "${PRINTFORMAT}\n" "${LABEL}" "${INDEX}" "${V}" 
+	done
+}
+
+# Synopsis label_create LABEL VALUE
+label_create() {
+	local LABEL="${1}" VALUE="${2}"
+	local V="${VALUE}"
+	local returned_message
+	$ANSI && V=$(ANSI "${V}" "${V}")
+	$VERBOSE && echo "Creating ${LABEL} label with the value of ${V} ..."
+	if ! $ASSUMEYES; then
+		echo "You are about to add a new label to Qubes OS!"
+		read -p "Do you want to proceed? (y/n) " REPLY
+		if [[ $REPLY =~ ^[Nn]$ ]]; then
+			echo "Aborting operation..."
+			exit 0
+		elif ! [[ $REPLY =~ ^[Yy]$ ]]; then
+			abort 22 "Please type Y or N!"
+		fi
+	fi
+	IFS=$'\n' returned_message=$(qubesd_admin_api admin.label.Create dom0 \
+		"${LABEL}" "${VALUE}")
+	if [[ ${?} = 0 ]]; then
+		echo "Successfully created" "${LABEL} label = ${V}"
+	else
+		unset RESULT[0]
+		echo "Operation failed! Here is the result of Admin API call:"
+		printf '%s\n' "${returned_message[@]}"
+		exit 11
+	fi
+}
+
+# Synopsis label_get LABEL|INDEX
+label_get() {
+	local LABEL="${1}" V
+	$VERBOSE && echo "Getting value for label: ${LABEL}" 
+	V=$(qubesd_admin_api admin.label.Get dom0 ${LABEL})
+	[[ ${?} -ne 0 ]] && abort 11 "Qubes Admin API query failed!"
+	$ANSI && V=$(ANSI "${V}" "${V}")
+	if $RAWDATA; then
+		echo ${V}
+	else
+		echo "Value of label ${LABEL} = ${V}"
+	fi
+}
+
+# Synopsis label_index LABEL
+label_index() {
+	local LABEL="${1}" INDEX
+	$VERBOSE && echo "Getting index for label: ${LABEL}" 
+	INDEX=$(qubesd_admin_api admin.label.Index dom0 ${LABEL})
+	[[ ${?} -ne 0 ]] && abort 11 "Qubes Admin API query failed!"
+	if $RAWDATA; then
+		echo ${INDEX}
+	else
+		echo "Index of label ${LABEL} = ${INDEX}"
+	fi
+}
+
+# Synopsis label_remove LABEL|INDEX
+label_remove() {
+	local LABEL="${1}" INDEX returned_message
+	$VERBOSE && echo "Removing label: ${LABEL}" 
+	returned_message=($(qubesd_admin_api admin.label.Index dom0 "${LABEL}"))
+	if [[ ${?} -ne 0 ]]; then
+		$VERBOSE && printf '%s\n' "${returned_message[@]}"
+		abort 11 "Admin API query failed! Add --verbose for more info"
+	fi
+	INDEX="${returned_message[0]}"
+	if ! $ASSUMEYES; then
+		[ "${INDEX}" -lt 9 ] && echo "Warning! ${LABEL} is a Qubes OS "\
+			"default label!"
+		echo "You are about to remove ${LABEL} label."
+		read -p "Do you want to proceed? (y/n) " REPLY
+		if [[ $REPLY =~ ^[Nn]$ ]]; then
+			echo "Aborting operation..."
+			exit 0
+		elif ! [[ $REPLY =~ ^[Yy]$ ]]; then
+			abort 22 "Please type Y or N!"
+		fi
+	fi
+	IFS=$'\n' returned_message=($(qubesd_admin_api admin.label.Remove dom0 \
+		"${LABEL}"))
+	if [[ ${?} -ne 0 ]]; then
+		if $VERBOSE; then
+			printf '%s\n' "${returned_message[@]}"
+			abort 11 "Admin API query failed!"
+		else
+			abort 11 "Admin API query failed!"\
+				"Add --verbose to see Admin API output"
+		fi
+	else
+		echo "Successfully removed ${LABEL} label" 
+	fi
+}
+
+# Synopsis: main ALL_ARGS
+main() {
+	parse_cmd_parameters "${@}"
+	case ${SUBCOMMAND} in
+		list) label_list;;
+		create) label_create "${LABEL}" "${VALUE}";;
+		get) label_get "${LABEL}";;
+		index) label_index "${LABEL}";;
+		remove) label_remove "${LABEL}";;
+	esac
+}
+
+main "${@}"
+exit 0
