@@ -12,6 +12,6 @@ its features are not yet implemented via the mentioned tools.
 
 ### qubes-label
 A simple command line tool to list/create/get/index/remove Qubes `labels`. It is
-advisable to add a proper `suffix` to custom labels. This would prevent probable
-conflicts with new official labels (if any). Good examples are `custom`,`user`, 
+advisable to add a proper suffix to custom labels. This would prevent probable
+conflicts with new official labels (if any). Good examples are 'custom','user', 
 etc. Also never delete standard labels.
