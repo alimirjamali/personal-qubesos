@@ -110,7 +110,7 @@ parse_cmd_parameters() {
 				VERBOSE=false
 				ANSI=false;;
 			--) shift; break;;
-			*) abort 22 "Invalid argument: $1";;
+			*) abort 22 "Invalid argument: ${1}";;
 		esac
 		shift
 	done
@@ -141,24 +141,24 @@ parse_cmd_parameters() {
 
 # Synopsis: qubesd_admin_api <CALL> <DEST> [ARGUMENTS]
 qubesd_admin_api() {
-	local -a returned_message
+	local -a api_message
 	local -i message_type
 	local CALL="${1}" DEST="${2}"
 	shift; shift
 	if [ $# -le 1 ]; then
-		readarray -t returned_message < <(qubesd-query --empty --null \
+		readarray -t api_message < <(qubesd-query --empty --null \
 			${HOSTNAME} ${CALL} ${DEST} ${@} | tr '\0' '\n')
 	else
 		local ARGUMENT="${1}"
 		shift
 		local INSIDE="${@}"
-		readarray -t returned_message < <(qubesd-query --null \
+		readarray -t api_message < <(qubesd-query --null \
 			${HOSTNAME} ${CALL} ${DEST} ${ARGUMENT} <<< "${INSIDE}"\
 			| tr '\0' '\n')
 	fi
-	message_type=${returned_message[0]}
-	unset returned_message[0]
-	printf '%s\n' "${returned_message[@]}"
+	message_type=${api_message[0]}
+	unset api_message[0]
+	printf '%s\n' "${api_message[@]}"
 	return ${message_type}
 }
 
@@ -166,8 +166,8 @@ qubesd_admin_api() {
 label_list() {
 	local -a LABELS
 	local LABEL INDEX VALUE
-	local PRINTFORMAT
-	$VERBOSE && echo "Fetching list of all labels..." 
+	local PRINTFORMAT V
+	$VERBOSE && echo "Fetching list of all labels from Qubes Admin API..." 
 	if $RAWDATA; then
 		PRINTFORMAT="%s|%s|%s"
 	else
@@ -175,13 +175,13 @@ label_list() {
 		printf "${PRINTFORMAT}\n" Label Index Value
 	fi
 	LABELS=($(qubesd_admin_api admin.label.List dom0 ${LABEL}))
-	[[ ${?} -ne 0 ]] && abort 11 "Admin API query failed!"
+	[[ ${?} -ne 0 ]] && abort 11 "Qubes Admin API query failed!"
 	for LABEL in "${LABELS[@]}"; do
 		local V
 		INDEX=$(qubesd_admin_api admin.label.Index dom0 ${LABEL})
-		[[ ${?} -ne 0 ]] && abort 11 "Admin API query failed!"
+		[[ ${?} -ne 0 ]] && abort 11 "Qubes Admin API query failed!"
 		V=$(qubesd_admin_api admin.label.Get dom0 ${LABEL})
-		[[ ${?} -ne 0 ]] && abort 11 "Admin API query failed!"
+		[[ ${?} -ne 0 ]] && abort 11 "Qubes Admin API query failed!"
 		$ANSI && V=$(ANSI "${V}" "${V}")
 		printf "${PRINTFORMAT}\n" "${LABEL}" "${INDEX}" "${V}" 
 	done
@@ -191,7 +191,7 @@ label_list() {
 label_create() {
 	local LABEL="${1}" VALUE="${2}"
 	local V="${VALUE}"
-	local returned_message
+	local api_message
 	$ANSI && V=$(ANSI "${V}" "${V}")
 	$VERBOSE && echo "Creating ${LABEL} label with the value of ${V} ..."
 	if ! $ASSUMEYES; then
@@ -204,55 +204,69 @@ label_create() {
 			abort 22 "Please type Y or N!"
 		fi
 	fi
-	IFS=$'\n' returned_message=$(qubesd_admin_api admin.label.Create dom0 \
-		"${LABEL}" "${VALUE}")
+	IFS=$'\n' api_message=($(qubesd_admin_api admin.label.Create dom0 \
+		"${LABEL}" "${VALUE}"))
 	if [[ ${?} = 0 ]]; then
 		echo "Successfully created" "${LABEL} label = ${V}"
 	else
-		unset RESULT[0]
 		echo "Operation failed! Here is the result of Admin API call:"
-		printf '%s\n' "${returned_message[@]}"
+		printf '%s\n' "${api_message[@]}"
 		exit 11
 	fi
 }
 
 # Synopsis label_get LABEL|INDEX
 label_get() {
-	local LABEL="${1}" V
+	local LABEL="${1}" api_message V
 	$VERBOSE && echo "Getting value for label: ${LABEL}" 
-	V=$(qubesd_admin_api admin.label.Get dom0 ${LABEL})
-	[[ ${?} -ne 0 ]] && abort 11 "Qubes Admin API query failed!"
-	$ANSI && V=$(ANSI "${V}" "${V}")
-	if $RAWDATA; then
-		echo ${V}
+	IFS=$'\n' api_message=($(qubesd_admin_api admin.label.Get dom0 \
+		${LABEL}))
+	if [[ ${?} = 0 ]]; then
+		V="${api_message[0]}"
+		$ANSI && V=$(ANSI "${V}" "${V}")
+		if $RAWDATA; then
+			echo ${V}
+		else
+			echo "Value of label ${LABEL} = ${V}"
+		fi
 	else
-		echo "Value of label ${LABEL} = ${V}"
+		echo "Operation failed! Here is the result of Admin API call:"
+		printf '%s\n' "${api_message[@]}"
+		exit 11
 	fi
 }
 
 # Synopsis label_index LABEL
 label_index() {
-	local LABEL="${1}" INDEX
+	local LABEL="${1}" api_message INDEX
 	$VERBOSE && echo "Getting index for label: ${LABEL}" 
-	INDEX=$(qubesd_admin_api admin.label.Index dom0 ${LABEL})
-	[[ ${?} -ne 0 ]] && abort 11 "Qubes Admin API query failed!"
-	if $RAWDATA; then
-		echo ${INDEX}
+	IFS=$'\n' api_message=($(qubesd_admin_api admin.label.Index dom0 \
+		${LABEL}))
+	if [[ ${?} = 0 ]]; then
+		INDEX="${api_message[0]}"
+		if $RAWDATA; then
+			echo ${INDEX}
+		else
+			echo "Index of label ${LABEL} = ${INDEX}"
+		fi
 	else
-		echo "Index of label ${LABEL} = ${INDEX}"
+		echo "Operation failed! Here is the result of Admin API call:"
+		printf '%s\n' "${api_message[@]}"
+		exit 11
 	fi
 }
 
 # Synopsis label_remove LABEL|INDEX
 label_remove() {
-	local LABEL="${1}" INDEX returned_message
+	local LABEL="${1}" INDEX api_message
 	$VERBOSE && echo "Removing label: ${LABEL}" 
-	returned_message=($(qubesd_admin_api admin.label.Index dom0 "${LABEL}"))
+	api_message=($(qubesd_admin_api admin.label.Index dom0 "${LABEL}"))
 	if [[ ${?} -ne 0 ]]; then
-		$VERBOSE && printf '%s\n' "${returned_message[@]}"
-		abort 11 "Admin API query failed! Add --verbose for more info"
+		echo "Operation failed! Here is the result of Admin API call:"
+		printf '%s\n' "${api_message[@]}"
+		exit 11
 	fi
-	INDEX="${returned_message[0]}"
+	INDEX="${api_message[0]}"
 	if ! $ASSUMEYES; then
 		[ "${INDEX}" -lt 9 ] && echo "Warning! ${LABEL} is a Qubes OS "\
 			"default label!"
@@ -265,16 +279,12 @@ label_remove() {
 			abort 22 "Please type Y or N!"
 		fi
 	fi
-	IFS=$'\n' returned_message=($(qubesd_admin_api admin.label.Remove dom0 \
+	IFS=$'\n' api_message=($(qubesd_admin_api admin.label.Remove dom0 \
 		"${LABEL}"))
 	if [[ ${?} -ne 0 ]]; then
-		if $VERBOSE; then
-			printf '%s\n' "${returned_message[@]}"
-			abort 11 "Admin API query failed!"
-		else
-			abort 11 "Admin API query failed!"\
-				"Add --verbose to see Admin API output"
-		fi
+		echo "Operation failed! Here is the result of Admin API call:"
+		printf '%s\n' "${api_message[@]}"
+		exit 11
 	else
 		echo "Successfully removed ${LABEL} label" 
 	fi
