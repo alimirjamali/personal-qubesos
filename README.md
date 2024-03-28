@@ -15,3 +15,13 @@ A simple command line tool to list/create/get/index/remove Qubes `labels`. It is
 advisable to add a proper suffix to custom labels. This would prevent probable
 conflicts with new official labels (if any). Good examples are 'custom','user', 
 etc. Also never delete standard labels.
+
+### qvm-get-filtered-image
+As of March 2024 (Qubes OS 4.2.1), only tinted icons are supported for
+application icons. `qvm-get-image` and `qvm-get-tinted-image` are the starting
+point of this work. They are available via 
+[qubes-app-linux-img-converter](https://github.com/QubesOS/qubes-app-linux-img-converter)
+repository. Those tools depend on `qubesimgconverter` library which is a part of
+[qubes-linux-utils](https://github.com/QubesOS/qubes-linux-utils.git)
+repository. Strangely the current systray effects are not implemented via the
+same library.
