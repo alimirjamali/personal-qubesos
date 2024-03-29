@@ -4,6 +4,7 @@
 #
 # Ali's personal Qubes OS improvements, http://www.mirjamali.com
 #
+# Copyright (C) 2013  Wojciech Porczyk <wojciech@porczyk.eu>
 # Copyright (C) 2024  Ali Mirjamai <ali@mirjamali.com>
 #
 # This program is free software; you can redistribute it and/or
@@ -41,7 +42,7 @@ parser.add_argument("--ANSI", action="store_true", help="Print ANSI X3.64 "\
 parser.add_argument("--filter", type=str, default="custom", choices=["custom",\
         "tint", "overlay","thin-border", "thick-border", "untouched", "invert"],\
         help="Filter to perform on the image. 'custom' is the default i.e.: "\
-        "Program will look for 'imgfilter' in qube features. If that feature "\
+        "Program will look for 'imgfilter' key in qube features. If that key "\
         "exits, its value should indicate default filter for that qube. If "\
         "'imgfilter' is missing or it contains an invalid filter, 'tint' will "\
         "be the default.")
