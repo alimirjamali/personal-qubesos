@@ -59,7 +59,7 @@ class Image(qubesimgconverter.Image):
         r = (((a * r) + (255 - a) * rb) / 256).astype('B')
         g = (((a * g) + (255 - a) * gb) / 256).astype('B')
         b = (((a * b) + (255 - a) * bb) / 256).astype('B')
-        a[:] = 0
+        a[:] = 255
         pixelso = numpy.column_stack((r, g, b, a.astype('B')))
         return self.__class__(rgba=pixelso.tobytes(), size=self._size)
 
@@ -76,10 +76,10 @@ class Image(qubesimgconverter.Image):
         pixels = numpy.frombuffer(self._rgba, dtype='B').reshape(\
                 self.height, self.width, 4)
         pixelsb = pixels.astype('u4')
-        pixelsb[0:width, :] = rb, gb, bb, 0
-        pixelsb[:, 0:width] = rb, gb, bb, 0
-        pixelsb[-width:, :] = rb, gb, bb, 0
-        pixelsb[:, -width:] = rb, gb, bb, 0
+        pixelsb[0:width, :] = rb, gb, bb, 255
+        pixelsb[:, 0:width] = rb, gb, bb, 255
+        pixelsb[-width:, :] = rb, gb, bb, 255
+        pixelsb[:, -width:] = rb, gb, bb, 255
         return self.__class__(rgba=pixelsb.astype('B'), size=self._size)
 
     def untouched(self):
