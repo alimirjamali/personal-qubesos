@@ -1,0 +1,181 @@
+#!/usr/bin/python3
+#
+# The Qubes OS Project, http://www.qubes-os.org
+# Ali's personal Qubes OS improvements, http://www.mirjamali.com
+#
+# Copyright (C) 2010  Joanna Rutkowska <joanna@invisiblethingslab.com>
+# Copyright (C) 2013  Marek Marczykowski <marmarek@invisiblethingslab.com>
+# Copyright (C) 2024  Ali Mirjamai <ali@mirjamali.com>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
+# USA.
+
+""" My tweaks to: Handle menu entries for starting applications in qubes"""
+
+import sys
+import os
+import os.path
+import shutil
+
+import xdg.BaseDirectory
+
+import qubesadmin
+import qubesadmin.exc
+import qubesadmin.tools
+import qubesadmin.vm
+
+from qubesappmenustweaks import Appmenus
+from qubesappmenus import retrieve_list
+
+basedir = os.path.join(xdg.BaseDirectory.xdg_data_home, 'qubes-appmenus')
+
+parser = qubesadmin.tools.QubesArgumentParser(show_forceroot=True)
+
+parser_stdin_mode = parser.add_mutually_exclusive_group()
+
+parser.add_argument(
+    '--init', action='store_true',
+    help='Initialize directory structure for appmenus (on VM creation)')
+parser.add_argument(
+    '--create', action='store_true',
+    help='Create appmenus')
+parser.add_argument(
+    '--remove', action='store_true',
+    help='Remove appmenus')
+parser.add_argument(
+    '--update', action='store_true',
+    help='Update appmenus')
+parser.add_argument(
+    '--get-available', action='store_true',
+    help='Get list of applications available')
+parser.add_argument(
+    '--get-whitelist', action='store_true',
+    help='Get list of applications to include in the menu')
+parser_stdin_mode.add_argument(
+    '--set-whitelist', metavar='PATH',
+    action='store',
+    help='Set list of applications to include in the menu,'
+         'use \'-\' to read from stdin')
+parser_stdin_mode.add_argument(
+    '--set-default-whitelist', metavar='PATH',
+    action='store',
+    help='Set default list of applications to include in menu '
+         'for VMs based on this template,'
+         'use \'-\' to read from stdin')
+parser.add_argument(
+    '--get-default-whitelist', action='store_true',
+    help='Get default list of applications to include in menu '
+         'for VMs based on this template'
+)
+parser.add_argument(
+    '--source', action='store', default=None,
+    help='Source VM to copy data from (for --init option)')
+parser.add_argument(
+    '--force', action='store_true', default=False,
+    help='Force refreshing files, even when looks up to date')
+parser.add_argument(
+    '--i-understand-format-is-unstable', dest='fool',
+    action='store_true',
+    help='required pledge for --get-available')
+parser.add_argument(
+    '--file-field', action='append', dest='fields',
+    help='File field to append to output for --get-available; can be used'
+         ' multiple times for multiple fields. This option changes output'
+         ' format to pipe-("|") separated.')
+parser.add_argument(
+    '--template', action='store',
+    help='Use the following template for listed domains instead of their '
+         'actual template. Requires --get-available.')
+parser.add_argument(
+    '--all', action='store_true', dest='all_domains',
+    help='perform the action on all qubes')
+parser.add_argument(
+    'domains', metavar='VMNAME', nargs='*', default=[],
+    help='VMs on which perform requested actions')
+
+
+def main(args=None, app=None):
+    """main function for qvm-appmenus-tweak-tools tool"""
+    args = parser.parse_args(args=args, app=app)
+    if not args.all_domains and not args.domains:
+        parser.error("one of the arguments --all VMNAME is required")
+    appmenus = Appmenus()
+    if args.source is not None:
+        args.source = args.app.domains[args.source]
+    if args.template is not None:
+        args.template = args.app.domains[args.template]
+    if args.all_domains:
+        if args.remove:
+            domains = [vm for vm in os.listdir(os.path.abspath(basedir))
+                       if os.path.isdir(os.path.join(basedir, vm))]
+        else:
+            domains = args.app.domains
+    else:
+        domains = args.domains
+    for vm in domains:
+        if str(vm) == 'dom0':
+            continue
+        # allow multiple actions
+        # for remove still use just VM name (str), because VM may be already
+        # removed.
+        if args.remove:
+            if isinstance(vm, qubesadmin.vm.QubesVM):
+                vm = vm.name
+            appmenus.appmenus_remove(vm)
+            appmenus.appicons_remove(vm)
+            try:
+                shutil.rmtree(os.path.join(basedir, str(vm)))
+            except FileNotFoundError:
+                pass
+        # for other actions - get VM object
+        if not args.remove:
+            if not isinstance(vm, qubesadmin.vm.QubesVM):
+                vm = args.app.domains[vm]
+            if args.init:
+                appmenus.appmenus_init(vm, src=args.source)
+            if args.get_whitelist:
+                whitelist = appmenus.get_whitelist(vm)
+                print('\n'.join(whitelist))
+            if args.set_default_whitelist:
+                whitelist = retrieve_list(args.set_default_whitelist)
+                appmenus.set_default_whitelist(vm, whitelist)
+            if args.get_default_whitelist:
+                default_whitelist = appmenus.get_default_whitelist(vm)
+                print('\n'.join(default_whitelist))
+            if args.set_whitelist:
+                whitelist = retrieve_list(args.set_whitelist)
+                appmenus.set_whitelist(vm, whitelist)
+            if args.create:
+                appmenus.appicons_create(vm, force=args.force)
+                appmenus.appmenus_create(vm)
+            if args.update:
+                appmenus.appmenus_update(vm, force=args.force)
+            if args.get_available:
+                if not args.fool:
+                    parser.error(
+                        'this requires --i-understand-format-is-unstable '
+                        'and a sacrifice of one cute kitten')
+                if not args.fields:
+                    sys.stdout.write(''.join('{} - {}\n'.format(*available)
+                                             for available in
+                                             appmenus.get_available(vm)))
+                else:
+                    for result in appmenus.get_available(
+                            vm, fields=args.fields, template=args.template):
+                        print('|'.join(result))
+
+
+if __name__ == '__main__':
+    sys.exit(main())

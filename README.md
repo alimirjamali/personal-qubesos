@@ -25,3 +25,10 @@ repository. Those tools depend on `qubesimgconverter` library which is a part of
 [qubes-linux-utils](https://github.com/QubesOS/qubes-linux-utils.git)
 repository. Strangely the current systray effects are not implemented via the
 same library.
+
+### qvm-appmenus-tweak-tools
+Since `qvm-appmenus(1)` calls qubesimgconverter.tint function directly to
+performs the tint effect on the locally stored icons, an alternative is required
+if we want custom effects for AppMenu icons. Moreover, other useful actions
+such as launching qube apps in their dedicated workspace could be automated with
+such a tool. Thus qvm-appmenus-teak-tools is born.
