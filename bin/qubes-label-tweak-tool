@@ -28,7 +28,8 @@ might be introduced in the future, it is advisable to prepend a suffix to new
 custom labels. Good examples are 'custom', 'user', 'personal', etc. 
 Also never ever remove standard labels!
 
-usage: qubes-label [--verbose] [-assume-yes] [--help] [--ANSI] COMMAND ...
+usage: qubes-label-tweak-tool [--verbose] [-assume-yes] [--help] [--ANSI]
+                              [--raw-data] COMMAND ...
 
 options:
   -v, --verbose             verbose operation

@@ -10,7 +10,7 @@ parts of it has become obsolete because of the modern Salt interface or the new
 graphical updater and `qvm-vm-update` tool. Yet it is still useful as some of 
 its features are not yet implemented via the mentioned tools.
 
-### qubes-label
+### qubes-label-tweak-tool
 A simple command line tool to list/create/get/index/remove Qubes `labels`. It is
 advisable to add a proper suffix to custom labels. This would prevent probable
 conflicts with new official labels (if any). Good examples are 'custom','user', 
@@ -26,9 +26,9 @@ repository. Those tools depend on `qubesimgconverter` library which is a part of
 repository. Strangely the current systray effects are not implemented via the
 same library.
 
-### qvm-appmenus-tweak-tools
+### qvm-appmenus-tweak-tool
 Since `qvm-appmenus(1)` calls qubesimgconverter.tint function directly to
 performs the tint effect on the locally stored icons, an alternative is required
 if we want custom effects for AppMenu icons. Moreover, other useful actions
 such as launching qube apps in their dedicated workspace could be automated with
-such a tool. Thus qvm-appmenus-teak-tools is born.
+such a tool. Thus qvm-appmenus-teak-tool is born.
