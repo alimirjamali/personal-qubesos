@@ -38,6 +38,8 @@ options:
   --ANSI                    print label values in color with ANSI X3.64
                             (ISO/IEC 6429) escape codes in terminal. it requires
                             color capable tty such as xterm or xfce4-terminal
+                            even that is rough representation of colors as tty
+                            is usually limited to 256 color limit term emulators
   --raw-data                output data in easy to parse format without headers
                             intended for bash-parsing. this will disable ANSI &
                             verbose options.
