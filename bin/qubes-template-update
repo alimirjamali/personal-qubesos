@@ -339,16 +339,26 @@ synthesize_template_cmds() {
 	fi
 }
 
-# Synopsis: qubesd_admin_api CALL DEST [ARGUMENTS]
+# Synopsis: qubesd_admin_api <CALL> <DEST> [ARGUMENTS]
 qubesd_admin_api() {
-	local -a returned_message
+	local -a api_message
 	local -i message_type
-	readarray -t returned_message < <(\
-		qubesd-query --empty --null ${HOSTNAME} ${@} |\
-		tr '\0' '\n')
-	message_type=${returned_message[0]}
-	unset returned_message[0]
-	printf '%s\n' "${returned_message[@]}"
+	local CALL="${1}" DEST="${2}"
+	shift; shift
+	if [ $# -le 1 ]; then
+		readarray -t api_message < <(qubesd-query --empty --null \
+			${HOSTNAME} ${CALL} ${DEST} ${@} | tr '\0' '\n')
+	else
+		local ARGUMENT="${1}"
+		shift
+		local INSIDE="${@}"
+		readarray -t api_message < <(qubesd-query --null \
+			${HOSTNAME} ${CALL} ${DEST} ${ARGUMENT} <<< "${INSIDE}"\
+			| tr '\0' '\n')
+	fi
+	message_type=${api_message[0]}
+	unset api_message[0]
+	printf '%s\n' "${api_message[@]}"
 	return ${message_type}
 }
 
