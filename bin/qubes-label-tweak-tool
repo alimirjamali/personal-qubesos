@@ -70,6 +70,14 @@ declare VALUE=""
 declare SELF=${0##*/}
 declare HOSTNAME=$(hostname)
 
+declare TARGETICONS="~/.local/share/icons/hicolor"
+declare TARGETTEMPLATE="/usr/share/icons/hicolor"
+declare -A SVGTEMPLATE=()
+for vm in appvm dispvm servicevm standalonevm templatevm; do
+	# Selecting qute red icons as the default template for new icons
+	SVGTEMPLATE["${vm}"]="${TARGETTEMPLATE}/scalable/apps/${vm}-red.svg"
+done
+
 # Synopsis: print_usage [EXIT_CODE]
 print_usage() {
 	echo "${syntax}"
@@ -83,13 +91,95 @@ abort() {
 	exit ${1}
 }
 
+# Synopsis hex_to_int <COLOR>
+hex_to_int() {
+	# Accepted formats are 0xRRGGBB, #RRGGBB and RRGGBB
+	local COLOR="${1}" R G B
+	! [[ ${COLOR} =~ ^(0x|#|)([0-9a-fA-F]){6}$ ]] && exit 22
+	COLOR="${COLOR#0x}"; COLOR="${COLOR#\#}"
+	printf '%d %d %d' 0x${COLOR:0:2} 0x${COLOR:2:2} 0x${COLOR:4:2}
+}
+
 # Synopsis ANSI <COLOR> <TEXT>
 ANSI() {
-	local color="${1}"
+	local -a RGB=($(hex_to_int ${1}))
+	[[ ${?} -ne 0 ]] && exit 22
 	shift
-	printf '\e[48;2;%d;%d;%dm' 0x${color:2:2} 0x${color:4:2} 0x${color:6:2}
+	printf '\e[48;2;%d;%d;%dm' ${RGB[@]}
 	echo -n "$@"
 	printf '\e[0m'
+}
+
+# Synopsis rgb_to_hsv <R> <G> <B>
+rgb_to_hsv() {
+	local -i R=$1 G=$2 B=$3
+	local -i CmaxX255 CminX255 DeltaX255 Hue SaturationX100 ValueX100
+	CmaxX255=$(( $R > $G ? $R : $G ));
+	CmaxX255=$(( $CmaxX255 > $B ? $CmaxX255 : $B ))
+	CminX255=$(( $R < $G ? $R : $G ));
+	CminX255=$(( $CminX255 < $B ? $CminX255 : $B ))
+	DeltaX255=$(($CmaxX255-$CminX255))
+	if [ $DeltaX255 -eq 0 ]; then
+		Hue=0
+	else
+		case $CmaxX255 in
+			$R)
+				Hue=$(((($G-$B)*60/$DeltaX255)))
+				[ $Hue -lt 0 ] && Hue=$((360+$Hue))
+				;;
+			$G)
+				Hue=$((($B-$R)*60/$DeltaX255+120))
+				;;
+			$B)
+				Hue=$((($R-$G)*60/$DeltaX255+240))
+				;;
+		esac
+	fi
+	if [ $CmaxX255 -eq 0 ]; then
+		SaturationX100=0
+	else
+		SaturationX100=$(($DeltaX255*100/$CmaxX255))
+	fi
+	ValueX100=$(($CmaxX255*100/255))
+	printf '%d %d %d' $Hue $SaturationX100 $ValueX100
+}
+
+# Synopsis hsv_to_rgb <HUE> <SATURATIONx100> <VALUEx100>
+hsv_to_rgb() {
+	local -i Hue=${1} Sx100=${2} Vx100=${3}
+	local -i Cx255=$(($Sx100*$Vx100*255/10000))
+	local -i x=$((($Hue % 120)-60))
+	x=${x#-}
+	local -i Xx255=$(($Cx255*(60-$x)/60))
+	local -i Mx255=$(($Vx100*255/100-$Cx255))
+	local -i RP GP BP R G B
+	if [ $Hue -lt 60 ]; then
+		RP=$Cx255; GP=$Xx255; BP=0
+	elif [ $Hue -lt 120 ]; then
+		RP=$Xx255; GP=$Cx255; BP=0
+	elif [ $Hue -lt 180 ]; then
+		RP=0; GP=$Cx255; BP=$Xx255
+	elif [ $Hue -lt 240 ]; then
+		RP=0; GP=$Xx255; BP=$Cx255
+	elif [ $Hue -lt 300 ]; then
+		RP=$Xx255; GP=0; BP=$Cx255
+	else
+		RP=$Cx255; GP=0; BP=$Xx255
+	fi
+	R=$(($RP+$Mx255))
+	G=$(($GP+$Mx255))
+	B=$(($BP+$Mx255))
+	printf '%d %d %d' $R $G $B
+}
+
+# Synopsis tint_color <COLOR> <TINT>
+tint_color() {
+	local -a COLOR=($(hex_to_int ${1}))
+	local -a TINT=($(hex_to_int ${2}))
+	local -a CHSV=($(rgb_to_hsv ${COLOR[@]}))
+	local -a THSV=($(rgb_to_hsv ${TINT[@]}))
+	local -a RESULT=($(hsv_to_rgb ${THSV[0]} ${CHSV[1]} ${CHSV[2]}))
+	printf '0x%02x%02x%02x' ${RESULT[@]}
 }
 
 # Synopsis: parse_cmd_parameters [OPTIONS] COMMAND ...
