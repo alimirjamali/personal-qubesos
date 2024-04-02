@@ -22,10 +22,10 @@ set -o noglob
 
 declare syntax="\
 This tool is a simple command line utility to manage Qubes OS labels. It could
-list, create, get value, print index or remove labels from Qubes OS database.
+list, create, get value, print index or remove labels on Qubes OS dom0/GUIVM.
 In order to avoid possible conflicts with any probable official labels which 
 might be introduced in the future, it is advisable to prepend a suffix to new
-custom labels. Good examples are 'custom', 'user', 'personal', etc. 
+custom labels. Good suffix examples are 'custom-', 'user-', 'personal-', etc.
 Also never ever remove standard labels!
 
 usage: qubes-label-tweak-tool [--verbose] [-assume-yes] [--help] [--ANSI]
@@ -44,8 +44,18 @@ options:
                             intended for bash-parsing. this will disable ANSI &
                             verbose options.
 
+create subcommand options:
+  --icon <allvm|appvm|dispvm|servicevm|standalonevm|templatevm>=filename
+                            by default, Qubes Qute icons are used as templates
+                            for new icons. user could provide SVG icon for all
+                            or one class of VMs. this option could be repeated
+                            multiple times for different VM classes.
+  --tint <on|off|yes|no>    tint user provided icons or not. default is off.
+                            user could control tintiing of individual icons by
+                            adding --tint <on|off> before each --icon instance
+
 subcommands:
-   list                     List all labels and their values
+   list                     List all labels, their indexes and their values
    create <LABEL> <VALUE>   Create a new label with the provided color value.
                             Value should be in '0xRRGGBB' format.
    get <LABEL|INDEX>        Print hexadecimal value of label
@@ -56,8 +66,8 @@ subcommands:
 # Note to self:
 #
 # Enquire about maximum length of labels supported by the API.
-# Enquire supported characters for labels.
-# Enquire if string sanitization is needed at client side.
+# Enquire about supported characters for labels.
+# Enquire if string sanitization for label name is needed at client side.
 
 declare VERBOSE=false
 declare ASSUMEYES=false
@@ -70,13 +80,23 @@ declare VALUE=""
 declare SELF=${0##*/}
 declare HOSTNAME=$(hostname)
 
-declare TARGETICONS="~/.local/share/icons/hicolor"
-declare TARGETTEMPLATE="/usr/share/icons/hicolor"
-declare -A SVGTEMPLATE=()
-for vm in appvm dispvm servicevm standalonevm templatevm; do
+declare TARGETICONS="${HOME}/.local/share/icons/hicolor"
+declare SOURCETEMPLATE="/usr/share/icons/hicolor"
+declare -A SVGTEMPLATE=() SVGTEMPLATETINT=()
+declare TINT=true
+for klass in appvm dispvm servicevm standalonevm templatevm; do
 	# Selecting qute red icons as the default template for new icons
-	SVGTEMPLATE["${vm}"]="${TARGETTEMPLATE}/scalable/apps/${vm}-red.svg"
+	SVGTEMPLATE["${klass}"]="${SOURCETEMPLATE}/scalable/apps/${klass}-red.svg"
+	SVGTEMPLATETINT["${klass}"]=true
 done
+declare CONVERTCMD=""
+# Note to self: qubes-artwork repo uses inkscape to convert SVGs to PNGs...
+# However, no one is going to have it installed in dom0 or GUIVM
+if [ -f /usr/bin/gm ]; then
+	CONVERTCMD="gm convert -background transparent"
+elif [ -f /usr/bin/convert ]; then
+	CONVERTCMD="convert +antialais -background transparent"
+fi
 
 # Synopsis: print_usage [EXIT_CODE]
 print_usage() {
@@ -89,6 +109,18 @@ abort() {
 	echo "error: ${2}" 1>&2
 	echo "Please see --help for more information." 1>&2
 	exit ${1}
+}
+
+# Synopsis prompt <MESSAGE>
+prompt() {
+	echo "${1}"
+	read -p "Do you want to proceed? (y/n) " REPLY
+	if [[ $REPLY =~ ^[Nn]$ ]]; then
+		echo "Aborting operation..."
+		exit 0
+	elif ! [[ $REPLY =~ ^[Yy]$ ]]; then
+		abort 22 "Please type Y or N!"
+	fi
 }
 
 # Synopsis hex_to_int <COLOR>
@@ -182,10 +214,32 @@ tint_color() {
 	printf '0x%02x%02x%02x' ${RESULT[@]}
 }
 
+# Synopsis: verify_user_icon <class=SVGFILE>
+verify_custom_icon() {
+	local klass="${1%%=*}" svgfile="${1#*=}" mime
+	! [[ ${1} =~ ^(all|app|disp|service|standalone|template)vm=.*$ ]] &&\
+		abort 22 "Invalid option ${1} for --icon"
+	! [ -f "${svgfile}" ] && abort 22 "Could not find ${svgfile}!"
+	mime=$(file --brief --raw --mime-type "${svgfile}")
+	if ! [[ "${mime}" == "image/svg+xml" ]]; then
+		echo "Only SVG icons are supported as icon templates!"
+		abort 22 "Filetype: '${mime}' detected for ${svgfile} icon!"
+	else
+		$VERBOSE && echo "Successfully verified ${svgfile} as ${mime}"
+	fi
+	[[ "${klass}" == "allvm" ]] && \
+		klass=(appvm dispvm servicevm standalonevm templatevm)
+	for k in "${klass[@]}"; do
+		SVGTEMPLATE["${k}"]="${svgfile}"
+		SVGTEMPLATETINT["${k}"]=${TINT}
+	done
+}
+
 # Synopsis: parse_cmd_parameters [OPTIONS] COMMAND ...
 parse_cmd_parameters() {
 	local arguments=$(getopt -n "${SELF}" --options vhy \
-		--longoptions verbose,help,assume-yes,ANSI,raw-data -- "${@}")
+		--longoptions verbose,help,assume-yes,ANSI,raw-data,icon:,tint:\
+		-- "${@}")
 
 	[[ ${?} -ne 0 ]] && abort 22 "Invalid option!"
 	eval set -- "${arguments}"
@@ -202,6 +256,18 @@ parse_cmd_parameters() {
 				RAWDATA=true
 				VERBOSE=false
 				ANSI=false;;
+			--icon)
+				verify_custom_icon "${2}"
+				shift;;
+			--tint)
+				case ${2} in
+					on|yes) TINT=true;;
+					off|no) TINT=false;;
+					*) abort 22 \
+						"Invalid option ${2} for --tint"
+					;;
+				esac
+				shift;;
 			--) shift; break;;
 			*) abort 22 "Invalid argument: ${1}";;
 		esac
@@ -280,23 +346,78 @@ label_list() {
 	done
 }
 
+# Synopsis verify_target_icons
+verify_target_icons() {
+	$VERBOSE && echo "Checking for ${TARGETICONS} directory & icon theme..."
+	# No confirming as creating ~/.local/share/icons is a benign operation.
+	if ! [ -f "${TARGETICONS}/index.theme" ]; then
+		! [ -d "${TARGETICONS}" ] && mkdir -p "${TARGETICONS}"
+		cp "${SOURCETEMPLATE}/index.theme" "${TARGETICONS}/index.theme"
+		for directory in $(find ${SOURCETEMPLATE} -type d); do
+			mkdir -p "${directory/${SOURCETEMPLATE}/${TARGETICONS}}"
+		done
+		gtk-update-icon-cache "${TARGETICONS}" || \
+			abort 11 "Did not manage to create ICON dir"
+		$VERBOSE && echo "Successfully created ${TARGETICONS}"
+	fi
+}
+
+# Synopsis copy_and_tint_svgs
+copy_and_tint_svgs() {
+	local klass src dst color_orig color_tint
+	local -a palette
+	for klass in "${!SVGTEMPLATE[@]}"; do
+		src="${SVGTEMPLATE[${klass}]}"
+		dst="$TARGETICONS/scalable/apps/${klass}-${LABEL}.svg"
+		$VERBOSE && echo "${src} -> ${dst}"
+		cp ${src} ${dst} || abort 22 "Did not manage to copy ICON"
+		if ${SVGTEMPLATETINT["${klass}"]}; then
+			$VERBOSE && echo Tinting $dst
+			palette=($(sed -nr 's/^.*(#[0-9a-fA-F]{6}).*$/\1/p' \
+				${dst} | sort | uniq))
+			for color_orig in "${palette[@]}"; do
+				color_tint=$(tint_color ${color_orig} ${VALUE})
+				color_tint=${color_tint/0x/#}
+				$VERBOSE && echo "$color_orig -> $color_tint"
+				sed -r "s/${color_orig}/${color_tint}/g" $dst -i
+				[[ ${?} -ne 0 ]] && \
+					abort 11 "Did not manage to tint ICONs"
+			done
+		fi
+	done
+}
+
+# Synopsis generate_pngs
+generate_pngs() {
+	local klass src dst dim
+	for klass in "${!SVGTEMPLATE[@]}"; do
+		src="$TARGETICONS/scalable/apps/${klass}-${LABEL}.svg"
+		for png in $(find $SOURCETEMPLATE -name ${klass}-red.png); do
+			dst="${png/red/${LABEL}}"
+			dst="${png/$SOURCETEMPLATE/$TARGETICONS}"
+			dim="${dst##*hicolor/}"
+			dim="${dim%%/devices*}"; dim="${dim%%/apps*}"
+			${CONVERTCMD} ${src} -resize ${dim} ${dst} ||\
+				abort 11 "Did not manage to generate PNGs"
+		done
+	done
+}
+
 # Synopsis label_create LABEL VALUE
 label_create() {
 	local LABEL="${1}" VALUE="${2}"
 	local V="${VALUE}"
 	local api_message
+	[ -z "${CONVERTCMD}" ] && abort 11 \
+		"Either GraphicMagick or ImageMagick is neede to generate ICONs"
 	$ANSI && V=$(ANSI "${V}" "${V}")
 	$VERBOSE && echo "Creating ${LABEL} label with the value of ${V} ..."
-	if ! $ASSUMEYES; then
-		echo "You are about to add a new label to Qubes OS!"
-		read -p "Do you want to proceed? (y/n) " REPLY
-		if [[ $REPLY =~ ^[Nn]$ ]]; then
-			echo "Aborting operation..."
-			exit 0
-		elif ! [[ $REPLY =~ ^[Yy]$ ]]; then
-			abort 22 "Please type Y or N!"
-		fi
-	fi
+	! $ASSUMEYES && prompt "You are about to add a new label to Qubes OS!"
+	verify_target_icons
+	copy_and_tint_svgs
+	generate_pngs
+	gtk-update-icon-cache "${TARGETICONS}" || \
+		abort 22 "Did not manage to generate ICONs"
 	IFS=$'\n' api_message=($(qubesd_admin_api admin.label.Create dom0 \
 		"${LABEL}" "${VALUE}"))
 	if [[ ${?} = 0 ]]; then
@@ -380,6 +501,7 @@ label_remove() {
 		exit 11
 	else
 		echo "Successfully removed ${LABEL} label" 
+		$VERBOSE && echo "SVGs and PNGs are not deleted automatically"
 	fi
 }
 

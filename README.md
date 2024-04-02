@@ -16,6 +16,10 @@ advisable to add a proper suffix to custom labels. This would prevent probable
 conflicts with new official labels (if any). Good examples are 'custom','user', 
 etc. Also never delete standard labels.
 
+Honorable mention: Willy-JL's
+[Qubes-Scripts](https://github.com/Willy-JL/Qubes-Scripts)
+has been an inspiration for lots of work in this tool.
+
 ### qvm-get-filtered-image
 As of March 2024 (Qubes OS 4.2.1), only tinted icons are supported for
 application icons. `qvm-get-image` and `qvm-get-tinted-image` are the starting
