@@ -14,7 +14,7 @@ install: install_python_libs install_executables
 install_python_libs: $(PYTHONLIBS)
 	install -v -d $(LIBDIR)
 	for file in $^; do \
-		install -v -D -t $(LIBDIR)/$${file} $${file}/__init__.py; \
+		install -v -C -D -t $(LIBDIR)/$${file} $${file}/__init__.py; \
 	done
 
 install_executables: $(EXECUTABLES)

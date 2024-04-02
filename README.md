@@ -18,7 +18,7 @@ etc. Also never delete standard labels.
 
 Honorable mention: Willy-JL's
 [Qubes-Scripts](https://github.com/Willy-JL/Qubes-Scripts)
-has been an inspiration for lots of work in this tool.
+has been an inspiration for this tool.
 
 ### qvm-get-filtered-image
 As of March 2024 (Qubes OS 4.2.1), only tinted icons are supported for
