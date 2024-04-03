@@ -364,7 +364,7 @@ verify_target_icons() {
 
 # Synopsis copy_and_tint_svgs
 copy_and_tint_svgs() {
-	local klass src dst color_orig color_tint
+	local klass src dst c_orig c_tint
 	local -a palette
 	for klass in "${!SVGTEMPLATE[@]}"; do
 		src="${SVGTEMPLATE[${klass}]}"
@@ -375,13 +375,17 @@ copy_and_tint_svgs() {
 			$VERBOSE && echo Tinting $dst
 			palette=($(sed -nr 's/^.*(#[0-9a-fA-F]{6}).*$/\1/p' \
 				${dst} | sort | uniq))
-			for color_orig in "${palette[@]}"; do
-				color_tint=$(tint_color ${color_orig} ${VALUE})
-				color_tint=${color_tint/0x/#}
-				$VERBOSE && echo "$color_orig -> $color_tint"
-				sed -r "s/${color_orig}/${color_tint}/g" $dst -i
+			for c_orig in "${palette[@]}"; do
+				c_tint=$(tint_color ${c_orig} ${VALUE})
+				c_tint=${c_tint/0x/#}
+				sed -r "s/${c_orig}/${c_tint}/g" $dst -i
 				[[ ${?} -ne 0 ]] && \
 					abort 11 "Did not manage to tint ICONs"
+				if $VERBOSE; then
+					$ANSI && c_orig=$(ANSI $c_orig $c_orig)
+					$ANSI && c_tint=$(ANSI $c_tint $c_tint)
+					echo "$c_orig -> $c_tint"
+				fi
 			done
 		fi
 	done
