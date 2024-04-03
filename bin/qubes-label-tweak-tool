@@ -398,9 +398,10 @@ generate_pngs() {
 		src="$TARGETICONS/scalable/apps/${klass}-${LABEL}.svg"
 		for png in $(find $SOURCETEMPLATE -name ${klass}-red.png); do
 			dst="${png/red/${LABEL}}"
-			dst="${png/$SOURCETEMPLATE/$TARGETICONS}"
+			dst="${dst/$SOURCETEMPLATE/$TARGETICONS}"
 			dim="${dst##*hicolor/}"
 			dim="${dim%%/devices*}"; dim="${dim%%/apps*}"
+			$VERBOSE && echo "Generating ${dst}..."
 			${CONVERTCMD} ${src} -resize ${dim} ${dst} ||\
 				abort 11 "Did not manage to generate PNGs"
 		done
@@ -511,6 +512,8 @@ label_remove() {
 
 # Synopsis: main ALL_ARGS
 main() {
+	! [ -f /usr/bin/qubesd-query ] && abort 11 \
+		"Could not find qubesd-query(1). Is this running on dom0?"
 	parse_cmd_parameters "${@}"
 	case ${SUBCOMMAND} in
 		list) label_list;;
