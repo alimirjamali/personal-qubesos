@@ -83,7 +83,7 @@ declare HOSTNAME=$(hostname)
 declare TARGETICONS="${HOME}/.local/share/icons/hicolor"
 declare SOURCETEMPLATE="/usr/share/icons/hicolor"
 declare -A SVGTEMPLATE=() SVGTEMPLATETINT=()
-declare TINT=true
+declare TINT=false
 for klass in appvm dispvm servicevm standalonevm templatevm; do
 	# Selecting qute red icons as the default template for new icons
 	SVGTEMPLATE["${klass}"]="${SOURCETEMPLATE}/scalable/apps/${klass}-red.svg"
