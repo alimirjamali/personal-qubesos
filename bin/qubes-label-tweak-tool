@@ -25,8 +25,8 @@ This tool is a simple command line utility to manage Qubes OS labels. It could
 list, create, get value, print index or remove labels on Qubes OS dom0/GUIVM.
 In order to avoid possible conflicts with any probable official labels which 
 might be introduced in the future, it is advisable to prepend a suffix to new
-custom labels. Good suffix examples are 'custom-', 'user-', 'personal-', etc.
-Also never ever remove standard labels!
+custom labels. Good suffix examples are 'custom', 'user', 'personal', etc.
+Avoid Hyphen (-) in label names. Also never ever remove standard labels!
 
 usage: qubes-label-tweak-tool [--verbose] [-assume-yes] [--help] [--ANSI]
                               [--raw-data] COMMAND ...
