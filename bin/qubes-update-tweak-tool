@@ -19,11 +19,12 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 set -o noglob
+declare SELF=${0##*/}
 
 ### Configs
 
 # Lockfile path
-lock_file="/tmp/qubes-template-update.lck"
+lock_file="/tmp/${SELF}.lck"
 # qrexec_agent could be either 'qrexec-client' or 'qvm-run'
 qrexec_agent="qvm-run"
 # Colors for qvm-run
@@ -40,7 +41,7 @@ It is currently compatible with templates using apt(8), dnf(8), emerge(1) or
 pacman(8) as their primary package manager. This tool could be run from dom0 or
 on management VMs with sufficient privileges. Use it at your own risk!
 
-usage: qubes-template-update [--verbose|--quiet] [--assume-yes|assume-no]
+usage: ${SELF} [--verbose|--quiet] [--assume-yes|assume-no]
                              [--refresh] [--skip-broken] [--download-only]
                              [--dry-run] [--auto-start|--no-autostart]
                              [--if-updates-available]
@@ -121,7 +122,6 @@ declare -a cmd_dnf=(dnf)
 declare -a cmd_emerge=(emerge)
 declare -a cmd_pacman=(pacman)
 
-declare SELF=${0##*/}
 declare HOSTNAME=$(hostname)
 
 # Synopsis: print_usage [EXIT_CODE]
