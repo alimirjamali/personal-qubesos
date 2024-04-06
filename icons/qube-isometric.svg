@@ -28,14 +28,14 @@
      inkscape:deskcolor="#d1d1d1"
      showguides="false"
      inkscape:zoom="8"
-     inkscape:cx="47.8125"
+     inkscape:cx="47.9375"
      inkscape:cy="23.6875"
      inkscape:window-width="1440"
      inkscape:window-height="843"
      inkscape:window-x="0"
      inkscape:window-y="33"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Dimentions">
+     inkscape:current-layer="svg2">
     <sodipodi:guide
        position="24.565225,44.854254"
        orientation="0.5,0.8660254"
@@ -258,40 +258,40 @@
      id="Grid"
      style="opacity:0.5">
     <path
-       style="vector-effect:non-scaling-stroke;fill:#d62821;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
        d="M 30.694466,0 0,17.721458"
        id="G30T" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:#d62821;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
        d="M 48,8.1955337 0,35.991355"
        id="G30M" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:#d62821;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
        d="M 10.844805,48 48,26.548438"
        id="G30B"
        sodipodi:nodetypes="cc" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:#d62821;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
        d="M 19.116633,0 48,16.67582"
        id="GM30T" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:#d62821;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
        d="M 0,7.3381989 48,35.051012"
        id="GM30M" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:#d62821;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
        d="M 38.783916,48 0,25.608096"
        id="GM30B" />
     <path
-       style="opacity:0.4;vector-effect:non-scaling-stroke;fill:#d62821;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
        d="M 8.9921665,0 V 48"
        id="path36" />
     <path
-       style="opacity:0.4;vector-effect:non-scaling-stroke;fill:#d62821;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
        d="M 24.565225,0 V 48"
        id="GHM" />
     <path
-       style="opacity:0.4;vector-effect:non-scaling-stroke;fill:#d62821;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
        d="M 40.727744,48 V 0"
        id="GHL" />
   </g>
