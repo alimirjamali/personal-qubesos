@@ -420,11 +420,14 @@ label_create() {
 	# Checking if label already exists.
 	$VERBOSE && echo "Creating ${LABEL} label with the value of ${V} ..."
 	api_message=$(qubesd_admin_api admin.label.Get dom0 ${LABEL})
-	if [[ ${?} -ne 0 ]]; then if ! $ASSUMEYES; then
-		prompt "You are about to add a new label to Qubes OS!"
+	if [[ ${?} -ne 0 ]]; then
+		! $ASSUMEYES && prompt \
+			"You are about to add a new label to Qubes OS!"
+		api_message=""
 	else
-		prompt "Label already exists. Only regenerate icons?"
-	fi; fi
+		! $ASSUMEYES && prompt \
+			"Label already exists. Only regenerate icons?"
+	fi
 	verify_target_icons
 	copy_and_tint_svgs
 	generate_pngs
@@ -525,7 +528,6 @@ label_remove() {
 		[[ ${?} -ne 0 ]] && abort 11 "Did not manage to delete icons!"
 	done
 	echo "Successfully removed ${LABEL} label" 
-	$VERBOSE && echo "SVGs and PNGs are not deleted automatically"
 }
 
 # Synopsis: main ALL_ARGS
