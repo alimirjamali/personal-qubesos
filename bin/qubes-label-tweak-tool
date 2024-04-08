@@ -283,7 +283,7 @@ parse_cmd_parameters() {
 			[[ $# -gt 0 ]] && abort 7 "Invalid argument: ${@}"
 			;;
 		create)
-			[[ $# -ne 2 ]] && abort 22 "Invalid syntax!"
+			[[ $# -ne 2 ]] && abort 22 "Invalid syntax: ${@}!"
 			LABEL="${1}"
 			VALUE="${2}"
 			if ! [[ ${VALUE} =~ ^0x([0-9a-fA-F]){6}$ ]];
@@ -415,15 +415,25 @@ label_create() {
 	local V="${VALUE}"
 	local api_message
 	[ -z "${CONVERTCMD}" ] && abort 11 \
-		"Either GraphicMagick or ImageMagick is neede to generate ICONs"
+		"Either of GraphicMagick or ImageMagick is needed to generate ICONs"
 	$ANSI && V=$(ANSI "${V}" "${V}")
+	# Checking if label already exists.
 	$VERBOSE && echo "Creating ${LABEL} label with the value of ${V} ..."
-	! $ASSUMEYES && prompt "You are about to add a new label to Qubes OS!"
+	api_message=$(qubesd_admin_api admin.label.Get dom0 ${LABEL})
+	if [[ ${?} -ne 0 ]]; then if ! $ASSUMEYES; then
+		prompt "You are about to add a new label to Qubes OS!"
+	else
+		prompt "Label already exists. Only regenerate icons?"
+	fi; fi
 	verify_target_icons
 	copy_and_tint_svgs
 	generate_pngs
 	gtk-update-icon-cache "${TARGETICONS}" || \
 		abort 22 "Did not manage to generate ICONs"
+	if [ ! -z ${api_message} ]; then
+		echo "Icons successfully regenerated. exiting..."
+		exit 0
+	fi
 	IFS=$'\n' api_message=($(qubesd_admin_api admin.label.Create dom0 \
 		"${LABEL}" "${VALUE}"))
 	if [[ ${?} = 0 ]]; then
@@ -478,7 +488,7 @@ label_index() {
 
 # Synopsis label_remove LABEL|INDEX
 label_remove() {
-	local LABEL="${1}" INDEX api_message
+	local LABEL="${1}" INDEX api_message klass
 	[[ LABEL == "red" ]] && abort 11 \
 		"Red label is the 1st label and could not be deleted!"
 	$VERBOSE && echo "Removing label: ${LABEL}" 
@@ -507,10 +517,15 @@ label_remove() {
 		echo "Operation failed! Here is the result of Admin API call:"
 		printf '%s\n' "${api_message[@]}"
 		exit 11
-	else
-		echo "Successfully removed ${LABEL} label" 
-		$VERBOSE && echo "SVGs and PNGs are not deleted automatically"
 	fi
+	for klass in appvm dispvm servicevm standalonevm templatevm; do
+		find ${TARGETICONS} -name "${klass}-${LABEL}.svg" -delete
+		[[ ${?} -ne 0 ]] && abort 11 "Did not manage to delete icons!"
+		find ${TARGETICONS} -name "${klass}-${LABEL}.png" -delete
+		[[ ${?} -ne 0 ]] && abort 11 "Did not manage to delete icons!"
+	done
+	echo "Successfully removed ${LABEL} label" 
+	$VERBOSE && echo "SVGs and PNGs are not deleted automatically"
 }
 
 # Synopsis: main ALL_ARGS
