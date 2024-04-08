@@ -19,11 +19,12 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 set -o noglob
+declare SELF=${0##*/}
 
 ### Configs
 
 # Lockfile path
-lock_file="/tmp/qubes-template-update.lck"
+lock_file="/tmp/${SELF}.lck"
 # qrexec_agent could be either 'qrexec-client' or 'qvm-run'
 qrexec_agent="qvm-run"
 # Colors for qvm-run
@@ -40,7 +41,7 @@ It is currently compatible with templates using apt(8), dnf(8), emerge(1) or
 pacman(8) as their primary package manager. This tool could be run from dom0 or
 on management VMs with sufficient privileges. Use it at your own risk!
 
-usage: qubes-template-update [--verbose|--quiet] [--assume-yes|assume-no]
+usage: ${SELF} [--verbose|--quiet] [--assume-yes|assume-no]
                              [--refresh] [--skip-broken] [--download-only]
                              [--dry-run] [--auto-start|--no-autostart]
                              [--if-updates-available]
@@ -95,6 +96,7 @@ subcommands:
    install <PACKAGE> ...    Install package(s) on the template(s) 
    remove <PACKAGE> ...     Remove the specified package(s) from template(s)
    search <keywords>        Search for packages
+   repolist                 List enabled repositories of the template(s)
    custom ...               Used together with --dnf, --apt, --emerge & --pacman
                             This option is for advanced users! Check it with
                             '--dry-run' before running the actual command.
@@ -120,7 +122,6 @@ declare -a cmd_dnf=(dnf)
 declare -a cmd_emerge=(emerge)
 declare -a cmd_pacman=(pacman)
 
-declare SELF=${0##*/}
 declare HOSTNAME=$(hostname)
 
 # Synopsis: print_usage [EXIT_CODE]
@@ -286,6 +287,14 @@ synthesize_template_cmds() {
 			cmd_emerge+=(--search "${@}")
 			cmd_pacman+=(--sync --search "${@}")
 			;;
+		repolist)
+			cmd_apt=(apt-cache policy)
+			cmd_dnf=(dnf -v repolist --enabled \| grep -i \
+				Repo-baseurl)
+			cmd_emerge=(portageq repos_config / \| grep \
+				-E '^.*\(sync-uri\).*$')
+			cmd_pacman=(cat /etc/pacman.d/{mirrorlist,"*.conf"})
+			;;
 		custom)
 			shift
 			# Using "apt" instead of "apt-get" for custom query
@@ -375,6 +384,7 @@ qrexec() {
 	local domain=${1}
 	local user=${2}
 	shift; shift
+	local -a qrexec_cmd
 	if $DRYRUN; then
 		local tmp=$QUIET
 		QUIET=false
@@ -385,17 +395,23 @@ qrexec() {
 		message "Running as ${user} on ${domain}: ${@}"
 	fi
 	if [ ${qrexec_agent} = "qrexec-client" ]; then
-		qrexec-client -tT -d ${domain} ${user}:"${@}"
-		return ${?}
+		qrexec_cmd=(qrexec-client -d ${domain} ${user}:"${@}")
 	elif [ ${qrexec_agent} = "qvm-run" ]; then
-		qvm-run --user=${user} --no-auto --no-gui --pass-io\
-			--color-output=${color_output} \
-			--color-stderr=${color_stderr} \
-			${domain} -- "${@}"
-		return ${?}
+		qrexec_cmd=(qvm-run --user=${user} --no-auto --no-gui \
+			--pass-io --filter-escape-chars)
+			if [ -t 1 ]; then
+				qrexec_cmd+=(--color-output=${color_output})
+				qrexec_cmd+=(--color-stderr=${color_stderr})
+			else
+				qrexec_cmd+=(--no-color-output)
+				qrexec_cmd+=(--no-color-stderr)
+			fi
+			qrexec_cmd+=(${domain} -- "${@}")
 	else
 		abort 22 "Invalid qrexec agent: ${qrexec_agent}"
 	fi
+	"${qrexec_cmd[@]}"
+	return ${?}
 }
 
 # Synopsis: detect_distro TEMPLATE
@@ -452,8 +468,8 @@ update_template() {
 		*gentoo*)
 			# Since emerge does not detect qvm-run -p as valid tty,
 			# Sadly it does not honor --ask option.
-			if ${ASSUMEYES} || ${DOWNLOADONLY} ||\
-			[[ ${SUBCOMMAND} =~ ^(check-only|search|custom)$ ]];
+			if ${ASSUMEYES} || ${DOWNLOADONLY} || [[ ${SUBCOMMAND} \
+				=~ ^(check-only|search|custom|repolist)$ ]];
 			then
 				cmd_update="${cmd_emerge[@]}"
 			else

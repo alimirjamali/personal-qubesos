@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="qube-isometric.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title40">Isometric Qube</title>
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="false"
+     inkscape:zoom="8"
+     inkscape:cx="47.9375"
+     inkscape:cy="23.6875"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2">
+    <sodipodi:guide
+       position="24.565225,44.854254"
+       orientation="0.5,0.8660254"
+       id="guide1"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="16.903264,30.902697"
+       orientation="0.5,0.8660254"
+       id="guide2"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="16.903263,12.632801"
+       orientation="0.5,0.8660254"
+       id="guide3"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="16.903263,40.037645"
+       orientation="-0.5,0.8660254"
+       id="guide4"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="38.240775,34.086967"
+       orientation="-0.5,0.8660254"
+       id="guide5"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="32.725458,12.632801"
+       orientation="-0.5,0.8660254"
+       id="guide6"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="0,48"
+       orientation="1,0"
+       id="guide15"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,48"
+       orientation="0,-1"
+       id="guide16"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="48,0"
+       orientation="0,-1"
+       id="guide17"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="48,0"
+       orientation="1,0"
+       id="guide18"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="8.9921665,35.470171"
+       orientation="1,0"
+       id="guide28"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="24.565225,44.854254"
+       orientation="1,0"
+       id="guide29"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="40.727744,35.522819"
+       orientation="1,0"
+       id="guide30"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <polygon
+       id="path-1"
+       points="0.000248593875 0.6295 28.6120703 0.6295 28.6120703 32.4825474 0.000248593875 32.4825474" />
+    <polygon
+       id="path-3"
+       points="0.201451406 0.147076191 28.0225 0.147076191 28.0225 32 0.201451406 32" />
+    <mask
+       id="mask-2"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1" />
+    </mask>
+    <mask
+       id="mask2"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2" />
+    </mask>
+    <mask
+       id="mask-2-2"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-9" />
+    </mask>
+    <mask
+       id="mask2-1"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-2" />
+    </mask>
+    <mask
+       id="mask-2-1"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-8" />
+    </mask>
+    <mask
+       id="mask2-7"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-9" />
+    </mask>
+    <mask
+       id="mask-2-7"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-3" />
+    </mask>
+    <mask
+       id="mask2-6"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-1" />
+    </mask>
+    <mask
+       id="mask-2-0"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-36" />
+    </mask>
+    <mask
+       id="mask2-10"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-6" />
+    </mask>
+    <mask
+       id="mask-2-5"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-6" />
+    </mask>
+    <mask
+       id="mask2-9"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-3" />
+    </mask>
+    <mask
+       id="mask-2-78"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-68" />
+    </mask>
+    <mask
+       id="mask2-8"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-4" />
+    </mask>
+    <mask
+       id="mask-2-04"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-87" />
+    </mask>
+    <mask
+       id="mask2-17"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-27" />
+    </mask>
+  </defs>
+  <g
+     id="Grid"
+     style="opacity:0.5">
+    <path
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       d="M 30.694466,0 0,17.721458"
+       id="G30T" />
+    <path
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       d="M 48,8.1955337 0,35.991355"
+       id="G30M" />
+    <path
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       d="M 10.844805,48 48,26.548438"
+       id="G30B"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       d="M 19.116633,0 48,16.67582"
+       id="GM30T" />
+    <path
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       d="M 0,7.3381989 48,35.051012"
+       id="GM30M" />
+    <path
+       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       d="M 38.783916,48 0,25.608096"
+       id="GM30B" />
+    <path
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       d="M 8.9921665,0 V 48"
+       id="path36" />
+    <path
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       d="M 24.565225,0 V 48"
+       id="GHM" />
+    <path
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
+       d="M 40.727744,48 V 0"
+       id="GHL" />
+  </g>
+  <g
+     id="Qube"
+     style="display:inline">
+    <path
+       style="fill:#ffffff;stroke:none;stroke-width:0.49827;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke"
+       d="M 8.992166,12.529829 V 30.799725 L 24.81436,39.934673 40.636555,30.799725 V 12.529829 L 24.81436,3.3948807 Z"
+       id="Qube-Fill" />
+    <path
+       style="display:inline;opacity:0.5;fill:#d45500;stroke:#d45500;stroke-width:2.491;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke"
+       d="M 16.903264,26.232251 32.725457,17.097303"
+       id="L"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:0.5;fill:#d45500;stroke:#008000;stroke-width:2.491;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke"
+       d="M 32.725457,26.232251 16.903264,17.097303"
+       id="W"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:0.5;fill:#008080;stroke:#0000ff;stroke-width:2.491;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke"
+       d="M 24.81436,30.799725 V 12.529829"
+       id="H"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:0.7;fill:none;stroke:#4d4d4d;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 2;stroke-dashoffset:0;paint-order:markers fill stroke"
+       d="M 24.81436,3.3948807 V 21.664777"
+       id="Back" />
+    <path
+       style="display:inline;opacity:0.7;fill:none;stroke:#4d4d4d;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2, 2;stroke-dashoffset:0;paint-order:markers fill stroke"
+       d="M 40.636555,30.799725 24.81436,21.664777 8.9921661,30.799725"
+       id="Botton" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       d="m 8.992166,12.529829 15.822194,9.134948 v 0 18.269896 0 L 8.992166,30.799725 h 1e-7 z"
+       id="Left" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       d="M 40.636555,12.529829 24.81436,21.664777 v 0 18.269896 0 l 15.822195,-9.134948 v 0 z"
+       id="Right" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       d="M 40.636555,12.529829 24.81436,3.3948798 v 0 L 8.9921659,12.529828 v 0 L 24.81436,21.664777 v 0 z"
+       id="Top" />
+  </g>
+  <g
+     id="Dimentions"
+     style="display:inline">
+    <g
+       id="DimLeft">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 0.44657317,12.529829 V 30.799725"
+         id="DimL" />
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 4.8807111,12.529829 H 0.44657317"
+         id="DimLT"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 4.9474411,30.799725 H 0.44657317"
+         id="DimLB"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="DimBotton">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 40.636555,38.865052 24.81436,48 8.992166,38.865052"
+         id="DimB" />
+      <path
+         style="display:inline;font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 24.81436,43.209314 V 48"
+         id="DimBM"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="display:inline;font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="m 40.636555,34.823101 v 4.041951"
+         id="DimBR"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="m 8.992166,34.8231 v 4.041952"
+         id="DimBL"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="DimRight">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 47.64729,3.362702 V 21.696956"
+         id="DimR"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 33.526279,21.696956 H 47.64729"
+         id="DimRB"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="m 33.526279,3.3627019 14.121011,1e-7"
+         id="DimRT"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="DimTop">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 8.992166,0.33217981 H 40.636555"
+         id="DimT" />
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 8.992166,6.7526502 V 0.33217981"
+         id="DimTL"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 40.636555,7.3487084 V 0.33217981"
+         id="DimTR"
+         sodipodi:nodetypes="cc" />
+    </g>
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:title>Isometric Qube</dc:title>
+        <dc:date>06 April 2024</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC-BY-SA</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:description>Isometric drawing of a qube with dimentions.</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
