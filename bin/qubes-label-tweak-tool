@@ -94,7 +94,7 @@ declare CONVERTCMD=""
 # However, no one is going to have it installed in dom0 or GUIVM
 # So we either use ImageMagick (preferred) or GraphicMagick
 if [ -f /usr/bin/convert ]; then
-	CONVERTCMD="convert +antialais -background transparent"
+	CONVERTCMD="convert +antialias -background transparent"
 elif [ -f /usr/bin/convert ]; then
 	CONVERTCMD="gm convert -background transparent"
 fi
