@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="qube-optical-illusion.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Optical Illusion Cube</title>
+  <sodipodi:namedview
+     id="namedview"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="6.5407376"
+     inkscape:cy="20.771261"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2">
+    <sodipodi:guide
+       position="24,0"
+       orientation="0.5,0.8660254"
+       id="guide1"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,16"
+       orientation="0.5,0.8660254"
+       id="guide2"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,32"
+       orientation="0.5,0.8660254"
+       id="guide3"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,48"
+       orientation="0.5,0.8660254"
+       id="guide4"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,0"
+       orientation="-0.5,0.8660254"
+       id="guide5"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,16"
+       orientation="-0.5,0.8660254"
+       id="guide6"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,32"
+       orientation="-0.5,0.8660254"
+       id="guide7"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,48"
+       orientation="-0.5,0.8660254"
+       id="guide8"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,40"
+       orientation="0.5,0.8660254"
+       id="guide9"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="0.5,0.8660254"
+       id="guide10"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,8"
+       orientation="0.5,0.8660254"
+       id="guide11"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,40"
+       orientation="-0.5,0.8660254"
+       id="guide12"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="-0.5,0.8660254"
+       id="guide13"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,8"
+       orientation="-0.5,0.8660254"
+       id="guide14"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,32"
+       orientation="1,0"
+       id="guide15"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="17.071797,36"
+       orientation="1,0"
+       id="guide16"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10.143594,24"
+       orientation="1,0"
+       id="guide17"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="3.2153904,12"
+       orientation="1,0"
+       id="guide18"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="30.928203,20"
+       orientation="1,0"
+       id="guide19"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="37.856406,16"
+       orientation="1,0"
+       id="guide20"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="44.78461,12"
+       orientation="1,0"
+       id="guide21"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="43.052,25"
+       orientation="0.5,0.8660254"
+       id="guide22"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="44.784,32"
+       orientation="0.5,0.8660254"
+       id="guide23"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="44.784,16"
+       orientation="0.5,0.8660254"
+       id="guide24"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="41.32,10"
+       orientation="0.5,0.8660254"
+       id="guide25"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="34.392,6"
+       orientation="0.5,0.8660254"
+       id="guide26"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="27.464,2"
+       orientation="0.5,0.8660254"
+       id="guide27"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="3.2153904,31.999707"
+       orientation="-0.5,0.8660254"
+       id="guide28"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="4.9480004,25"
+       orientation="-0.5,0.8660254"
+       id="guide29"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="3.2153904,15.999941"
+       orientation="-0.5,0.8660254"
+       id="guide30"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="6.6800004,10"
+       orientation="-0.5,0.8660254"
+       id="guide31"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="13.608,6"
+       orientation="-0.5,0.8660254"
+       id="guide32"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="20.536,2"
+       orientation="-0.5,0.8660254"
+       id="guide33"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <polygon
+       id="path-1"
+       points="0.000248593875 0.6295 28.6120703 0.6295 28.6120703 32.4825474 0.000248593875 32.4825474" />
+    <polygon
+       id="path-3"
+       points="0.201451406 0.147076191 28.0225 0.147076191 28.0225 32 0.201451406 32" />
+    <mask
+       id="mask-2"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1" />
+    </mask>
+    <mask
+       id="mask2"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2" />
+    </mask>
+    <mask
+       id="mask-2-2"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-9" />
+    </mask>
+    <mask
+       id="mask2-1"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-2" />
+    </mask>
+    <mask
+       id="mask-2-1"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-8" />
+    </mask>
+    <mask
+       id="mask2-7"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-9" />
+    </mask>
+    <mask
+       id="mask-2-7"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-3" />
+    </mask>
+    <mask
+       id="mask2-6"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-1" />
+    </mask>
+    <mask
+       id="mask-2-0"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-36" />
+    </mask>
+    <mask
+       id="mask2-10"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-6" />
+    </mask>
+    <mask
+       id="mask-2-5"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-6" />
+    </mask>
+    <mask
+       id="mask2-9"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-3" />
+    </mask>
+    <mask
+       id="mask-2-78"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-68" />
+    </mask>
+    <mask
+       id="mask2-8"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-4" />
+    </mask>
+    <mask
+       id="mask-2-04"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-87" />
+    </mask>
+    <mask
+       id="mask2-17"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use2-27" />
+    </mask>
+    <mask
+       id="mask-2-6"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-7" />
+    </mask>
+    <mask
+       id="mask-4"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-3"
+         id="use2-5" />
+    </mask>
+    <mask
+       id="mask-6"
+       fill="#ffffff">
+      <polygon
+         id="use3"
+         points="20.632861,33.9504 0,33.9504 0,0.0254 20.632861,0.0254 " />
+    </mask>
+    <mask
+       id="mask-2-67"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-5" />
+    </mask>
+    <mask
+       id="mask-4-3"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-3"
+         id="use2-56" />
+    </mask>
+    <mask
+       id="mask-6-2"
+       fill="#ffffff">
+      <polygon
+         id="use3-9"
+         points="20.632861,33.9504 0,33.9504 0,0.0254 20.632861,0.0254 " />
+    </mask>
+    <mask
+       id="mask-2-675"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-1"
+         id="use1-35" />
+    </mask>
+    <mask
+       id="mask-4-6"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-3"
+         id="use2-29" />
+    </mask>
+    <mask
+       id="mask-6-1"
+       fill="#ffffff">
+      <polygon
+         id="use3-2"
+         points="20.632861,33.9504 0,33.9504 0,0.0254 20.632861,0.0254 " />
+    </mask>
+  </defs>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC-BY-SA</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date>2024-04-10</dc:date>
+        <dc:description>Optical illusion cube icon designed for Qubes OS</dc:description>
+        <dc:title>Optical Illusion Cube</dc:title>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Cube</rdf:li>
+            <rdf:li>Qube</rdf:li>
+            <rdf:li>Optical Illusion Cube</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="display:inline;fill:#ffffff;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="M 3.21539,12 V 36 L 24,48 44.78461,36 V 12 L 24,-1.6905996e-7 Z"
+     id="Back" />
+  <path
+     style="fill:#b4bbc1;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="m 24,24 -17.3205588,10.000029 13.8564068,8 2.03e-4,-3.999941 L 13.607949,34.000147 24,27.999942 l 3.463797,2.000234 6.928254,3.999971 -6.928102,3.999941 2.03e-4,3.999941 13.856407,-8 z"
+     id="Bottom"
+     sodipodi:nodetypes="cccccccccccc" />
+  <path
+     style="fill:#b4bbc1;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="m 41.320762,17.999501 -3.05e-4,16.00047 -13.856406,8.000411 3.05e-4,-12.000118 L 24.000305,27.999882 24,48 44.784305,35.999766 44.78461,12 27.464356,22.000264 l 3.464152,1.999618 z"
+     id="Right"
+     sodipodi:nodetypes="ccccccccccc" />
+  <path
+     style="fill:#34373a;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="m 6.679238,18.000147 2.03e-4,16.000176 13.856508,8.000059 -2.03e-4,-11.999824 3.464051,-2.000382 L 24,48 3.215593,36.000118 3.21539,12.000646 l 17.320356,9.999912 -3.464152,1.999618 z"
+     id="Left"
+     sodipodi:nodetypes="ccccccccccc" />
+  <path
+     style="fill:#b4bbc1;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="m 24,24 -17.3205588,10.000029 8e-7,-15.999735 3.463847,1.999824 3.05e-4,7.999941 10.392355,-6.00003 -3.55e-4,-3.999853 5.33e-4,-7.999692 -6.928151,4.000029 -3.464382,-2.000161 13.856355,-8.0000295 z"
+     id="Top-Left"
+     sodipodi:nodetypes="cccccccccccc" />
+  <path
+     style="fill:#34373a;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="m 23.999873,23.999926 17.320686,10.000103 2.03e-4,-15.999882 -3.464356,2.000147 0,8.000058 -10.392482,-6.000397 3.55e-4,-3.999853 1.02e-4,-7.999941 6.927924,4.314463 3.464101,-2.314272 -13.856457,-8.0000295 z"
+     id="Top-Right"
+     sodipodi:nodetypes="cccccccccccc" />
+  <path
+     style="fill:#b4bbc1;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="M 10.143034,12.00003 24.000051,3.999678 37.856762,11.999854 27.464153,18.000029 27.463797,22.000176 44.784609,12.000001 24,0 3.2153904,12 20.535949,22.000029 20.535594,18.000176 Z"
+     id="Top"
+     sodipodi:nodetypes="ccccccccccc" />
+</svg>

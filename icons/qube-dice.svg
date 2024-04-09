@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="qube-dice.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Dice</title>
+  <sodipodi:namedview
+     id="namedview"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="8.6002186"
+     inkscape:cx="13.429891"
+     inkscape:cy="31.801517"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Dice">
+    <sodipodi:guide
+       position="24,0"
+       orientation="0.5,0.8660254"
+       id="guide1"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,16"
+       orientation="0.5,0.8660254"
+       id="guide2"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,32"
+       orientation="0.5,0.8660254"
+       id="guide3"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,48"
+       orientation="0.5,0.8660254"
+       id="guide4"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,0"
+       orientation="-0.5,0.8660254"
+       id="guide5"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,16"
+       orientation="-0.5,0.8660254"
+       id="guide6"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,32"
+       orientation="-0.5,0.8660254"
+       id="guide7"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,48"
+       orientation="-0.5,0.8660254"
+       id="guide8"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,40"
+       orientation="0.5,0.8660254"
+       id="guide9"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="0.5,0.8660254"
+       id="guide10"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,8"
+       orientation="0.5,0.8660254"
+       id="guide11"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,40"
+       orientation="-0.5,0.8660254"
+       id="guide12"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="-0.5,0.8660254"
+       id="guide13"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,8"
+       orientation="-0.5,0.8660254"
+       id="guide14"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,32"
+       orientation="1,0"
+       id="guide15"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="17.071797,36"
+       orientation="1,0"
+       id="guide16"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10.143594,24"
+       orientation="1,0"
+       id="guide17"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="3.2153904,12"
+       orientation="1,0"
+       id="guide18"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="30.928203,20"
+       orientation="1,0"
+       id="guide19"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="37.856406,16"
+       orientation="1,0"
+       id="guide20"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="44.78461,12"
+       orientation="1,0"
+       id="guide21"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC-BY-SA</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:title>Die/Dice</dc:title>
+        <dc:date>2024-04-10</dc:date>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Die</rdf:li>
+            <rdf:li>Dice</rdf:li>
+            <rdf:li>Qube</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Die (Dice) qube icon for Qubes OS labels. Based on Steaphan Greene's Dice Icon</dc:description>
+        <dc:source>https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg</dc:source>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>Steaphan Greene
+Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="matrix(0,0.11243246,-0.11243246,0,79.865888,-17.064439)"
+     id="Dice">
+    <path
+       id="Corners"
+       style="display:inline;fill:#404040;fill-opacity:1;fill-rule:evenodd;stroke:#404040;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 161.60731 500.08034 C 161.60735 508.25235 163.40375 516.41179 166.97512 522.61123 L 242.50658 653.74899 L 242.50658 653.99219 C 252.02085 677.77788 281.65085 681.14495 290.99054 679.26778 L 446.30949 679.12881 C 460.61915 679.11516 478.19433 668.96576 485.36071 656.58055 L 564.74865 519.36275 C 564.81026 519.25626 564.82792 519.15621 564.88762 519.05006 L 564.99185 518.99795 C 574.83022 506.69999 562.93265 475.18373 557.78266 469.4022 L 481.1568 336.99632 C 473.99012 324.6106 456.43206 314.46166 442.12294 314.44806 L 283.59027 314.29172 C 283.40665 314.29154 283.24994 314.32331 283.06912 314.32646 L 282.49586 313.9964 C 269.99587 313.9964 252.50807 328.99556 245.00808 341.49555 L 245.00808 342.08618 L 166.97512 477.53208 C 163.40361 483.73177 161.60728 491.90833 161.60731 500.08034 z " />
+    <g
+       transform="matrix(-0.3828283,3.653872e-4,0.1917306,-0.3313563,472.998,680.25529)"
+       id="5-Left"
+       style="display:inline;overflow:visible">
+      <path
+         d="M 71.459473,553.5 C 34.080566,553.5 3.5,522.91895 3.5,485.54004 V 71.459473 C 3.5,34.082031 34.080566,3.5 71.459473,3.5 H 485.54004 C 522.91797,3.5 553.5,34.082031 553.5,71.459473 V 485.54004 C 553.5,522.91895 522.91797,553.5 485.54004,553.5 Z"
+         id="Left-face"
+         style="display:inline;fill:#d5dde4;fill-opacity:1;stroke:#000000;stroke-width:12.4896;stroke-dasharray:none" />
+      <circle
+         cx="117.02637"
+         cy="439.97461"
+         r="57.115234"
+         id="L5"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="439.97461"
+         cy="439.97461"
+         r="57.115234"
+         id="L4"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="439.97314"
+         cy="117.02588"
+         r="57.114746"
+         id="L3"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="278.5"
+         cy="278.5"
+         r="57.115234"
+         id="L2"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="117.02588"
+         cy="117.02563"
+         r="57.115479"
+         id="L1"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+    </g>
+    <g
+       transform="matrix(0.1917306,0.3313563,-0.3828283,-3.653872e-4,468.80258,313.31549)"
+       id="4-Right"
+       style="display:inline;overflow:visible">
+      <path
+         d="M 71.459473,553.5 C 34.080566,553.5 3.5,522.91895 3.5,485.54004 V 71.459473 C 3.5,34.082031 34.080566,3.5 71.459473,3.5 H 485.54004 C 522.91797,3.5 553.5,34.082031 553.5,71.459473 V 485.54004 C 553.5,522.91895 522.91797,553.5 485.54004,553.5 Z"
+         id="Right-face"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:12.4896;stroke-dasharray:none" />
+      <circle
+         cx="117.02637"
+         cy="439.97461"
+         r="57.115234"
+         id="R4"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="439.97461"
+         cy="439.97461"
+         r="57.115234"
+         id="R3"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="439.97314"
+         cy="117.02588"
+         r="57.114746"
+         id="R2"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="117.02588"
+         cy="117.02563"
+         r="57.115479"
+         id="R1"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+    </g>
+    <g
+       transform="matrix(0.19109766,-0.33172173,0.19109766,0.33172173,152.64427,500.07482)"
+       id="1-Top"
+       style="display:inline;overflow:visible">
+      <path
+         d="M 71.459473,553.5 C 34.080566,553.5 3.5,522.91895 3.5,485.54004 V 71.459473 C 3.5,34.082031 34.080566,3.5 71.459473,3.5 H 485.54004 C 522.91797,3.5 553.5,34.082031 553.5,71.459473 V 485.54004 C 553.5,522.91895 522.91797,553.5 485.54004,553.5 Z"
+         id="Top-face"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:12.4896;stroke-dasharray:none" />
+      <circle
+         cx="278.5"
+         cy="278.5"
+         r="57.115234"
+         id="One"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

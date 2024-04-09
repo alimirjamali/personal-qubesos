@@ -9,16 +9,15 @@
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
-     id="title40">Isometric Qube</title>
+     id="title">Isometric qube</title>
   <sodipodi:namedview
-     id="namedview2"
+     id="namedview"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -28,8 +27,8 @@
      inkscape:deskcolor="#d1d1d1"
      showguides="false"
      inkscape:zoom="8"
-     inkscape:cx="47.9375"
-     inkscape:cy="23.6875"
+     inkscape:cx="12.0625"
+     inkscape:cy="28.3125"
      inkscape:window-width="1440"
      inkscape:window-height="843"
      inkscape:window-x="0"
@@ -118,168 +117,69 @@
      id="defs1">
     <marker
        style="overflow:visible"
-       id="Triangle"
+       id="marker1"
        refX="0"
        refY="0"
        orient="auto-start-reverse"
-       inkscape:stockid="Triangle arrow"
-       markerWidth="1"
-       markerHeight="1"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="0.5"
+       markerHeight="0.5"
        viewBox="0 0 1 1"
        inkscape:isstock="true"
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path135" />
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path1" />
     </marker>
-    <polygon
-       id="path-1"
-       points="0.000248593875 0.6295 28.6120703 0.6295 28.6120703 32.4825474 0.000248593875 32.4825474" />
-    <polygon
-       id="path-3"
-       points="0.201451406 0.147076191 28.0225 0.147076191 28.0225 32 0.201451406 32" />
-    <mask
-       id="mask-2"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use1" />
-    </mask>
-    <mask
-       id="mask2"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use2" />
-    </mask>
-    <mask
-       id="mask-2-2"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use1-9" />
-    </mask>
-    <mask
-       id="mask2-1"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use2-2" />
-    </mask>
-    <mask
-       id="mask-2-1"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use1-8" />
-    </mask>
-    <mask
-       id="mask2-7"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use2-9" />
-    </mask>
-    <mask
-       id="mask-2-7"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use1-3" />
-    </mask>
-    <mask
-       id="mask2-6"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use2-1" />
-    </mask>
-    <mask
-       id="mask-2-0"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use1-36" />
-    </mask>
-    <mask
-       id="mask2-10"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use2-6" />
-    </mask>
-    <mask
-       id="mask-2-5"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use1-6" />
-    </mask>
-    <mask
-       id="mask2-9"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use2-3" />
-    </mask>
-    <mask
-       id="mask-2-78"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use1-68" />
-    </mask>
-    <mask
-       id="mask2-8"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use2-4" />
-    </mask>
-    <mask
-       id="mask-2-04"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use1-87" />
-    </mask>
-    <mask
-       id="mask2-17"
-       fill="#ffffff">
-      <use
-         xlink:href="#path-1"
-         id="use2-27" />
-    </mask>
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="0.5"
+       markerHeight="0.5"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8" />
+    </marker>
   </defs>
   <g
      id="Grid"
-     style="opacity:0.5">
+     style="display:inline;opacity:1">
     <path
-       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
        d="M 30.694466,0 0,17.721458"
        id="G30T" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
        d="M 48,8.1955337 0,35.991355"
        id="G30M" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
        d="M 10.844805,48 48,26.548438"
        id="G30B"
        sodipodi:nodetypes="cc" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
        d="M 19.116633,0 48,16.67582"
        id="GM30T" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
        d="M 0,7.3381989 48,35.051012"
        id="GM30M" />
     <path
-       style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke;opacity:0.6"
+       style="opacity:0.6;vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;-inkscape-stroke:hairline;paint-order:markers fill stroke"
        d="M 38.783916,48 0,25.608096"
        id="GM30B" />
     <path
@@ -340,77 +240,81 @@
   </g>
   <g
      id="Dimentions"
-     style="display:inline">
+     style="display:inline;stroke-width:1.1;stroke-dasharray:none;stroke:#ff0000">
     <g
-       id="DimLeft">
+       id="DimLeft"
+       style="stroke-width:1.1;stroke-dasharray:none;stroke:#ff0000">
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 0.44657317,12.529829 V 30.799725"
          id="DimL" />
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#RoundedArrow);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 4.8807111,12.529829 H 0.44657317"
          id="DimLT"
          sodipodi:nodetypes="cc" />
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#RoundedArrow);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 4.9474411,30.799725 H 0.44657317"
          id="DimLB"
          sodipodi:nodetypes="cc" />
     </g>
     <g
-       id="DimBotton">
+       id="DimBotton"
+       style="stroke-width:1.1;stroke-dasharray:none;stroke:#ff0000">
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 40.636555,38.865052 24.81436,48 8.992166,38.865052"
          id="DimB" />
       <path
-         style="display:inline;font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
-         d="M 24.81436,43.209314 V 48"
+         style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-start:url(#marker1);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         d="M 24.81436,44.091732 V 48"
          id="DimBM"
          sodipodi:nodetypes="cc" />
       <path
-         style="display:inline;font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="display:inline;font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#RoundedArrow);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="m 40.636555,34.823101 v 4.041951"
          id="DimBR"
          sodipodi:nodetypes="cc" />
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#RoundedArrow);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="m 8.992166,34.8231 v 4.041952"
          id="DimBL"
          sodipodi:nodetypes="cc" />
     </g>
     <g
-       id="DimRight">
+       id="DimRight"
+       style="stroke-width:1.1;stroke-dasharray:none;stroke:#ff0000">
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 47.64729,3.362702 V 21.696956"
          id="DimR"
          sodipodi:nodetypes="cc" />
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#RoundedArrow);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 33.526279,21.696956 H 47.64729"
          id="DimRB"
          sodipodi:nodetypes="cc" />
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#RoundedArrow);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="m 33.526279,3.3627019 14.121011,1e-7"
          id="DimRT"
          sodipodi:nodetypes="cc" />
     </g>
     <g
-       id="DimTop">
+       id="DimTop"
+       style="stroke-width:1.1;stroke-dasharray:none;stroke:#ff0000">
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 8.992166,0.33217981 H 40.636555"
          id="DimT" />
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#RoundedArrow);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 8.992166,6.7526502 V 0.33217981"
          id="DimTL"
          sodipodi:nodetypes="cc" />
       <path
-         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Triangle);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#RoundedArrow);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 40.636555,7.3487084 V 0.33217981"
          id="DimTR"
          sodipodi:nodetypes="cc" />
@@ -423,8 +327,8 @@
          rdf:about="">
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
-        <dc:title>Isometric Qube</dc:title>
-        <dc:date>06 April 2024</dc:date>
+        <dc:title>Isometric qube</dc:title>
+        <dc:date>10 April 2024</dc:date>
         <dc:creator>
           <cc:Agent>
             <dc:title>Ali Mirjamali</dc:title>
@@ -436,6 +340,13 @@
           </cc:Agent>
         </dc:rights>
         <dc:description>Isometric drawing of a qube with dimentions.</dc:description>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Qube</rdf:li>
+            <rdf:li>Cube</rdf:li>
+            <rdf:li>Isometric Cube</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
