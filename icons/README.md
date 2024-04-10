@@ -33,6 +33,7 @@ VM icons with those colors.
 | ![](qube-isometric.svg) | Isometric | CC-BY-SA | Original design by myself. |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original design by myself. |
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz designs](https://github.com/QubesOS/qubes-artwork). |
+| ![](qube-sticky-notes.svg) | Sticky Notes | CC-0 | Based on [crisg design](https://openclipart.org/detail/183333/sticky-cube-notes). |
 | ![](qube-tesseract.svg) | Tesseract | CC-BY-SA | Original design by myself. |
 | ![](qube-webcolors.svg) | Web Colors | CC-BY-SA | Based on [Denis N Gour's design](https://commons.wikimedia.org/wiki/File:Web_Color_Cube.svg). |
 
