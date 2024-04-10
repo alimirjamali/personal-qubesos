@@ -29,6 +29,7 @@ VM icons with those colors.
 | ![](qube-dice.svg) | Dice(Die) | CC-BY-SA | Based on [Steaphan Greene's design](https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg). |
 | ![](qube-engraved.svg) | Engraved | CC0 | Based on [Jarda design](https://openclipart.org/detail/177642/engraved-cube-2). |
 | ![](qube-impossible-cube1.svg) | Impossible 1 | CC-BY-SA | Original design by myself. |
+| ![](qube-impossible-cubes.svg) | Impossible 3 | CC0 | Based on [Jarda design](https://openclipart.org/detail/176610/impossible-cubes). |
 | ![](qube-impossible-hexagon.svg) | Impossible<br />Hexagon | CC-BY-SA | Original design by myself. |
 | ![](qube-infinity.svg) | Infinity | CC-BY-SA | Original design by myself. |
 | ![](qube-isometric.svg) | Isometric | CC-BY-SA | Original design by myself. |
