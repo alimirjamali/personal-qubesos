@@ -71,7 +71,7 @@ linked if available.
 | <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nix-snowflake-colours.svg" width="48" height="48"> | ![`#7EBAE4`](https://placehold.co/48x48/7EBAE4/7EBAE4.png) ![`#5277C3`](https://placehold.co/48x48/5277C3/5277C3.png) | `#7EBAE4`<br />`#5277C3` |[Nixos](https://github.com/NixOS/nixos-artwork/blob/master/logo/README.md) Light Blue and Dark Blue |
 | <img src="https://static.opensuse.org/favicon.svg" width="48" height="48"> | ![`#73ba25`](https://placehold.co/48x48/73ba25/73ba25.png) | `#73ba25` | [openSUSE](https://en.opensuse.org/Help:Colors) |
 | <img src="https://raw.githubusercontent.com/openwrt/branding/master/logo/openwrt_logo_blue_and_dark_blue.svg" width="48" height="48"> | ![`#00B5E2`](https://placehold.co/48x48/00B5E2/00B5E2.png) ![`#002B49`](https://placehold.co/48x48/002B49/002B49.png) | `#00B5E2`<br />`#002B49` | [OpenWrt](https://github.com/openwrt/branding) |
-| <img src="https://styleguide.torproject.org/static/images/tor-browser/stable/stable.svg" width="48" height="48"> | ![`#7E4798`](https://placehold.co/48x48/7E4798/7E4798.png) | `#7E4798` | [Tor](https://styleguide.torproject.org/brand-assets/) |
+| <img src="https://styleguide.torproject.org/static/images/tor-browser/stable/stable.svg" width="48" height="48"> | ![`#7D4698`](https://placehold.co/48x48/7D4698/7D4698.png) | `#7D4698` | [Tor](https://styleguide.torproject.org/brand-assets/) |
 | <img src="https://www.whonix.org/favicon.svg?hsversion=2" width="48" height="48"> | ![`#7dcff3`](https://placehold.co/48x48/7dcff3/7dcff3.png) | `#7dcff3` | [Whonix](https://www.whonix.org/wiki/Dev/Logo) |
 
 ### Icons to consider
