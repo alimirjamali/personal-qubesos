@@ -33,7 +33,7 @@ VM icons with those colors.
 | ![](qube-impossible-hexagon.svg) | Impossible<br />Hexagon | CC-BY-SA | Original design by myself. |
 | ![](qube-infinity.svg) | Infinity | CC-BY-SA | Original design by myself. |
 | ![](qube-isometric.svg) | Isometric | CC-BY-SA | Original design by myself. |
-| ![](qube-isometric-shapes.svg) | Isometric Shapes | CC0 | Based on [Gramzon design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
+| ![](qube-isometric-shapes.svg) | Isometric<br />Shapes | CC0 | Based on [Gramzon design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original design by myself. |
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz designs](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-sticky-notes.svg) | Sticky Notes | CC0 | Based on [crisg design](https://openclipart.org/detail/183333/sticky-cube-notes). |
@@ -75,9 +75,13 @@ linked if available.
 | <img src="https://www.whonix.org/favicon.svg?hsversion=2" width="48" height="48"> | ![`#7dcff3`](https://placehold.co/48x48/7dcff3/7dcff3.png) | `#7dcff3` | [Whonix](https://www.whonix.org/wiki/Dev/Logo) |
 
 ### Icons to consider
-PCB qube, Melting ice qube, Roughing end milling qube, Cubicle, Acoustic qube,
-3D puzzle cube, Cubane molecule, Cube Speaker, Different species of Wooden qubes, 
-Cardboard qube, Prism qube.
+PCB qube, [Melting ice qube](https://openclipart.org/detail/182951/ice-cube), 
+Roughing end milling qube, Cubicle, Acoustic qube, 3D puzzle cube,
+Cubane molecule, Cube Speaker, Different species of Wooden qubes, 
+[Cardboard qube](https://openclipart.org/detail/231068/3d-isometric-cardboard-box),
+[Earth qube](https://openclipart.org/detail/259468/cube-earth-silhouette),
+[Blank die](https://openclipart.org/detail/304802/blank-dice),
+Prism qube.
 
 ### Qubes which might be possible due to expired patents or trademarks
 Bauhaus qubes, Peter Keler D1, Lego qube
