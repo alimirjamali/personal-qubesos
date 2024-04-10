@@ -33,6 +33,7 @@ VM icons with those colors.
 | ![](qube-impossible-hexagon.svg) | Impossible<br />Hexagon | CC-BY-SA | Original design by myself. |
 | ![](qube-infinity.svg) | Infinity | CC-BY-SA | Original design by myself. |
 | ![](qube-isometric.svg) | Isometric | CC-BY-SA | Original design by myself. |
+| ![](qube-isometric-shapes.svg) | Isometric Shapes | CC0 | Based on [Gramzon design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original design by myself. |
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz designs](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-sticky-notes.svg) | Sticky Notes | CC0 | Based on [crisg design](https://openclipart.org/detail/183333/sticky-cube-notes). |

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="qube-isometric-shapes.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">Isometric Shapes Qube</title>
+  <sodipodi:namedview
+     id="namedview"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="8.0000001"
+     inkscape:cx="19.875"
+     inkscape:cy="24.6875"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:date>2024-04-11</dc:date>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Cube</rdf:li>
+            <rdf:li>Qube</rdf:li>
+            <rdf:li>Isometric Shapes</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Impossible cubes icon designed for Qubes OS. Based on Gramzon's work on OpenClipArt</dc:description>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC0</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:title>Isometric Shapes Qube</dc:title>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="Isometric-Shapes"
+     transform="matrix(0.09714633,0,0,0.09714633,5.1244681,-8.2650001e-7)">
+    <g
+       id="g3">
+	<polygon
+   class="st0"
+   points="80.2,158.4 40.2,135.2 0,158.4 0.1,204.6 40.1,227.8 60.2,216.2 60.1,193.1 80.2,181.5 "
+   id="polygon1"
+   style="fill:#c3006b" />
+
+	<polygon
+   class="st4"
+   points="60.2,216.2 40.1,227.8 40,181.6 80.2,158.4 80.2,181.5 60.1,193.1 "
+   id="polygon2"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="0,158.4 40.2,135.2 80.2,158.4 40,181.6 "
+   id="polygon3"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g7">
+	<polygon
+   class="st0"
+   points="40.4,261.2 40.2,261.3 20.2,249.7 0.1,261.3 0.3,307.5 40.2,330.7 80.4,307.5 80.4,284.4 "
+   id="polygon4"
+   style="fill:#c3006b" />
+
+	<polygon
+   class="st4"
+   points="80.4,307.5 40.2,330.7 40.1,284.5 60.2,272.9 60.3,296 80.4,284.4 "
+   id="polygon5"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="60.3,296 80.4,284.4 60.2,272.9 "
+   id="polygon6"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+	<polygon
+   class="st1"
+   points="0.1,261.3 20.2,249.7 60.2,272.9 40.1,284.5 "
+   id="polygon7"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g11">
+	<polygon
+   class="st0"
+   points="129.7,186.5 109.6,198.1 109.6,221.2 89.5,232.8 89.6,255.9 129.5,279.2 169.8,255.9 169.6,209.7 "
+   id="polygon8"
+   style="fill:#c3006b" />
+
+	<polygon
+   class="st4"
+   points="129.5,256.1 149.6,244.4 149.5,221.3 169.6,209.7 169.8,255.9 129.5,279.2 "
+   id="polygon9"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="89.5,232.8 109.6,221.2 149.6,244.4 129.5,256.1 "
+   id="polygon10"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+	<polygon
+   class="st1"
+   points="109.6,198.1 129.7,186.5 169.6,209.7 149.5,221.3 "
+   id="polygon11"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g14">
+	<polygon
+   class="st0"
+   points="129.5,153 149.5,164.7 169.6,153 169.5,106.8 129.5,83.6 89.3,106.8 89.4,129.9 129.3,153.2 "
+   id="polygon12"
+   style="fill:#c3006b" />
+
+	<polygon
+   class="st4"
+   points="149.4,141.6 129.3,153.2 129.3,130.1 169.5,106.8 169.6,153 149.5,164.7 "
+   id="polygon13"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="89.3,106.8 129.5,83.6 169.5,106.8 129.3,130.1 "
+   id="polygon14"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g18">
+	<polygon
+   class="st2"
+   points="219.2,153.2 239.3,164.8 259.3,153.2 259.5,153.3 299.4,130 299.5,106.9 259.3,83.7 219.3,106.9 "
+   id="polygon15"
+   style="fill:#009fe3" />
+
+	<polygon
+   class="st4"
+   points="299.5,106.9 299.4,130 259.5,153.3 259.5,130.2 "
+   id="polygon16"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st4"
+   points="239.3,164.8 259.3,153.2 239.4,141.7 "
+   id="polygon17"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="259.3,83.7 299.5,106.9 259.5,130.2 219.3,106.9 "
+   id="polygon18"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g23">
+	<polygon
+   class="st2"
+   points="259.1,186.6 219.2,209.8 219.1,256.1 259.3,279.3 299.2,256.1 299.3,233 279.2,221.3 279.2,198.2 "
+   id="polygon19"
+   style="fill:#009fe3" />
+
+	<polygon
+   class="st4"
+   points="299.3,233 299.2,256.1 259.3,279.3 259.3,256.2 "
+   id="polygon20"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st4"
+   points="279.2,198.2 279.2,221.3 239.2,244.6 239.3,221.5 "
+   id="polygon21"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="279.2,221.3 299.3,233 259.3,256.2 239.2,244.6 "
+   id="polygon22"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+	<polygon
+   class="st1"
+   points="259.1,186.6 279.2,198.2 239.3,221.5 219.2,209.8 "
+   id="polygon23"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g27">
+	<polygon
+   class="st2"
+   points="368.4,249.7 348.4,261.3 348.2,261.2 308.2,284.4 308.2,307.5 348.4,330.7 388.3,307.5 388.5,261.3 "
+   id="polygon24"
+   style="fill:#009fe3" />
+
+	<polygon
+   class="st4"
+   points="388.5,261.3 388.3,307.5 348.4,330.7 348.5,284.5 "
+   id="polygon25"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="328.4,272.9 308.2,284.4 328.3,296 "
+   id="polygon26"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+	<polygon
+   class="st1"
+   points="368.4,249.7 388.5,261.3 348.5,284.5 328.4,272.9 "
+   id="polygon27"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g30">
+	<polygon
+   class="st2"
+   points="388.5,204.6 388.6,158.4 348.4,135.2 308.4,158.4 308.4,181.5 328.5,193.1 328.4,216.2 348.5,227.8 "
+   id="polygon28"
+   style="fill:#009fe3" />
+
+	<polygon
+   class="st4"
+   points="388.6,158.4 388.5,204.6 348.5,227.8 348.6,181.6 "
+   id="polygon29"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="348.4,135.2 388.6,158.4 348.6,181.6 308.4,158.4 "
+   id="polygon30"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g34">
+	<polygon
+   class="st3"
+   points="174.3,379.5 194.3,367.9 214.4,379.5 234.4,367.9 234.5,321.7 194.3,298.5 154.4,321.7 154.2,367.9 "
+   id="polygon31"
+   style="fill:#f39200" />
+
+	<polygon
+   class="st4"
+   points="234.4,367.9 214.4,379.5 214.5,333.3 234.5,321.7 "
+   id="polygon32"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st4"
+   points="194.3,367.9 174.3,379.5 174.5,333.3 194.4,321.7 "
+   id="polygon33"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="174.5,333.3 154.4,321.7 194.3,298.5 234.5,321.7 214.5,333.3 194.4,321.7 "
+   id="polygon34"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g38">
+	<polygon
+   class="st3"
+   points="65.3,373.3 65.2,419.5 105.4,442.7 125.4,431.1 125.5,384.9 125.3,384.8 125.4,361.6 105.3,350 "
+   id="polygon35"
+   style="fill:#f39200" />
+
+	<polygon
+   class="st4"
+   points="125.4,431.1 105.4,442.7 105.5,396.5 125.5,384.9 "
+   id="polygon36"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="105.5,396.5 65.3,373.3 105.3,350 125.4,361.6 105.4,373.3 125.5,384.9 "
+   id="polygon37"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+	<polygon
+   class="st4"
+   points="125.3,384.8 125.4,361.6 105.4,373.3 "
+   id="polygon38"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+</g>
+    <g
+       id="g41">
+	<polygon
+   class="st3"
+   points="234.6,424.7 214.5,413.1 194.5,424.7 174.4,413.1 154.4,424.7 154.3,470.9 194.5,494.1 234.5,470.9 "
+   id="polygon39"
+   style="fill:#f39200" />
+
+	<polygon
+   class="st4"
+   points="234.5,470.9 194.5,494.1 194.6,447.9 234.6,424.7 "
+   id="polygon40"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="174.4,413.1 194.5,424.7 214.5,413.1 234.6,424.7 194.6,447.9 154.4,424.7 "
+   id="polygon41"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g44">
+	<polygon
+   class="st3"
+   points="283.6,350 263.6,361.6 263.5,407.9 263.7,408 263.7,431.1 283.8,442.7 323.7,419.5 323.8,373.2 "
+   id="polygon42"
+   style="fill:#f39200" />
+
+	<polygon
+   class="st4"
+   points="323.7,419.5 283.8,442.7 283.9,396.5 323.8,373.2 "
+   id="polygon43"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="283.8,373.3 263.6,361.6 283.6,350 323.8,373.2 283.9,396.5 263.8,384.9 "
+   id="polygon44"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+    <g
+       id="g47">
+	<polygon
+   class="st3"
+   points="234,69.4 234.1,23.2 193.9,0 153.9,23.2 153.8,69.4 194,92.7 "
+   id="polygon45"
+   style="fill:#f39200" />
+
+	<polygon
+   class="st4"
+   points="234,69.4 194,92.7 194.2,46.4 234.1,23.2 "
+   id="polygon46"
+   style="mix-blend-mode:multiply;fill:#868686" />
+
+	<polygon
+   class="st1"
+   points="194.2,46.4 153.9,23.2 193.9,0 234.1,23.2 "
+   id="polygon47"
+   style="fill:#ffffff;fill-opacity:0.5" />
+
+</g>
+  </g>
+</svg>
