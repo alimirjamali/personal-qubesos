@@ -27,13 +27,14 @@ VM icons with those colors.
 | ![](qube-cfop-pll.svg) | CFOP PLL | CC-BY-SA | Original design by myself. Based on Rubik's Cube CFOP method - PLL stage |
 | ![](qube-cubist.svg) | Rubik's | CC-BY-SA | Original design by myself. Unsolved Rubik's Cube |
 | ![](qube-dice.svg) | Dice(Die) | CC-BY-SA | Based on [Steaphan Greene's design](https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg). |
+| ![](qube-engraved.svg) | Engraved | CC0 | Based on [Jarda design](https://openclipart.org/detail/177642/engraved-cube-2). |
 | ![](qube-impossible-cube1.svg) | Impossible 1 | CC-BY-SA | Original design by myself. |
 | ![](qube-impossible-hexagon.svg) | Impossible<br />Hexagon | CC-BY-SA | Original design by myself. |
 | ![](qube-infinity.svg) | Infinity | CC-BY-SA | Original design by myself. |
 | ![](qube-isometric.svg) | Isometric | CC-BY-SA | Original design by myself. |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original design by myself. |
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz designs](https://github.com/QubesOS/qubes-artwork). |
-| ![](qube-sticky-notes.svg) | Sticky Notes | CC-0 | Based on [crisg design](https://openclipart.org/detail/183333/sticky-cube-notes). |
+| ![](qube-sticky-notes.svg) | Sticky Notes | CC0 | Based on [crisg design](https://openclipart.org/detail/183333/sticky-cube-notes). |
 | ![](qube-tesseract.svg) | Tesseract | CC-BY-SA | Original design by myself. |
 | ![](qube-webcolors.svg) | Web Colors | CC-BY-SA | Based on [Denis N Gour's design](https://commons.wikimedia.org/wiki/File:Web_Color_Cube.svg). |
 
