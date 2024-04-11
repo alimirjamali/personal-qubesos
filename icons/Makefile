@@ -3,7 +3,7 @@
 
 QLTT := $${HOME}/bin/qubes-label-tweak-tool -y --ANSI
 ALLLABELS := Maroon Olive Navy Lime Cyan Magenta Apricot Mint Lavender \
-	     Alpine Archlinux Debian Fedora Gentoo Manjaroo LinuxMint NixOS \
+	     Alpine Archlinux Debian Fedora Gentoo Manjaro LinuxMint NixOS \
 	     openSUSE OpenWrt Tor Whonix \
 	     Cubist Qubes2 Qubes3 CAD CAM Dice StickyNotes \
 	     Axonometric Engraved Impossible1 Impossibles ImpossibleHex \
