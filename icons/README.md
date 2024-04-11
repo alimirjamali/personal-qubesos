@@ -19,6 +19,7 @@ VM icons with those colors.
 | Icon | Qube Name | License | Description |
 | :---: | :---: | :---: | :--- |
 | ![](qube-axonometric.svg) | Axonometric | CC-BY-SA | Based on [Nevit Dilmen's design](https://be.m.wikimedia.org/wiki/File:Axonometric-cube.svg). |
+| ![](qube-cam.svg) | CAM | CC-BY-SA | Cube based on Vector Perfect Qute Sushi. Drill bit from [Inductiveload design](https://en.m.wikipedia.org/wiki/File:Machined_Holes.svg) |
 | ![](qube-cfop-0.svg) | CFOP Zero | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Inspection stage |
 | ![](qube-cfop-cross.svg) | CFOP Cross | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Cross stage |
 | ![](qube-cfop-f2l.svg) | CFOP F2L | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - First two layers stage |
@@ -35,6 +36,7 @@ VM icons with those colors.
 | ![](qube-isometric.svg) | Isometric | CC-BY-SA | Original sketch by myself. |
 | ![](qube-isometric-shapes.svg) | Isometric<br />Shapes | CC0 | Based on [Gramzon design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original sketch by myself. |
+| ![](qube-square2.svg) | Qube&#x00B2; | CC-BY-SA | Based on [Qubes OS Artwork](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz designs](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-sticky-notes.svg) | Sticky Notes | CC0 | Based on [crisg design](https://openclipart.org/detail/183333/sticky-cube-notes). |
 | ![](qube-tesseract.svg) | Tesseract | CC-BY-SA | Original sketch by myself. |

@@ -314,7 +314,8 @@
             <rdf:li>Rubik's</rdf:li>
           </rdf:Bag>
         </dc:subject>
-        <dc:description>Rubik's Cube icon designed for Qubes OS</dc:description>
+        <dc:description>Rubik's Cube icon designed for Qubes-OS</dc:description>
+        <dc:source>https://github.com/alimirjamali/personal-qubesos</dc:source>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">

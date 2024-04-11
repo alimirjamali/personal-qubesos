@@ -26,149 +26,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="8.6002186"
-     inkscape:cx="13.429891"
-     inkscape:cy="31.801517"
+     inkscape:zoom="11.145833"
+     inkscape:cx="24"
+     inkscape:cy="24.08972"
      inkscape:window-width="1440"
      inkscape:window-height="843"
      inkscape:window-x="0"
      inkscape:window-y="33"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Dice">
-    <sodipodi:guide
-       position="24,0"
-       orientation="0.5,0.8660254"
-       id="guide1"
-       inkscape:locked="false"
-       inkscape:label=""
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,16"
-       orientation="0.5,0.8660254"
-       id="guide2"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,32"
-       orientation="0.5,0.8660254"
-       id="guide3"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,48"
-       orientation="0.5,0.8660254"
-       id="guide4"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,0"
-       orientation="-0.5,0.8660254"
-       id="guide5"
-       inkscape:locked="false"
-       inkscape:label=""
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,16"
-       orientation="-0.5,0.8660254"
-       id="guide6"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,32"
-       orientation="-0.5,0.8660254"
-       id="guide7"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,48"
-       orientation="-0.5,0.8660254"
-       id="guide8"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,40"
-       orientation="0.5,0.8660254"
-       id="guide9"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,24"
-       orientation="0.5,0.8660254"
-       id="guide10"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,8"
-       orientation="0.5,0.8660254"
-       id="guide11"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,40"
-       orientation="-0.5,0.8660254"
-       id="guide12"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,24"
-       orientation="-0.5,0.8660254"
-       id="guide13"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,8"
-       orientation="-0.5,0.8660254"
-       id="guide14"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,134,229)" />
-    <sodipodi:guide
-       position="24,32"
-       orientation="1,0"
-       id="guide15"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="17.071797,36"
-       orientation="1,0"
-       id="guide16"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="10.143594,24"
-       orientation="1,0"
-       id="guide17"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="3.2153904,12"
-       orientation="1,0"
-       id="guide18"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="30.928203,20"
-       orientation="1,0"
-       id="guide19"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="37.856406,16"
-       orientation="1,0"
-       id="guide20"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="44.78461,12"
-       orientation="1,0"
-       id="guide21"
-       inkscape:locked="false" />
-  </sodipodi:namedview>
+     inkscape:current-layer="Dice" />
   <defs
      id="defs1" />
   <metadata
@@ -197,8 +63,8 @@
             <rdf:li>Qube</rdf:li>
           </rdf:Bag>
         </dc:subject>
-        <dc:description>Die (Dice) qube icon for Qubes OS labels. Based on Steaphan Greene's Dice Icon</dc:description>
-        <dc:source>https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg</dc:source>
+        <dc:description>Die (Dice) qube icon for Qubes-OS labels. Based on Steaphan Greene's Dice Icon</dc:description>
+        <dc:source>https://github.com/alimirjamali/personal-qubesos</dc:source>
         <dc:contributor>
           <cc:Agent>
             <dc:title>Steaphan Greene
@@ -225,11 +91,12 @@ Ali Mirjamali</dc:title>
   </metadata>
   <g
      transform="matrix(0,0.11243246,-0.11243246,0,79.865888,-17.064439)"
-     id="Dice">
+     id="Dice"
+     style="display:inline">
     <path
        id="Corners"
-       style="display:inline;fill:#404040;fill-opacity:1;fill-rule:evenodd;stroke:#404040;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 161.60731 500.08034 C 161.60735 508.25235 163.40375 516.41179 166.97512 522.61123 L 242.50658 653.74899 L 242.50658 653.99219 C 252.02085 677.77788 281.65085 681.14495 290.99054 679.26778 L 446.30949 679.12881 C 460.61915 679.11516 478.19433 668.96576 485.36071 656.58055 L 564.74865 519.36275 C 564.81026 519.25626 564.82792 519.15621 564.88762 519.05006 L 564.99185 518.99795 C 574.83022 506.69999 562.93265 475.18373 557.78266 469.4022 L 481.1568 336.99632 C 473.99012 324.6106 456.43206 314.46166 442.12294 314.44806 L 283.59027 314.29172 C 283.40665 314.29154 283.24994 314.32331 283.06912 314.32646 L 282.49586 313.9964 C 269.99587 313.9964 252.50807 328.99556 245.00808 341.49555 L 245.00808 342.08618 L 166.97512 477.53208 C 163.40361 483.73177 161.60728 491.90833 161.60731 500.08034 z " />
+       style="display:inline;fill:#404040;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 161.60731,500.08034 c 4e-5,8.172 1.79644,16.33146 5.36781,22.53089 l 75.53146,131.13776 v 0.2432 c 9.51426,23.78566 39.14428,27.15276 48.48396,25.27559 l 155.31895,-0.13897 c 14.30964,-0.0137 31.88485,-10.16307 39.05122,-22.54826 l 79.38794,-137.2178 c 0.0616,-0.10649 0.0793,-0.20654 0.13897,-0.31269 l 0.10423,-0.0521 C 574.83021,506.7 562.93264,475.18373 557.78266,469.4022 L 481.1568,336.99632 c -7.16668,-12.38571 -24.72475,-22.53466 -39.03386,-22.54826 l -158.53267,-0.15634 c -0.18362,-1.8e-4 -0.34033,0.0316 -0.52115,0.0347 l -0.57326,-0.33006 c -12.49998,0 -29.9878,14.99917 -37.48778,27.49915 v 0.59063 l -78.03296,135.4459 c -3.57151,6.19969 -5.36784,14.37626 -5.36781,22.54826 z" />
     <g
        transform="matrix(-0.3828283,3.653872e-4,0.1917306,-0.3313563,472.998,680.25529)"
        id="5-Left"
@@ -307,9 +174,9 @@ Ali Mirjamali</dc:title>
        id="1-Top"
        style="display:inline;overflow:visible">
       <path
-         d="M 71.459473,553.5 C 34.080566,553.5 3.5,522.91895 3.5,485.54004 V 71.459473 C 3.5,34.082031 34.080566,3.5 71.459473,3.5 H 485.54004 C 522.91797,3.5 553.5,34.082031 553.5,71.459473 V 485.54004 C 553.5,522.91895 522.91797,553.5 485.54004,553.5 Z"
          id="Top-face"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:12.4896;stroke-dasharray:none" />
+         style="font-variation-settings:normal;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:12.4896;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         d="m 24.491018,22.411968 c -12.31749,12.31768 -19.9158602,29.31649 -19.9158602,48.0052 l -0.0285,414.096152 c 10e-6,37.37886 30.5718702,67.95072 67.9507302,67.95073 l 414.096172,-0.0285 c 37.37787,-2e-5 67.94721,-30.56836 67.94722,-67.94722 l 0.002,-414.069982 c -10e-6,-37.3774 -30.57286,-67.9507202 -67.95074,-67.9507402 l -414.069962,0.002 c -18.68944,0 -35.71389,7.6243702 -48.03138,19.9420402 z" />
       <circle
          cx="278.5"
          cy="278.5"

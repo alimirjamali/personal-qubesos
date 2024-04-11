@@ -57,7 +57,8 @@
             <rdf:li>Impossible Cubes</rdf:li>
           </rdf:Bag>
         </dc:subject>
-        <dc:description>Impossible cubes icon designed for Qubes OS. Based on Jarda's work on OpenClipArt</dc:description>
+        <dc:description>Impossible cubes icon designed for Qubes-OS. Based on Jarda's work on OpenClipArt</dc:description>
+        <dc:source>https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg</dc:source>
         <dc:title>Impossible Qube 3</dc:title>
         <dc:rights>
           <cc:Agent>
