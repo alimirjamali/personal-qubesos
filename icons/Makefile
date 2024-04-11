@@ -3,6 +3,7 @@
 
 QLTT := $${HOME}/bin/qubes-label-tweak-tool -y --ANSI
 UI_UX := Maroon Olive Navy Lime Cyan Magenta Apricot Mint Lavender
+.PHONY: $(UI_UX)
 CUBIST := qube-cfop-0.svg qube-cfop-cross.svg \
 	  qube-cfop-oll-2.svg qube-cfop-pll.svg qube-cubist.svg
 QUBESTHEME := qube-square2.svg qube-square3.svg
@@ -25,13 +26,11 @@ all: UIUX Cubist QubesTheme CADCAM RealLife Conceptual
 
 # Labels suggested by Ninavizz
 UIUX:
-	$(QLTT) create Maroon    0x800000
 	$(QLTT) create Olive     0x808000
 	$(QLTT) create Navy      0x000075
 	$(QLTT) create Lime      0xBFEF45
 	$(QLTT) create Cyan      0x42d4f4
 	$(QLTT) create Magenta   0xF032e6
-	$(QLTT) create Apricot   0xFFD8B1
 	$(QLTT) create Mint      0xAAFFC3
 	$(QLTT) create Lavender  0xDCBEFF
 	$(info Ninavizz suggested labels created with Qute Sushi icons.)
