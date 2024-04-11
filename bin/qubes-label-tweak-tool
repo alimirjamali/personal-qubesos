@@ -436,7 +436,7 @@ label_create() {
 	gtk-update-icon-cache "${TARGETICONS}" || \
 		abort 22 "Did not manage to generate ICONs"
 	if [ ! -z ${api_message} ]; then
-		echo "Icons successfully regenerated. exiting..."
+		echo "Icons of ${LABEL} = ${V} label successfully regenerated."
 		exit 0
 	fi
 	IFS=$'\n' api_message=($(qubesd_admin_api admin.label.Create dom0 \
@@ -499,7 +499,8 @@ label_remove() {
 	$VERBOSE && echo "Removing label: ${LABEL}" 
 	api_message=($(qubesd_admin_api admin.label.Index dom0 "${LABEL}"))
 	if [[ ${?} -ne 0 ]]; then
-		echo "Operation failed! Here is the result of Admin API call:"
+		echo "Removing of ${LABEL} failed!"
+		echo "Here is the result of Admin API call:"
 		printf '%s\n' "${api_message[@]}"
 		exit 11
 	fi
