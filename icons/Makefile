@@ -37,28 +37,28 @@ UIUX:
 	$(info Ninavizz suggested labels created with Qute Sushi icons.)
 
 Cubist: $(CUBIST)
+	$(info Rubik's Qubes label will be created.)
 	$(QLTT) create Cubist 0x73D216 \
 		--icon appvm=qube-cubist.svg \
 		--icon dispvm=qube-cfop-0.svg \
 		--icon servicevm=qube-cfop-oll-2.svg \
 		--icon standalonevm=qube-cfop-pll.svg \
 		--icon templatevm=qube-cfop-cross.svg
-	$(info Rubik's Qubes label created.)
 
 QubesTheme: $(QUBESTHEME) 
 	$(QLTT) create Qubes2 0xEEEEEE --icon allvm=qube-square2.svg
 	$(QLTT) create Qubes3 0xAAAAAA --icon allvm=qube-square3.svg
-	$(info Qubes-OS theme labels created.)
+	$(info Qubes-OS theme labels will be created.)
 
 CADCAM: $(CAD_CAM)
 	$(QLTT) create CAM 0xBBBBBB --icon allvm=qube-cam.svg
 	$(QLTT) create CAD 0x555555 --icon allvm=qube-isometric.svg
-	$(info CAD/CAM lables created.)
+	$(info CAD/CAM lables will be created.)
 
 RealLife: $(REALLIFE)
 	$(QLTT) create Dice 0x000000 --icon allvm=qube-dice.svg
 	$(QLTT) create StickyNotes 0xBBBBBB --icon allvm=qube-cam.svg
-	$(info Real life lables created.)
+	$(info Real life lables will be created.)
 
 Conceptual: $(CONCEPTUAL)
 	$(QLTT) create Axonometric 0xFFDD55 --icon allvm=qube-axonometric.svg
@@ -69,9 +69,9 @@ Conceptual: $(CONCEPTUAL)
 	$(QLTT) create Infinity 0x555555 --icon allvm=qube-infinity.svg
 	$(QLTT) create Isometrics 0x555555 --icon allvm=qube-isometric-shapes.svg
 	$(QLTT) create Tesseract 0x555555 --icon allvm=qube-tesseract.svg
-	$(QLTT) create OpticalIllusions 0x --icon allvm=qube-optical-illusion.svg
+	$(QLTT) create OpticalIllusions 0x555555 --icon allvm=qube-optical-illusion.svg
 	$(QLTT) create Webcolors 0xFF00FF --icon allvm=qube-webcolors.svg
-	$(info Conecptual lables created.)
+	$(info Conecptual lables will be created.)
 
 clean: $(CUBIST) $(QUBESTHEME) $(CAD_CAM) $(REALLIFE) $(CONCEPTUAL) $(UI_UX)
 	$(info Non-existing or used labels will be ignored.)
