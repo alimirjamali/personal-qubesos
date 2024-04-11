@@ -92,11 +92,13 @@ done
 declare CONVERTCMD=""
 # Note to self: qubes-artwork repo uses inkscape to convert SVGs to PNGs...
 # However, no one is going to have it installed in dom0 or GUIVM
-# So we either use ImageMagick (preferred) or GraphicMagick
-if [ -f /usr/bin/convert ]; then
-	CONVERTCMD="convert +antialias -background transparent"
-elif [ -f /usr/bin/convert ]; then
+# So we either use GraphicsMagick (preferred) or ImageMagick
+if [ -f /usr/bin/gm ]; then
 	CONVERTCMD="gm convert -background transparent"
+	CONVERTCMD="$CONVERTCMD -density 512x512 -size 512x512"
+elif [ -f /usr/bin/convert ]; then
+	CONVERTCMD="convert +antialias -background transparent"
+	CONVERTCMD="$CONVERTCMD -density 512x512 -size 512x512"
 fi
 
 # Synopsis: print_usage [EXIT_CODE]
@@ -219,7 +221,7 @@ tint_color() {
 verify_custom_icon() {
 	local klass="${1%%=*}" svgfile="${1#*=}" mime
 	! [[ ${1} =~ ^(all|app|disp|service|standalone|template)vm=.*$ ]] &&\
-		abort 22 "Invalid option ${1} for --icon"
+		abort 22 "Invalid option '${1}' for --icon (Did you forget =?)."
 	! [ -f "${svgfile}" ] && abort 22 "Could not find ${svgfile}!"
 	mime=$(file --brief --raw --mime-type "${svgfile}")
 	if ! [[ "${mime}" == "image/svg+xml" ]]; then
@@ -415,7 +417,7 @@ label_create() {
 	local V="${VALUE}"
 	local api_message
 	[ -z "${CONVERTCMD}" ] && abort 11 \
-		"Either of GraphicMagick or ImageMagick is needed to generate ICONs"
+		"GraphicsMagick or ImageMagick is needed to generate ICONs"
 	$ANSI && V=$(ANSI "${V}" "${V}")
 	# Checking if label already exists.
 	$VERBOSE && echo "Creating ${LABEL} label with the value of ${V} ..."
