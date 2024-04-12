@@ -79,7 +79,7 @@ linked if available.
 
 ### Icons to consider
 PCB qube, [Melting ice qube](https://openclipart.org/detail/182951/ice-cube), 
-Roughing end milling qube, Cubicle, Acoustic qube, 3D puzzle cube,
+Roughing end milling qube, Acoustic qube, 3D puzzle cube,
 Cubane molecule, Cube Speaker, Different species of Wooden qubes, 
 [Cardboard qube](https://openclipart.org/detail/231068/3d-isometric-cardboard-box),
 [Earth qube](https://openclipart.org/detail/259468/cube-earth-silhouette),
