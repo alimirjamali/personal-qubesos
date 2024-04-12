@@ -75,6 +75,7 @@ CADCAM: $(CAD_CAM)
 	$(info CAD/CAM lables will be created.)
 
 RealLife: $(REALLIFE)
+	$(QLTT) create Cubicle 0x000000 --icon allvm=qube-cubicle.svg
 	$(QLTT) create Dice 0x000000 --icon allvm=qube-dice.svg
 	$(QLTT) create StickyNotes 0xBBBBBB --icon allvm=qube-sticky-notes.svg
 	$(info Real life lables will be created.)

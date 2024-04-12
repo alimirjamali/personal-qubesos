@@ -26,6 +26,7 @@ VM icons with those colors.
 | ![](qube-cfop-oll-1.svg) | CFOP OLL 1 | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Two look OLL 1 stage |
 | ![](qube-cfop-oll-2.svg) | CFOP OLL 2 | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Two look OLL 2 stage |
 | ![](qube-cfop-pll.svg) | CFOP PLL | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - PLL stage |
+| ![](qube-cubicle.svg) | Cubicle | CC-BY-SA | Original sketch by myself. Monitor by Michaël Bégin, Keyboard by David Peters, Screen from Qubes Artwork |
 | ![](qube-cubist.svg) | Rubik's | CC-BY-SA | Original sketch by myself. Unsolved Rubik's Cube |
 | ![](qube-dice.svg) | Dice(Die) | CC-BY-SA | Based on [Steaphan Greene's design](https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg). |
 | ![](qube-engraved.svg) | Engraved | CC0 | Based on [Jarda design](https://openclipart.org/detail/177642/engraved-cube-2). |
