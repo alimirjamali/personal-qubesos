@@ -26,6 +26,7 @@ VM icons with those colors.
 | ![](qube-cfop-oll-1.svg) | CFOP OLL 1 | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Two look OLL 1 stage |
 | ![](qube-cfop-oll-2.svg) | CFOP OLL 2 | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Two look OLL 2 stage |
 | ![](qube-cfop-pll.svg) | CFOP PLL | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - PLL stage |
+| ![](qube-cubane.svg) | Cubane | CC0 | Based on [NEUROtiker design](https://commons.wikimedia.org/wiki/File:Cuban.svg) on Wikimedia |
 | ![](qube-cubicle.svg) | Cubicle | CC-BY-SA | Original sketch by myself. Monitor by Michaël Bégin, Keyboard by David Peters, Screen from Qubes Artwork |
 | ![](qube-cubist.svg) | Rubik's | CC-BY-SA | Original sketch by myself. Unsolved Rubik's Cube |
 | ![](qube-dice.svg) | Dice(Die) | CC-BY-SA | Based on [Steaphan Greene's design](https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg). |
@@ -80,7 +81,7 @@ linked if available.
 ### Icons to consider
 PCB qube, [Melting ice qube](https://openclipart.org/detail/182951/ice-cube), 
 Roughing end milling qube, Acoustic qube, 3D puzzle cube,
-Cubane molecule, Cube Speaker, Different species of Wooden qubes, 
+Cube Speaker, Different species of Wooden qubes, 
 [Cardboard qube](https://openclipart.org/detail/231068/3d-isometric-cardboard-box),
 [Earth qube](https://openclipart.org/detail/259468/cube-earth-silhouette),
 [Blank die](https://openclipart.org/detail/304802/blank-dice),

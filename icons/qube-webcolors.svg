@@ -281,7 +281,7 @@
           </rdf:Bag>
         </dc:subject>
         <dc:description>Web Colors icon designed for Qubes-OS. Based on Denis N Gour Web Color Cube design</dc:description>
-        <dc:source>https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg</dc:source>
+        <dc:source>https://www.github.com/alimirjamali/personal-qubesos</dc:source>
         <dc:title>Web Colors Cube</dc:title>
       </cc:Work>
       <cc:License

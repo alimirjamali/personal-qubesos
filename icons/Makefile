@@ -5,14 +5,14 @@ QLTT := $${HOME}/bin/qubes-label-tweak-tool -y --ANSI
 ALLLABELS := Maroon Olive Navy Lime Cyan Magenta Apricot Mint Lavender \
 	     Alpine Archlinux Debian Fedora Gentoo Manjaro LinuxMint NixOS \
 	     openSUSE OpenWrt Tor Whonix \
-	     Cubist Qubes2 Qubes3 CAD CAM Dice StickyNotes \
+	     Cubist Qubes2 Qubes3 CAD CAM Cubane Cubicle Dice StickyNotes \
 	     Axonometric Engraved Impossible1 Impossibles ImpossibleHex \
 	     Infinity Isometrics Tesseract OpticalIllusions Webcolors
 CUBIST := qube-cfop-0.svg qube-cfop-cross.svg \
 	  qube-cfop-oll-2.svg qube-cfop-pll.svg qube-cubist.svg
 QUBESTHEME := qube-square2.svg qube-square3.svg
 CAD_CAM := qube-cam.svg qube-isometric.svg
-REALLIFE := qube-dice.svg qube-sticky-notes.svg
+REALLIFE := qube-cubane.svg qube-cubicle.svg qube-dice.svg qube-sticky-notes.svg
 CONCEPTUAL := qube-axonometric.svg qube-engraved.svg qube-impossible-cube1.svg \
 	      qube-impossible-cubes.svg qube-impossible-hexagon.svg \
 	      qube-infinity.svg qube-isometric-shapes.svg qube-tesseract.svg \
@@ -75,6 +75,7 @@ CADCAM: $(CAD_CAM)
 	$(info CAD/CAM lables will be created.)
 
 RealLife: $(REALLIFE)
+	$(QLTT) create Cubane 0x000000 --icon allvm=qube-cubane.svg
 	$(QLTT) create Cubicle 0x000000 --icon allvm=qube-cubicle.svg
 	$(QLTT) create Dice 0x000000 --icon allvm=qube-dice.svg
 	$(QLTT) create StickyNotes 0xBBBBBB --icon allvm=qube-sticky-notes.svg

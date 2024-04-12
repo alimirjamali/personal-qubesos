@@ -103,7 +103,7 @@
           </rdf:Bag>
         </dc:subject>
         <dc:description>Infinity cube icon designed for Qubes-OS</dc:description>
-        <dc:source>https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg</dc:source>
+        <dc:source>https://www.github.com/alimirjamali/personal-qubesos</dc:source>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">

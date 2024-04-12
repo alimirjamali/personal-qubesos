@@ -63,7 +63,7 @@
           </rdf:Bag>
         </dc:subject>
         <dc:description>Sticky cube icon designed for Qubes-OS. Based on Crisg &quot;sticky cube notes&quot; on OpenClipArt.org</dc:description>
-        <dc:source>https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg</dc:source>
+        <dc:source>https://www.github.com/alimirjamali/personal-qubesos</dc:source>
         <dc:title>Sticky Notes Cube</dc:title>
         <dc:contributor>
           <cc:Agent>

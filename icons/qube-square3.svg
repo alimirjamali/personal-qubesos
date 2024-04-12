@@ -411,7 +411,7 @@ Ali Mirjamali</dc:title>
         </dc:subject>
         <dc:description>Based on Qubes-OS Vector Pertect Sushi Icons
 Visit https://github.com/QubesOS/qubes-artwork for more info</dc:description>
-        <dc:source>https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg</dc:source>
+        <dc:source>https://www.github.com/alimirjamali/personal-qubesos</dc:source>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">

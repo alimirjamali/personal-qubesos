@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="qube-cubane.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Cubane qube</title>
+  <sodipodi:namedview
+     id="namedview"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="false"
+     inkscape:zoom="8"
+     inkscape:cx="12.1875"
+     inkscape:cy="28.3125"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2">
+    <sodipodi:guide
+       position="24.565225,44.854254"
+       orientation="0.5,0.8660254"
+       id="guide1"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="16.903264,30.902697"
+       orientation="0.5,0.8660254"
+       id="guide2"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="16.903263,12.632801"
+       orientation="0.5,0.8660254"
+       id="guide3"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="16.903263,40.037645"
+       orientation="-0.5,0.8660254"
+       id="guide4"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="38.240775,34.086967"
+       orientation="-0.5,0.8660254"
+       id="guide5"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="32.725458,12.632801"
+       orientation="-0.5,0.8660254"
+       id="guide6"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="0,48"
+       orientation="1,0"
+       id="guide15"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,48"
+       orientation="0,-1"
+       id="guide16"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="48,0"
+       orientation="0,-1"
+       id="guide17"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="48,0"
+       orientation="1,0"
+       id="guide18"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="8.9921665,35.470171"
+       orientation="1,0"
+       id="guide28"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="24.565225,44.854254"
+       orientation="1,0"
+       id="guide29"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="40.727744,35.522819"
+       orientation="1,0"
+       id="guide30"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:title>Cubane qube</dc:title>
+        <dc:date>12 April 2024</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Qube</rdf:li>
+            <rdf:li>Cube</rdf:li>
+            <rdf:li>Cubane</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:source>https://www.github.com/alimirjamali/personal-qubesos</dc:source>
+        <dc:description>Cubane Molecule Qube. Iconized design of NEUROtiker design</dc:description>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC0</dc:title>
+          </cc:Agent>
+        </dc:rights>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="Cubane"
+     style="overflow:visible;fill:#000000"
+     transform="matrix(0.36093319,0,0,0.36093319,0.64708121,-1.2631577)">
+    <path
+       style="fill:#000000"
+       d="m 51.933975,111.7408 -6.98155,-1.85345 0.56905,-1.51905 6.65,1.75655 z"
+       id="polygon3" />
+    <path
+       style="fill:#000000"
+       d="m 52.552425,107.55985 -6.0325,-1.61405 0.61655,-1.52095 5.605,1.52095 z"
+       id="polygon5" />
+    <path
+       style="fill:#000000"
+       d="m 53.121475,103.3333 -4.9875,-1.33 0.61845,-1.52 4.60655,1.235 z"
+       id="polygon7" />
+    <path
+       style="fill:#000000"
+       d="m 53.691475,99.1058 -3.9425,-1.04595 0.09595,-0.2375 h 4.0375 z"
+       id="polygon9" />
+    <path
+       style="fill:#000000"
+       d="m 54.878975,90.69735 -1.94655,-0.5225 0.61655,-1.51905 1.5675,0.4275 z"
+       id="polygon11" />
+    <path
+       style="fill:#000000"
+       d="m 107.93743,27.23735 5.12905,5.13095 -1.2825,0.9975 -4.845,-4.7975 z"
+       id="polygon13" />
+    <path
+       style="fill:#000000"
+       d="m 105.03898,31.0858 4.2275,4.22655 -1.2825,0.95 -3.9425,-3.89405 z"
+       id="polygon15" />
+    <path
+       style="fill:#000000"
+       d="m 102.14148,34.8858 3.325,3.325 -1.32905,0.95 -2.9925,-2.945 z"
+       id="polygon17" />
+    <path
+       style="fill:#000000"
+       d="m 99.244925,38.73235 2.375005,2.375 -1.2825,0.95 -2.090955,-2.04155 z"
+       id="polygon19" />
+    <path
+       style="fill:#000000"
+       d="m 96.346475,42.53235 1.47345,1.47345 -1.33095,0.9975 -1.13905,-1.14095 z"
+       id="polygon21" />
+    <path
+       style="fill:#000000"
+       d="m 45.332425,23.8658 7.02905,-1.85345 0.19095,1.61595 -6.60345,1.7575 z"
+       id="polygon23" />
+    <path
+       style="fill:#000000"
+       d="m 47.232425,28.42485 5.74655,-1.5675 0.2375,1.61595 -5.3675,1.47155 z"
+       id="polygon25" />
+    <path
+       style="fill:#000000"
+       d="m 49.132425,32.9858 4.5125,-1.23595 0.18905,1.61595 -4.085,1.09155 z"
+       id="polygon27" />
+    <path
+       style="fill:#000000"
+       d="m 51.032425,37.4983 3.22905,-0.855 0.19095,1.61405 -2.80345,0.76095 z"
+       id="polygon29" />
+    <path
+       style="fill:#000000"
+       d="m 52.932425,42.05735 1.94655,-0.52155 0.2375,1.61405 -1.5675,0.42845 z"
+       id="polygon31" />
+    <path
+       style="fill:#000000"
+       d="m 113.87493,100.67235 -5.13,5.13095 -0.99845,-1.2825 4.845,-4.84595 z"
+       id="polygon33" />
+    <path
+       style="fill:#000000"
+       d="m 109.88398,97.53735 -4.22655,4.22845 -0.99845,-1.2825 3.9425,-3.89595 z"
+       id="polygon35" />
+    <path
+       style="fill:#000000"
+       d="m 105.84648,94.44985 -3.27655,3.27845 -0.99845,-1.2825 2.9925,-2.9925 z"
+       id="polygon37" />
+    <path
+       style="fill:#000000"
+       d="m 101.80898,91.36235 -2.375005,2.375 -0.99655,-1.32905 2.089055,-2.0425 z"
+       id="polygon39" />
+    <path
+       style="fill:#000000"
+       d="m 97.771475,88.27485 -1.425,1.425 -0.99655,-1.28155 1.13905,-1.14 z"
+       id="polygon41" />
+    <path
+       style="fill:#000000"
+       d="m 56.161475,84.1433 -0.8075,0.80655 -0.8075,-0.475 v -24.3675 h 1.615 z"
+       id="polygon43" />
+    <path
+       style="fill:#000000"
+       d="m 54.546475,48.61235 0.8075,-1.33 0.8075,0.80845 v 6.1275 h -1.615 z"
+       id="polygon45" />
+    <path
+       style="fill:#000000"
+       d="m 55.544925,85.7583 -0.19095,-0.80845 0.8075,-0.80655 h 14.82095 v 1.615 z"
+       id="polygon47" />
+    <path
+       style="fill:#000000"
+       d="m 92.262425,84.1433 0.8075,0.80655 -3.325,0.80845 h -12.825 v -1.615 z"
+       id="polygon49" />
+    <path
+       style="fill:#000000"
+       d="m 93.876475,46.47485 -0.80655,0.8075 -3.325,0.80845 h -5.41595 l 1.14095,-1.61595 z"
+       id="polygon51" />
+    <path
+       style="fill:#000000"
+       d="m 56.161475,48.0908 -0.8075,-0.80845 -0.18905,-0.8075 h 20.18655 l -0.76,1.61595 z"
+       id="polygon53" />
+    <path
+       style="fill:#000000"
+       d="m 93.876475,85.47235 -0.80655,-0.5225 -0.8075,-0.80655 V 48.61235 l 0.8075,-1.33 0.80655,-0.8075 z"
+       id="polygon55" />
+    <g
+       id="g57"
+       transform="matrix(0.95,0,0,0.95,3.235075,3.4997)"
+       style="fill:#000000">
+      <path
+         style="fill:#000000"
+         d="M 87.6,31.588 V 14.4 h 2.281 v 7.063 h 8.891 V 14.4 h 2.281 v 17.188 h -2.281 v -8.094 h -8.891 v 8.094 z"
+         id="path59" />
+    </g>
+    <g
+       id="g61"
+       transform="matrix(0.95,0,0,0.95,3.235075,3.4997)"
+       style="fill:#000000">
+      <path
+         style="fill:#000000"
+         d="M 0,37.888 V 20.7 h 2.281 v 7.063 h 8.891 V 20.7 h 2.281 V 37.888 H 11.172 V 29.794 H 2.281 v 8.094 z"
+         id="path63" />
+    </g>
+    <g
+       id="g65"
+       transform="matrix(0.95,0,0,0.95,3.235075,3.4997)"
+       style="fill:#000000">
+      <path
+         style="fill:#000000"
+         d="M 0,133.688 V 116.5 h 2.281 v 7.063 h 8.891 V 116.5 h 2.281 v 17.188 h -2.281 v -8.094 H 2.281 v 8.094 z"
+         id="path67" />
+    </g>
+    <g
+       id="g69"
+       transform="matrix(0.95,0,0,0.95,3.235075,3.4997)"
+       style="fill:#000000">
+      <path
+         style="fill:#000000"
+         d="M 87.6,139.987 V 122.8 h 2.281 v 7.063 h 8.891 V 122.8 h 2.281 v 17.188 h -2.281 v -8.094 h -8.891 v 8.094 H 87.6 Z"
+         id="path71" />
+    </g>
+    <g
+       id="g73"
+       transform="matrix(0.95,0,0,0.95,3.235075,3.4997)"
+       style="fill:#000000">
+      <path
+         style="fill:#000000"
+         d="M 115.95,27.487 V 10.3 h 2.281 v 7.063 h 8.891 V 10.3 h 2.281 v 17.188 h -2.281 v -8.094 h -8.891 v 8.094 h -2.281 z"
+         id="path75" />
+    </g>
+    <g
+       id="g77"
+       transform="matrix(0.95,0,0,0.95,3.235075,3.4997)"
+       style="fill:#000000">
+      <path
+         style="fill:#000000"
+         d="M 37.9,17.188 V 0 h 2.281 v 7.063 h 8.891 V 0 h 2.281 V 17.188 H 49.072 V 9.094 h -8.891 v 8.094 z"
+         id="path79" />
+    </g>
+    <g
+       id="g81"
+       transform="matrix(0.95,0,0,0.95,3.235075,3.4997)"
+       style="fill:#000000">
+      <path
+         style="fill:#000000"
+         d="M 37.9,133.537 V 116.35 h 2.281 v 7.063 h 8.891 v -7.063 h 2.281 v 17.188 h -2.281 v -8.094 h -8.891 v 8.094 H 37.9 Z"
+         id="path83" />
+    </g>
+    <g
+       id="g85"
+       transform="matrix(0.95,0,0,0.95,3.235075,3.4997)"
+       style="fill:#000000">
+      <path
+         style="fill:#000000"
+         d="M 115.95,123.287 V 106.1 h 2.281 v 7.063 h 8.891 V 106.1 h 2.281 v 17.188 h -2.281 v -8.094 h -8.891 v 8.094 h -2.281 z"
+         id="path87" />
+    </g>
+    <path
+       style="fill:#000000"
+       d="m 55.164925,46.47485 0.18905,0.8075 -0.8075,1.33 -14.9625,7.74345 -3.325,0.80655 0.19,-1.04405 z"
+       id="polygon89" />
+    <path
+       style="fill:#000000"
+       d="m 89.744925,48.0908 3.325,-0.80845 -0.8075,1.33 -17.48,9.025 -0.8075,-0.475 2.7075,-2.32655 z"
+       id="polygon91" />
+    <path
+       style="fill:#000000"
+       d="m 89.744925,85.7583 3.325,-0.80845 0.80655,0.5225 -18.71405,9.69 -1.1875,-0.28405 0.8075,-1.33095 z"
+       id="polygon93" />
+    <path
+       style="fill:#000000"
+       d="m 54.546475,84.47485 0.8075,0.475 0.19095,0.80845 -15.96095,8.3125 -3.325,0.8075 0.8075,-1.33095 z"
+       id="polygon95" />
+    <path
+       style="fill:#000000"
+       d="m 37.066475,93.54735 -0.8075,1.33095 -0.80655,-0.38095 V 57.5433 l 0.80655,-0.38095 0.8075,0.8075 z"
+       id="polygon97" />
+    <path
+       style="fill:#000000"
+       d="m 36.639925,95.68485 -0.38095,-0.80655 3.325,-0.8075 h 33.5825 l 0.80845,0.8075 -0.52345,0.80655 z"
+       id="polygon99" />
+    <path
+       style="fill:#000000"
+       d="m 73.451475,56.3558 0.52345,0.80655 -0.80845,0.8075 h -36.1 l -0.8075,-0.8075 3.325,-0.80655 z"
+       id="polygon101" />
+    <path
+       style="fill:#000000"
+       d="m 74.782425,93.54735 -0.8075,1.33095 -0.80845,-0.8075 V 57.96985 l 0.80845,-0.8075 0.8075,0.475 z"
+       id="polygon103" />
+    <path
+       style="fill:#000000"
+       d="m 83.094925,34.0783 6.3175,3.60905 -12.73,17.14845 -2.7075,2.32655 -0.52345,-0.80655 z"
+       id="polygon105" />
+    <path
+       style="fill:#000000"
+       d="m 16.214925,42.2483 5.13,-5.13 15.10405,19 -0.19,1.04405 -0.80655,0.38095 z"
+       id="polygon107" />
+    <path
+       style="fill:#000000"
+       d="m 20.632425,115.63485 -5.17845,-5.12905 19.99845,-16.00845 0.80655,0.38095 0.38095,0.80655 z"
+       id="polygon109" />
+    <path
+       style="fill:#000000"
+       d="m 90.076475,115.5408 -6.26905,3.60905 -10.35595,-23.465 0.52345,-0.80655 1.1875,0.28405 z"
+       id="polygon111" />
+  </g>
+</svg>

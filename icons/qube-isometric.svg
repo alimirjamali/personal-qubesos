@@ -219,7 +219,7 @@
           </cc:Agent>
         </dc:rights>
         <dc:description>Isometric drawing of a qube with dimentions.</dc:description>
-        <dc:source>https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg</dc:source>
+        <dc:source>https://www.github.com/alimirjamali/personal-qubesos</dc:source>
         <dc:subject>
           <rdf:Bag>
             <rdf:li>Qube</rdf:li>
