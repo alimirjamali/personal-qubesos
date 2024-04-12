@@ -72,9 +72,9 @@ def main():
         case "overlay":
             img=img.overlay(args.colour)
         case "thin-border":
-            img=img.border(args.colour, 10./3.)
+            img=img.thin_border(args.colour)
         case "thick-border":
-            img=img.border(args.colour, 20./3.)
+            img=img.thick_border(args.colour)
         case "untouched":
             img=img.untouched()
         case "invert":

@@ -80,7 +80,14 @@ class Image(qubesimgconverter.Image):
         pixelsb[:, 0:width] = rb, gb, bb, 255
         pixelsb[-width:, :] = rb, gb, bb, 255
         pixelsb[:, -width:] = rb, gb, bb, 255
-        return self.__class__(rgba=pixelsb.astype('B'), size=self._size)
+        return self.__class__(rgba=pixelsb.astype('B').tobytes(), \
+                size=self._size)
+
+    def thin_border(self, color):
+        return self.border(color, 10./30.)
+
+    def thick_border(self, color):
+        return self.border(color, 20./30.)
 
     def untouched(self):
         ''' Returning the untouched image '''

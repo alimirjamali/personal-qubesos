@@ -100,9 +100,9 @@ class Appmenus(qubesappmenus.Appmenus):
                     case "overlay":
                         img=img.overlay(vm.label.color)
                     case "thin-border":
-                        img=img.border(vm.label.color, 10./3.)
+                        img=img.thin_border(vm.label.color)
                     case "thick-border":
-                        img=img.border(vm.label.color, 20./3.)
+                        img=img.thick_border(vm.label.color)
                     case "untouched":
                         img=img.untouched()
                     case "invert":
