@@ -64,18 +64,31 @@ class Image(qubesimgconverter.Image):
         return self.__class__(rgba=pixelso.tobytes(), size=self._size)
 
     def border(self, colour, percent):
-        ''' Apply a border of colour to image. No antialiasing for now '''
-        ''' percent if minimum of (width, height) '''
+        ''' Apply a border to image at the border width of percent of  '''
+        ''' minimum of image width & height. Assuming (0. < percent < 100.) '''
+        ''' Even though border with over 50.% percent would be meaningless '''
 
         rb, gb, bb = hex_to_int(colour)
-        if  min(self.height, self.width) <= 16:
+        mindim = min(self.height, self.width)
+        if  mindim <= 16:
             width = 1
+            ab = 0
         else:
-            width = int(min(self.height, self.width) * percent / 100.)
+            width = int(mindim * percent / 100.)
+            ''' Anti-aliasing border edges. We need alpha of border at edges '''
+            ab = int(((mindim * percent) % 100.) * 255. / 100.)
 
         pixels = numpy.frombuffer(self._rgba, dtype='B').reshape(\
                 self.height, self.width, 4)
         pixelsb = pixels.astype('u4')
+
+        if ab>0:
+            border=numpy.array([rb, gb, bb, ab])
+            pixelsb[0:width+1, :] = (pixelsb[0:width+1, :] + border) / 2
+            pixelsb[:, 0:width+1] = (pixelsb[:, 0:width+1] + border) / 2
+            pixelsb[-width-1:, :] = (pixelsb[-width-1:, :] + border) / 2
+            pixelsb[:, -width-1:] = (pixelsb[:, -width-1:] + border) / 2
+
         pixelsb[0:width, :] = rb, gb, bb, 255
         pixelsb[:, 0:width] = rb, gb, bb, 255
         pixelsb[-width:, :] = rb, gb, bb, 255
