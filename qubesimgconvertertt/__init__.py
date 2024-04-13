@@ -97,9 +97,11 @@ class Image(qubesimgconverter.Image):
                 size=self._size)
 
     def thin_border(self, color):
-        return self.border(color, 3.125)
+        """ 1.5 Pixel border is nice for thin borders of 32x32 icons """
+        return self.border(color, 4.6875)
 
     def thick_border(self, color):
+        """ 2 Pixel border is nice for thick borders of 32x32 icons """
         return self.border(color, 6.25)
 
     def untouched(self):
