@@ -84,10 +84,10 @@ class Image(qubesimgconverter.Image):
                 size=self._size)
 
     def thin_border(self, color):
-        return self.border(color, 10./3.)
+        return self.border(color, 3.125)
 
     def thick_border(self, color):
-        return self.border(color, 20./3.)
+        return self.border(color, 6.25)
 
     def untouched(self):
         ''' Returning the untouched image '''

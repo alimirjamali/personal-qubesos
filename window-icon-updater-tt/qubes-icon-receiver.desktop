@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Qubes window icon receiver
+Comment=Disablig original icon updater to Replace with our own Tweak Tool
+Icon=qubes
+Exec=/usr/lib/qubes/icon-receiver
+Terminal=false
+Type=Application
+Hidden=true
