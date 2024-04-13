@@ -1,7 +1,7 @@
 .SILENT:
 .PHONY: info all UIUX DISTROS Cubist QubesTheme CADCAM Conceptual RealLife clean
 
-QLTT := $${HOME}/bin/qubes-label-tweak-tool -y --ANSI
+QLTT := $${HOME}/bin/qubes-label-tt -y --ANSI
 ALLLABELS := Maroon Olive Navy Lime Cyan Magenta Apricot Mint Lavender \
 	     Alpine Archlinux Debian Fedora Gentoo Manjaro LinuxMint NixOS \
 	     openSUSE OpenWrt Tor Whonix \

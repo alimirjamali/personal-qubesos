@@ -107,7 +107,7 @@ parser.add_argument(
 
 
 def main(args=None, app=None):
-    """main function for qvm-appmenus-tweak-tool"""
+    """main function for qvm-appmenus-tt"""
     args = parser.parse_args(args=args, app=app)
     if not args.all_domains and not args.domains:
         parser.error("one of the arguments --all VMNAME is required")

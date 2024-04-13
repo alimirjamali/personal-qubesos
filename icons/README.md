@@ -1,5 +1,5 @@
 # Background
-Icons to use with `qubes-label-tweak-tool` and other Qubes OS related purposes.
+Icons to use with `qubes-label-tt` and other Qubes OS related purposes.
 Some of these items are my personal original designs. Some are based on public 
 domain designs or other type of free licensed designs (e.g. CC-BY-SA). Here I
 try to list all of them with proper attribution to the original designer.
