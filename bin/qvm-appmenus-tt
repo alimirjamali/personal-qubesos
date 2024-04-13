@@ -36,7 +36,7 @@ import qubesadmin.exc
 import qubesadmin.tools
 import qubesadmin.vm
 
-from qubesappmenustweaks import Appmenus
+from qubesappmenustt import Appmenus
 from qubesappmenus import retrieve_list
 
 basedir = os.path.join(xdg.BaseDirectory.xdg_data_home, 'qubes-appmenus')
