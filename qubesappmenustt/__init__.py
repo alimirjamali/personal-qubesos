@@ -35,8 +35,8 @@ import qubesadmin.exc
 import qubesadmin.tools
 import qubesadmin.vm
 
-import qubesimgconvertertweaks
-from qubesimgconvertertweaks import Image
+import qubesimgconvertertt
+from qubesimgconvertertt import Image
 import qubesappmenus
 
 basedir = os.path.join(xdg.BaseDirectory.xdg_data_home, 'qubes-appmenus')

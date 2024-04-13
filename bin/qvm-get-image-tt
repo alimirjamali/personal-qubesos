@@ -23,7 +23,7 @@
 
 import argparse
 import qubesadmin
-import qubesimgconvertertweaks
+import qubesimgconvertertt
 
 parser = argparse.ArgumentParser(
         description='Secure copy of images between virtual machines',
@@ -59,7 +59,7 @@ def main():
     if vm is None:
         parser.error('No such VM: {0}'.format(args.vmname))
 
-    img=qubesimgconvertertweaks.Image.get_from_vm(vm, args.src)
+    img=qubesimgconvertertt.Image.get_from_vm(vm, args.src)
     
     filter = args.filter
     if filter == "custom":

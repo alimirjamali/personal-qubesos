@@ -5,9 +5,9 @@
 BINDIR := ~/bin
 LIBDIR = `python3 -m site --user-site`
 BASHSCRIPTS = bin/qubes-update-tweak-tool bin/qubes-label-tweak-tool
-PYTHONEXECUTABLES = bin/qvm-get-filtered-image bin/qvm-appmenus-tweak-tool
+PYTHONEXECUTABLES = bin/qvm-get-image-tt bin/qvm-appmenus-tt
 EXECUTABLES = $(BASHSCRIPTS) $(PYTHONEXECUTABLES)
-PYTHONLIBS = qubesimgconvertertweaks qubesappmenustt
+PYTHONLIBS = qubesimgconvertertt qubesappmenustt
 
 install: install-python-libs install-executables
 
