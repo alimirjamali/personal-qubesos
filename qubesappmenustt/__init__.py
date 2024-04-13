@@ -91,7 +91,7 @@ class Appmenus(qubesappmenus.Appmenus):
                     os.path.getmtime(src_icon) > os.path.getmtime(dst_icon):
 
                 img = Image.load_from_file_pil(src_icon)
-                filter = vm.features.get("imgfilter", "tint")
+                filter = vm.features.get("ttfilter", "tint")
                 ''' Python 3.11 is nicely shipped with Qubes OS 4.2 ''' 
                 ''' so we use match statement '''
                 match filter:

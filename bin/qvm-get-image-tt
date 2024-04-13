@@ -39,9 +39,9 @@ parser.add_argument("--ANSI", action="store_true", help="Print ANSI X3.64 "\
 parser.add_argument("--filter", type=str, default="custom", choices=["custom",\
         "tint", "overlay","thin-border", "thick-border", "untouched", "invert"],\
         help="Filter to perform on the image. 'custom' is the default i.e.: "\
-        "Program will look for 'imgfilter' key in qube features. If that key "\
+        "Program will look for 'ttfilter' key in qube features. If that key "\
         "exits, its value should indicate default filter for that qube. If "\
-        "'imgfilter' is missing or it contains an invalid filter, 'tint' will "\
+        "'ttfilter' is missing or it contains an invalid filter, 'tint' will "\
         "be the default.")
 parser.add_argument("--mirror", type=str, default="none", choices=\
         ["vertical", "vertically", "horizontal", "horizontally", "both"],\
@@ -63,7 +63,7 @@ def main():
     
     filter = args.filter
     if filter == "custom":
-        filter = vm.features.get("imgfilter", "tint")
+        filter = vm.features.get("ttfilter", "tint")
 
     ''' Python 3.11 is nicely shipped with Q4.2, so we use match statement'''
     match filter:
