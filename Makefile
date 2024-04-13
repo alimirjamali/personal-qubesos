@@ -4,7 +4,7 @@
 
 BINDIR := ~/bin
 LIBDIR = `python3 -m site --user-site`
-BASHSCRIPTS = bin/qubes-update-tweak-tool bin/qubes-label-tweak-tool
+BASHSCRIPTS = bin/qubes-update-tweak-tool bin/qubes-label-tt
 PYTHONEXECUTABLES = bin/qvm-get-image-tt bin/qvm-appmenus-tt
 EXECUTABLES = $(BASHSCRIPTS) $(PYTHONEXECUTABLES)
 PYTHONLIBS = qubesimgconvertertt qubesappmenustt

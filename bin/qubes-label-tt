@@ -19,6 +19,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 set -o noglob
+declare SELF=${0##*/}
 
 declare syntax="\
 This tool is a simple command line utility to manage Qubes OS labels. It could
@@ -28,8 +29,8 @@ might be introduced in the future, it is advisable to prepend a suffix to new
 custom labels. Good suffix examples are 'custom', 'user', 'personal', etc.
 Avoid Hyphen (-) in label names. Also never ever remove standard labels!
 
-usage: qubes-label-tweak-tool [--verbose] [-assume-yes] [--help] [--ANSI]
-                              [--raw-data] COMMAND ...
+usage: ${SELF} [--verbose] [-assume-yes] [--help] [--ANSI] [--raw-data] 
+                      COMMAND ...
 
 options:
   -v, --verbose             verbose operation
@@ -77,7 +78,6 @@ declare RAWDATA=false
 declare SUBCOMMAND=""
 declare LABEL=""
 declare VALUE=""
-declare SELF=${0##*/}
 declare HOSTNAME=$(hostname)
 
 declare TARGETICONS="${HOME}/.local/share/icons/hicolor"
