@@ -1,0 +1,193 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+#
+# The Qubes OS Project, http://www.qubes-os.org
+#
+# Copyright (C) 2013-2015  Marek Marczykowski-Górecki
+#                                   <marmarek@invisiblethingslab.com>
+# Copyright (C) 2024 Ali Mirjamali  <ali@mirjamali.com>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+#
+
+# Original '/var/lib/qubes/icon-receiver' is imported as qubesiconreceiver 
+# Python Library. All security features will be handled by original code.
+from importlib.machinery import SourceFileLoader
+qubesiconreceiver = SourceFileLoader("icon-receiver", 
+    "/usr/lib/qubes/icon-receiver").load_module()
+
+import os
+import struct
+import sys
+import asyncio
+import argparse
+from qubesimgconverter import ICON_MAXSIZE
+
+# And the Tweak Tool version of qubesimgconverter is loaded
+from qubesimgconvertertt import Image
+import logging
+
+from qubesadmin import Qubes
+from qubesadmin.exc import QubesException
+
+log = logging.getLogger('icon-receiver-tt')
+
+SOCKET_PATH = '/var/run/qubes/icon-receiver.sock'
+
+class IconReceiver(qubesiconreceiver.IconReceiver):
+    """
+    This class is derived from original icon-reciever. Additional effects are
+    overloaded on the child object. The original icon-receiver daemon will be
+    suppressed via ~/.config/autostart/qubes-icon-receiver.desktop with a
+    'Hidden=true' tag. This daemon will be automatically loaded via another
+    .desktop file at the autostart directory.
+    """
+    def __init__(self):
+        super().__init__()
+
+    def get_filter(self, domain):
+        # Load the VM features - we need this to get VM Tweak Tool image filter
+        self.app.domains.refresh_cache(force=True)
+        try:
+            vm = self.app.domains[domain]
+        except KeyError:
+            raise QubesException("VM '{}' doesn't exist in qubes.xml".format(
+                domain))
+        return vm.features.get("ttfilter", "tint")
+
+    async def retrieve_icon_for_window(self, reader, color, ttfilter):
+        # intentionally don't catch exceptions here
+        # the Image.get_from_stream method receives UNTRUSTED data
+        # from given stream (stdin), sanitize it and store in Image() object
+        icon = await Image.get_from_stream_async(reader,
+            ICON_MAXSIZE, ICON_MAXSIZE)
+        # now we can apply Tweak Tool effects of the icon
+        match ttfilter:
+            case "tint":
+                icon_tt=icon.tint(color)
+            case "overlay":
+                icon_tt=icon.overlay(color)
+            case "thin-border":
+                icon_tt=icon.thin_border(color)
+            case "thick-border":
+                icon_tt=icon.thick_border(color)
+            case "untouched":
+                icon_tt=icon.untouched()
+            case "invert":
+                icon_tt=icon.invert()
+            case "mirror":
+                icon_tt=icon.mirror(1)
+            case "flip":
+                icon_tt=icon.mirror(0)
+            case _:
+                icon_tt=icon.tint(color)
+
+        # conver RGBA (Image.data) -> ARGB (X11)
+        icon_tt_data = self._convert_rgba_to_argb(icon_tt.data)
+        # prepare icon header according to X11 _NET_WM_ICON format:
+        # "This is an array of 32bit packed CARDINAL ARGB with high byte
+        # being A, low byte being B. The first two cardinals are width, height.
+        # Data is in rows, left to right and top to bottom."
+        # http://standards.freedesktop.org/wm-spec/1.4/ar01s05.html
+        icon_property_data = struct.pack(
+            "II", icon_tt.width, icon_tt.height)
+        # and then append the actual icon
+        icon_property_data += icon_tt_data
+        return icon_property_data
+
+    async def handle_client(self, reader, writer):
+        try:
+            # Parse header from qrexec
+            header = await reader.readuntil(b'\0')
+            header_parts = header.decode('ascii').split(' ')
+            assert len(header_parts) >= 2, header_parts
+
+            service_name = header_parts[0]
+            if '+' in service_name:
+                service_name, arg = service_name.split('+', 1)
+                assert arg == '', arg
+            assert service_name == 'qubes.WindowIconUpdater', service_name
+
+            domain = header_parts[1]
+            color = self.get_color(domain)
+            ttfilter = self.get_filter(domain)
+
+            log.info('connected: %s - color: %s - filter: %s', \
+                domain, color, ttfilter)
+
+            while True:
+                untrusted_w = await reader.readline()
+                if untrusted_w == b'':
+                    break
+                if len(untrusted_w) > 32:
+                    raise ValueError("WindowID too long")
+                remote_winid = (domain, int(untrusted_w))
+                icon_property_data = await self.retrieve_icon_for_window(
+                    reader, color, ttfilter)
+                try:
+                    local_winid = self.search_for_window(remote_winid)
+                    self.set_icon_for_window(local_winid, icon_property_data)
+                except KeyError:
+                    self.cache_icon(remote_winid, icon_property_data)
+
+            log.info('disconnected: %s', domain)
+        finally:
+            writer.close()
+            await writer.wait_closed()
+
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument(
+    '-f', '--force', action='store_true',
+    help='run even if not in GuiVM')
+
+
+def main():
+    args = parser.parse_args()
+
+    if not args.force:
+        if (not os.path.exists('/var/run/qubes-service/guivm-gui-agent') and
+            not os.path.exists('/etc/qubes-release')):
+
+            print('Not in GuiVM or dom0, exiting '
+                  '(run with --force to override)',
+                  file=sys.stderr)
+            return
+
+    logging.basicConfig(
+        stream=sys.stderr, level=logging.INFO,
+        format='%(asctime)s %(name)s: %(message)s')
+
+    rcvd = IconReceiver()
+
+    def handle_exception(loop, context):
+        e = context.get('exception')
+        if isinstance(e, xcb.ConnectionException):
+            logging.error("Connection error: %s", e)
+            sys.exit(1)
+
+    loop = asyncio.get_event_loop()
+    tasks = [
+        rcvd.handle_events(),
+        rcvd.handle_clients(),
+    ]
+    loop.set_exception_handler(handle_exception)
+    loop.run_until_complete(asyncio.gather(*tasks))
+
+
+if __name__ == '__main__':
+    main()
