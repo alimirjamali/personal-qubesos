@@ -25,7 +25,7 @@ qvm-features VMNAME ttfilter <tint|overlay|thin-border|thick-border|untouched|in
 ```
 
 ### Installation & Removal
-To install the library & tool at your '~/.local/lib' & '~/bin' directories, 
+To install the library & tool at your `~/.local/lib` & `~/bin` directories, 
 run this command in the current directory:
 ```
 make install

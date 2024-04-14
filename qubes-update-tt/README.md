@@ -18,7 +18,7 @@ Command help is available at top of the file which hopefully should make it
 self-explanatory.
 
 ### Installation & Removal
-To install the tool at your '~/bin' directory, run this in the current dir:
+To install the tool at your `~/bin` directory, run this in the current dir:
 ```
 make install
 ```

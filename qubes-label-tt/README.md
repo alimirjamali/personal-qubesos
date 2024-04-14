@@ -14,7 +14,7 @@ RGB-to-HSV, HSV-to-RGB and tinting are implemented in pure bash without any
 floating point calculations. Most probably only of its kind.
 
 ### Installation & Removal
-To install the tool at your '~/bin' directory, run this command in the current
+To install the tool at your `~/bin` directory, run this command in the current
 directory
 ```
 make install

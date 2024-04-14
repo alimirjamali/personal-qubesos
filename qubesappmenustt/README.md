@@ -22,7 +22,7 @@ qvm-appmenus-tt VMNAME --update --force
 ```
 
 ### Installation & Removal
-To install the library & tool at your '~/.local/lib' & '~/bin' directories, 
+To install the library & tool at your `~/.local/lib` & `~/bin` directories, 
 run this command in the current directory:
 ```
 make install
