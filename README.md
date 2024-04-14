@@ -1,42 +1,33 @@
-# Tools, Configs, Customization & Tweaks for Qubes OS
+# Qubes OS Tweak Tools
+My personal Qubes OS Tweak Tools, configs and related files.
 
 ## Icons
-Mostly icons for qubes-label-tt. Full description in [icons](/icons)
+Mostly icons for `qubes-label-tt`. Full description in [icons](/icons)
 sub-directory.
 
-## Tools for DOM0 / ManagementVM
-### qubes-update-tt
-This tool was originally created during my Qubes OS 3.2 days. I had to download
-updates for many templates during night to circumvent daily download caps.
-I've added installation, search, remove and other functionalities at later 
-stages. After being away from Qubes OS for a long time and returning to Qubes OS 
-4.2, some parts of it became obsolete because of the modern Salt interface, the
-new graphical updater and `qvm-vm-update` tool. It is still useful as some of
-its features are not available via the mentioned tools.
+## Tweak Tools & Libraries
+### `qubesappmenustt` Lib & `qvm-appmenus-tt` Utility 
+Tweak Tools for Qubes OS AppMenus. Full description is available in
+[qubesappmenustt](/qubesappmenustt) sub-directory.
 
-### qubes-label-tt
-A simple command line tool to list/create/get/index/remove Qubes OS labels. It 
-is advisable to add a proper suffix to custom labels. This should prevent
-probable conflicts with new official labels (if any). Good examples are 
-'custom','user', etc. Also never delete standard labels.
+### `qubesimgconvertertt` Lib & `qvm-get-image-tt Utility
+Custom effects for Qubes OS icons & images. Full description is available in
+[qubesimgconvertertt](/qubesimgconvertertt) sub-directory.
 
-Honorable mention: Willy-JL's
-[Qubes-Scripts](https://github.com/Willy-JL/Qubes-Scripts)
-has been an inspiration for this tool.
+### `qubes-label-tt` Utility
+Label management tool for Qubes OS. Full description is available in
+[qubes-label-tt](/qubeslabeltt) sub-directory.
 
-### qvm-get-image-tt, qubesimgconvertertt
-As of March 2024 (Qubes OS 4.2.1), only tinted icons are supported for
-application icons. `qvm-get-image` and `qvm-get-tinted-image` were the starting
-point of this work. Part of 
-[qubes-app-linux-img-converter](https://github.com/QubesOS/qubes-app-linux-img-converter)
-repository. `qubesimgconverter` which is a part of
-[qubes-linux-utils](https://github.com/QubesOS/qubes-linux-utils.git)
-repository is the basis of qubesimgconvertertt library. 
-It should be noted that the current systray effects are not implemented via the
-qubesimgconverter library.
+### `qubes-update-tt` Utility
+My personal template updater tweak tool. This utility is not installed by 
+default as a part of Tweak Tools. More information and background in
+[qubes-update-tt](/qubes-update-tt) sub-directory.
 
-### qvm-appmenus-tt
-Since `qvm-appmenus(1)` calls qubesimgconverter.tint function directly to tint 
-icons, an alternative was required to perform custom effects on AppMenu icons.
-Other useful actions such as launching qube apps in their dedicated workspace
-could be automated via this tool. Thus qvm-appmenus-tt was born.
+### `icon-receiver-tt` Daemon
+Custom icon effects for the running VM Apps. Full description is available in
+[window-icon-updater-tt](/window-icon-updater-tt) sub-directory.
+
+### References & Links
+- The ongoing 
+[discussion on Qubes OS forum](https://forum.qubes-os.org/t/programming-approaches-to-alternative-appmenu-icon-effects-setting-default-workspace-per-qube-additional-label-colors/25381)
+on icon effects, additional labels, workspace/VM.

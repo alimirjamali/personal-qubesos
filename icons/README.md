@@ -1,11 +1,13 @@
 # Background
-Icons to use with `qubes-label-tt` and other Qubes OS related purposes.
-Some of these items are my personal original designs. Some are based on public 
+Icons to use with `qubes-label-tt` and for other Qubes OS related purposes.
+Some of the icons are my personal original sketches. Some are based on public 
 domain designs or other type of free licensed designs (e.g. CC-BY-SA). Here I
-try to list all of them with proper attribution to the original designer.
+try to list all of them with proper attribution to the original designer. If you
+find anything inappropriate or any license infringement, kindly open an issue to
+inform me.
 
 Table of the beautiful Qubes 
-[Vector Perfect Sushi icons](https://github.com/QubesOS/qubes-artwork) 
+[Vector Perfect Qute Sushi icons](https://github.com/QubesOS/qubes-artwork) 
 is linked directly from Qubes OS Artwork repository for reference (designed by
 [@ninavizz](https://github.com/ninavizz)).
 
@@ -19,28 +21,28 @@ VM icons with those colors.
 | Icon | Qube Name | License | Description |
 | :---: | :---: | :---: | :--- |
 | ![](qube-axonometric.svg) | Axonometric | CC-BY-SA | Based on [Nevit Dilmen's design](https://be.m.wikimedia.org/wiki/File:Axonometric-cube.svg). |
-| ![](qube-cam.svg) | CAM | CC-BY-SA | Cube based on Vector Perfect Qute Sushi. Drill bit from [Inductiveload design](https://en.m.wikipedia.org/wiki/File:Machined_Holes.svg) |
+| ![](qube-cam.svg) | CAM | CC-BY-SA | Cube based on Vector Perfect Qute Sushi. Drill bit from [Inductiveload's design](https://en.m.wikipedia.org/wiki/File:Machined_Holes.svg) |
 | ![](qube-cfop-0.svg) | CFOP Zero | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Inspection stage |
 | ![](qube-cfop-cross.svg) | CFOP Cross | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Cross stage |
 | ![](qube-cfop-f2l.svg) | CFOP F2L | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - First two layers stage |
 | ![](qube-cfop-oll-1.svg) | CFOP OLL 1 | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Two look OLL 1 stage |
 | ![](qube-cfop-oll-2.svg) | CFOP OLL 2 | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Two look OLL 2 stage |
 | ![](qube-cfop-pll.svg) | CFOP PLL | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - PLL stage |
-| ![](qube-cubane.svg) | Cubane | CC0 | Based on [NEUROtiker design](https://commons.wikimedia.org/wiki/File:Cuban.svg) on Wikimedia |
+| ![](qube-cubane.svg) | Cubane | CC0 | Based on [NEUROtiker's design](https://commons.wikimedia.org/wiki/File:Cuban.svg) on Wikimedia |
 | ![](qube-cubicle.svg) | Cubicle | CC-BY-SA | Original sketch by myself. Monitor by Michaël Bégin,<br />Keyboard by David Peters, Screen from Qubes Artwork |
 | ![](qube-cubist.svg) | Rubik's | CC-BY-SA | Original sketch by myself. Unsolved Rubik's Cube |
 | ![](qube-dice.svg) | Dice(Die) | CC-BY-SA | Based on [Steaphan Greene's design](https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg). |
-| ![](qube-engraved.svg) | Engraved | CC0 | Based on [Jarda design](https://openclipart.org/detail/177642/engraved-cube-2). |
+| ![](qube-engraved.svg) | Engraved | CC0 | Based on [Jarda's design](https://openclipart.org/detail/177642/engraved-cube-2). |
 | ![](qube-impossible-cube1.svg) | Impossible 1 | CC-BY-SA | Original sketch by myself. |
-| ![](qube-impossible-cubes.svg) | Impossible 3 | CC0 | Based on [Jarda design](https://openclipart.org/detail/176610/impossible-cubes). |
+| ![](qube-impossible-cubes.svg) | Impossible 3 | CC0 | Based on [Jarda's design](https://openclipart.org/detail/176610/impossible-cubes). |
 | ![](qube-impossible-hexagon.svg) | Impossible<br />Hexagon | CC-BY-SA | Original sketch by myself. |
 | ![](qube-infinity.svg) | Infinity | CC-BY-SA | Original sketch by myself. |
 | ![](qube-isometric.svg) | Isometric | CC-BY-SA | Original sketch by myself. |
-| ![](qube-isometric-shapes.svg) | Isometric<br />Shapes | CC0 | Based on [Gramzon design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
+| ![](qube-isometric-shapes.svg) | Isometric<br />Shapes | CC0 | Based on [Gramzon's design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original sketch by myself. |
 | ![](qube-square2.svg) | Qube&#x00B2; | CC-BY-SA | Based on [Qubes OS Artwork](https://github.com/QubesOS/qubes-artwork). |
-| ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz designs](https://github.com/QubesOS/qubes-artwork). |
-| ![](qube-sticky-notes.svg) | Sticky Notes | CC0 | Based on [crisg design](https://openclipart.org/detail/183333/sticky-cube-notes). |
+| ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz's designs](https://github.com/QubesOS/qubes-artwork). |
+| ![](qube-sticky-notes.svg) | Sticky Notes | CC0 | Based on [crisg's design](https://openclipart.org/detail/183333/sticky-cube-notes). |
 | ![](qube-tesseract.svg) | Tesseract | CC-BY-SA | Original sketch by myself. |
 | ![](qube-webcolors.svg) | Web Colors | CC-BY-SA | Based on [Denis N Gour's design](https://commons.wikimedia.org/wiki/File:Web_Color_Cube.svg). |
 
@@ -57,13 +59,13 @@ VM icons with those colors.
 | purple | `#75507b` | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/appvm-purple.svg) | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/dispvm-purple.svg) | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/servicevm-purple.svg) | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/standalonevm-purple.svg) | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/templatevm-purple.svg) |
 | black | `#000000` | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/appvm-black.svg) | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/dispvm-black.svg) | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/servicevm-black.svg) | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/standalonevm-black.svg) | ![](https://raw.githubusercontent.com/QubesOS/qubes-artwork/main/icons/scalable/apps/templatevm-black.svg) |
 
-### Distro Icons and Color Codes
+### Distro Icons & Color Codes
 
 Distro logo icons are linked directly from their websites or Wikipedia. N/A
-means not available as SVG or is non-square size. Distro artwork guidelines is
-linked if available.
+means not available as SVG or logo is non-square size. Distro artwork guidelines
+are linked if available.
 
-| Icon | Color | Hex Value | Distro name and artwork guidelines |
+| Icon | Color | Hex Value | Distro name & artwork guidelines |
 | :---: | :--- | :---: | :--- |
 | N/A | ![`#0d597f`](https://placehold.co/48x48/0d597f/0d597f.png) | `#0d597f` | Alpine |
 | <img src="https://archlinux.org/static/logos/legacy/arch-legacy-blue2.3b770e580065.svg" width="48" height="48"> | ![`#1793d1`](https://placehold.co/48x48/1793d1/1793d1.png) | `#1793d1` | [Archlinux](https://archlinux.org/art/) |
@@ -78,10 +80,14 @@ linked if available.
 | <img src="https://styleguide.torproject.org/static/images/tor-browser/stable/stable.svg" width="48" height="48"> | ![`#7D4698`](https://placehold.co/48x48/7D4698/7D4698.png) | `#7D4698` | [Tor](https://styleguide.torproject.org/brand-assets/) |
 | <img src="https://www.whonix.org/favicon.svg?hsversion=2" width="48" height="48"> | ![`#7dcff3`](https://placehold.co/48x48/7dcff3/7dcff3.png) | `#7dcff3` | [Whonix](https://www.whonix.org/wiki/Dev/Logo) |
 
+### Automatic Label Creation & Removal
+A Makefile is included in the current directory which would create my personal
+set of labels. Run `make info` at the current directory for more information.
+
 ### Icons to consider
 PCB qube, [Melting ice qube](https://openclipart.org/detail/182951/ice-cube), 
 Roughing end milling qube, Acoustic qube, 3D puzzle cube,
-Cube Speaker, Different species of Wooden qubes, 
+Cube Speaker, Wooden block qubes of different species, 
 [Cardboard qube](https://openclipart.org/detail/231068/3d-isometric-cardboard-box),
 [Earth qube](https://openclipart.org/detail/259468/cube-earth-silhouette),
 [Blank die](https://openclipart.org/detail/304802/blank-dice),

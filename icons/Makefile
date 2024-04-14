@@ -1,5 +1,4 @@
 .SILENT:
-.PHONY: info all UIUX DISTROS Cubist QubesTheme CADCAM Conceptual RealLife clean
 
 QLTT := $${HOME}/bin/qubes-label-tt -y --ANSI
 ALLLABELS := Maroon Olive Navy Lime Cyan Magenta Apricot Mint Lavender \
@@ -18,12 +17,14 @@ CONCEPTUAL := qube-axonometric.svg qube-engraved.svg qube-impossible-cube1.svg \
 	      qube-infinity.svg qube-isometric-shapes.svg qube-tesseract.svg \
 	      qube-optical-illusion.svg qube-webcolors.svg
 
+.PHONY: info all UIUX DISTROS Cubist QubesTheme CADCAM Conceptual RealLife clean
+
 info:
 	$(info Run 'make <target>' to create target category.)
 	$(info Available target lables are as follow:)
-	$(info UIUX, Cubist, QubesTheme, CADCAM, RealLife, Conceptual)
+	$(info <<< UIUX, Cubist, QubesTheme, CADCAM, RealLife, Conceptual >>>)
 	$(info or 'make all' to create all of the available labels.)
-	$(info 'make clean' removes all Tweak Tools labels.)
+	$(info 'make clean' removes all unused Tweak Tools labels.)
 
 all: UIUX DISTROS Cubist QubesTheme CADCAM RealLife Conceptual
 	$(info Tweak Tools default labels are created successfully.)
@@ -65,23 +66,24 @@ Cubist: $(CUBIST)
 		--icon templatevm=qube-cfop-cross.svg
 
 QubesTheme: $(QUBESTHEME) 
+	$(info Qubes-OS theme labels will be created.)
 	$(QLTT) create Qubes2 0xEEEEEE --icon allvm=qube-square2.svg
 	$(QLTT) create Qubes3 0xAAAAAA --icon allvm=qube-square3.svg
-	$(info Qubes-OS theme labels will be created.)
 
 CADCAM: $(CAD_CAM)
+	$(info CAD/CAM lables will be created.)
 	$(QLTT) create CAM 0xBBBBBB --icon allvm=qube-cam.svg
 	$(QLTT) create CAD 0x555555 --icon allvm=qube-isometric.svg
-	$(info CAD/CAM lables will be created.)
 
 RealLife: $(REALLIFE)
+	$(info Real life lables will be created.)
 	$(QLTT) create Cubane 0x000000 --icon allvm=qube-cubane.svg
 	$(QLTT) create Cubicle 0x000000 --icon allvm=qube-cubicle.svg
 	$(QLTT) create Dice 0x000000 --icon allvm=qube-dice.svg
 	$(QLTT) create StickyNotes 0xBBBBBB --icon allvm=qube-sticky-notes.svg
-	$(info Real life lables will be created.)
 
 Conceptual: $(CONCEPTUAL)
+	$(info Conecptual lables will be created.)
 	$(QLTT) create Axonometric 0xFFDD55 --icon allvm=qube-axonometric.svg
 	$(QLTT) create Engraved 0x555555 --icon allvm=qube-engraved.svg
 	$(QLTT) create Impossible1 0x555555 --icon allvm=qube-impossible-cube1.svg
@@ -92,7 +94,6 @@ Conceptual: $(CONCEPTUAL)
 	$(QLTT) create Tesseract 0x555555 --icon allvm=qube-tesseract.svg
 	$(QLTT) create OpticalIllusions 0x555555 --icon allvm=qube-optical-illusion.svg
 	$(QLTT) create Webcolors 0xFF00FF --icon allvm=qube-webcolors.svg
-	$(info Conecptual lables will be created.)
 
 clean: $(UI_UX) $(CUBIST) $(QUBESTHEME) $(CAD_CAM) $(REALLIFE) $(CONCEPTUAL)
 	$(info All unused custom labels will be removed.)
