@@ -26,5 +26,5 @@ System restart or login/logoff is necessary to properly reload the daemon.
 
 ### Limitations, Issues & ToDo
 These are the currently known limitation with the tool & library:
-- Daemon does not properly register running VMs after logoff/login.
-
+- Daemon does not properly register running VMs after logoff/login. This is a
+random behaviour which demands further study.

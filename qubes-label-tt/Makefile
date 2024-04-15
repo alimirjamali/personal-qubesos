@@ -15,7 +15,7 @@ install: qubes-label-tt
 	install -v -D -C -m 755 qubes-label-tt $(BINDIR)
 
 fixupdategui:
-	echo "label {color: #000000;}" >> /usr/lib/python3.11/site-packages/qui/styles/qubes-colors-light.css
+	echo 'label {color: #000000;}' >> /usr/lib/python3.11/site-packages/qui/styles/qubes-colors-light.css
 
 remove:
 	-rm -v $(BINDIR)/qubes-label-tt

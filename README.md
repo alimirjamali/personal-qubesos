@@ -10,7 +10,7 @@ sub-directory.
 Tweak Tools for Qubes OS AppMenus. Full description is available in
 [qubesappmenustt](/qubesappmenustt) sub-directory.
 
-### `qubesimgconvertertt` Lib & `qvm-get-image-tt Utility
+### `qubesimgconvertertt` Lib & `qvm-get-image-tt` Utility
 Custom effects for Qubes OS icons & images. Full description is available in
 [qubesimgconvertertt](/qubesimgconvertertt) sub-directory.
 
