@@ -21,5 +21,5 @@ install:
 remove:
 	rm -v $(BINDIR)/qvm-get-image-tt
 	rm -v $(LIBDIR)/qubesimgconverter/__init__.py
-	rmdir -v $(LIBDIR)/qubesimgconverter
+	-rmdir -v $(LIBDIR)/qubesimgconverter
 

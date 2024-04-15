@@ -20,5 +20,5 @@ install:
 remove:
 	rm -v $(BINDIR)/qvm-appmenus-tt
 	rm -v $(LIBDIR)/qubesappmenustt/__init__.py
-	rmdir -v $(LIBDIR)/qubesappmenustt
+	-rmdir -v $(LIBDIR)/qubesappmenustt
 
