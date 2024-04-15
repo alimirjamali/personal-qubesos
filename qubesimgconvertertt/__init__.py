@@ -36,64 +36,91 @@ class Image(qubesimgconverter.Image):
 
     def ANSI(self):
         '''Printing representation of image with ANSI escape codes'''
-
-        pixels = numpy.frombuffer(self._rgba, dtype='B').reshape(\
+        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
                 self.height, self.width, 4)
         for row in pixels:
             for pixel in row:
-                r, g, b, a = pixel[:]
+                r, g, b = pixel[:3]
                 print("\033[48;2;%d;%d;%dm  " % (r, g, b), end='')
             print("\033[0m")
 
+    def alphacompositor(self, back):
+        ''' Compositing self on top of another Image. See: '''
+        ''' https://en.wikipedia.org/wiki/Alpha_compositing for more info '''
+        tPixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
+                self.height, self.width, 4).astype(numpy.single)
+        bPixels = numpy.frombuffer(back._rgba, dtype=numpy.uint8).reshape(\
+                back.height, back.width, 4).astype(numpy.single)
+        ''' If top image and back image dimensions are different: '''
+        w = max(self.width, back.width)
+        h = max(self.height, back.height)
+        tPixels = numpy.pad(tPixels, [(0, w - self.width), \
+                (0, h - self.height), (0, 0)], mode = 'constant') 
+        bPixels = numpy.pad(bPixels, [(0, w - back.width), \
+                (0, h - back.height), (0, 0)], mode = 'constant')
+        tRGB = tPixels[...,:3]
+        bRGB = bPixels[...,:3]
+        tAlpha = tPixels[...,3] / 255.0
+        bAlpha = bPixels[...,3] / 255.0
+        outAlpha = tAlpha + bAlpha * (1 - tAlpha)
+
+        numpy.seterr(all='ignore')
+        outRGB = (tRGB * tAlpha[..., numpy.newaxis] + bRGB * \
+                bAlpha[..., numpy.newaxis] * (1 - tAlpha[..., numpy.newaxis])) \
+                / outAlpha[..., numpy.newaxis]
+
+        outRGBA = numpy.dstack((outRGB, outAlpha * 255)).astype(numpy.uint8)
+        numpy.seterr(all='warn')
+
+        return self.__class__(rgba=outRGBA.tobytes(), size=[w, h])
+
     def overlay(self, colour):
         ''' Overlay image on a solid block of color, using its Alpha channel '''
-
         rb, gb, bb = hex_to_int(colour)
-
-        pixels = numpy.frombuffer(self._rgba, dtype='B').reshape(\
-                self.height * self.width, 4)
-        r = pixels[:, 0].astype('u4')
-        g = pixels[:, 1].astype('u4')
-        b = pixels[:, 2].astype('u4')
-        a = pixels[:, 3].astype('u4')
-        r = (((a * r) + (255 - a) * rb) / 256).astype('B')
-        g = (((a * g) + (255 - a) * gb) / 256).astype('B')
-        b = (((a * b) + (255 - a) * bb) / 256).astype('B')
-        a[:] = 255
-        pixelso = numpy.column_stack((r, g, b, a.astype('B')))
+        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
+                self.height * self.width, 4).astype(numpy.uint32)
+        r = pixels[:, 0]
+        g = pixels[:, 1]
+        b = pixels[:, 2]
+        a = pixels[:, 3]
+        r = (((a * r) + (255 - a) * rb) / 255).astype(numpy.uint8)
+        g = (((a * g) + (255 - a) * gb) / 255).astype(numpy.uint8)
+        b = (((a * b) + (255 - a) * bb) / 255).astype(numpy.uint8)
+        a.fill(255)
+        pixelso = numpy.column_stack((r, g, b, a.astype(numpy.uint8)))
         return self.__class__(rgba=pixelso.tobytes(), size=self._size)
 
     def border(self, colour, percent):
         ''' Apply a border to image at the border width of percent of  '''
         ''' minimum of image width & height. Assuming (0. < percent < 100.) '''
         ''' Even though border with over 50.% percent would be meaningless '''
-
         rb, gb, bb = hex_to_int(colour)
         mindim = min(self.height, self.width)
-        if  mindim <= 16:
-            width = 1
-            ab = 0
+        ''' 8x8 icons do not need borders. 16x16 icons could have only 1 pix'''
+        if mindim <= 8:
+            return self
+        elif mindim <= 16:
+            width = 1; ab = 0
         else:
             width = int(mindim * percent / 100.)
             ''' Anti-aliasing border edges. We need alpha of border at edges '''
             ab = int(((mindim * percent) % 100.) * 255. / 100.)
 
-        pixels = numpy.frombuffer(self._rgba, dtype='B').reshape(\
-                self.height, self.width, 4)
-        pixelsb = pixels.astype('u4')
+        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
+                self.height, self.width, 4).astype(numpy.uint32)
 
         if ab>0:
             border=numpy.array([rb, gb, bb, ab])
-            pixelsb[0:width+1, :] = (pixelsb[0:width+1, :] + border) / 2
-            pixelsb[:, 0:width+1] = (pixelsb[:, 0:width+1] + border) / 2
-            pixelsb[-width-1:, :] = (pixelsb[-width-1:, :] + border) / 2
-            pixelsb[:, -width-1:] = (pixelsb[:, -width-1:] + border) / 2
+            pixels[0:width+1, :] = (pixels[0:width+1, :] + border) / 2
+            pixels[:, 0:width+1] = (pixels[:, 0:width+1] + border) / 2
+            pixels[-width-1:, :] = (pixels[-width-1:, :] + border) / 2
+            pixels[:, -width-1:] = (pixels[:, -width-1:] + border) / 2
 
-        pixelsb[0:width, :] = rb, gb, bb, 255
-        pixelsb[:, 0:width] = rb, gb, bb, 255
-        pixelsb[-width:, :] = rb, gb, bb, 255
-        pixelsb[:, -width:] = rb, gb, bb, 255
-        return self.__class__(rgba=pixelsb.astype('B').tobytes(), \
+        pixels[0:width, :] = rb, gb, bb, 255
+        pixels[:, 0:width] = rb, gb, bb, 255
+        pixels[-width:, :] = rb, gb, bb, 255
+        pixels[:, -width:] = rb, gb, bb, 255
+        return self.__class__(rgba=pixels.astype(numpy.uint8).tobytes(), \
                 size=self._size)
 
     def thin_border(self, color):
@@ -110,22 +137,18 @@ class Image(qubesimgconverter.Image):
 
     def invert(self):
         ''' Inverting image for a paranoid effect '''
-
-        pixels = numpy.frombuffer(self._rgba, dtype='B').reshape(\
-                self.height * self.width, 4)
-        ri = 255 - pixels[:, 0]
-        gi = 255 - pixels[:, 1]
-        bi = 255 - pixels[:, 2]
-        a = pixels[:, 3]
-        pixelst = numpy.column_stack((ri, gi, bi, a))
-        return self.__class__(rgba=pixelst.tobytes(), size=self._size)
+        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
+                self.height * self.width, 4).astype(numpy.uint32)
+        pixels[:, 0:2] = 255 - pixels[:, 0:2]
+        return self.__class__(rgba=pixels.astype(numpy.uint8).tobytes(), \
+                size=self._size)
 
     def mirror(self, axes):
-        ''' Mirror/flip image vertically. I guess no one would use this'''
-
-        pixels = numpy.frombuffer(self._rgba, dtype='B').reshape(\
+        ''' Mirror/flip image. I guess no one would use this'''
+        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
                 self.height, self.width, 4)
         pixels = numpy.flip(pixels, axes)
-        return self.__class__(rgba=pixels.astype('B'), size=self._size)
+        return self.__class__(rgba=pixels.tobytes(), \
+                size=self._size)
 
 # vim: ft=python sw=4 ts=4 et
