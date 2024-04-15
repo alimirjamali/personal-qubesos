@@ -1,6 +1,7 @@
 .SILENT:
 
 BINDIR ?= ~/bin
+SYSTEMDDIR ?= ~/.config/systemd/user/
 
 .PHONY: install
 
@@ -13,6 +14,14 @@ info:
 
 install: qubes-update-tt
 	install -v -D -C -m 755 qubes-update-tt $(BINDIR)
+	install -v -D -C -m 644 -t $(SYSTEMDDIR) qubes-update-tt-checkonly.service
+	install -v -D -C -m 644 -t $(SYSTEMDDIR) qubes-update-tt-checkonly.timer
+	install -v -D -C -m 644 -t $(SYSTEMDDIR) qubes-update-tt-download.service
+	install -v -D -C -m 644 -t $(SYSTEMDDIR) qubes-update-tt-download.timer
 
 remove:
 	-rm -v $(BINDIR)/qubes-update-tt
+	-rm -v $(SYSTEMDDIR)/qubes-update-tt-checkonly.service
+	-rm -v $(SYSTEMDDIR)/qubes-update-tt-checkonly.timer
+	-rm -v $(SYSTEMDDIR)/qubes-update-tt-download.service
+	-rm -v $(SYSTEMDDIR)/qubes-update-tt-download.timer

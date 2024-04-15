@@ -1,0 +1,10 @@
+[Unit]
+Description=Qubes OS Update Tweak Tool - Download template updates
+After=qubes-vm@sys-firewall.service
+
+[Service]
+Type=oneshot
+Nice=19
+IOSchedulingClass=2
+IOSchedulingPriority=7
+ExecStart=sh -c "~/bin/qubes-update-tt --all update --if-updates --refresh --download-only -y --skip-broken --after-update running"

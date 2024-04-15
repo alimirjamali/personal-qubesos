@@ -1,0 +1,11 @@
+[Unit]
+Description=qubes-update-tt-checkonly timer
+After=qubes-vm@sys-firewall.service
+
+[Timer]
+OnCalendar=*-*-* 3:00
+RandomizedDelaySec=60m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

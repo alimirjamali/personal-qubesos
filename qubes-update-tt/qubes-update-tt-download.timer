@@ -1,0 +1,11 @@
+[Unit]
+Description=qubes-update-tt-download timer
+After=qubes-vm@sys-firewall.service
+
+[Timer]
+OnCalendar=*-*-* 5:00
+RandomizedDelaySec=60m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

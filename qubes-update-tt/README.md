@@ -15,14 +15,40 @@ templates which have qrexec installed on them. It could be used to perform
 package install, search and removal operations as well as downloading updates
 without installation or actual installation of updates (which is discouraged).
 Command help is available at top of the file which hopefully should make it
-self-explanatory.
+self-explanatory. Some use cases:
+
+1. Only checking for updates & notifying dom0. If the template is halted, it is
+turned on, checked for update and turned off again. A pair of systemd unit &
+timer are provided for this purpose to schedule it for 3:00±60m:
+```
+qubes-update-tt --all check-only
+```
+2. Downloading updates without installation only for templates tagged for update
+availability. And keep the template running after download. A pair of systemd
+unit & timer are provided for this purpose to schedule it for 5:00±60m:
+```
+qubes-update-tt --all --if-updates update --refresh --download-only -y --skip-broken --after-update running
+```
+3. Installing `htop` on all minimal templates:
+```
+qubes-update-tt "*-minimal" install htop
+```
+4. List repos for Fedora templates:
+```
+qubes-update-tt "*fedora*" repolist
+```
+5. Search for blender on XFCE & Arch templates:
+```
+qubes-update-tt "*xfce*,archlinux" search blender
+```
 
 ### Installation & Removal
-To install the tool at your `~/bin` directory, run this in the current dir:
+To install the tool at your `~/bin` directory and systemd units at 
+`~/.config/systemd/user` run this in the current directory:
 ```
 make install
 ```
-To remove it from your system run this in the current directory:
+To remove them from your system run this in the current directory:
 ```
 make remove
 ```

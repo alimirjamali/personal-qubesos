@@ -26,7 +26,7 @@ declare SELF=${0##*/}
 # Lockfile path
 lock_file="/tmp/${SELF}.lck"
 # qrexec_agent could be either 'qrexec-client' or 'qvm-run'
-qrexec_agent="qvm-run"
+[ -t 1 ] && qrexec_agent="qvm-run" || qrexec_agent="qrexec-client"
 # Colors for qvm-run
 color_output=91
 color_stderr=37
@@ -132,7 +132,16 @@ print_usage() {
 
 # Synopsis: message MESSAGE
 message() {
-	! $QUIET && echo "${@}"
+	if ! $QUIET; then
+		if [ -t 1 ]; then
+			echo "${@}"
+		else
+			notify-send -u normal -a "Qubes Update Tweak Tool" \
+				--icon software-update-available \
+				"Tweak Tool Updater" \
+				"Performing routine ${SUBCOMMAND} tasks.\n${@}"
+		fi
+	fi
 }
 
 # Synopsis: abort EXIT_CODE MESSAGE
@@ -395,7 +404,7 @@ qrexec() {
 		message "Running as ${user} on ${domain}: ${@}"
 	fi
 	if [ ${qrexec_agent} = "qrexec-client" ]; then
-		qrexec_cmd=(qrexec-client -d ${domain} ${user}:"${@}")
+		qrexec_cmd=(qrexec-client -w 60 -d ${domain} ${user}:"${@}")
 	elif [ ${qrexec_agent} = "qvm-run" ]; then
 		qrexec_cmd=(qvm-run --user=${user} --no-auto --no-gui \
 			--pass-io --filter-escape-chars)
@@ -437,7 +446,7 @@ update_template() {
 		return
 	fi
 
-	message "Working on ${template} template"
+	message "Working on ${template} template."
 
 	if [ $AUTOSTART = true ] && [ "${state}" = "halted" ] && \
 		[ $DRYRUN = false ];
@@ -445,7 +454,7 @@ update_template() {
 		$VERBOSE && message "Starting ${template} template."
 		qubesd_admin_api admin.vm.Start ${template} >/dev/null
 		[[ ${?} -ne 0 ]] && \
-			abort 42 "Qubes API call to start ${template}  failed!"
+			abort 42 "Qubes API call to start ${template} failed!"
 	fi
 
 	current_state=$(power_state ${template})
@@ -537,7 +546,7 @@ update_templates() {
 		template_os=$(qubesd_admin_api \
 			admin.vm.feature.Get ${template} os)
 		if [[ ! $? == 0 ]]; then
-			message "Could not determin OS for ${template} via"\
+			message "Could not determin OS of ${template} via"\
 				"Qubes API! Ignoring."
 			continue
 		fi
