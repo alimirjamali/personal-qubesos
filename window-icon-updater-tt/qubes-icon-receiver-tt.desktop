@@ -2,6 +2,6 @@
 Name=Qubes window icon receiver Tweak Tool
 Comment=Tweaks for Receiving and updating Qubes window icons
 Icon=qubes
-Exec=/bin/sh -c "${HOME}/bin/icon-receiver-tt
+Exec=/usr/bin/sh -c "${HOME}/bin/icon-receiver-tt"
 Terminal=false
 Type=Application

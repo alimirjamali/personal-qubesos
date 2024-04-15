@@ -20,6 +20,6 @@ install: icon-receiver-tt qubes-icon-receiver.desktop qubes-icon-receiver-tt.des
 
 remove:
 	$(info Removing icon-receiver Tweak Tool. Reboot for changes to take effect)
-	rm -v $(BINDIR)/icon-receiver-tt
-	rm -v $(AUTORUNDIR)/qubes-icon-receiver.desktop
-	rm -v $(AUTORUNDIR)/qubes-icon-receiver-tt.desktop
+	-rm -v $(BINDIR)/icon-receiver-tt
+	-rm -v $(AUTORUNDIR)/qubes-icon-receiver.desktop
+	-rm -v $(AUTORUNDIR)/qubes-icon-receiver-tt.desktop

@@ -15,11 +15,11 @@ info:
 
 install:
 	install -v -d $(LIBDIR)
-	install -v -C -D __init__.py -t $(LIBDIR)/qubesimgconverter
+	install -v -C -D __init__.py -t $(LIBDIR)/qubesimgconvertertt
 	install -v -C -D -m 755 qvm-get-image-tt $(BINDIR)
 
 remove:
-	rm -v $(BINDIR)/qvm-get-image-tt
-	rm -v $(LIBDIR)/qubesimgconverter/__init__.py
-	-rmdir -v $(LIBDIR)/qubesimgconverter
+	-rm -v $(BINDIR)/qvm-get-image-tt
+	-rm -v $(LIBDIR)/qubesimgconvertertt/__init__.py
+	-rmdir -v $(LIBDIR)/qubesimgconvertertt
 

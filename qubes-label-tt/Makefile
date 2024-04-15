@@ -18,4 +18,4 @@ fixupdategui:
 	echo "label {color: #000000;}" >> /usr/lib/python3.11/site-packages/qui/styles/qubes-colors-light.css
 
 remove:
-	rm -v $(BINDIR)/qubes-label-tt
+	-rm -v $(BINDIR)/qubes-label-tt

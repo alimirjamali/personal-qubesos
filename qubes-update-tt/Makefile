@@ -15,4 +15,4 @@ install: qubes-update-tt
 	install -v -D -C -m 755 qubes-update-tt $(BINDIR)
 
 remove:
-	rm -v $(BINDIR)/qubes-update-tt
+	-rm -v $(BINDIR)/qubes-update-tt
