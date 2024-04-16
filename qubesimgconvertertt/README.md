@@ -54,3 +54,47 @@ default tint. They are already fast but there is always room for improvements.
 - Inspirational piece of code 
 [by Mark Setchell on Stackoverflow](https://stackoverflow.com/questions/60398939/how-to-do-alpha-compositing-with-a-list-of-rgba-data-in-numpy-arrays#answer-60401248)
 on [Alpha Compositing](https://en.wikipedia.org/wiki/Alpha_compositing).
+
+### Screenshots & Demo
+The untouched 32x32 pixel Icon of Ristretto. ANSI color representation of
+output is printed to the terminal via __--ANSI__ option.
+
+![](effect-untouched.png)
+
+The default __Tint__ effect. Original work by Wojciech Porczyk and others.
+
+![](effect-tint.png)
+
+Overlaying image on provided color using its Alpha channel.
+
+![](effect-overlay.png)
+
+Thin and Thick borders. Bordering supports percentage of image instead of fixed
+pixel count. This allows consistent results on HiDPI displays. The anti-aliased 
+1.5 pixel width thin border for 32x32 icons is much more distinguishable and
+comfortable than 1 pixel width.
+
+![](effect-thin-border.png)
+
+![](effect-thick-border.png)
+
+Special invert effect is very useful for __untrusted__ VM. As it implies a
+paranoid effect.
+
+![](effect-invert.png)
+
+Mirrored or flipped icons are not that much usable as in practice, our brains do
+not register them well as distinguishable effects.
+
+![](effect-mirrored.png)
+
+Alpha Compositing 16x16 pixel Firefox icon on Chrome icon. This effect could be
+useful for compositing qube icon on application icons. It is necessary to
+consult professional UIUX experts for better feedback.
+
+![](effect-alphacompositor.png)
+
+Mixed effects are feasible. Here is a mirrored Wilber (GIMP’s macot), tinted
+with Magenta, finally composited on Qubes OS icon.
+
+![](effect-mix-effects.png)
