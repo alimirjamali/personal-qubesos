@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="qube-whonix.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="8.8771942"
+     inkscape:cx="11.602765"
+     inkscape:cy="30.47134"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3"
+     showguides="true" />
+  <title
+     id="title">Vector Perfect Qute Qube</title>
+  <defs
+     id="defs1">
+    <polygon
+       id="path-1"
+       points="0.264506174 0.398583241 40.0936 0.398583241 40.0936 46 0.264506174 46" />
+    <polygon
+       id="path-3"
+       points="0 0.361 40.9599938 0.361 40.9599938 45.9620167 0 45.9620167" />
+    <polygon
+       id="path-5"
+       points="0 0.0254 20.6328606 0.0254 20.6328606 33.9504 0 33.9504" />
+    <mask
+       id="mask-4-6"
+       fill="#ffffff">
+      <use
+         xlink:href="#path-3"
+         id="use2-7" />
+    </mask>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter13"
+       x="-0.05651202"
+       y="-0.044567038"
+       width="1.1455959"
+       height="1.0891341">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         id="feFlood12" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="0.500000"
+         id="feGaussianBlur12" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="1.000000"
+         dy="0.000000"
+         id="feOffset12" />
+      <feComposite
+         result="comp1"
+         operator="in"
+         in="flood"
+         in2="offset"
+         id="feComposite12" />
+      <feComposite
+         result="comp2"
+         operator="over"
+         in="SourceGraphic"
+         in2="comp1"
+         id="feComposite13" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata3">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Vector Perfect Qute Qube</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g8"
+     transform="matrix(1.1250001,0,0,1.1250001,-3.0000023,-5.2500025)">
+    <path
+       id="path1"
+       style="display:inline;fill:#7dcff4;fill-opacity:0.980392;stroke:#000000;stroke-width:1.06999;stroke-dasharray:none;filter:url(#filter13)"
+       d="m 23.639986,6.5349975 c -4.927075,0 -9.055034,3.9865975 -9.055034,8.9863865 v 0.399802 c -0.273145,0.269677 -0.529615,0.553125 -0.777468,0.842922 l -3.547301,2.046642 c -0.4699703,0.271338 -0.851224,0.659991 -1.114318,1.112722 -0.2638428,0.454231 -0.4088844,0.973097 -0.4118826,1.515026 l -0.043104,7.009989 -0.041507,7.008392 c -0.00294,0.552422 0.1434444,1.083632 0.4102862,1.545359 0.2668418,0.461724 0.6521635,0.855097 1.1318794,1.128686 l 6.090437,3.467478 6.090437,3.467477 c 0.471468,0.268341 0.996722,0.400597 1.521411,0.399111 0.524687,-0.0014 1.049844,-0.135755 1.519816,-0.407092 l 6.162275,-3.560072 6.163873,-3.558475 c 0.469971,-0.270589 0.850474,-0.656049 1.114319,-1.10953 0.263842,-0.45423 0.41048,-0.975541 0.413478,-1.518219 l 0.04151,-7.008391 0.04151,-7.008392 c 0.0037,-0.552422 -0.141849,-1.083634 -0.40869,-1.545359 -0.26684,-0.462476 -0.65376,-0.854253 -1.133475,-1.12709 l -3.967169,-2.258969 h -0.02235 c -0.191179,-0.205642 -0.38766,-0.407464 -0.592282,-0.601859 v -0.240158 c 0,-4.999407 -3.915781,-8.9863865 -8.842706,-8.9863865 z m -0.05907,3.2328003 h 0.249046 c 3.033711,0 5.41514,2.5194042 5.41514,5.5971352 v 0.06739 H 18.090745 v -0.06739 c 0,-3.077732 2.456459,-5.5971352 5.490171,-5.5971352 z"
+       sodipodi:nodetypes="sscccccccsccccccccccccccccssssssccss" />
+    <g
+       id="g1"
+       style="display:inline"
+       transform="matrix(1.1237297,0,0,1.1400353,-2.6593431,1.1473558)">
+      <path
+         d="m 17.269901,23.059531 c 0.08216,-4.313034 1.437652,-7.393704 2.505642,-7.393704 1.314431,0 3.20389,1.807312 4.518321,1.807312 0.821469,0 2.669935,-1.31435 4.107587,-1.31435 0.739362,0 1.926915,2.34183 1.967989,6.285203 -5.183213,0.297007 -8.627033,2.316028 -13.099297,0.615595 z"
+         fill-rule="evenodd"
+         id="path2"
+         style="stroke-width:0.0803786" />
+      <path
+         d="m 22.369922,27.506074 c 0.796464,-0.487898 2.097158,-0.455586 2.802319,-0.05561 l 0.01152,0.580776 c -0.741605,-0.406451 -2.041134,-0.380609 -2.802239,0.05561 z"
+         fill-rule="evenodd"
+         id="path3"
+         style="stroke-width:0.0803786" />
+      <path
+         d="m 26.283555,32.794985 c 0,0 -0.238764,0.896542 -2.238221,0.967034 -2.218851,0.104083 -2.494871,-0.747641 -2.494871,-0.747641"
+         fill="none"
+         stroke="#000000"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="1.13503"
+         id="path4" />
+      <path
+         d="m 13.357072,23.6262 c 0.03927,-1.571964 6.538315,1.194988 8.545047,0.933838 3.128334,-0.226161 11.732058,-2.898692 12.164494,-0.894533 0.314385,1.768409 -2.416341,0.379403 -7.497071,1.152549 0,0 -13.212631,1.441188 -13.212631,-1.191854 z"
+         id="path5"
+         style="fill-rule:evenodd;stroke-width:0.0803786" />
+      <path
+         d="m 16.962052,27.610566 c 0.649193,-0.943484 3.593163,-1.234213 5.729947,-0.298148 0,0 0.320703,0.953772 -0.08321,1.563685 -0.332236,1.00642 -3.392458,2.03623 -5.167137,0.883119 -0.673725,-0.560713 -0.77112,-1.315636 -0.479578,-2.14868 z"
+         id="path6"
+         style="fill-rule:evenodd;stroke-width:0.0803786" />
+      <path
+         d="m 30.542816,26.954677 c -0.761426,-0.855469 -3.718715,-0.778113 -5.722553,0.416257 0,0 -0.199676,0.986245 0.276889,1.541178 0.454741,0.95739 3.619206,1.598891 5.236825,0.234192 0.59882,-0.640136 0.601641,-1.401321 0.208839,-2.191603 z"
+         id="path7"
+         style="fill-rule:evenodd;stroke-width:0.0803786" />
+    </g>
+  </g>
+</svg>

@@ -27,7 +27,22 @@ default as a part of Tweak Tools. More information and background in
 Custom icon effects for the running VM Apps. Full description is available in
 [window-icon-updater-tt](/window-icon-updater-tt) sub-directory.
 
-### References & Links
+## Installation & Removal
+Individual libraries or tools could be installed via the __Makefiles__ inside
+their directories. Each __Makefile__ has its own __install & remove__ targets
+as well as a default __info__ target which prints brief explanation of the
+operation. __qubesimgconvertertt__ is a dependency for __qubesappmenustt__ &
+__icon-receiver-tt__ daemon. All of the tools & libraries with the exception of
+__qubes-update-tt__ could be installed in the project root via this command:
+```
+make install
+```
+And removed via this command:
+```
+make remove
+```
+
+## References & Links
 - The ongoing 
 [discussion on Qubes OS forum](https://forum.qubes-os.org/t/programming-approaches-to-alternative-appmenu-icon-effects-setting-default-workspace-per-qube-additional-label-colors/25381)
 on icon effects, additional labels, workspace/VM.
