@@ -3,7 +3,7 @@ Custom effects for Qubes OS application icons. Provided effects are **overlay,
 thin-border, thick-border** as well as the standard _tint_ which use the label 
 color for their effects. Special filters of **untouched, invert, mirror, flip**
 are also available. Screenshot of the effects are at the bottom of this page.
-Real-life use cases are are documented and explained in 
+Real-life use cases are documented and explained in
 [qubesappmenustt](/qubesappmenustt) and
 [window-icon-updater-tt](/window-icon-updater-tt) directories.
 
@@ -18,11 +18,11 @@ drop-in replacement for `qvm-get-image` or `qvm-get-tinted-image`. Based on
 utilities with additional _--filter_ & _--mirror_ options which allows user to
 select the desired filter. An extra _--ANSI_ function is provided to quickly
 check the results directly within the terminal. A special _--alphacomposite_
-option is available which allows compositing of one image on another. By default,
+option is available which allows composition of one image on another. By default,
 `qvm-get-image-tt` checks for an special **ttfilter** VM feature and uses it to
-determine custom effect per VM. If the _ttfilter_ key is not present or is
-invalid, the default tint effect will be applied. To change the default Tweak
-Tool filter of any VM:
+determine the current Tweak Tool filter effect per VM. If the _ttfilter_ key is
+not present or is invalid, the default tint effect will be applied. To change
+the Tweak Tool filter effect of any VM:
 
 ```
 qvm-features VMNAME ttfilter <tint|overlay|thin-border|thick-border|untouched|invert|mirror|flip>
@@ -44,8 +44,9 @@ These are the current known limitation with the tool & library:
 - It should be noted that the current _systray_ effects are not implemented via
 the `qubesimgconverter` library but are rather written in C language and a part of
 [qubes-gui-daemon](https://github.com/QubesOS/qubes-gui-daemon/tree/main/gui-daemon)
-- Performance evaluation of the effects are not compared with the default tint.
-They are already fast but there is always room for improvements.
+repository. Further study of its mechanism is needed.
+- Performance of the Tweak Tool effects are not evaluated and compared with the
+default tint. They are already fast but there is always room for improvements.
 - Test Units should be added.
 - Currently tested only on Qubes OS 4.2.1
 

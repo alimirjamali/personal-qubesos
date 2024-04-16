@@ -139,7 +139,7 @@ class Image(qubesimgconverter.Image):
         ''' Inverting image for a paranoid effect '''
         pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
                 self.height * self.width, 4).astype(numpy.uint32)
-        pixels[:, 0:2] = 255 - pixels[:, 0:2]
+        pixels[:, :3] = 255 - pixels[:, :3]
         return self.__class__(rgba=pixels.astype(numpy.uint8).tobytes(), \
                 size=self._size)
 

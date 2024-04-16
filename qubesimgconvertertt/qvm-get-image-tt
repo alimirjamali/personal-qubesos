@@ -48,7 +48,6 @@ parser.add_argument("--mirror", type=str, default="none", choices=\
         ["vertical", "vertically", "horizontal", "horizontally", "both"], \
         help="Mirror image in one or both axes.")
 parser.add_argument("--alphacomposite", type=str, \
-        default="/usr/share/icons/hicolor/32x32/apps/qubes-logo-icon.png", \
         help="Compositing filtered image on a background image. "\
         "Provide path of background image inside source VM.")
 
