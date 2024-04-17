@@ -71,8 +71,8 @@ Overlaying image on provided color using its Alpha channel.
 
 Thin and Thick borders. Bordering supports percentage of image instead of fixed
 pixel count. This allows consistent results on HiDPI displays. The anti-aliased 
-1.5 pixel width thin border for 32x32 icons is much more distinguishable and
-comfortable than 1 pixel width.
+1.536 pixel width thin-border for 32x32 icons is much more distinguishable and
+comfortable than the fixed 1 pixel width.
 
 ![](effect-thin-border.png)
 
