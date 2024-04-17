@@ -24,6 +24,7 @@
 import qubesimgconverter
 from qubesimgconverter import hex_to_int
 import numpy
+import math
 
 '''Note to self: qubesimgconverter.Image.tint is using numpy's old- '''
 '''deprecated binary mode of fromstring. as it behaves surprisingly-'''
@@ -45,13 +46,13 @@ class Image(qubesimgconverter.Image):
             print("\033[0m")
 
     def alphacompositor(self, back):
-        ''' Compositing self on top of another Image. See: '''
+        ''' Compositing Image on top of another Image. See: '''
         ''' https://en.wikipedia.org/wiki/Alpha_compositing for more info '''
         tPixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
                 self.height, self.width, 4).astype(numpy.single)
         bPixels = numpy.frombuffer(back._rgba, dtype=numpy.uint8).reshape(\
                 back.height, back.width, 4).astype(numpy.single)
-        ''' If top image and back image dimensions are different: '''
+        ''' Top image and back image dimensions might be different: '''
         w = max(self.width, back.width)
         h = max(self.height, back.height)
         tPixels = numpy.pad(tPixels, [(0, w - self.width), \
@@ -74,62 +75,43 @@ class Image(qubesimgconverter.Image):
 
         return self.__class__(rgba=outRGBA.tobytes(), size=[w, h])
 
-    def overlay(self, colour):
+    def overlay(self, color):
         ''' Overlay image on a solid block of color, using its Alpha channel '''
-        rb, gb, bb = hex_to_int(colour)
-        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
-                self.height * self.width, 4).astype(numpy.uint32)
-        r = pixels[:, 0]
-        g = pixels[:, 1]
-        b = pixels[:, 2]
-        a = pixels[:, 3]
-        r = (((a * r) + (255 - a) * rb) / 255).astype(numpy.uint8)
-        g = (((a * g) + (255 - a) * gb) / 255).astype(numpy.uint8)
-        b = (((a * b) + (255 - a) * bb) / 255).astype(numpy.uint8)
-        a.fill(255)
-        pixelso = numpy.column_stack((r, g, b, a.astype(numpy.uint8)))
-        return self.__class__(rgba=pixelso.tobytes(), size=self._size)
-
-    def border(self, colour, percent):
-        ''' Apply a border to image at the border width of percent of  '''
-        ''' minimum of image width & height. Assuming (0. < percent < 100.) '''
-        ''' Even though border with over 50.% percent would be meaningless '''
-        rb, gb, bb = hex_to_int(colour)
-        mindim = min(self.height, self.width)
-        ''' 8x8 icons do not need borders. 16x16 icons could have only 1 pix'''
-        if mindim <= 8:
-            return self
-        elif mindim <= 16:
-            width = 1; ab = 0
-        else:
-            width = int(mindim * percent / 100.)
-            ''' Anti-aliasing border edges. We need alpha of border at edges '''
-            ab = int(((mindim * percent) % 100.) * 255. / 100.)
-
-        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
-                self.height, self.width, 4).astype(numpy.uint32)
-
-        if ab>0:
-            border=numpy.array([rb, gb, bb, ab])
-            pixels[0:width+1, :] = (pixels[0:width+1, :] + border) / 2
-            pixels[:, 0:width+1] = (pixels[:, 0:width+1] + border) / 2
-            pixels[-width-1:, :] = (pixels[-width-1:, :] + border) / 2
-            pixels[:, -width-1:] = (pixels[:, -width-1:] + border) / 2
-
-        pixels[0:width, :] = rb, gb, bb, 255
-        pixels[:, 0:width] = rb, gb, bb, 255
-        pixels[-width:, :] = rb, gb, bb, 255
-        pixels[:, -width:] = rb, gb, bb, 255
+        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape( \
+                self.height * self.width, 4).astype(numpy.integer)
+        back = numpy.array(hex_to_int(color))
+        alpha = pixels[..., 3]
+        pixels[..., :3] = (pixels[..., :3] * alpha[..., numpy.newaxis] + \
+                back[numpy.newaxis, ...] * \
+                (255 - alpha[..., numpy.newaxis])) / 255
+        pixels[..., 3].fill(255)
         return self.__class__(rgba=pixels.astype(numpy.uint8).tobytes(), \
                 size=self._size)
 
+    def border(self, color, percent):
+        ''' Apply a border to image. Border width in pxiels as percent of    '''
+        ''' minimum of image width & height. Assuming (0. < percent < 50.) '''
+        mindim = min(self.height, self.width)
+        ''' 8x8 or smaller icons do not need borders. '''
+        if mindim <= 8: return self
+        r, g, b = hex_to_int(color)
+        border = numpy.full((self.width, self.height, 4), [r, g, b, 255])
+        ''' Proper passe-partout technique for best quality '''
+        edge = int(mindim * percent / 100.)
+        antialias = int(((mindim * percent) % 100.) * 255. / 100.)
+        border[edge:-edge, edge:-edge]=numpy.array([r, g, b, antialias])
+        back = math.ceil(mindim * percent / 100.)
+        border[back:-back, back:-back]=numpy.array([255, 255, 255, 0])
+        return self.__class__(rgba=border.astype(numpy.uint8).tobytes(), \
+                size=self._size).alphacompositor(self)
+
     def thin_border(self, color):
-        """ 1.5 Pixel border is nice for thin borders of 32x32 icons """
-        return self.border(color, 4.6875)
+        """ 1.536 Pixel border is nice for thin borders of 32x32 icons """
+        return self.border(color, 4.8)
 
     def thick_border(self, color):
-        """ 2 Pixel border is nice for thick borders of 32x32 icons """
-        return self.border(color, 6.25)
+        """ 2.048 Pixel border is nice for thick borders of 32x32 icons """
+        return self.border(color, 6.4)
 
     def untouched(self):
         ''' Returning the untouched image '''
@@ -138,13 +120,13 @@ class Image(qubesimgconverter.Image):
     def invert(self):
         ''' Inverting image for a paranoid effect '''
         pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
-                self.height * self.width, 4).astype(numpy.uint32)
-        pixels[:, :3] = 255 - pixels[:, :3]
+                self.height * self.width, 4).astype(numpy.integer)
+        pixels[..., :3] = 255 - pixels[..., :3]
         return self.__class__(rgba=pixels.astype(numpy.uint8).tobytes(), \
                 size=self._size)
 
     def mirror(self, axes):
-        ''' Mirror/flip image. I guess no one would use this'''
+        ''' Mirror/flip image. I guess no one would ever use this'''
         pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
                 self.height, self.width, 4)
         pixels = numpy.flip(pixels, axes)
