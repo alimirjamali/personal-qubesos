@@ -1,7 +1,6 @@
 #!/usr/bin/python3 -O
 
 # The Qubes OS Project, http://www.qubes-os.org
-#
 # Ali's personal Qubes OS improvements, http://www.mirjamali.com
 #
 # Copyright (C) 2013  Wojciech Porczyk <wojciech@porczyk.eu>
@@ -26,30 +25,42 @@ import qubesadmin
 import qubesimgconvertertt
 
 parser = argparse.ArgumentParser(
-        description='Secure copy of images between virtual machines',
-        epilog='Both SRC and DST may specify format in gm(1) way,\n'
-        'i.e. png:aqq.gif')
+        formatter_class=argparse.RawDescriptionHelpFormatter, \
+        description='Secure copy of images between virtual machines', \
+        epilog="Both SRC and DST may specify format in gm(1) way, i.e. " \
+        "png:aqq.gif\nANSI representation in xterm & xfce4-terminal is usually "\
+        "limited to 256 colors.")
 
 parser.add_argument('vmname', metavar='VMNAME', help='Source VM')
-parser.add_argument('colour', metavar='COLOUR', help='Colour')
+parser.add_argument('color', metavar='COLOR', \
+        help='Color for the effects. Will be ignored for untouched & invert filters.')
 parser.add_argument('src', metavar='SRC', help='Path inside source VM')
-parser.add_argument('dst', metavar='DST', help='Destination path in this VM')
-parser.add_argument("--ANSI", action="store_true", help="Print ANSI X3.64 "\
-        "(ISO/IEC 6429) color representation of image in color capable tty")
-parser.add_argument("--filter", type=str, default="ttfilter", choices= \
+
+effectgroup = parser.add_argument_group(title="Image Effects", \
+        description="Effect filter(s) to perform on the image")
+effectgroup.add_argument("--filter", type=str, default="ttfilter", choices= \
         ["ttfilter", "tint", "overlay","thin-border", "thick-border", \
         "untouched", "invert"], \
-        help="Filter to perform on the image. 'ttfilter' is the default i.e.: "\
-        "Program will look for 'ttfilter' key in VM features. If that key " \
-        "exists, its value should indicate default filter for that qube. If " \
-        "'ttfilter' is missing or it contains an invalid filter, 'tint' will " \
-        "be the default.")
-parser.add_argument("--mirror", type=str, default="none", choices=\
+        help="'ttfilter' is the default i.e.: program will look for 'ttfilter' " \
+        "key in VM features. If it exists, its value should indicate the effect " \
+        "for that qube. If 'ttfilter' feature key is missing or it contains an " \
+        "invalid value, 'tint' will be the default.")
+effectgroup.add_argument("--mirror", type=str, default="none", choices=\
         ["vertical", "vertically", "horizontal", "horizontally", "both"], \
         help="Mirror image in one or both axes.")
-parser.add_argument("--alphacomposite", type=str, \
-        help="Compositing filtered image on a background image. "\
+effectgroup.add_argument("--alphacomposite", metavar="SRCALPHA", type=str, \
+        help="Composite filtered image on top of another image. "\
         "Provide path of background image inside source VM.")
+
+dstoransi = parser.add_argument_group(title="Output Control", \
+        description="Image could be saved or printed to the terminal (or both)")
+dstoransi.add_argument('dst', metavar='DST', \
+        help='Destination path in this VM', nargs='?')
+dstoransi.add_argument("--ANSI", type=str, \
+        choices=["pattern", "white", "black", "COLOR"], help="Print ANSI " \
+        "X3.64(ISO/IEC 6429) color representation of image in color-capable tty. "\
+        "Background could be GIMP-Style transparency representation 'pattern', " \
+        "'white', 'black' or 'COLOR' to apply 2nd positional argument as bg.")
 
 def main():
     args = parser.parse_args()
@@ -62,6 +73,8 @@ def main():
 
     if vm is None:
         parser.error('No such VM: {0}'.format(args.vmname))
+    if not(args.ANSI or args.dst):
+        parser.error("Either or both of --ANSI or DST is required")
 
     img=qubesimgconvertertt.Image.get_from_vm(vm, args.src)
     
@@ -72,13 +85,13 @@ def main():
     ''' Python 3.11 is nicely shipped with Q4.2, so we use match statement'''
     match filter:
         case "tint":
-            img=img.tint(args.colour)
+            img=img.tint(args.color)
         case "overlay":
-            img=img.overlay(args.colour)
+            img=img.overlay(args.color)
         case "thin-border":
-            img=img.thin_border(args.colour)
+            img=img.thin_border(args.color)
         case "thick-border":
-            img=img.thick_border(args.colour)
+            img=img.thick_border(args.color)
         case "untouched":
             img=img.untouched()
         case "invert":
@@ -88,7 +101,7 @@ def main():
         case "flip":
             img=img.mirror(0)
         case _:
-            img=img.tint(args.colour)
+            img=img.tint(args.color)
 
     match args.mirror:
         case "vertical" | "vertically":
@@ -105,9 +118,13 @@ def main():
         img=img.alphacompositor(back)
 
     if args.ANSI:
-        img.ANSI()
+        if args.ANSI == "COLOR":
+            img.ANSI(args.color)
+        else:
+            img.ANSI(args.ANSI)
 
-    img.save(args.dst)
+    if args.dst:
+        img.save(args.dst)
 
 if __name__ == '__main__':
     main()
