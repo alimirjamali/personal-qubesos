@@ -69,9 +69,9 @@ Mirror Effect:                0.30468669399851933
 ```
 - Performance of the border effects is nearly 3 times slower than tint. This is
 because of the Anti-Aliased Alpha Compositor implementation. Considering the
-superior quality, it is well worth it as old 1 pixel borders are barely
-distinguishable. Individual implementation of `thick-border` with integer based
-calculation would improve its speed. It is already darn fast on the 10 year old
+superior quality, it is well worth it as 1 pixel borders are barely
+distinguishable. Individual implementation of _thick-border_ with integer based
+calculation would improve its speed. It is already darn fast on my 10 year old
 _i5-4300U_ test machine.
 - Original unit tests are performed on a 2x2 image. Mostly done from security
 perspective. Not suitable for most of the Tweak Tool effects. Individual unit
