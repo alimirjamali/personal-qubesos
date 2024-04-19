@@ -12,8 +12,8 @@ The `qubesimgconvertertt` library is derived from the original
 [qubesimgconverter](https://github.com/QubesOS/qubes-linux-utils/tree/main/imgconverter/qubesimgconverter)
 library and _Image_ class. Effects are written as individual methods.
 
-The `qvm-get-image-tt` is an independent utility which could be used as a
-drop-in replacement for `qvm-get-tinted-image`. Based on
+The `qvm-get-image-tt` is a utility which could be used as a drop-in replacement
+for `qvm-get-tinted-image`. It is based on
 [qubes-app-linux-img-converter](https://github.com/QubesOS/qubes-app-linux-img-converter)
 utilities with additional _--filter_ & _--mirror_ options which allows user to
 select the desired filter. An extra _--ANSI_ function is provided to quickly
@@ -34,6 +34,17 @@ run this command in the current directory:
 ```
 make install
 ```
+The policy file to allow _VM1_ to read images from _VM2_. Both VMs could be
+disposable and do not need network connection. It is better to use an XFCE or
+GNOME based template to have some Images in VM2 and an image viewer application
+in VM2
+```
+admin.vm.List		*	VM1 VM1	 allow target=dom0
+admin.vm.List		*	VM1 VM2	 allow target=dom0
+admin.vm.List		*	VM1 @adminvm	 allow target=dom0
+qubes.GetImageRGBA	*	VM1 VM2	 allow target=VM2
+```
+
 To remove them from your system, run this command in the current directory:
 ```
 make remove
