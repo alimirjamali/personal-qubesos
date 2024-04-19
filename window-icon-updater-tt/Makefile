@@ -14,6 +14,7 @@ info:
 
 install: icon-receiver-tt qubes-icon-receiver.desktop qubes-icon-receiver-tt.desktop
 	$(info Installing icon-receiver Tweak Tool. Reboot for changes to take effect)
+	install -v -d $(BINDIR)
 	install -v -D -C -m 755 icon-receiver-tt $(BINDIR)
 	install -v -D -C -m 644 qubes-icon-receiver.desktop $(AUTORUNDIR)
 	install -v -D -C -m 644 qubes-icon-receiver-tt.desktop $(AUTORUNDIR)

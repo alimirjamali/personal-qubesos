@@ -12,6 +12,7 @@ info:
 	$(info run 'make remove' to remove it from your system.)
 
 install: qubes-label-tt
+	install -v -d $(BINDIR)
 	install -v -D -C -m 755 qubes-label-tt $(BINDIR)
 
 fixupdategui:

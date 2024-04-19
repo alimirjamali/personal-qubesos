@@ -13,6 +13,7 @@ info:
 	$(info Run 'make remove' to remove the library and the utility from yoru system)
 
 install:
+	install -v -d $(BINDIR)
 	install -v -d $(LIBDIR)
 	install -v -C -D __init__.py -t $(LIBDIR)/qubesappmenustt
 	install -v -C -D -m 755 qvm-appmenus-tt $(BINDIR)

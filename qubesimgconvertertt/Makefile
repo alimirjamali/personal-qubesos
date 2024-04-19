@@ -14,8 +14,8 @@ info:
 	$(info Run 'make remove' to remove the library and the utility from yoru system)
 
 install:
-	install -v -d $(LIBDIR)
 	install -v -d $(BINDIR)
+	install -v -d $(LIBDIR)
 	install -v -C -D __init__.py -t $(LIBDIR)/qubesimgconvertertt
 	install -v -C -D -m 755 qvm-get-image-tt $(BINDIR)
 

@@ -13,6 +13,7 @@ info:
 	$(info run 'make remove' to remove it from your system.)
 
 install: qubes-update-tt
+	install -v -d $(BINDIR)
 	install -v -D -C -m 755 qubes-update-tt $(BINDIR)
 	install -v -D -C -m 644 -t $(SYSTEMDDIR) qubes-update-tt-checkonly.service
 	install -v -D -C -m 644 -t $(SYSTEMDDIR) qubes-update-tt-checkonly.timer
