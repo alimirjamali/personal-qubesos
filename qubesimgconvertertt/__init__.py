@@ -35,7 +35,7 @@ class Image(qubesimgconverter.Image):
     def __init__(self, rgba, size):
           super().__init__(rgba, size) 
 
-    def alphacompositor(self, back):
+    def alphacomposite(self, back):
         ''' Compositing Image on top of another Image. See:                  '''
         ''' https://en.wikipedia.org/wiki/Alpha_compositing for more info    '''
         tPixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape(\
@@ -94,7 +94,7 @@ class Image(qubesimgconverter.Image):
         back = math.ceil(mindim * percent / 100.)
         border[back:-back, back:-back]=numpy.array([255, 255, 255, 0])
         return self.__class__(rgba=border.astype(numpy.uint8).tobytes(), \
-                size=self._size).alphacompositor(self)
+                size=self._size).alphacomposite(self)
 
     def thin_border(self, color):
         ''' 1.536 Pixel border is nice for thin borders of 32x32 icons       '''
@@ -139,7 +139,7 @@ class Image(qubesimgconverter.Image):
                         dtype=numpy.uint32)
                 pattern[::2, ::2].fill(0xffc0c0c0)
                 pattern[1::2, 1::2].fill(0xffc0c0c0)
-                img = self.alphacompositor(self.__class__(rgba=pattern.astype( \
+                img = self.alphacomposite(self.__class__(rgba=pattern.astype( \
                         numpy.uint32).tobytes(), size=self._size))
             case _:
                 img = self.overlay(background)

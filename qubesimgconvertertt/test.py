@@ -38,10 +38,10 @@ class TestCaseTweakTool(unittest.IsolatedAsyncioTestCase):
         print ("ANSI print of original image:")
         self.image.ANSI()
 
-    def test_02_alphacompositor(self):
+    def test_02_alphacomposite(self):
         back = qubesimgconvertertt.Image(rgba=np.rot90(self.img[::2, ::2])\
                 .tobytes(), size=(int(self.size[0]/2), int(self.size[1]/2)))
-        image = self.image.alphacompositor(back)
+        image = self.image.alphacomposite(back)
         print ("Alpha Compositor:")
         image.ANSI()
 

@@ -32,7 +32,7 @@ class Benchmark(object):
     def testMirror(self):
         self.Image1.mirror((0,1))
     def testAlphacompositor(self):
-        self.Image1.alphacompositor(self.Image2)
+        self.Image1.alphacomposite(self.Image2)
 
 def cpuinfo():
     cpudetails={}
