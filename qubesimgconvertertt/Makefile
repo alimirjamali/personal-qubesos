@@ -15,6 +15,7 @@ info:
 
 install:
 	install -v -d $(LIBDIR)
+	install -v -d $(BINDIR)
 	install -v -C -D __init__.py -t $(LIBDIR)/qubesimgconvertertt
 	install -v -C -D -m 755 qvm-get-image-tt $(BINDIR)
 

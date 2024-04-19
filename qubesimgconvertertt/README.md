@@ -41,11 +41,30 @@ make remove
 
 ### Limitations, Issues & ToDo
 These are the current known limitation with the tool & library:
-- Performance of the Tweak Tool effects are not evaluated and compared with the
-default tint. They are already fast but there is always room for improvements.
+- Performance of the effects could be evaluated via the provided `benchmark.py`:
+```
+vendor_id	 :  GenuineIntel
+model name	 :  Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz
+cpu MHz		 :  2494.228
+cpu cores	 :  2
+Performing benchmarks on a 32x32 image for 10000 times...
+Untouched Image (no effect):  0.0008901969995349646
+The original tint effect:     1.021499689999473
+Alpha Compositor:             2.7155920950026484
+Overlay Effect:               0.8482616449982743
+Border Effects:               3.3331768399984867
+Invert Effect:                0.30216739200113807
+Mirror Effect:                0.30468669399851933
+```
+- Performance of the border effects is nearly 3 times slower than tint. This is
+because of the Anti-Aliased Alpha Compositor implementation. Considering the
+superior quality, it is well worth it as old 1 pixel borders are barely
+distinguishable. Individual implementation of `thick-border` with integer based
+calculation would improve its speed. It is already darn fast on the 10 year old
+_i5-4300U_ test machine.
 - Original unit tests are performed on a 2x2 image. Mostly done from security
 perspective. Not suitable for most of the Tweak Tool effects. Individual unit
-tests are required.
+tests are developed to represent effects via ANSI output.
 - Currently tested only on Qubes OS 4.2.1
 - Theoretically it should be possible to install the library and utility within
 any Qube if the dependency (`python3-qubesimgconverter`) is installed in its
