@@ -87,7 +87,8 @@ set of labels. Run `make info` at the current directory for more information.
 ### Icons to consider
 PCB qube, [Melting ice qube](https://openclipart.org/detail/182951/ice-cube), 
 Roughing end milling qube, Acoustic qube, 3D puzzle cube,
-Cube Speaker, Wooden block qubes of different species, 
+Cube Speaker, Wooden block qubes of
+[different species](https://openclipart.org/detail/256779/wood-grain-filter-pack-3), 
 [Cardboard qube](https://openclipart.org/detail/231068/3d-isometric-cardboard-box),
 [Earth qube](https://openclipart.org/detail/259468/cube-earth-silhouette),
 [Blank die](https://openclipart.org/detail/304802/blank-dice),

@@ -16,7 +16,7 @@ Custom effects for Qubes OS icons & images. Full description is available in
 
 ### `qubes-label-tt` Utility
 Label management tool for Qubes OS. Full description is available in
-[qubes-label-tt](/qubeslabeltt) sub-directory.
+[qubes-label-tt](/qubes-label-tt) sub-directory.
 
 ### `qubes-update-tt` Utility
 My personal template updater tweak tool. This utility is not installed by 
