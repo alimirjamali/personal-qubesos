@@ -6,6 +6,11 @@ Mostly icons for `qubes-label-tt`. Full description in [icons](/icons)
 sub-directory.
 
 ## Tweak Tools & Libraries
+### `qubesadmintt` Utilities
+Tweaks to utilities of _qubesadmin_ tools. These utilities are not installed by
+default as a part of Tweak Tools. More information in
+[qubes-core-admin-client-tt](/qubes-core-admin-clinet-tt) sub-directory.
+
 ### `qubesappmenustt` Lib & `qvm-appmenus-tt` Utility 
 Tweak Tools for Qubes OS AppMenus. Full description is available in
 [qubesappmenustt](/qubesappmenustt) sub-directory.
@@ -18,14 +23,14 @@ Custom effects for Qubes OS icons & images. Full description is available in
 Label management tool for Qubes OS. Full description is available in
 [qubes-label-tt](/qubes-label-tt) sub-directory.
 
+### `icon-receiver-tt` Daemon
+Custom icon effects for the running VM Apps. Full description is available in
+[window-icon-updater-tt](/window-icon-updater-tt) sub-directory.
+
 ### `qubes-update-tt` Utility
 My personal template updater tweak tool. This utility is not installed by 
 default as a part of Tweak Tools. More information and background in
 [qubes-update-tt](/qubes-update-tt) sub-directory.
-
-### `icon-receiver-tt` Daemon
-Custom icon effects for the running VM Apps. Full description is available in
-[window-icon-updater-tt](/window-icon-updater-tt) sub-directory.
 
 ## Installation & Removal
 Individual libraries or tools could be installed via the __Makefiles__ inside
