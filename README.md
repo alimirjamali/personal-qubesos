@@ -9,7 +9,7 @@ sub-directory.
 ### `qubesadmintt` Utilities
 Tweaks to utilities of _qubesadmin_ tools. These utilities are not installed by
 default as a part of Tweak Tools. More information in
-[qubes-core-admin-client-tt](/qubes-core-admin-clinet-tt) sub-directory.
+[qubes-core-admin-client-tt](/qubes-core-admin-client-tt) sub-directory.
 
 ### `qubesappmenustt` Lib & `qvm-appmenus-tt` Utility 
 Tweak Tools for Qubes OS AppMenus. Full description is available in
