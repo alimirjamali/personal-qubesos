@@ -146,6 +146,24 @@ def get_parser():
         parser.add_argument('--{}'.format(pwrstate), action='store_true',
             help='show {} VMs'.format(pwrstate))
 
+    parser.add_argument('--class', metavar='AppVM,TemplateVM,...', dest='klass',
+        action='store',
+        help='show only VMs with specific class(es)')
+
+    parser.add_argument('--label', metavar='red,green,...',
+        action='store',
+        help='show only VMs with specific label(s)')
+
+    parser.add_argument('--internal', metavar='<yes|no|both>', default='both',
+        action='store', choices=['y', 'yes', 'n', 'no', 'both'],
+            help='show only internal VMs or option to hide them. '
+                'default is showing both regular & internal VMs.')
+
+    parser.add_argument('--servicevm', metavar='<yes|no|both>', default='both',
+        action='store', choices=['y', 'yes', 'n', 'no', 'both'],
+            help='show only Service VMs or option to hide them. '
+                'default is showing both regular & Service VMs.')
+
     parser.add_argument('--raw-data', action='store_true',
         help='Display specify data of specified VMs. Intended for '
              'bash-parsing.')
@@ -248,6 +266,34 @@ def main(args=None, app=None):
     pwrstates = {state: getattr(args, state) for state in DOMAIN_POWER_STATES}
     domains = [d for d in domains
                if matches_power_states(d, **pwrstates)]
+
+    if args.klass:
+        domains = [d for d in domains if d.klass in args.klass.split(',')]
+
+    ''' ToDo: Move to Tables class for acceleration '''
+    if args.label:
+        domains_labeled = list()
+        spinner.show('Filtering based on labels...')
+        for d in domains:
+            if d.label.name in args.label.split(','):
+                domains_labeled.append(d)
+            spinner.update()
+        domains = domains_labeled
+        spinner.hide()
+
+    if args.internal in ['y', 'yes', 'true', '1']:
+        domains = [d for d in domains if d.features.get('internal', None)
+                   in ['1', 'true', 'True']]
+    elif args.internal in ['n', 'no', 'false', '0']:
+        domains = [d for d in domains if not d.features.get('internal', None)
+                   in ['1', 'true', 'True']]
+
+    if args.servicevm in ['y', 'yes', 'true', '1']:
+        domains = [d for d in domains if d.features.get('servicevm', None)
+                   in ['1', 'true', 'True']]
+    elif args.internal in ['n', 'no', 'false', '0']:
+        domains = [d for d in domains if not d.features.get('servicevm', None)
+                   in ['1', 'true', 'True']]
 
     table = Table(domains, columns, spinner, args.raw_data, args.tree)
     table.write_table(sys.stdout)
