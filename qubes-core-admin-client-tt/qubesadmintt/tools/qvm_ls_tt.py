@@ -150,9 +150,15 @@ def get_parser():
         action='store',
         help='show only VMs with specific class(es)')
 
-    parser.add_argument('--label', metavar='red,green,...',
-        action='store',
+    parser.add_argument('--label', metavar='red,green,...', action='store',
         help='show only VMs with specific label(s)')
+
+    parser.add_argument('--basedon', metavar='TEMPLATE', action='store',
+        help='Filter results to the VMs based on the TEMPLATE. "" implies None')
+
+    parser.add_argument('--connects-with', metavar='NETVM', action='store',
+        help='Filter results to the VMs using NETVM for connection. '\
+                '"" implies None')
 
     parser.add_argument('--internal', metavar='<yes|no|both>', default='both',
         action='store', choices=['y', 'yes', 'n', 'no', 'both'],
@@ -279,6 +285,36 @@ def main(args=None, app=None):
                 domains_labeled.append(d)
             spinner.update()
         domains = domains_labeled
+        spinner.hide()
+
+    ''' ToDo: Move to Tables class for acceleration '''
+    if args.basedon != None:
+        domains_child = list()
+        if args.basedon:
+            spinner.show('Filtering results to VMs based on {} template...'\
+                    .format(args.basedon))
+        else:
+            spinner.show('Filtering results to VMs without a template.')
+        for d in domains:
+            if getattr(d, 'template', '') == args.basedon:
+                domains_child.append(d)
+            spinner.update()
+        domains = domains_child
+        spinner.hide()
+
+    ''' ToDo: Move to Tables class for acceleration '''
+    if args.connects_with != None:
+        domains_connecting = list()
+        if args.connects_with:
+            spinner.show('Filtering results to VMs using {} for connection...'\
+                    .format(args.connects_with))
+        else:
+            spinner.show('Filtering results to VMs without network connection.')
+        for d in domains:
+            if getattr(d, 'netvm', '') == args.connects_with:
+                domains_connecting.append(d)
+            spinner.update()
+        domains = domains_connecting
         spinner.hide()
 
     if args.internal in ['y', 'yes', 'true', '1']:

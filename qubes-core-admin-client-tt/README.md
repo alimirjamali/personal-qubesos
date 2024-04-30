@@ -21,12 +21,17 @@ With further funny ones to come (see ToDo).
 ### `qvm-ls-tt`
 Forked from the original
 [qvm_ls.py](https://github.com/QubesOS/qubes-core-admin-client/blob/main/qubesadmin/tools/qvm_ls.py)
-code, there are additional improvements to it. A _perf_ output format is added.
-Run `qvm-ls-tt --help-formats` to see what data it provides. *MAXMEM* column is
-now available. Filtering of VMs based on **internal** feature tag is possible
-via `--internal <yes|no|both>` option. Similarly, the `--servicevm <yes|no|both>`
-option allows filtering based on ServiceVM status. The two `--class` and
-`--label` options allow filtering based on VM Class or Label.
+code, there are additional improvements to it:
+- A _perf_ output format is added. Run `qvm-ls-tt --help-formats` to see what
+data it provides. *MAXMEM* column is now available.
+- The `--class` options allows to filter output to one or more class of VMs
+(AppVM, TemplateVM, ...).
+- The `--label` options allow filtering of results based on VM label.
+- The `--basedon` option allows filtering to VMs based on specific template.
+- The `--connects-width` options allows filtering to VMs using specific NetVM.
+- The `--servicevm <yes|no|both>` option allows filtering based on to ServiceVMs.
+- Filtering of VMs based on **internal** feature tag is possible via
+`--internal <yes|no|both>` option. 
 
 ## Installation & Removal
 To install the tools at your `~/bin` and the libraries at your `~/.local/lib`,
@@ -46,3 +51,4 @@ added to to `qvm-ls-tt`.
 - Filtering of VMs based on last access dates should be added to `qvm-ls-tt`
 - Cool terminal [spinners](https://github.com/manrajgrover/py-spinners) should
 be added with option for user to select their desired one via a _.conf_ file.
+- Add ANSI color output option for labels
