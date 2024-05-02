@@ -26,5 +26,12 @@ install:
 	$(PYTHON) setup.py install -O1 $(PYTHON_PREFIX_ARG) --user
 
 remove:
+	-rm -v $(BINDIR)/qvm-check-tt
+	-rm -v $(BINDIR)/qvm-kill-tt
 	-rm -v $(BINDIR)/qvm-ls-tt
-	-rm -vrf $(LIBDIR)/qubesadmintt
+	-rm -v $(BINDIR)/qvm-pause-tt
+	-rm -v $(BINDIR)/qvm-remove-tt
+	-rm -v $(BINDIR)/qvm-shutdown-tt
+	-rm -v $(BINDIR)/qvm-start-tt
+	-rm -v $(BINDIR)/qvm-unpause-tt	-rm -vrf $(LIBDIR)/qubesadmintt
+

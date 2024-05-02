@@ -10,15 +10,18 @@ All of the core classes, methods and properties are inherited from _qubesadmin_
 base class with the following exception:
 - `QubesArgumentParser`, `VmNameAction` and `VmNameGroup` classes of
 `qubesadmin.tools` are overridden to add Unix like Wildcard matching support
-to the admin utilities which support more than one VM (i.e. 
-_qvm-check-tt, qvm-kill-tt, qvm-pause-tt, qvm-remove-tt, qvm-shutdown-tt,
-qvm-start-tt, qvm-unpause-tt, qvm-ls-tt, qvm-remove-tt_ but most importantly
-_qvm-ls-tt_). So you could use `qvm-ls-tt fedora*`, `qvm-shutdown-tt *template`,
-...
+to the admin utilities which support more than one VM (i.e. _qvm-check-tt,
+qvm-kill-tt, qvm-ls-tt, qvm-pause-tt, qvm-remove-tt, qvm-shutdown-tt,
+qvm-start-tt, qvm-unpause-tt_). So you could use `qvm-ls-tt fedora*`,
+`qvm-kill-tt disp*`, ...
 - `qubesadmin.spinner` is modified to allow cool braille alphabet based spinner.
 With further funny ones to come (see ToDo).
 
-### `qvm-ls-tt`
+### `qvm-check-tt` Tweaks
+In addition to Wildcard support, there are `--internal` and `--servicevm`
+options.
+
+### `qvm-ls-tt` Tweaks
 Forked from the original
 [qvm_ls.py](https://github.com/QubesOS/qubes-core-admin-client/blob/main/qubesadmin/tools/qvm_ls.py)
 code, there are additional improvements to it:
@@ -54,3 +57,4 @@ added to to `qvm-ls-tt`.
 - Cool terminal [spinners](https://github.com/manrajgrover/py-spinners) should
 be added with option for user to select their desired one via a _.conf_ file.
 - Add ANSI color output option for labels
+
