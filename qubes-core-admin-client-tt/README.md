@@ -51,8 +51,6 @@ make remove
 
 ## Limitations, Issues & ToDo
 - Only tested on Qubes OS 4.2.1. Backward compatibility is unknown.
-- Sorting of VMs based on their memory usage, storage usage, etc. should be
-added to to `qvm-ls-tt`.
 - Filtering of VMs based on last access dates should be added to `qvm-ls-tt`
 - Cool terminal [spinners](https://github.com/manrajgrover/py-spinners) should
 be added with option for user to select their desired one via a _.conf_ file.
