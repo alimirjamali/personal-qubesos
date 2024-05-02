@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="qube-NAS.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">NAS qube</title>
+  <sodipodi:namedview
+     id="namedview"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="4"
+     inkscape:cx="-6.625"
+     inkscape:cy="11.625"
+     inkscape:window-width="1366"
+     inkscape:window-height="707"
+     inkscape:window-x="0"
+     inkscape:window-y="61"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2">
+    <sodipodi:guide
+       position="24,0"
+       orientation="0.5,0.8660254"
+       id="guide1"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,16"
+       orientation="0.5,0.8660254"
+       id="guide2"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,32"
+       orientation="0.5,0.8660254"
+       id="guide3"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,48"
+       orientation="0.5,0.8660254"
+       id="guide4"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,0"
+       orientation="-0.5,0.8660254"
+       id="guide5"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,16"
+       orientation="-0.5,0.8660254"
+       id="guide6"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,32"
+       orientation="-0.5,0.8660254"
+       id="guide7"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,48"
+       orientation="-0.5,0.8660254"
+       id="guide8"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,40"
+       orientation="0.5,0.8660254"
+       id="guide9"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="0.5,0.8660254"
+       id="guide10"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,8"
+       orientation="0.5,0.8660254"
+       id="guide11"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,40"
+       orientation="-0.5,0.8660254"
+       id="guide12"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="-0.5,0.8660254"
+       id="guide13"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,8"
+       orientation="-0.5,0.8660254"
+       id="guide14"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="24,32"
+       orientation="1,0"
+       id="guide15"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="17.071797,36"
+       orientation="1,0"
+       id="guide16"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10.143594,24"
+       orientation="1,0"
+       id="guide17"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="3.2153904,12"
+       orientation="1,0"
+       id="guide18"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="30.928203,20"
+       orientation="1,0"
+       id="guide19"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="37.856406,16"
+       orientation="1,0"
+       id="guide20"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="44.78461,12"
+       orientation="1,0"
+       id="guide21"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="18.561553,0"
+       orientation="0,-1"
+       id="guide22"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC-BY-SA</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:title>NAS qube</dc:title>
+        <dc:date>2024-05-03</dc:date>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Cube</rdf:li>
+            <rdf:li>Qube</rdf:li>
+            <rdf:li>NAS</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>NAS icon designed for Qubes-OS</dc:description>
+        <dc:source>https://github.com/alimirjamali/personal-qubesos</dc:source>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="Front"
+     transform="matrix(0.15723819,-0.09078151,0,0.17969784,23.991653,24.118555)">
+    <rect
+       style="fill:#5c7184;fill-opacity:1;stroke:#000000;stroke-width:4.17426;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Right"
+       width="132.29167"
+       height="132.29167"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:none;fill-opacity:0.54902;stroke:#000000;stroke-width:4.17426;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Panel"
+       width="26.458332"
+       height="132.29166"
+       x="0"
+       y="0"
+       ry="8.8123951e-17" />
+    <rect
+       style="fill:#47535f;fill-opacity:1;stroke:#000000;stroke-width:4.17426;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Front-Top"
+       width="105.83333"
+       height="26.45833"
+       x="26.458332"
+       y="0"
+       ry="8.8123951e-17" />
+    <rect
+       style="fill:#47535f;fill-opacity:1;stroke:none;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Shadow"
+       width="105.83333"
+       height="13.229165"
+       x="26.458332"
+       y="119.06249"
+       ry="8.8123951e-17" />
+    <rect
+       style="fill:none;fill-opacity:0.54902;stroke:#000000;stroke-width:4.17426;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Drive4"
+       width="26.458332"
+       height="105.83332"
+       x="105.83333"
+       y="26.45833"
+       ry="8.8123951e-17" />
+    <rect
+       style="fill:none;fill-opacity:0.54902;stroke:#000000;stroke-width:4.17426;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Drive3"
+       width="26.458332"
+       height="105.83332"
+       x="79.375"
+       y="26.45833"
+       ry="8.8123951e-17" />
+    <rect
+       style="fill:none;fill-opacity:0.54902;stroke:#000000;stroke-width:4.17426;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Drive2"
+       width="26.458332"
+       height="105.83332"
+       x="52.916664"
+       y="26.45833"
+       ry="8.8123951e-17" />
+    <rect
+       style="fill:none;fill-opacity:0.54902;stroke:#000000;stroke-width:4.17426;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Drive1"
+       width="26.458332"
+       height="105.83332"
+       x="26.458332"
+       y="26.45833"
+       ry="8.8123951e-17" />
+    <ellipse
+       style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="LED-Green"
+       cx="13.229166"
+       cy="13.229165"
+       rx="6.614583"
+       ry="6.6145825" />
+    <ellipse
+       style="fill:#ff0000;fill-opacity:0.996421;stroke:none;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="LED-Red"
+       cx="13.229166"
+       cy="39.205147"
+       rx="6.614583"
+       ry="6.6145825" />
+    <ellipse
+       style="fill:#00ffff;fill-opacity:0.996779;stroke:none;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="LED-Blue"
+       cx="13.229166"
+       cy="66.145828"
+       rx="6.614583"
+       ry="6.6145825" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Red-Bottom"
+       width="13.229166"
+       height="13.229165"
+       x="6.614583"
+       y="112.04533"
+       ry="8.8123951e-17" />
+    <rect
+       style="fill:#ffff00;fill-opacity:0.996833;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="Yellow-Bottom"
+       width="13.229166"
+       height="13.229165"
+       x="6.6145816"
+       y="85.989578"
+       ry="8.8123951e-17" />
+    <path
+       style="fill:#47535f;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       d="M 119.0625,13.229166 H 92.604168"
+       id="Line" />
+  </g>
+  <path
+     style="fill:#5c7184;fill-opacity:1;stroke-width:0.70166521;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke;font-variation-settings:normal;opacity:1;vector-effect:none;stroke:#000000;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+     d="M 24,0 44.78461,12 24,24 3.2153904,12 Z"
+     id="Top" />
+  <path
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#5c7184;fill-opacity:1;stroke:#000000;stroke-width:0.701665;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:markers fill stroke"
+     d="M 3.2153904,12 V 36 L 24,48 23.991653,24.118555 Z"
+     id="Left" />
+  <path
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#47535f;fill-opacity:1;stroke:none;stroke-width:0.4525;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
+     d="M 24,4.2612517 37.403906,12 24,19.738749 10.596095,12 Z"
+     id="Vent" />
+</svg>
