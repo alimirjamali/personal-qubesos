@@ -100,6 +100,58 @@ Column('ROOT-USED',
 
 FlagsColumn()
 
+class Table(qubesadmin.tools.qvm_ls.Table):
+    def  __init__(self, domains, colnames, spinner, raw_data=False,
+            tree_sorted=False, sort_order='NAME', reverse_sort=False,
+            ignore_case=False):
+        self.sort_order = sort_order.upper().replace('_', '-')
+        self.reverse_sort = reverse_sort
+        self.ignore_case = ignore_case
+        super().__init__(domains, colnames, spinner, raw_data, tree_sorted)
+
+    def write_table(self, stream=sys.stdout):
+        '''Write whole table to file-like object.
+
+        :param file stream: Stream to write the table to.
+
+        Tweaks: Adding sorting options except for tree_sorted
+        '''
+
+        table_data = []
+
+        if self.raw_data:
+            for vm in sorted(self.domains):
+                try:
+                    stream.write('|'.join(self.get_row(vm)) + '\n')
+                except qubesadmin.exc.QubesVMNotFoundError:
+                    continue
+        else:
+            self.spinner.show('please wait...')
+            table_data.append(self.get_head())
+            self.spinner.update()
+            if self.tree_sorted:
+                #FIXME: handle qubesadmin.exc.QubesVMNotFoundError
+                #       (see QubesOS/qubes-issues#5105)
+                insertion_vm_list = self.sort_to_tree(self.domains)
+                for insertion, vm in insertion_vm_list:
+                    table_data.append(self.get_row(vm, insertion))
+            else:
+                for vm in self.domains:
+                    try:
+                        table_data.append(self.get_row(vm))
+                    except qubesadmin.exc.QubesVMNotFoundError:
+                        continue
+            self.spinner.hide()
+            if self.sort_order in self.get_head():
+                sort_index = self.get_head().index(self.sort_order)
+                if self.ignore_case:
+                    compare_key = (lambda row: row[sort_index].upper())
+                else:
+                    compare_key = (lambda row: row[sort_index])
+                table_data[1:] = sorted(table_data[1:], key=compare_key,
+                    reverse=self.reverse_sort)
+            qubesadmin.tools.print_table(table_data, stream=stream)
+
 #: Additional Tweak Tool formats. Main ones are in qvm_ls.py.
 formats['perf']=('name', 'label', 'template', 'netvm', 'vcpus', 'initialmem', 
          'maxmem', 'virt_mode')
@@ -157,18 +209,29 @@ def get_parser():
         help='Filter results to the VMs based on the TEMPLATE. "" implies None')
 
     parser.add_argument('--connects-with', metavar='NETVM', action='store',
-        help='Filter results to the VMs using NETVM for connection. '\
+        help='Filter results to the VMs using NETVM for connection. '
                 '"" implies None')
 
     parser.add_argument('--internal', metavar='<yes|no|both>', default='both',
         action='store', choices=['y', 'yes', 'n', 'no', 'both'],
-            help='show only internal VMs or option to hide them. '
+            help='Show only internal VMs or option to hide them. '
                 'default is showing both regular & internal VMs.')
 
     parser.add_argument('--servicevm', metavar='<yes|no|both>', default='both',
         action='store', choices=['y', 'yes', 'n', 'no', 'both'],
-            help='show only Service VMs or option to hide them. '
-                'default is showing both regular & Service VMs.')
+            help='Show only Service VMs or option to hide them. '
+                'Default is showing both regular & Service VMs.')
+
+    parser.add_argument('--sort', metavar='COLUMN', action='store',
+        default='NAME', help='Sort based on provided column rather than NAME. '
+            'Blank "" implies None')
+
+    parser.add_argument('--reverse', action='store_true', default=False,
+        help='Reverse order while sorting')
+
+    parser.add_argument('--ignore-case', action='store_true', default=False,
+        help='Ignore case distinctions in patterns and input data,'
+            ' so that characters that differ only in case match each other.')
 
     parser.add_argument('--raw-data', action='store_true',
         help='Display specify data of specified VMs. Intended for '
@@ -331,7 +394,9 @@ def main(args=None, app=None):
         domains = [d for d in domains if not d.features.get('servicevm', None)
                    in ['1', 'true', 'True']]
 
-    table = Table(domains, columns, spinner, args.raw_data, args.tree)
+    table = Table(domains, columns, spinner, args.raw_data, args.tree,
+                  sort_order=args.sort, reverse_sort=args.reverse,
+                  ignore_case=args.ignore_case)
     table.write_table(sys.stdout)
 
     return 0

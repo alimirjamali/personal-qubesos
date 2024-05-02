@@ -32,6 +32,8 @@ data it provides. *MAXMEM* column is now available.
 - The `--servicevm <yes|no|both>` option allows filtering based on to ServiceVMs.
 - Filtering of VMs based on **internal** feature tag is possible via
 `--internal <yes|no|both>` option. 
+- Sorting with any column rather than name is now possible with `--sort COLUMN`
+option. `--reverse` and `--ignore-case` sub-options are available.
 
 ## Installation & Removal
 To install the tools at your `~/bin` and the libraries at your `~/.local/lib`,
