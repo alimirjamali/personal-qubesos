@@ -26,13 +26,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="4"
-     inkscape:cx="-6.625"
-     inkscape:cy="11.625"
-     inkscape:window-width="1366"
-     inkscape:window-height="707"
+     inkscape:zoom="16"
+     inkscape:cx="22.9375"
+     inkscape:cy="35.59375"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
      inkscape:window-x="0"
-     inkscape:window-y="61"
+     inkscape:window-y="33"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2">
     <sodipodi:guide
@@ -289,42 +289,42 @@
        y="26.45833"
        ry="8.8123951e-17" />
     <ellipse
-       style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:3.96874;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
        id="LED-Green"
        cx="13.229166"
        cy="13.229165"
-       rx="6.614583"
-       ry="6.6145825" />
+       rx="9.921875"
+       ry="9.921874" />
     <ellipse
-       style="fill:#ff0000;fill-opacity:0.996421;stroke:none;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="fill:#ff0000;fill-opacity:0.996421;stroke:none;stroke-width:3.96874;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
        id="LED-Red"
        cx="13.229166"
        cy="39.205147"
-       rx="6.614583"
-       ry="6.6145825" />
+       rx="9.921875"
+       ry="9.921874" />
     <ellipse
-       style="fill:#00ffff;fill-opacity:0.996779;stroke:none;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="fill:#00ffff;fill-opacity:0.996779;stroke:none;stroke-width:3.96874;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
        id="LED-Blue"
        cx="13.229166"
        cy="66.145828"
-       rx="6.614583"
-       ry="6.6145825" />
+       rx="9.921875"
+       ry="9.921874" />
     <rect
-       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:3.96874;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
        id="Red-Bottom"
-       width="13.229166"
-       height="13.229165"
-       x="6.614583"
-       y="112.04533"
-       ry="8.8123951e-17" />
+       width="19.843748"
+       height="19.843748"
+       x="3.3072915"
+       y="108.73804"
+       ry="1.3218592e-16" />
     <rect
-       style="fill:#ffff00;fill-opacity:0.996833;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="fill:#ffff00;fill-opacity:0.996833;stroke:none;stroke-width:3.96874;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
        id="Yellow-Bottom"
-       width="13.229166"
-       height="13.229165"
-       x="6.6145816"
-       y="85.989578"
-       ry="8.8123951e-17" />
+       width="19.843748"
+       height="19.843748"
+       x="3.3072901"
+       y="82.682289"
+       ry="1.3218592e-16" />
     <path
        style="fill:#47535f;fill-opacity:1;stroke:#000000;stroke-width:2.64583;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke"
        d="M 119.0625,13.229166 H 92.604168"
