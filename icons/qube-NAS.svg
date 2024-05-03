@@ -26,13 +26,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="16"
-     inkscape:cx="22.9375"
-     inkscape:cy="35.59375"
-     inkscape:window-width="1440"
-     inkscape:window-height="843"
+     inkscape:zoom="8"
+     inkscape:cx="19.8125"
+     inkscape:cy="38.8125"
+     inkscape:window-width="1366"
+     inkscape:window-height="707"
      inkscape:window-x="0"
-     inkscape:window-y="33"
+     inkscape:window-y="61"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2">
     <sodipodi:guide
@@ -342,4 +342,8 @@
      style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#47535f;fill-opacity:1;stroke:none;stroke-width:0.4525;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
      d="M 24,4.2612517 37.403906,12 24,19.738749 10.596095,12 Z"
      id="Vent" />
+  <path
+     d="m 6.2598333,15.992627 v 19.654555 l 3.1297062,1.804987 V 28.204172 C 9.3586383,27.250449 9.3198077,26.292037 9.2734559,25.329394 l -0.093322,-2.86112 0.093322,0.05462 7.2062901,19.024061 4.449874,2.569773 V 24.46218 l -3.150192,-1.818643 v 9.302625 l 0.09105,2.751865 c 0.03091,0.917022 0.05511,1.839071 0.07056,2.765522 l -0.07056,-0.04098 -7.18353,-18.873835 z"
+     style="font-size:21.673px;text-align:center;text-anchor:middle;fill-opacity:0.997743;stroke:#ffffff;stroke-width:1.05239"
+     id="path1" />
 </svg>
