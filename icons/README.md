@@ -39,6 +39,7 @@ VM icons with those colors.
 | ![](qube-infinity.svg) | Infinity | CC-BY-SA | Original sketch by myself. |
 | ![](qube-isometric.svg) | Isometric | CC-BY-SA | Original sketch by myself. |
 | ![](qube-isometric-shapes.svg) | Isometric<br />Shapes | CC0 | Based on [Gramzon's design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
+| ![](qube-NAS.svg) | NAS | CC-BY-SA | Original sketch by myself. |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original sketch by myself. |
 | ![](qube-square2.svg) | Qube&#x00B2; | CC-BY-SA | Based on [Qubes OS Artwork](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz's designs](https://github.com/QubesOS/qubes-artwork). |
