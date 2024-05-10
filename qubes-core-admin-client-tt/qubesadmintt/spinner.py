@@ -1,10 +1,10 @@
 # vim: fileencoding=utf-8
 
 #
-# The Qubes OS Project, https://www.qubes-os.org/
+# Qubes OS Tweak Tools, https://github.com/alimirjamali/personal-qubesos
 #
 # Copyright (C) 2017  Wojtek Porczyk <woju@invisiblethingslab.com>
-# Copyright (C) 2017  Ali Mirjamali <ali@mirjamali.com>
+# Copyright (C) 2024  Ali Mirjamali <ali@mirjamali.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU Lesser General Public License as published by

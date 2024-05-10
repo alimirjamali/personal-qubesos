@@ -50,6 +50,9 @@ make remove
 ```
 
 ## Limitations, Issues & ToDo
+- The online Qubes OS developer’s documentation
+[document](https://dev.qubes-os.org/en/latest/) provided useful help on the
+modules, tools, functions, ...
 - Only tested on Qubes OS 4.2.1. Backward compatibility is unknown.
 - Filtering of VMs based on last access dates should be added to `qvm-ls-tt`
 - Cool terminal [spinners](https://github.com/manrajgrover/py-spinners) should
