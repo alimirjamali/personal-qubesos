@@ -12,6 +12,8 @@ info:
 	$(info Run 'make remove' to remove all of the Tweak Tools)
 
 install:
+	install -v -d $(BINDIR)
+	install -v -d $(LIBDIR)
 	$(MAKE) -C qubesappmenustt install
 	$(MAKE) -C qubesimgconvertertt install
 	$(MAKE) -C qubes-label-tt install
