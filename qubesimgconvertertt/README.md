@@ -7,7 +7,7 @@ Tools effects are at the bottom of this page. Real-life use cases are
 documented and explained in [qubesappmenustt](/qubesappmenustt) and
 [window-icon-updater-tt](/window-icon-updater-tt) sub-directories.
 
-### Internals & Features
+## Internals & Features
 The `qubesimgconvertertt` library is derived from the original
 [qubesimgconverter](https://github.com/QubesOS/qubes-linux-utils/tree/main/imgconverter/qubesimgconverter)
 library and _Image_ class. Effects are written as individual methods.

@@ -3,3 +3,5 @@
 *.pyo
 __pycache__/
 .DS_Store
+*.egg-info
+qubes-core-admin-client-tt/build

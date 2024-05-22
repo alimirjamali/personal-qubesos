@@ -115,7 +115,7 @@ def main():
 
     if args.alphacomposite:
         back=qubesimgconvertertt.Image.get_from_vm(vm, args.alphacomposite)
-        img=img.alphacompositor(back)
+        img=img.alphacomposite(back)
 
     if args.ANSI:
         if args.ANSI == "COLOR":

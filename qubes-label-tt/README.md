@@ -29,8 +29,9 @@ These are the current known limitation with this tool or Qubes OS custom labels:
 - Rewrite of the project in Python is necessary, keeping its skeleton, function
 and syntax but implement it in Python. This would be absolutely essential if it
 is going to be submitted as a community package. Few days work.
-- Installation & removal of icons via `xdg-icon-resource(1)` is necessary. As it
-is the right way. Proper study of XDG documents is needed.
+- Installation & removal of icons via
+[xdg-icon-resource(1)](https://linux.die.net/man/1/xdg-icon-resource)
+ is necessary. As it is the right way. Proper study of XDG documents is needed.
 - Proper unit tests should be written.
 - Only tested on Qubes OS 4.2.1. Backward compatibility is unknown.
 - Qubes OS [Admin API](https://www.qubes-os.org/doc/admin-api/) calls are made
