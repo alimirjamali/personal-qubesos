@@ -546,12 +546,13 @@ update_templates() {
 		template_os=$(qubesd_admin_api \
 			admin.vm.feature.Get ${template} os)
 		if [[ ! $? == 0 ]]; then
-			message "Could not determin OS of ${template} via"\
-				"Qubes API! Ignoring."
+			$VERBOSE && message "Could not determin OS of "\
+				"${template} via Qubes API! Ignoring."
 			continue
 		fi
 		if [[ ! ${template_os,,} == "linux" ]]; then
-			message "${template} is not Linux based. Ignoring."
+			$VERBOSE && message "${template} is not Linux based. "\
+				"Ignoring."
 			# Windows updates could be implemented via powershell
 			# and 'wuauclt.exe /updatenow'.
 			# Only if we had a working qrexec. Work in progress...
