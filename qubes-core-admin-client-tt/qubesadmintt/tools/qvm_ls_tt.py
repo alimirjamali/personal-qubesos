@@ -198,6 +198,9 @@ def get_parser():
         parser.add_argument('--{}'.format(pwrstate), action='store_true',
             help='show {} VMs'.format(pwrstate))
 
+    parser.add_argument('--active', action='store_true',
+        help='Do not show VMs in shutdown state')
+
     parser.add_argument('--class', metavar='AppVM,TemplateVM,...', dest='klass',
         action='store',
         help='show only VMs with specific class(es)')
@@ -335,6 +338,10 @@ def main(args=None, app=None):
     pwrstates = {state: getattr(args, state) for state in DOMAIN_POWER_STATES}
     domains = [d for d in domains
                if matches_power_states(d, **pwrstates)]
+
+    if args.active:
+        domains = [d for d in domains
+            if d.get_power_state().lower() != 'halted']
 
     if args.klass:
         domains = [d for d in domains if d.klass in args.klass.split(',')]

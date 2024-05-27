@@ -27,6 +27,7 @@ Forked from the original
 code, there are additional improvements to it:
 - A _perf_ output format is added. Run `qvm-ls-tt --help-formats` to see what
 data it provides. *MAXMEM* column is now available.
+- The `--active` option shows all VMs but Halted ones.
 - The `--class` options allows to filter output to one or more class of VMs
 (AppVM, TemplateVM, ...).
 - The `--label` options allow filtering of results based on VM label.
