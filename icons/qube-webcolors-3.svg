@@ -5,7 +5,7 @@
    viewBox="0 0 48 48"
    version="1.1"
    id="svg2"
-   sodipodi:docname="qube-webcolors-3.svg"
+   sodipodi:docname="qube-webcolors-5.svg"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -303,7 +303,7 @@
   </metadata>
   <g
      id="Web-Colors"
-     transform="rotate(-120,24,24)">
+     transform="matrix(1,0,0,-1,0,48)">
     <path
        d="m 24,20 3.464,2 v 4 L 24,28 20.536,26 v -4 z"
        id="path2"

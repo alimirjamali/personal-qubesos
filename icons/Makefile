@@ -93,7 +93,12 @@ RealLife: $(REALLIFE)
 Conceptual: $(CONCEPTUAL)
 	$(info Conecptual lables will be created.)
 	$(QLTT) create Axonometric 0xFFDD55 --icon allvm=qube-axonometric.svg
-	$(QLTT) create Engraved 0x555555 --icon allvm=qube-engraved.svg
+	$(QLTT) create Engraved 0x555555 \
+		--icon appvm=qube-engraved-1.svg \
+		--icon templatevm=qube-engraved-2.svg \
+		--icon servicevm=qube-engraved-3.svg \
+		--icon standalonevm=qube-engraved-4.svg \
+		--icon dispvm=qube-engraved-5.svg
 	$(QLTT) create Impossible1 0x555555 --icon allvm=qube-impossible-cube1.svg
 	$(QLTT) create Impossibles 0x555555 --icon allvm=qube-impossible-cubes.svg
 	$(QLTT) create ImpossibleHex 0xF57900 --icon allvm=qube-impossible-hexagon.svg
