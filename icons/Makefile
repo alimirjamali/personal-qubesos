@@ -11,8 +11,9 @@ CUBIST := qube-cfop-0.svg qube-cfop-cross.svg \
 	  qube-cfop-oll-2.svg qube-cfop-pll.svg qube-cubist.svg
 QUBESTHEME := qube-square2.svg qube-square3.svg
 CAD_CAM := qube-cam.svg qube-isometric.svg
-REALLIFE := qube-cubane.svg qube-cubicle.svg qube-dice.svg qube-NAS.svg \
-	    qube-sticky-notes.svg
+REALLIFE := qube-cubane.svg qube-cubicle.svg qube-NAS.svg qube-sticky-notes.svg \
+	    qube-dice-1.svg qube-dice-2.svg qube-dice-3.svg qube-dice-4.svg \
+	    qube-dice-5.svg qube-dice-6.svg
 CONCEPTUAL := qube-axonometric.svg qube-engraved.svg qube-impossible-cube1.svg \
 	      qube-impossible-cubes.svg qube-impossible-hexagon.svg \
 	      qube-infinity.svg qube-isometric-shapes.svg qube-tesseract.svg \
@@ -80,7 +81,12 @@ RealLife: $(REALLIFE)
 	$(info Real life lables will be created.)
 	$(QLTT) create Cubane 0x000000 --icon allvm=qube-cubane.svg
 	$(QLTT) create Cubicle 0x000000 --icon allvm=qube-cubicle.svg
-	$(QLTT) create Dice 0x000000 --icon allvm=qube-dice.svg
+	$(QLTT) create Dice 0x000000 \
+		--icon appvm=qube-dice-6.svg \
+		--icon dispvm=qube-dice-2.svg \
+		--icon servicevm=qube-dice-3.svg \
+		--icon standalonevm=qube-dice-4.svg \
+		--icon templatevm=qube-dice-1.svg
 	$(QLTT) create NAS 0x5c7184 --icon allvm=qube-NAS.svg
 	$(QLTT) create StickyNotes 0xBBBBBB --icon allvm=qube-sticky-notes.svg
 

@@ -31,7 +31,7 @@ VM icons with those colors.
 | ![](qube-cubane.svg) | Cubane | CC0 | Based on [NEUROtiker's design](https://commons.wikimedia.org/wiki/File:Cuban.svg) on Wikimedia |
 | ![](qube-cubicle.svg) | Cubicle | CC-BY-SA | Original sketch by myself. Monitor by Michaël Bégin,<br />Keyboard by David Peters, Screen from Qubes Artwork |
 | ![](qube-cubist.svg) | Rubik's | CC-BY-SA | Original sketch by myself. Unsolved Rubik's Cube |
-| ![](qube-dice.svg) | Dice(Die) | CC-BY-SA | Based on [Steaphan Greene's design](https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg). |
+| ![](qube-dice-1.svg) | Dice(Die) | CC-BY-SA | Based on [Steaphan Greene's design](https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg). |
 | ![](qube-engraved.svg) | Engraved | CC0 | Based on [Jarda's design](https://openclipart.org/detail/177642/engraved-cube-2). |
 | ![](qube-impossible-cube1.svg) | Impossible 1 | CC-BY-SA | Original sketch by myself. |
 | ![](qube-impossible-cubes.svg) | Impossible 3 | CC0 | Based on [Jarda's design](https://openclipart.org/detail/176610/impossible-cubes). |

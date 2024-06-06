@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="qube-dice-6.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title">Dice</title>
+  <sodipodi:namedview
+     id="namedview"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="8"
+     inkscape:cx="20.9375"
+     inkscape:cy="19.4375"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Die" />
+  <defs
+     id="defs1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC-BY-SA</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:title>Dice</dc:title>
+        <dc:date>2024-04-10</dc:date>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Die</rdf:li>
+            <rdf:li>Dice</rdf:li>
+            <rdf:li>Qube</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Die (Dice) qube icon for Qubes-OS labels. Based on Steaphan Greene's Dice Icon</dc:description>
+        <dc:source>https://github.com/alimirjamali/personal-qubesos</dc:source>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>Steaphan Greene
+Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="matrix(-0.09736937,-0.05621623,0.05621623,-0.09736937,31.643053,92.897876)"
+     id="Die"
+     style="display:inline">
+    <path
+       id="Corners"
+       style="display:inline;fill:#404040;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 463.14371,322.16341 c -7.07718,-4.08597 -15.04168,-6.60997 -22.19622,-6.61679 l -151.33437,-0.15672 -0.21061,-0.1216 c -25.35612,-3.65324 -43.08712,20.32356 -46.13129,29.35055 L 165.7321,479.19849 c -7.14295,12.39936 -7.14095,32.69463 0.002,45.09348 l 79.14013,137.36087 c 0.0614,0.10659 0.13922,0.17195 0.20131,0.2767 l -0.007,0.11631 c 5.73117,14.66925 38.97385,20.12379 46.55579,18.55454 l 152.97978,-0.157 c 14.30968,-0.0137 31.87797,-10.14493 39.0443,-22.53018 L 563.0499,520.69806 c 0.092,-0.15893 0.1428,-0.31054 0.23052,-0.46868 l 0.57247,-0.33143 c 6.24999,-10.8253 2.00424,-33.46978 -5.07107,-46.21494 l -0.5115,-0.29532 -78.28311,-135.30147 c -3.58333,-6.19287 -9.76629,-11.83682 -16.84346,-15.92279 z" />
+    <g
+       transform="matrix(0.19109772,-0.33172173,0.19109767,0.33172172,151.41229,501.74818)"
+       id="Face-2"
+       style="display:inline;overflow:visible">
+      <path
+         d="M 71.459473,553.5 C 34.080566,553.5 3.5,522.91895 3.5,485.54004 V 71.459473 C 3.5,34.082031 34.080566,3.5 71.459473,3.5 H 485.54004 C 522.91797,3.5 553.5,34.082031 553.5,71.459473 V 485.54004 C 553.5,522.91895 522.91797,553.5 485.54004,553.5 Z"
+         id="Face-B"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:12.4896;stroke-dasharray:none" />
+      <circle
+         cx="117.02637"
+         cy="439.97461"
+         r="57.115234"
+         id="B1"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="439.97314"
+         cy="117.02588"
+         r="57.114746"
+         id="B2"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+    </g>
+    <g
+       transform="matrix(-0.38282827,3.6542028e-4,0.19173058,-0.33135634,471.28918,681.58474)"
+       id="Face-6"
+       style="display:inline;overflow:visible">
+      <path
+         d="M 71.459473,553.5 C 34.080566,553.5 3.5,522.91895 3.5,485.54004 V 71.459473 C 3.5,34.082031 34.080566,3.5 71.459473,3.5 H 485.54004 C 522.91797,3.5 553.5,34.082031 553.5,71.459473 V 485.54004 C 553.5,522.91895 522.91797,553.5 485.54004,553.5 Z"
+         id="Face-F"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:12.4896;stroke-dasharray:none" />
+      <circle
+         cx="117.02637"
+         cy="439.97461"
+         r="57.115234"
+         id="F6"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="117.02588"
+         cy="117.02563"
+         r="57.115479"
+         id="F5"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="278.41125"
+         cy="439.79645"
+         r="57.115234"
+         id="F4"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="278.41074"
+         cy="116.8477"
+         r="57.114746"
+         id="F3"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="439.97461"
+         cy="439.97461"
+         r="57.115234"
+         id="F2"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="439.97314"
+         cy="117.02588"
+         r="57.114746"
+         id="F1"
+         style="display:inline;overflow:visible;fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1"
+         transform="translate(1.1099599e-5)" />
+    </g>
+    <g
+       transform="matrix(0.19173062,0.33135629,-0.38282828,-3.6543684e-4,467.63001,314.40394)"
+       id="Face-1"
+       style="display:inline;overflow:visible">
+      <path
+         id="Face-C"
+         style="font-variation-settings:normal;display:inline;overflow:visible;vector-effect:none;fill:#d5dde4;fill-opacity:1;stroke:#000000;stroke-width:12.4896;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         d="m 24.491018,22.411968 c -12.31749,12.31768 -19.9158602,29.31649 -19.9158602,48.0052 l -0.0285,414.096152 c 10e-6,37.37886 30.5718702,67.95072 67.9507302,67.95073 l 414.096172,-0.0285 c 37.37787,-2e-5 67.94721,-30.56836 67.94722,-67.94722 l 0.002,-414.069982 c -10e-6,-37.3774 -30.57286,-67.9507202 -67.95074,-67.9507402 l -414.069962,0.002 c -18.68944,0 -35.71389,7.6243702 -48.03138,19.9420402 z" />
+      <circle
+         cx="439.97311"
+         cy="117.02585"
+         r="57.114746"
+         id="C3"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="278.49997"
+         cy="278.49997"
+         r="57.115234"
+         id="C2"
+         style="fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1" />
+      <circle
+         cx="117.02633"
+         cy="439.97458"
+         r="57.115234"
+         id="C1"
+         style="display:inline;overflow:visible;fill:#404040;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1"
+         transform="translate(-8.1984913e-6)" />
+    </g>
+  </g>
+</svg>
