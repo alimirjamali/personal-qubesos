@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="qube-engraved-2.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">Engraved qube</title>
+  <sodipodi:namedview
+     id="namedview"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="12.4375"
+     inkscape:cx="24"
+     inkscape:cy="24"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC0 Public Domain Dediction</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date>2024-04-11</dc:date>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Cube</rdf:li>
+            <rdf:li>Qube</rdf:li>
+            <rdf:li>Engraved Cube</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Engraved cube icon designed for Qubes-OS. Based on Jarda's design on OpenClipArt</dc:description>
+        <dc:source>https://www.github.com/alimirjamali/personal-qubesos</dc:source>
+        <dc:title>Engraved qube</dc:title>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g4279"
+     stroke="#000000"
+     stroke-width="3"
+     transform="matrix(-0.02592996,0.04491202,-0.04491202,-0.02592996,145.5695,-51.309386)">
+    <path
+       id="path3024-0-0-8"
+       fill="#ff9955"
+       d="m 2736.5,1179.6 -260.81,150.59 v 301.19 l 260.81,-150.59 z m -30.688,35.438 v 248.03 l -214.78,124.03 v -248.03 z" />
+    <path
+       id="path2986-9-0-3"
+       fill="#ffccaa"
+       d="m 2828.6,1073.3 -398.91,230.31 v 460.62 l 398.91,-230.31 z m -30.688,53.125 v 389.78 l -337.53,194.88 v -389.75 z" />
+    <path
+       id="path2996-4-6-7"
+       fill="#b3b3b3"
+       d="m 2460.4,1693.4 322.2,-186.02 15.343,8.8582 -337.55,194.88 z" />
+    <path
+       id="path3000-8-1-1"
+       fill="#f2f2f2"
+       d="m 2782.6,1507.4 15.343,8.8582 v -389.76 l -15.343,8.8583 z" />
+    <path
+       id="path3002-82-3-0"
+       fill="#ffb380"
+       d="m 2782.6,1135.3 -30.688,17.719 -291.5,168.31 v 372.03 l 322.19,-186.03 v -372.03 z m -30.688,35.438 v 318.91 l -276.16,159.44 v -318.91 z" />
+    <path
+       id="path3004-4-8-7"
+       fill="#999999"
+       d="m 2475.7,1631.4 260.83,-150.59 15.343,8.8583 -276.17,159.45 z" />
+    <path
+       id="path3006-5-9-3"
+       fill="#e6e6e6"
+       d="m 2736.5,1179.6 v 301.18 l 15.343,8.8583 v -318.9 z" />
+    <path
+       id="path3015-5-3-4"
+       fill="#808080"
+       d="m 2491.1,1569.4 199.46,-115.16 15.343,8.8583 -214.8,124.02 z" />
+    <path
+       id="path3019-1-4-9"
+       fill="none"
+       d="m 2690.5,1223.9 15.343,-8.8583" />
+    <path
+       id="path3006-1-7-4-6"
+       fill="#b3b3b3"
+       d="m 2690.5,1223.9 v 230.31 l 15.343,8.8583 v -248.03 z" />
+    <path
+       id="path3024-7-11-6-5"
+       fill="#ff7f2a"
+       d="m 2690.5,1223.9 -199.46,115.16 v 230.32 l 199.46,-115.16 z m -30.688,35.438 v 177.16 l -153.43,88.593 v -177.16 z" />
+    <path
+       id="path3006-1-4-5-0-1"
+       fill="#999999"
+       d="m 2644.5,1268.2 v 159.45 l 15.343,8.8583 v -177.17 z" />
+    <path
+       id="path3015-0-2-6-0"
+       fill="#666666"
+       d="m 2506.4,1507.4 138.09,-79.724 15.343,8.8583 -153.43,88.583 z" />
+    <path
+       id="path3024-7-9-7-6-9"
+       fill="#ff6600"
+       d="m 2644.5,1268.2 -138.09,79.724 v 159.45 l 138.09,-79.724 z m -30.688,35.438 v 106.29 l -92.056,53.162 V 1356.8 Z" />
+    <path
+       id="path3006-1-4-4-6-1-9"
+       fill="#808080"
+       d="m 2598.5,1312.5 v 88.583 l 15.343,8.8583 v -106.3 z" />
+    <path
+       id="path3015-0-8-1-8-6"
+       fill="#4d4d4d"
+       d="m 2521.7,1445.4 76.715,-44.291 15.343,8.8583 -92.058,53.15 z" />
+    <path
+       id="path3024-7-9-8-4-4-8"
+       fill="#d45500"
+       d="m 2598.5,1312.5 -76.716,44.289 v 88.585 l 76.716,-44.289 z m -30.688,35.438 v 35.429 l -30.685,17.727 v -35.429 z" />
+    <path
+       id="path3006-1-4-4-2-2-9-3"
+       fill="#666666"
+       d="m 2552.4,1356.8 v 17.716 l 15.343,8.8583 v -35.433 z" />
+    <path
+       id="path3015-0-8-4-3-6-4"
+       fill="#333333"
+       d="m 2537.1,1383.4 15.343,-8.8583 15.343,8.8583 -30.686,17.716 z" />
+    <path
+       id="path3218-22-3-8"
+       fill="#aa4400"
+       d="m 2537.1,1365.6 v 17.716 l 15.343,-8.8583 v -17.716 z" />
+    <path
+       id="path3244-6-7-4"
+       fill="#99ff55"
+       d="m 2122.8,1179.6 260.81,150.59 v 301.19 L 2122.8,1480.79 Z m 30.688,35.438 v 248.03 l 214.78,124.03 v -248.03 z" />
+    <path
+       id="path3246-8-8-9"
+       fill="#ccffaa"
+       d="m 2030.8,1073.3 398.91,230.31 v 460.62 L 2030.8,1533.92 Z m 30.688,53.125 v 389.78 l 337.53,194.88 v -389.75 z" />
+    <path
+       id="path3248-5-8-9"
+       fill="#ececec"
+       d="m 2399,1693.4 -322.2,-186.02 -15.343,8.8583 337.55,194.88 z" />
+    <path
+       id="path3250-7-2-2"
+       fill="#808080"
+       d="m 2076.8,1507.4 -15.343,8.8583 v -389.76 l 15.343,8.8583 z" />
+    <path
+       id="path3252-61-9-5"
+       fill="#b3ff80"
+       d="m 2076.8,1135.3 30.688,17.719 291.5,168.31 v 372.03 l -322.19,-186.03 v -372.03 z m 30.688,35.438 v 318.91 l 276.16,159.44 v -318.91 z" />
+    <path
+       id="path3254-89-1-5"
+       fill="#cccccc"
+       d="m 2383.7,1631.4 -260.83,-150.59 -15.343,8.8583 276.17,159.45 z" />
+    <path
+       id="path3256-2-3-3"
+       fill="#666666"
+       d="m 2122.8,1179.6 v 301.18 l -15.343,8.8583 v -318.9 z" />
+    <path
+       id="path3258-79-5-3"
+       fill="#999999"
+       d="m 2368.3,1569.4 -199.46,-115.16 -15.343,8.8583 214.8,124.02 z" />
+    <path
+       id="path3260-5-9-3"
+       fill="none"
+       d="m 2168.9,1223.9 -15.343,-8.8583" />
+    <path
+       id="path3262-4-8-7"
+       fill="#4d4d4d"
+       d="m 2168.9,1223.9 v 230.31 l -15.343,8.8583 v -248.03 z" />
+    <path
+       id="path3264-3-4-4"
+       fill="#7fff2a"
+       d="m 2168.9,1223.9 199.46,115.16 v 230.32 L 2168.9,1454.22 Z m 30.688,35.438 v 177.16 l 153.43,88.593 v -177.16 z" />
+    <path
+       id="path3266-1-0-3"
+       fill="#333333"
+       d="m 2214.9,1268.2 v 159.45 l -15.343,8.8583 v -177.17 z" />
+    <path
+       id="path3268-23-7-8"
+       fill="#808080"
+       d="m 2353,1507.4 -138.09,-79.724 -15.343,8.8583 153.43,88.583 z" />
+    <path
+       id="path3270-3-6-0"
+       fill="#66ff00"
+       d="m 2214.9,1268.2 138.09,79.724 v 159.45 L 2214.9,1427.65 Z m 30.688,35.438 v 106.29 l 92.056,53.162 V 1356.8 Z" />
+    <path
+       id="path3272-4-3-8"
+       fill="#333333"
+       d="m 2260.9,1312.5 v 88.583 l -15.343,8.8583 v -106.3 z" />
+    <path
+       id="path3274-1-6-8"
+       fill="#666666"
+       d="m 2337.6,1445.4 -76.715,-44.291 -15.343,8.8583 92.058,53.15 z" />
+    <path
+       id="path3276-1-1-0"
+       fill="#55d400"
+       d="m 2260.9,1312.5 76.716,44.289 v 88.585 l -76.716,-44.289 z m 30.688,35.438 v 35.429 l 30.685,17.727 v -35.429 z" />
+    <path
+       id="path3278-3-5-6"
+       fill="#1a1a1a"
+       d="m 2307,1356.8 v 17.716 l -15.343,8.8583 v -35.433 z" />
+    <path
+       id="path3280-8-4-8"
+       fill="#4d4d4d"
+       d="m 2322.3,1383.4 -15.343,-8.8583 -15.343,8.8583 30.686,17.716 z" />
+    <path
+       id="path3282-7-2-1"
+       fill="#44aa00"
+       d="m 2322.3,1365.6 v 17.716 l -15.343,-8.8583 v -17.716 z" />
+    <path
+       id="path3286-7-0-9"
+       fill="#80e5ff"
+       d="m 2168.9,1099.9 260.82,150.57 260.84,-150.59 -260.82,-150.57 z m 46.034,8.8574 214.8,-124.02 214.8,123.99 -214.8,124.02 z" />
+    <path
+       id="path3288-7-9-8"
+       fill="#d5f6ff"
+       d="m 2030.8,1073.3 398.91,230.31 398.91,-230.31 -398.91,-230.31 z m 61.351,0.014 337.56,-194.89 337.53,194.87 -337.53,194.88 z" />
+    <path
+       id="path3290-9-7-9"
+       fill="#f2f2f2"
+       d="M 2751.9,1082.2 2429.7,896.18 v -17.717 l 337.55,194.88 z" />
+    <path
+       id="path3292-3-3-7"
+       fill="#b3b3b3"
+       d="m 2429.7,896.15 v -17.717 l -337.55,194.88 15.343,8.8583 z" />
+    <path
+       id="path3294-1-7-2"
+       fill="#aaeeff"
+       d="m 2107.5,1082.2 30.689,17.717 291.51,168.29 291.5,-168.3 30.69,-17.719 -322.2,-186.01 -322.19,186.02 z m 46.034,8.8574 276.18,-159.45 276.16,159.44 -276.18,159.45 z" />
+    <path
+       id="path3296-9-2-2"
+       fill="#e6e6e6"
+       d="M 2690.5,1099.9 2429.67,949.31 v -17.717 l 276.17,159.45 z" />
+    <path
+       id="path3298-8-6-8"
+       fill="#999999"
+       d="m 2168.9,1099.9 260.83,-150.59 v -17.717 l -276.17,159.45 z" />
+    <path
+       id="path3300-6-0-2"
+       fill="#b3b3b3"
+       d="m 2629.1,1117.6 -199.46,-115.16 v -17.716 l 214.8,124.02 z" />
+    <path
+       id="path3302-5-1-8"
+       fill="none"
+       d="m 2230.2,1117.6 -15.343,-8.8583" />
+    <path
+       id="path3304-0-6-9"
+       fill="#808080"
+       d="m 2230.2,1117.6 199.46,-115.16 v -17.716 l -214.8,124.02 z" />
+    <path
+       id="path3306-2-5-0"
+       fill="#55ddff"
+       d="m 2230.2,1117.6 199.46,115.16 199.46,-115.16 -199.46,-115.16 z m 46.034,8.8574 153.42,-88.582 153.44,88.577 -153.42,88.582 z" />
+    <path
+       id="path3308-8-7-7"
+       fill="#666666"
+       d="m 2291.6,1135.3 138.09,-79.724 v -17.716 l -153.43,88.583 z" />
+    <path
+       id="path3310-6-5-8"
+       fill="#999999"
+       d="m 2567.8,1135.3 -138.09,-79.724 v -17.716 l 153.43,88.583 z" />
+    <path
+       id="path3312-0-4-1"
+       fill="#2ad4ff"
+       d="m 2291.6,1135.3 138.09,79.724 138.09,-79.724 -138.09,-79.724 z m 46.034,8.8574 92.052,-53.146 92.067,53.141 -92.052,53.146 z" />
+    <path
+       id="path3314-2-1-5"
+       fill="#4d4d4d"
+       d="m 2353,1153 76.715,-44.291 v -17.716 l -92.058,53.15 z" />
+    <path
+       id="path3316-4-2-8"
+       fill="#999999"
+       d="m 2506.4,1153 -76.715,-44.291 v -17.716 l 92.058,53.15 z" />
+    <path
+       id="path3318-8-0-6"
+       fill="#00ccff"
+       d="m 2353,1153 76.714,44.294 76.716,-44.294 -76.714,-44.294 z m 46.034,8.8574 30.681,-17.716 30.694,17.711 -30.681,17.716 z" />
+    <path
+       id="path3320-6-0-1"
+       fill="#333333"
+       d="m 2414.3,1170.8 15.343,-8.8583 v -17.716 l -30.686,17.716 z" />
+    <path
+       id="path3322-5-1-2"
+       fill="#808080"
+       d="m 2445,1170.8 -15.343,-8.8583 v -17.716 l 30.686,17.716 z" />
+    <path
+       id="path3324-09-4-4"
+       fill="#00aad4"
+       d="m 2429.7,1179.6 15.343,-8.8582 -15.343,-8.8583 -15.343,8.8583 z" />
+  </g>
+</svg>

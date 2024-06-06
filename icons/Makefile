@@ -14,10 +14,10 @@ CAD_CAM := qube-cam.svg qube-isometric.svg
 REALLIFE := qube-cubane.svg qube-cubicle.svg qube-NAS.svg qube-sticky-notes.svg \
 	    qube-dice-1.svg qube-dice-2.svg qube-dice-3.svg qube-dice-4.svg \
 	    qube-dice-5.svg qube-dice-6.svg
-CONCEPTUAL := qube-axonometric.svg qube-engraved.svg qube-impossible-cube1.svg \
+CONCEPTUAL := qube-axonometric.svg qube-engraved-1.svg qube-impossible-cube1.svg \
 	      qube-impossible-cubes.svg qube-impossible-hexagon.svg \
 	      qube-infinity.svg qube-isometric-shapes.svg qube-tesseract.svg \
-	      qube-optical-illusion.svg qube-webcolors.svg
+	      qube-optical-illusion.svg qube-webcolors-1.svg
 
 .PHONY: info all UIUX DISTROS Cubist QubesTheme CADCAM Conceptual RealLife clean
 
@@ -101,7 +101,12 @@ Conceptual: $(CONCEPTUAL)
 	$(QLTT) create Isometrics 0x555555 --icon allvm=qube-isometric-shapes.svg
 	$(QLTT) create Tesseract 0x555555 --icon allvm=qube-tesseract.svg
 	$(QLTT) create OpticalIllusions 0x555555 --icon allvm=qube-optical-illusion.svg
-	$(QLTT) create Webcolors 0xFF00FF --icon allvm=qube-webcolors.svg
+	$(QLTT) create Webcolors 0xFF00FF \
+		--icon appvm=qube-webcolors-1.svg \
+		--icon templatevm=qube-webcolors-2.svg \
+		--icon servicevm=qube-webcolors-3.svg \
+		--icon standalonevm=qube-webcolors-4.svg \
+		--icon dispvm=qube-webcolors-5.svg
 
 clean: $(UI_UX) $(CUBIST) $(QUBESTHEME) $(CAD_CAM) $(REALLIFE) $(CONCEPTUAL)
 	$(info All unused custom labels will be removed.)

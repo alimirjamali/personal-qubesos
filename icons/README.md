@@ -32,7 +32,7 @@ VM icons with those colors.
 | ![](qube-cubicle.svg) | Cubicle | CC-BY-SA | Original sketch by myself. Monitor by Michaël Bégin,<br />Keyboard by David Peters, Screen from Qubes Artwork |
 | ![](qube-cubist.svg) | Rubik's | CC-BY-SA | Original sketch by myself. Unsolved Rubik's Cube |
 | ![](qube-dice-1.svg) | Dice(Die) | CC-BY-SA | Based on [Steaphan Greene's design](https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg). |
-| ![](qube-engraved.svg) | Engraved | CC0 | Based on [Jarda's design](https://openclipart.org/detail/177642/engraved-cube-2). |
+| ![](qube-engraved-1.svg) | Engraved | CC0 | Based on [Jarda's design](https://openclipart.org/detail/177642/engraved-cube-2). |
 | ![](qube-impossible-cube1.svg) | Impossible 1 | CC-BY-SA | Original sketch by myself. |
 | ![](qube-impossible-cubes.svg) | Impossible 3 | CC0 | Based on [Jarda's design](https://openclipart.org/detail/176610/impossible-cubes). |
 | ![](qube-impossible-hexagon.svg) | Impossible<br />Hexagon | CC-BY-SA | Original sketch by myself. |
@@ -45,7 +45,7 @@ VM icons with those colors.
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz's designs](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-sticky-notes.svg) | Sticky Notes | CC0 | Based on [crisg's design](https://openclipart.org/detail/183333/sticky-cube-notes). |
 | ![](qube-tesseract.svg) | Tesseract | CC-BY-SA | Original sketch by myself. |
-| ![](qube-webcolors.svg) | Web Colors | CC-BY-SA | Based on [Denis N Gour's design](https://commons.wikimedia.org/wiki/File:Web_Color_Cube.svg). |
+| ![](qube-webcolors-1.svg) | Web Colors | CC-BY-SA | Based on [Denis N Gour's design](https://commons.wikimedia.org/wiki/File:Web_Color_Cube.svg). |
 
 ### Qubes OS Vector Perfect Qute Sushi Icons
 
