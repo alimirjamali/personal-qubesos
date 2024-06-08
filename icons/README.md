@@ -23,7 +23,7 @@ VM icons with those colors.
 | ![](qube-axonometric.svg) | Axonometric | CC-BY-SA | Based on [Nevit Dilmen's design](https://be.m.wikimedia.org/wiki/File:Axonometric-cube.svg). |
 | ![](qube-braingames.svg) | Qube inside a room | CC0 | Based on [monsterbraingames's design](https://openclipart.org/detail/303901/cube-inside-a-room-isometric). |
 | ![](qube-cam.svg) | CAM | CC-BY-SA | Cube based on Vector Perfect Qute Sushi. Drill bit from [Inductiveload's design](https://en.m.wikipedia.org/wiki/File:Machined_Holes.svg) |
-| ![](qube-cardboard-box.sv) | Cardboard Box | CC0 | Based on [CDJ's design](https://openclipart.org/detail/231068/3d-isometric-cardboard-box). |
+| ![](qube-cardboard-box.svg) | Cardboard Box | CC0 | Based on [CDJ's design](https://openclipart.org/detail/231068/3d-isometric-cardboard-box). |
 | ![](qube-cfop-0.svg) | CFOP Zero | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Inspection stage |
 | ![](qube-cfop-cross.svg) | CFOP Cross | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Cross stage |
 | ![](qube-cfop-f2l.svg) | CFOP F2L | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - First two layers stage |
