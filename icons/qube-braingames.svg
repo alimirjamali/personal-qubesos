@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="qube-braingames.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">Qube inside a room isometric</title>
+  <sodipodi:namedview
+     id="namedview"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="4.3776417"
+     inkscape:cx="30.610088"
+     inkscape:cy="27.526236"
+     inkscape:window-width="1366"
+     inkscape:window-height="707"
+     inkscape:window-x="0"
+     inkscape:window-y="61"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:date>2024-06-08</dc:date>
+        <dc:source>https://github.com/alimirjamali/personal-qubesos</dc:source>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Qubes</rdf:li>
+            <rdf:li>Qubes-OS</rdf:li>
+            <rdf:li>Isometric Cube</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>Monsterbraingames
+Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:description>Cube inside a room isometric
+Iconized drawing of Monsterbraingames design</dc:description>
+        <dc:source>https://github.com/alimirjamali/personal-qubesos</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Ali Mirjamali</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:title>Qube inside a room isometric</dc:title>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC0</dc:title>
+          </cc:Agent>
+        </dc:rights>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="matrix(1.0520821,0,0,1.0520821,-190.61884,110.19779)">
+    <g
+       id="g1"
+       transform="translate(167.45469,-118.75773)">
+      <path
+         d="m 116.05041,99.94241 -49.526599,28.5942 -49.526601,-28.594201 1e-6,-57.188392 49.526601,-28.594196 49.526598,28.594196 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.0471976"
+         sodipodi:arg1="0.52359878"
+         sodipodi:r2="49.526604"
+         sodipodi:r1="57.188393"
+         sodipodi:cy="71.348213"
+         sodipodi:cx="66.523811"
+         sodipodi:sides="6"
+         id="path819"
+         style="fill:#dd4f43;fill-opacity:1;stroke:none;stroke-width:2.00453;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="star"
+         transform="matrix(0.39763318,0,0,0.39763318,10.08762,8.4422638)" />
+      <path
+         style="fill:#f35448;fill-opacity:1;stroke:#000000;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 16.846274,25.442678 19.693418,11.369996 10e-7,22.740011 -19.693419,-11.370003 z"
+         id="path861"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#f63d30;fill-opacity:1;stroke:#000000;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 36.539693,14.072678 56.23311,25.442679 36.539692,36.812674 16.846274,25.442678 Z"
+         id="path857"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#621812;fill-opacity:1;stroke:#000000;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 56.23311,25.442679 v 22.740003 l -19.693417,11.370003 -10e-7,-22.740011 z"
+         id="path859"
+         inkscape:connector-curvature="0" />
+      <path
+         sodipodi:type="star"
+         style="fill:#a1271d;fill-opacity:1;stroke:none;stroke-width:1.67627;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path815"
+         sodipodi:sides="6"
+         sodipodi:cx="66.523811"
+         sodipodi:cy="71.348213"
+         sodipodi:r1="47.823307"
+         sodipodi:r2="41.416203"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.0471976"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 107.94001,95.259867 66.523811,119.17152 25.107612,95.259867 l 1e-6,-47.823308 41.416199,-23.911653 41.416198,23.911654 z"
+         transform="matrix(0.39763318,0,0,0.39763318,10.08762,8.4422638)" />
+      <path
+         d="m 77.819868,77.869995 -11.296057,6.521781 -11.296057,-6.521781 1e-6,-13.043563 11.296056,-6.521782 11.296057,6.521782 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.0471976"
+         sodipodi:arg1="0.52359878"
+         sodipodi:r2="11.296058"
+         sodipodi:r1="13.043563"
+         sodipodi:cy="71.348213"
+         sodipodi:cx="66.523811"
+         sodipodi:sides="6"
+         id="path823"
+         style="fill:#671912;fill-opacity:1;stroke:none;stroke-width:0.457195;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="star"
+         transform="matrix(0.39763318,0,0,0.39763318,10.08762,8.4422638)" />
+      <path
+         style="fill:#c02f23;fill-opacity:1;stroke:#000000;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 36.539693,36.81268 V 17.796547 l 16.468453,9.508067 v 19.016132 z"
+         id="path845"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#621812;fill-opacity:1;stroke:#000000;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 36.539693,17.796547 V 36.81268 L 20.071239,46.320746 V 27.304614 Z"
+         id="path847"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#ff4c3e;fill-opacity:1;stroke:#000000;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 36.539692,36.812674 53.008146,46.320746 36.539693,55.828814 20.071239,46.320746 Z"
+         id="path849"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#621812;fill-opacity:1;stroke:#000000;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 41.03138,34.219403 -4.491687,2.593277 v 5.186553 l 4.491687,-2.593277 z"
+         id="path851"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#ff4c3e;fill-opacity:1;stroke:#000000;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 36.539693,31.626127 4.491687,2.593276 -4.491688,2.593271 -4.491685,-2.593271 z"
+         id="path853"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#c02f23;fill-opacity:1;stroke:#000000;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 32.048007,34.219403 4.491685,2.593271 10e-7,5.186559 -4.491686,-2.593277 z"
+         id="path855"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#000000;fill-opacity:0.237374;stroke:none;stroke-width:0.0996337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 36.539693,41.999233 2.050302,1.183742 4.408467,-2.54523 -1.967082,-6.418342 -4.491688,2.593271 z"
+         id="path863"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
