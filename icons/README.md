@@ -21,7 +21,9 @@ VM icons with those colors.
 | Icon | Qube Name | License | Description |
 | :---: | :---: | :---: | :--- |
 | ![](qube-axonometric.svg) | Axonometric | CC-BY-SA | Based on [Nevit Dilmen's design](https://be.m.wikimedia.org/wiki/File:Axonometric-cube.svg). |
+| ![](qube-braingames.svg) | Qube inside a room | CC0 | Based on [monsterbraingames's design](https://openclipart.org/detail/303901/cube-inside-a-room-isometric). |
 | ![](qube-cam.svg) | CAM | CC-BY-SA | Cube based on Vector Perfect Qute Sushi. Drill bit from [Inductiveload's design](https://en.m.wikipedia.org/wiki/File:Machined_Holes.svg) |
+| ![](qube-cardboard-box.svg) | Cardboard Box | CC0 | Based on [CDJ's design](https://openclipart.org/detail/231068/3d-isometric-cardboard-box). |
 | ![](qube-cfop-0.svg) | CFOP Zero | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Inspection stage |
 | ![](qube-cfop-cross.svg) | CFOP Cross | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - Cross stage |
 | ![](qube-cfop-f2l.svg) | CFOP F2L | CC-BY-SA | Original sketch by myself. Based on Rubik's Cube CFOP method - First two layers stage |
@@ -41,10 +43,13 @@ VM icons with those colors.
 | ![](qube-isometric-shapes.svg) | Isometric<br />Shapes | CC0 | Based on [Gramzon's design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
 | ![](qube-NAS.svg) | NAS | CC-BY-SA | Original sketch by myself. |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original sketch by myself. |
+| ![](qube-SGI-Crimson.svg) | Silicon Graphics<br />Crimson | CC0 | Based on [星球's design](https://openclipart.org/detail/272140/silicon-graphics-crimson). |
 | ![](qube-square2.svg) | Qube&#x00B2; | CC-BY-SA | Based on [Qubes OS Artwork](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz's designs](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-sticky-notes.svg) | Sticky Notes | CC0 | Based on [crisg's design](https://openclipart.org/detail/183333/sticky-cube-notes). |
+| ![](qube-store.svg) | Isometric Store | CC0 | Based on [CDJ's design](https://openclipart.org/detail/279010/simple-isometric-store). |
 | ![](qube-tesseract.svg) | Tesseract | CC-BY-SA | Original sketch by myself. |
+| ![](qube-tower.svg) | Isometric Tower | CC0 | Based on [rg1024's design](https://openclipart.org/detail/20730/isometric-tower). |
 | ![](qube-webcolors-1.svg) | Web Colors | CC-BY-SA | Based on [Denis N Gour's design](https://commons.wikimedia.org/wiki/File:Web_Color_Cube.svg). |
 
 ### Qubes OS Vector Perfect Qute Sushi Icons
