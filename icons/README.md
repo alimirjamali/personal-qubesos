@@ -20,7 +20,7 @@ VM icons with those colors.
 
 | Icon | Qube Name | License | Description |
 | :---: | :---: | :---: | :--- |
-| ![](qube-axonometric.svg) | Axonometric | CC-BY-SA | Based on [Nevit Dilmen's design](https://be.m.wikimedia.org/wiki/File:Axonometric-cube.svg). |
+| ![](qube-axonometric-1.svg) | Axonometric | CC-BY-SA | Based on [Nevit Dilmen's design](https://be.m.wikimedia.org/wiki/File:Axonometric-cube.svg). |
 | ![](qube-braingames.svg) | Qube inside a room | CC0 | Based on [monsterbraingames's design](https://openclipart.org/detail/303901/cube-inside-a-room-isometric). |
 | ![](qube-cam.svg) | CAM | CC-BY-SA | Cube based on Vector Perfect Qute Sushi. Drill bit from [Inductiveload's design](https://en.m.wikipedia.org/wiki/File:Machined_Holes.svg) |
 | ![](qube-cardboard-box.svg) | Cardboard Box | CC0 | Based on [CDJ's design](https://openclipart.org/detail/231068/3d-isometric-cardboard-box). |
@@ -35,7 +35,7 @@ VM icons with those colors.
 | ![](qube-cubist.svg) | Rubik's | CC-BY-SA | Original sketch by myself. Unsolved Rubik's Cube |
 | ![](qube-dice-1.svg) | Dice(Die) | CC-BY-SA | Based on [Steaphan Greene's design](https://commons.wikimedia.org/wiki/File:2-Dice-Icon.svg). |
 | ![](qube-engraved-1.svg) | Engraved | CC0 | Based on [Jarda's design](https://openclipart.org/detail/177642/engraved-cube-2). |
-| ![](qube-impossible-cube1.svg) | Impossible 1 | CC-BY-SA | Original sketch by myself. |
+| ![](qube-impossible-cube-1.svg) | Impossible | CC-BY-SA | Original sketch by myself. |
 | ![](qube-impossible-cubes.svg) | Impossible 3 | CC0 | Based on [Jarda's design](https://openclipart.org/detail/176610/impossible-cubes). |
 | ![](qube-impossible-hexagon.svg) | Impossible<br />Hexagon | CC-BY-SA | Original sketch by myself. |
 | ![](qube-infinity.svg) | Infinity | CC-BY-SA | Original sketch by myself. |
@@ -98,7 +98,7 @@ Cube Speaker, Wooden block qubes of
 [Cardboard qube](https://openclipart.org/detail/231068/3d-isometric-cardboard-box),
 [Earth qube](https://openclipart.org/detail/259468/cube-earth-silhouette),
 [Blank die](https://openclipart.org/detail/304802/blank-dice),
-Prism qube.
+Gold, Silver & Steel qubes. Prism qube.
 
 ### Qubes which might be possible due to expired patents or trademarks
 Bauhaus qubes, Peter Keler D1, Lego qube

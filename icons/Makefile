@@ -14,7 +14,7 @@ CAD_CAM := qube-cam.svg qube-isometric.svg
 REALLIFE := qube-cubane.svg qube-cubicle.svg qube-NAS.svg qube-sticky-notes.svg \
 	    qube-dice-1.svg qube-dice-2.svg qube-dice-3.svg qube-dice-4.svg \
 	    qube-dice-5.svg qube-dice-6.svg
-CONCEPTUAL := qube-axonometric.svg qube-engraved-1.svg qube-impossible-cube1.svg \
+CONCEPTUAL := qube-axonometric-1.svg qube-engraved-1.svg qube-impossible-cube-1.svg \
 	      qube-impossible-cubes.svg qube-impossible-hexagon.svg \
 	      qube-infinity.svg qube-isometric-shapes.svg qube-tesseract.svg \
 	      qube-optical-illusion.svg qube-webcolors-1.svg
@@ -82,24 +82,34 @@ RealLife: $(REALLIFE)
 	$(QLTT) create Cubane 0x000000 --icon allvm=qube-cubane.svg
 	$(QLTT) create Cubicle 0x000000 --icon allvm=qube-cubicle.svg
 	$(QLTT) create Dice 0x000000 \
-		--icon appvm=qube-dice-6.svg \
-		--icon dispvm=qube-dice-2.svg \
-		--icon servicevm=qube-dice-3.svg \
-		--icon standalonevm=qube-dice-4.svg \
-		--icon templatevm=qube-dice-1.svg
+		--icon appvm=qube-dice-4.svg \
+		--icon dispvm=qube-dice-5.svg \
+		--icon servicevm=qube-dice-1.svg \
+		--icon standalonevm=qube-dice-6.svg \
+		--icon templatevm=qube-dice-3.svg
 	$(QLTT) create NAS 0x5c7184 --icon allvm=qube-NAS.svg
 	$(QLTT) create StickyNotes 0xBBBBBB --icon allvm=qube-sticky-notes.svg
 
 Conceptual: $(CONCEPTUAL)
 	$(info Conecptual lables will be created.)
-	$(QLTT) create Axonometric 0xFFDD55 --icon allvm=qube-axonometric.svg
+	$(QLTT) create Axonometric 0xFFDD55 \
+		--icon appvm=qube-axonometric-1.svg \
+		--icon templatevm=qube-axonometric-2.svg \
+		--icon servicevm=qube-axonometric-3.svg \
+		--icon standalonevm=qube-axonometric-4.svg \
+		--icon dispvm=qube-axonometric-5.svg
 	$(QLTT) create Engraved 0x555555 \
 		--icon appvm=qube-engraved-1.svg \
 		--icon templatevm=qube-engraved-2.svg \
 		--icon servicevm=qube-engraved-3.svg \
 		--icon standalonevm=qube-engraved-4.svg \
 		--icon dispvm=qube-engraved-5.svg
-	$(QLTT) create Impossible1 0x555555 --icon allvm=qube-impossible-cube1.svg
+	$(QLTT) create Impossible 0x555555 \
+		--icon appvm=qube-impossible-cube-1.svg \
+		--icon templatevm=qube-impossible-cube-2.svg \
+		--icon servicevm=qube-impossible-cube-3.svg \
+		--icon standalonevm=qube-impossible-cube-4.svg \
+		--icon dispvm=qube-impossible-cube-5.svg
 	$(QLTT) create Impossibles 0x555555 --icon allvm=qube-impossible-cubes.svg
 	$(QLTT) create ImpossibleHex 0xF57900 --icon allvm=qube-impossible-hexagon.svg
 	$(QLTT) create Infinity 0x555555 --icon allvm=qube-infinity.svg
