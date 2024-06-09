@@ -119,8 +119,8 @@ Conceptual: $(CONCEPTUAL)
 	$(QLTT) create Webcolors 0xFF00FF \
 		--icon appvm=qube-webcolors-1.svg \
 		--icon templatevm=qube-webcolors-2.svg \
-		--icon servicevm=qube-webcolors-3.svg \
-		--icon standalonevm=qube-webcolors-4.svg \
+		--icon servicevm=qube-webcolors-4.svg \
+		--icon standalonevm=qube-webcolors-5.svg \
 		--icon dispvm=qube-webcolors-5.svg
 
 clean: $(UI_UX) $(CUBIST) $(QUBESTHEME) $(CAD_CAM) $(REALLIFE) $(CONCEPTUAL)
