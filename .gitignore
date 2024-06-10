@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 *.egg-info
 qubes-core-admin-client-tt/build
+Infrastructure/*.txt
+Infrastructure/credentials.py
+Infrastructure/token

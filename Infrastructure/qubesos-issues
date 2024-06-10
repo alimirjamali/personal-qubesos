@@ -1,0 +1,111 @@
+#!/bin/python3
+#
+# The Qubes OS Tweak Tools, https://github.com/alimirjamali/personal-qubesos
+#
+# Copyright (C) 2024  Ali Mirjamali <ali@mirjamali.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation; either version 2.1 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program; if not, see <http://www.gnu.org/licenses/>.
+#
+import requests
+import json
+import random
+import sys
+import signal
+import argparse
+
+from importlib.machinery import SourceFileLoader
+sys.dont_write_bytecode = True
+TTSpinner = SourceFileLoader("spinner",
+    "./spinner.py").load_module()
+try:
+    Credentials = SourceFileLoader('credentials',
+        './credentials.py').load_module()
+    username = Credentials.USER
+    password = Credentials.PASSWORD
+except:
+    username='guest'
+    password='guest'
+
+def signal_handler(sig, frame):
+    eprint('Program interrupted by user!')
+    sys.exit(1)
+signal.signal(signal.SIGINT, signal_handler)
+
+parser = argparse.ArgumentParser(prog='qubesos-issues',
+        description='Listing Qubes OS issues on Github',
+        epilog='Add your Github username & token to credentials.py to avoid '
+                'Github API rate limiting')
+
+parser.add_argument('--quiet', '-q', action='store_true', help='Disable spinner')
+
+sort_group = parser.add_mutually_exclusive_group()
+sort_group.add_argument('--newest', action='store_true',
+    help='Sort issues ascending from newest to oldest')
+sort_group.add_argument('--oldest', action='store_true',
+    help='Sort issues ascending from newest to oldest')
+sort_group.add_argument('--random', action='store_true', help='Randomize issues')
+
+def issue_number_checker(n):
+    i = int(n)
+    if i < 0:
+        raise argparse.ArgumentTypeError('Number of issues could not be < 1!!!')
+    return i
+
+parser.add_argument('--limit', type=issue_number_checker,
+    help='Limit number of issues to print')
+
+def main():
+    args = parser.parse_args()
+    url ='https://api.github.com/repos/QubesOS/qubes-issues/issues?per_page=100'
+    headers={
+        'Accept': 'application/vnd.github+json'}
+    token = open('token').readline().rstrip()
+    issues = list()
+    if args.quiet:
+        spinner = TTSpinner.DummySpinner(sys.stderr)
+    else:
+        spinner = TTSpinner.SpinnerTweakToolEdition(sys.stderr, interleave=0)
+    spinner.show("processing Qubes open issues...")
+    while url:
+        r = requests.get(url, headers=headers, auth=(username, password))
+        if (r.ok):
+            if 'next' in r.links.keys():
+                url = r.links['next']['url']
+            else:
+                url = None
+            issues = issues + json.loads(r.text or r.content)
+        else:
+            spinner.hide()
+            print(r.text)
+            print(r.headers)
+            exit(1)
+        spinner.update()
+    spinner.hide()
+    if args.random:
+        random.shuffle(issues)
+    elif args.newest:
+        pass
+    elif args.oldest:
+        issues.reverse()
+
+    if args.limit:
+        issues = issues[:args.limit]
+
+    for issue in issues:
+        print('{} : {}'.format(
+            issue['url'].replace('api', 'www').replace('/repos', ''),
+            issue['title']))
+
+if __name__ == '__main__':
+    main()
