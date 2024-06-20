@@ -53,6 +53,7 @@ usage: ${SELF} [--verbose|--quiet] [--assume-yes|assume-no]
 options:
   -v, --verbose             verbose operation
   -q, --quiet               quiet operation
+  --notify-send             send graphical notifications via notify-send(1)
   -h, --help                show command help
   -y, --assume-yes          automatically answer yes to all questions
   -n, --assume-no           automatically answer no to all questions
@@ -115,6 +116,7 @@ declare AUTOSTART=true
 declare IFUPDATES=false
 declare AFTERUPDATE='revert-state'
 declare SUBCOMMAND=""
+declare NOTIFYSEND=false
 
 declare -a template_patterns=()
 declare -a cmd_apt=(apt-get)
@@ -133,7 +135,7 @@ print_usage() {
 # Synopsis: message MESSAGE
 message() {
 	if ! $QUIET; then
-		if [ -t 1 ]; then
+		if ! $NOTIFYSEND; then
 			echo "${@}"
 		else
 			notify-send -u normal -a "Qubes Update Tweak Tool" \
@@ -157,7 +159,7 @@ parse_cmd_parameters() {
 		--longoptions verbose,quiet,help,assume-yes,assume-no \
 		--longoptions refresh,skip-broken,download-only,all,dry-run \
 		--longoptions autostart,auto,no-autostart,no-auto \
-		--longoptions if-updates-available \
+		--longoptions if-updates-available,notify-send \
 		--longoptions after-update:,after: \
 		--longoptions apt:,dnf:,emerge:,pacman: -- "${@}")
 
@@ -171,6 +173,7 @@ parse_cmd_parameters() {
 		case ${1} in
 			-v|--verbose) VERBOSE=true;;
 			-q|--quiet) QUIET=true;;
+			--notify-send) NOTIFYSEND=true;;
 			-h|--help) print_usage 0;;
 			-y|--assume-yes) ASSUMEYES=true;;
 			-n|--assume-no) ASSUMENO=true;;
