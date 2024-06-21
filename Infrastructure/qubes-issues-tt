@@ -42,7 +42,7 @@ def signal_handler(sig, frame):
     sys.exit(1)
 signal.signal(signal.SIGINT, signal_handler)
 
-parser = argparse.ArgumentParser(prog='qubesos-issues',
+parser = argparse.ArgumentParser(prog='qubes-issues-tt',
         description='Listing Qubes OS issues on Github',
         epilog='Add your Github username & token to credentials.py to avoid '
                 'Github API rate limiting')
