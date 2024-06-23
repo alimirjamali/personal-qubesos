@@ -43,6 +43,7 @@ VM icons with those colors.
 | ![](qube-isometric-shapes.svg) | Isometric<br />Shapes | CC0 | Based on [Gramzon's design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
 | ![](qube-NAS.svg) | NAS | CC-BY-SA | Original sketch by myself. |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original sketch by myself. |
+| ![](qube-puzzle.svg) | Puzzle | CC-BY-SA | Based on [CairdyMakes STL](https://www.printables.com/model/96190-5-piece-support-free-puzzle-cube/files). |
 | ![](qube-SGI-Crimson.svg) | Silicon Graphics<br />Crimson | CC0 | Based on [星球's design](https://openclipart.org/detail/272140/silicon-graphics-crimson). |
 | ![](qube-square2.svg) | Qube&#x00B2; | CC-BY-SA | Based on [Qubes OS Artwork](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz's designs](https://github.com/QubesOS/qubes-artwork). |
