@@ -15,7 +15,7 @@ REALLIFE := qube-cubane.svg qube-cubicle.svg qube-NAS.svg qube-sticky-notes.svg 
 	    qube-dice-1.svg qube-dice-2.svg qube-dice-3.svg qube-dice-4.svg \
 	    qube-dice-5.svg qube-dice-6.svg
 CONCEPTUAL := qube-axonometric-1.svg qube-engraved-1.svg qube-impossible-cube-1.svg \
-	      qube-impossible-cubes.svg qube-impossible-hexagon.svg \
+	      qube-impossible-cubes.svg qube-impossible-hexagon-2.svg \
 	      qube-infinity.svg qube-isometric-shapes.svg qube-tesseract.svg \
 	      qube-optical-illusion.svg qube-webcolors-1.svg
 
@@ -111,7 +111,7 @@ Conceptual: $(CONCEPTUAL)
 		--icon standalonevm=qube-impossible-cube-4.svg \
 		--icon dispvm=qube-impossible-cube-5.svg
 	$(QLTT) create Impossibles 0x555555 --icon allvm=qube-impossible-cubes.svg
-	$(QLTT) create ImpossibleHex 0xF57900 --icon allvm=qube-impossible-hexagon.svg
+	$(QLTT) create ImpossibleHex 0xF57900 --icon allvm=qube-impossible-hexagon-2.svg
 	$(QLTT) create Infinity 0x555555 --icon allvm=qube-infinity.svg
 	$(QLTT) create Isometrics 0x555555 --icon allvm=qube-isometric-shapes.svg
 	$(QLTT) create Tesseract 0x555555 --icon allvm=qube-tesseract.svg

@@ -37,7 +37,7 @@ VM icons with those colors.
 | ![](qube-engraved-1.svg) | Engraved | CC0 | Based on [Jarda's design](https://openclipart.org/detail/177642/engraved-cube-2). |
 | ![](qube-impossible-cube-1.svg) | Impossible | CC-BY-SA | Original sketch by myself. |
 | ![](qube-impossible-cubes.svg) | Impossible 3 | CC0 | Based on [Jarda's design](https://openclipart.org/detail/176610/impossible-cubes). |
-| ![](qube-impossible-hexagon.svg) | Impossible<br />Hexagon | CC-BY-SA | Original sketch by myself. |
+| ![](qube-impossible-hexagon-2.svg) | Impossible<br />Hexagon | CC-BY-SA | Original sketch by myself. |
 | ![](qube-infinity.svg) | Infinity | CC-BY-SA | Original sketch by myself. |
 | ![](qube-isometric.svg) | Isometric | CC-BY-SA | Original sketch by myself. |
 | ![](qube-isometric-shapes.svg) | Isometric<br />Shapes | CC0 | Based on [Gramzon's design](https://openclipart.org/detail/279989/isometric-shapes-1-cubes). |
