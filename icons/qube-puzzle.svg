@@ -15,7 +15,7 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
-     id="title">Cubist qube</title>
+     id="title">Puzzle Cube</title>
   <sodipodi:namedview
      id="namedview"
      pagecolor="#ffffff"
@@ -27,8 +27,8 @@
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
      inkscape:zoom="5.6568545"
-     inkscape:cx="9.0156111"
-     inkscape:cy="24.660348"
+     inkscape:cx="9.1923877"
+     inkscape:cy="24.837125"
      inkscape:window-width="1440"
      inkscape:window-height="843"
      inkscape:window-x="0"
@@ -294,16 +294,16 @@
             <dc:title>CC-BY-SA</dc:title>
           </cc:Agent>
         </dc:rights>
-        <dc:title>Rubik's Cube</dc:title>
-        <dc:date>2024-04-10</dc:date>
+        <dc:title>Puzzle Cube</dc:title>
+        <dc:date>2024-06-24</dc:date>
         <dc:subject>
           <rdf:Bag>
             <rdf:li>Cube</rdf:li>
             <rdf:li>Qube</rdf:li>
-            <rdf:li>Rubik's</rdf:li>
+            <rdf:li>Puzzle</rdf:li>
           </rdf:Bag>
         </dc:subject>
-        <dc:description>Rubik's Cube icon designed for Qubes-OS</dc:description>
+        <dc:description>Puzzle Cube icon designed for Qubes-OS</dc:description>
         <dc:source>https://github.com/alimirjamali/personal-qubesos</dc:source>
       </cc:Work>
       <cc:License
