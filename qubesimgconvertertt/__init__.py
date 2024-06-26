@@ -23,8 +23,9 @@
 
 import qubesimgconverter
 from qubesimgconverter import hex_to_int
-import numpy
 import math
+import numpy
+import shutil
 
 '''Note to self: qubesimgconverter.Image.tint is using numpy's old- '''
 '''deprecated binary mode of fromstring. as it behaves surprisingly-'''
@@ -42,7 +43,7 @@ class Image(qubesimgconverter.Image):
                 self.height, self.width, 4).astype(numpy.single)
         bPixels = numpy.frombuffer(back._rgba, dtype=numpy.uint8).reshape(\
                 back.height, back.width, 4).astype(numpy.single)
-        ''' Top image and back image dimensions might be different:          '''
+        # Top image and back image dimensions might be different. Use largest
         w = max(self.width, back.width)
         h = max(self.height, back.height)
         tPixels = numpy.pad(tPixels, [(0, w - self.width), \
@@ -83,11 +84,11 @@ class Image(qubesimgconverter.Image):
         ''' Apply a border to image. Border width in pxiels as percent of    '''
         ''' minimum of image width & height. Assuming (0. < percent < 50.)   '''
         mindim = min(self.height, self.width)
-        ''' 8x8 or smaller icons do not need borders.                        '''
+        # 8x8 or smaller icons do not need borders.
         if mindim <= 8: return self
         r, g, b = hex_to_int(color)
         border = numpy.full((self.width, self.height, 4), [r, g, b, 255])
-        ''' Proper passe-partout technique for best quality                  '''
+        # Proper passe-partout technique for best quality
         edge = int(mindim * percent / 100.)
         antialias = int(((mindim * percent) % 100.) * 255. / 100.)
         border[edge:-edge, edge:-edge]=numpy.array([r, g, b, antialias])
@@ -105,7 +106,7 @@ class Image(qubesimgconverter.Image):
         return self.border(color, 6.4)
 
     def untouched(self):
-        ''' Returning the untouched image i                                  '''
+        ''' Returning the untouched image                                    '''
         return self
 
     def invert(self):
@@ -133,8 +134,8 @@ class Image(qubesimgconverter.Image):
             case "black":
                 img = self.overlay('0x000000')
             case "pattern":
-                ''' x86 uint32 is little-endian, So Aplha values come first. '''
-                ''' To be fixed if Qubes is ported to IBM/360 or OpenRISC.   '''
+                # x86 uint32 is little-endian, So Aplha values come first.
+                # To be fixed if Qubes is ported to IBM/360 or OpenRISC.
                 pattern = numpy.full((self.width, self.height), 0xff777777, \
                         dtype=numpy.uint32)
                 pattern[::2, ::2].fill(0xffc0c0c0)
@@ -145,8 +146,11 @@ class Image(qubesimgconverter.Image):
                 img = self.overlay(background)
         pixels = numpy.frombuffer(img._rgba, dtype=numpy.uint8).reshape(\
                 self.height, self.width, 4)
+        screen_width = shutil.get_terminal_size().columns
         for row in pixels:
-            for pixel in row:
+            for col, pixel in enumerate(row):
+                if (col * 2) > (screen_width - 1):
+                    break
                 r, g, b = pixel[:3]
                 print("\033[48;2;%d;%d;%dm  " % (r, g, b), end='')
             print("\033[0m")
