@@ -47,6 +47,9 @@ parser = argparse.ArgumentParser(prog='qubes-issues-tt',
         epilog='Add your Github username & token to credentials.py to avoid '
                 'Github API rate limiting')
 
+parser.add_argument('--label', nargs='+', metavar='LABEL', dest='labels',
+                    help='Filter issues by label(s)')
+
 parser.add_argument('--quiet', '-q', action='store_true', help='Disable spinner')
 
 sort_group = parser.add_mutually_exclusive_group()
@@ -64,6 +67,13 @@ def issue_number_checker(n):
 
 parser.add_argument('--limit', type=issue_number_checker,
     help='Limit number of issues to print')
+
+def keywords_check(issue: list, keywords: list, key, value) -> bool:
+    for issue_key in issue[key]:
+        for keyword in keywords:
+            if keyword in issue_key[value]:
+                return True
+    return False
 
 def main():
     args = parser.parse_args()
@@ -98,6 +108,10 @@ def main():
         pass
     elif args.oldest:
         issues.reverse()
+
+    if args.labels:
+        issues = [issue for issue in issues if
+                  keywords_check(issue, args.labels, 'labels', 'name')]
 
     if args.limit:
         issues = issues[:args.limit]
