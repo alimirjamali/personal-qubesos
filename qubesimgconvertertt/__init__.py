@@ -26,6 +26,7 @@ from qubesimgconverter import hex_to_int
 import math
 import numpy
 import shutil
+from sys import stdout
 
 '''Note to self: qubesimgconverter.Image.tint is using numpy's old- '''
 '''deprecated binary mode of fromstring. as it behaves surprisingly-'''
@@ -128,6 +129,10 @@ class Image(qubesimgconverter.Image):
     def ANSI(self, background="pattern"):
         ''' Representation of image with ANSI esc codes. Default on GIMP-like'''
         ''' grid to imply transparency of the image. '''
+        if not stdout.isatty():
+            print("ANSI representation of Image is available only via "
+                  "Interactive Terminals.")
+            return
         match background:
             case "white":
                 img = self.overlay('0xffffff')
