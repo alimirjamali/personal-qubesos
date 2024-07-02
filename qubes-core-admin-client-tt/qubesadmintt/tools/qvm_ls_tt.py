@@ -344,7 +344,8 @@ def main(args=None, app=None):
             if d.get_power_state().lower() != 'halted']
 
     if args.klass:
-        domains = [d for d in domains if d.klass in args.klass.split(',')]
+        domains = [d for d in domains if d.klass.lower() in \
+            args.klass.lower().split(',')]
 
     ''' ToDo: Move to Tables class for acceleration '''
     if args.label:
