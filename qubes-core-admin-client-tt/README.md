@@ -38,6 +38,7 @@ data it provides. *MAXMEM* column is now available.
 `--internal <yes|no|both>` option. 
 - Sorting with any column rather than name is now possible with `--sort COLUMN`
 option. `--reverse` and `--ignore-case` sub-options are available.
+- The `--updates-available` filters results to VMs pending for update.
 
 ## Installation & Removal
 To install the tools at your `~/bin` and the libraries at your `~/.local/lib`,

@@ -268,6 +268,9 @@ def get_parser():
         action='store_const', dest='format', const='kernel',
         help='Same as --format=kernel')
 
+    parser.add_argument('--updates-available', action='store_true',
+        help='Filter results to VMs pending for update')
+
     parser.set_defaults(spinner=True)
 
 #   parser.add_argument('--conf', '-c',
@@ -401,6 +404,10 @@ def main(args=None, app=None):
     elif args.internal in ['n', 'no', 'false', '0']:
         domains = [d for d in domains if not d.features.get('servicevm', None)
                    in ['1', 'true', 'True']]
+
+    if args.updates_available:
+        domains = [d for d in domains if
+                   d.features.get('updates-available', None)]
 
     table = Table(domains, columns, spinner, args.raw_data, args.tree,
                   sort_order=args.sort, reverse_sort=args.reverse,
