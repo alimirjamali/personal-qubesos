@@ -37,8 +37,11 @@ except:
     username='guest'
     password='guest'
 
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
 def signal_handler(sig, frame):
-    eprint('Program interrupted by user!')
+    eprint('\nProgram interrupted by user!')
     sys.exit(1)
 signal.signal(signal.SIGINT, signal_handler)
 
