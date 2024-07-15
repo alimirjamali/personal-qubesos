@@ -126,6 +126,32 @@ class Image(qubesimgconverter.Image):
         return self.__class__(rgba=pixels.tobytes(), \
                 size=self._size)
 
+    def resize(self, output_size):
+        ''' Resize image to new size with numpy's numeric interpolation '''
+        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape( \
+                self.height,  self.width, 4).astype(numpy.uint32)
+        iw, ih = self._size
+        ow, oh = output_size
+
+        def _x_resize(pixels, iw, ow):
+            r = pixels[..., 0]
+            g = pixels[..., 1]
+            b = pixels[..., 2]
+            a = pixels[..., 3]
+            xv = numpy.interp(range(iw), [0, iw], [0, ow])
+            r = [numpy.interp(range(ow), xv, row) for row in r]
+            g = [numpy.interp(range(ow), xv, row) for row in g]
+            b = [numpy.interp(range(ow), xv, row) for row in b]
+            a = [numpy.interp(range(ow), xv, row) for row in a]
+            return numpy.dstack((r, g, b, a)).astype(numpy.uint8)
+
+        pixels = _x_resize(pixels, iw=iw, ow=ow)
+        pixels = numpy.rot90(pixels)
+        pixels = _x_resize(pixels, iw=ih, ow=oh)
+        outRGBA = numpy.rot90(pixels, 3)
+
+        return self.__class__(rgba=outRGBA.tobytes(), size=output_size)
+
     def ANSI(self, background="pattern"):
         ''' Representation of image with ANSI esc codes. Default on GIMP-like'''
         ''' grid to imply transparency of the image. '''
@@ -133,28 +159,37 @@ class Image(qubesimgconverter.Image):
             print("ANSI representation of Image is available only via "
                   "Interactive Terminals.")
             return
+
+        screen_width = shutil.get_terminal_size().columns
+
+        img = self
+        if (screen_width / 2) < img.width:
+            aspect = (screen_width / 2) / img.width
+            img = img.resize([int(img.width * aspect), int(img.height * aspect)])
+
         match background:
             case "white":
-                img = self.overlay('0xffffff')
+                img = img.overlay('0xffffff')
             case "black":
-                img = self.overlay('0x000000')
+                img = img.overlay('0x000000')
             case "pattern":
                 # x86 uint32 is little-endian, So Aplha values come first.
                 # To be fixed if Qubes is ported to IBM/360 or OpenRISC.
-                pattern = numpy.full((self.width, self.height), 0xff777777, \
+                pattern = numpy.full((img.height, img.width), 0xff777777, \
                         dtype=numpy.uint32)
                 pattern[::2, ::2].fill(0xffc0c0c0)
                 pattern[1::2, 1::2].fill(0xffc0c0c0)
-                img = self.alphacomposite(self.__class__(rgba=pattern.astype( \
-                        numpy.uint32).tobytes(), size=self._size))
+                img = img.alphacomposite(img.__class__(rgba=pattern.astype( \
+                        numpy.uint32).tobytes(), size=img._size))
             case _:
-                img = self.overlay(background)
+                img = img.overlay(background)
+
         pixels = numpy.frombuffer(img._rgba, dtype=numpy.uint8).reshape(\
-                self.height, self.width, 4)
-        screen_width = shutil.get_terminal_size().columns
+                img.height, img.width, 4)
+
         for row in pixels:
             for col, pixel in enumerate(row):
-                if (col * 2) > (screen_width - 1):
+                if (col * 2) > (screen_width - 2):
                     break
                 r, g, b = pixel[:3]
                 print("\033[48;2;%d;%d;%dm  " % (r, g, b), end='')

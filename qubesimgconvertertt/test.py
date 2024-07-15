@@ -65,5 +65,11 @@ class TestCaseTweakTool(unittest.IsolatedAsyncioTestCase):
         print ("Mirror:")
         image.ANSI()
 
+    def test_07_resize(self):
+        image=self.image.resize(
+                [self.image.width * 2, int(self.image.height/2)])
+        print ("Resize:")
+        image.ANSI()
+
 if __name__ == '__main__':
     unittest.main()
