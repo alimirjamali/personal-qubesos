@@ -28,6 +28,18 @@ import numpy
 import shutil
 from sys import stdout
 
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import GdkPixbuf, Gio
+
+MARKER = """
+<svg height="128" width="128">
+  <path
+     style="fill:{};stroke-width:4;stroke:#ffffff"
+     d="M 64 128 L 128 128 L 128 64 A 64 64 0 0 1 64 128 z " />
+</svg>
+"""
+
 '''Note to self: qubesimgconverter.Image.tint is using numpy's old- '''
 '''deprecated binary mode of fromstring. as it behaves surprisingly-'''
 '''on unicode inputs. Use of frombuffer is recommended. However,-   '''
@@ -209,6 +221,16 @@ class Image(qubesimgconverter.Image):
             t = v
 
         return self.pad(l, t, r, b)
+
+    def marker(self, color):
+        svg = MARKER.format(color)
+        pixbuf = GdkPixbuf.Pixbuf.new_from_stream_at_scale(
+                Gio.MemoryInputStream.new_from_data(svg.encode()),
+                width=self.width, height=self.height,
+                preserve_aspect_ratio=False,
+                cancellable=None)
+        return self.__class__(rgba=pixbuf.get_pixels(),
+                size=self._size).alphacomposite(self)
 
     def ANSI(self, background="pattern"):
         ''' Representation of image with ANSI esc codes. Default on GIMP-like'''

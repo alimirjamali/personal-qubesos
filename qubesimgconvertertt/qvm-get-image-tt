@@ -40,7 +40,7 @@ effectgroup = parser.add_argument_group(title="Image Effects", \
         description="Effect filter(s) to perform on the image")
 effectgroup.add_argument("--filter", type=str, default="ttfilter", choices= \
         ["ttfilter", "tint", "overlay","thin-border", "thick-border", \
-        "untouched", "invert"], \
+        "untouched", "invert", "marker"], \
         help="'ttfilter' is the default i.e.: program will look for 'ttfilter' " \
         "key in VM features. If it exists, its value should indicate the effect " \
         "for that qube. If 'ttfilter' feature key is missing or it contains an " \
@@ -100,6 +100,8 @@ def main():
             img=img.mirror(1)
         case "flip":
             img=img.mirror(0)
+        case "marker":
+            img=img.marker(args.color)
         case _:
             img=img.tint(args.color)
 

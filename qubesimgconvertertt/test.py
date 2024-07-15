@@ -86,5 +86,10 @@ class TestCaseTweakTool(unittest.IsolatedAsyncioTestCase):
         print ("Resize canvas:")
         image.ANSI()
 
+    def test_11_marker(self):
+        image=self.image.marker('#0000ff')
+        print ("Resize canvas:")
+        image.ANSI()
+
 if __name__ == '__main__':
     unittest.main()
