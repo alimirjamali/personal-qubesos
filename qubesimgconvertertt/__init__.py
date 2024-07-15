@@ -126,6 +126,14 @@ class Image(qubesimgconverter.Image):
         return self.__class__(rgba=pixels.tobytes(), \
                 size=self._size)
 
+    def rot90(self, times):
+        ''' Rotate image 90 degrees X times '''
+        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint32).reshape(\
+                self.height, self.width)
+        pixels = numpy.rot90(pixels)
+        return self.__class__(rgba=pixels.tobytes(), \
+                size=(pixels[0].size, pixels[..., 0].size))
+
     def resize(self, output_size):
         ''' Resize image to new size with numpy's numeric interpolation '''
         pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint8).reshape( \
@@ -175,7 +183,6 @@ class Image(qubesimgconverter.Image):
                            mode='constant', constant_values=(0,0))
         return self.__class__(rgba=pixels.tobytes(), \
                 size=(self.width + left + right, self.height + top + buttom))
-        return self
 
     def resize_canvas(self, newsize, horizontal = 'center', vertical = 'center'):
         ''' Easier to use than pad '''
@@ -201,7 +208,6 @@ class Image(qubesimgconverter.Image):
         elif vertical == 'buttom':
             t = v
 
-        print (l , t, r, b)
         return self.pad(l, t, r, b)
 
     def ANSI(self, background="pattern"):

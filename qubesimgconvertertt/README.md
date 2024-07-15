@@ -56,16 +56,19 @@ These are the current known limitation with the tool & library:
 ```
 vendor_id	 :  GenuineIntel
 model name	 :  Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz
-cpu MHz		 :  2494.228
+cpu MHz		 :  2494.222
 cpu cores	 :  2
 Performing benchmarks on a 32x32 image for 10000 times...
-Untouched Image (no effect):  0.0008901969995349646
-The original tint effect:     1.021499689999473
-Alpha Compositor:             2.7155920950026484
-Overlay Effect:               0.8482616449982743
-Border Effects:               3.3331768399984867
-Invert Effect:                0.30216739200113807
-Mirror Effect:                0.30468669399851933
+Untouched Image (no effect):  0.0010012559941969812
+The original tint effect:     1.2361762579967035
+Alpha Compositor:             2.8140470119979
+Overlay Effect:               0.942907433010987
+Border Effects:               3.421544383003493
+Invert Effect:                0.3583571380004287
+Mirror Effect:                0.34388239998952486
+Rotate Effect:                0.24688656700891443
+Image resize (scale):         41.827658419002546
+Image canvas resize (pad):    0.6018662949936697
 ```
 - Performance of the border effects is nearly 3 times slower than tint. This is
 because of the Anti-Aliased Alpha Compositor implementation. Considering the

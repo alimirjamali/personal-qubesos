@@ -31,8 +31,14 @@ class Benchmark(object):
         self.Image1.invert()
     def testMirror(self):
         self.Image1.mirror((0,1))
+    def testRotate(self):
+        self.Image1.rot90(1)
     def testAlphacompositor(self):
         self.Image1.alphacomposite(self.Image2)
+    def testResize(self):
+        self.Image1.resize((self.dim*2, int(self.dim/2)))
+    def testResizeCanvas(self):
+        self.Image1.resize_canvas((self.dim*2, int(self.dim/2)))
 
 def cpuinfo():
     cpudetails={}
@@ -69,6 +75,12 @@ def main():
             timeit("b.testInvert()",            globals=locals(), number=n))
     print ("Mirror Effect:               ", \
             timeit("b.testMirror()",            globals=locals(), number=n))
+    print ("Rotate Effect:               ", \
+            timeit("b.testRotate()",            globals=locals(), number=n))
+    print ("Image resize (scale):        ", \
+            timeit("b.testResize()",            globals=locals(), number=n))
+    print ("Image canvas resize (pad):   ", \
+            timeit("b.testResizeCanvas()",      globals=locals(), number=n))
 
 if __name__ == '__main__':
     main()

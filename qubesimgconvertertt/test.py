@@ -65,18 +65,23 @@ class TestCaseTweakTool(unittest.IsolatedAsyncioTestCase):
         print ("Mirror:")
         image.ANSI()
 
-    def test_07_resize(self):
+    def test_07_rot90(self):
+        image = self.image.rot90(1)
+        print ("Rotate:")
+        image.ANSI()
+
+    def test_08_resize(self):
         image=self.image.resize(
                 [self.image.width * 2, int(self.image.height/2)])
         print ("Resize:")
         image.ANSI()
 
-    def test_08_pad(self):
-        image=self.image.pad(3, 2, -1)
+    def test_09_pad(self):
+        image=self.image.pad(16, -16, -4, 1)
         print ("Pad:")
         image.ANSI()
 
-    def test_09_resize_canvas(self):
+    def test_10_resize_canvas(self):
         image=self.image.resize_canvas((48, 8), vertical = 'buttom')
         print ("Resize canvas:")
         image.ANSI()
