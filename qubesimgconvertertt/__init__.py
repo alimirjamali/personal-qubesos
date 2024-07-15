@@ -82,7 +82,7 @@ class Image(qubesimgconverter.Image):
                 size=self._size)
 
     def border(self, color, percent):
-        ''' Apply a border to image. Border width in pxiels as percent of    '''
+        ''' Apply a border to image. Border width in pixels as percent of    '''
         ''' minimum of image width & height. Assuming (0. < percent < 50.)   '''
         mindim = min(self.height, self.width)
         # 8x8 or smaller icons do not need borders.
@@ -151,6 +151,58 @@ class Image(qubesimgconverter.Image):
         outRGBA = numpy.rot90(pixels, 3)
 
         return self.__class__(rgba=outRGBA.tobytes(), size=output_size)
+
+    def pad(self, left: int, top: int = None, right: int = None,
+             buttom: int = None):
+        ''' Adding / removing pixels at edges (no color, transparent) '''
+        if top is None:
+            top = left
+        if right is None:
+            right = left
+        if buttom is None:
+            buttom = top
+
+        pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint32).reshape(\
+                self.height, self.width)
+
+        pixels = pixels[
+                -top if top < 0 else None: buttom if buttom < 0 else None,
+                -left if left < 0 else None: right if right < 0 else None]
+
+        pixels = numpy.pad(pixels, [
+            (0 if top <0 else top, 0 if buttom <0 else buttom),
+            (0 if left <0 else left, 0 if right <0 else right)],
+                           mode='constant', constant_values=(0,0))
+        return self.__class__(rgba=pixels.tobytes(), \
+                size=(self.width + left + right, self.height + top + buttom))
+        return self
+
+    def resize_canvas(self, newsize, horizontal = 'center', vertical = 'center'):
+        ''' Easier to use than pad '''
+        l = 0
+        r = 0
+        t = 0
+        b = 0
+        h = newsize[0] - self.width
+        v = newsize[1] - self.height
+        if horizontal == 'center':
+            l = int(h / 2)
+            r = h - l
+        elif horizontal == 'left':
+            r = h
+        elif horizontal == 'right':
+            l = h
+
+        if vertical == 'center':
+            t = int(v / 2)
+            b = v - t
+        elif vertical == 'top':
+            b = v
+        elif vertical == 'buttom':
+            t = v
+
+        print (l , t, r, b)
+        return self.pad(l, t, r, b)
 
     def ANSI(self, background="pattern"):
         ''' Representation of image with ANSI esc codes. Default on GIMP-like'''

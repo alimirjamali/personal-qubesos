@@ -71,5 +71,15 @@ class TestCaseTweakTool(unittest.IsolatedAsyncioTestCase):
         print ("Resize:")
         image.ANSI()
 
+    def test_08_pad(self):
+        image=self.image.pad(3, 2, -1)
+        print ("Pad:")
+        image.ANSI()
+
+    def test_09_resize_canvas(self):
+        image=self.image.resize_canvas((48, 8), vertical = 'buttom')
+        print ("Resize canvas:")
+        image.ANSI()
+
 if __name__ == '__main__':
     unittest.main()
