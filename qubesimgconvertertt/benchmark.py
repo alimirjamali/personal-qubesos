@@ -36,7 +36,7 @@ class Benchmark(object):
     def testAlphacompositor(self):
         self.Image1.alphacomposite(self.Image2)
     def testMarker(self):
-        self.Image1.marker('#0000ff')
+        self.Image1.marker('0x0000ff')
     def testResize(self):
         self.Image1.resize((self.dim*2, int(self.dim/2)))
     def testResizeCanvas(self):

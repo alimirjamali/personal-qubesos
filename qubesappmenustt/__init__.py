@@ -111,6 +111,8 @@ class Appmenus(qubesappmenus.Appmenus):
                         img=img.mirror(1)
                     case "flip":
                         img=img.mirror(0)
+                    case "marker":
+                        img=img.marker(vm.label.color)
                     case _:
                         img=img.tint(args.colour)
                 img.save_pil(dst_icon)

@@ -92,6 +92,8 @@ class IconReceiver(qubesiconreceiver.IconReceiver):
                 icon_tt=icon.mirror(1)
             case "flip":
                 icon_tt=icon.mirror(0)
+            case "marker":
+                icon_tt=icon.maker(color)
             case _:
                 icon_tt=icon.tint(color)
 

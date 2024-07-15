@@ -30,6 +30,7 @@ from sys import stdout
 
 import gi
 gi.require_version('Gtk', '3.0')
+gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import GdkPixbuf, Gio
 
 MARKER = """
@@ -223,6 +224,8 @@ class Image(qubesimgconverter.Image):
         return self.pad(l, t, r, b)
 
     def marker(self, color):
+        if color.startswith('0x'):
+            color = '#' + color[2:]
         svg = MARKER.format(color)
         pixbuf = GdkPixbuf.Pixbuf.new_from_stream_at_scale(
                 Gio.MemoryInputStream.new_from_data(svg.encode()),
