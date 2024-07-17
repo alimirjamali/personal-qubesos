@@ -32,7 +32,7 @@ data it provides. *MAXMEM* column is now available.
 (AppVM, TemplateVM, ...).
 - The `--label` options allow filtering of results based on VM label.
 - The `--basedon` option allows filtering to VMs based on specific template.
-- The `--connects-width` options allows filtering to VMs using specific NetVM.
+- The `--connects-with` options allows filtering to VMs using specific NetVM.
 - The `--servicevm <yes|no|both>` option allows filtering based on to ServiceVMs.
 - Filtering of VMs based on **internal** feature tag is possible via
 `--internal <yes|no|both>` option. 

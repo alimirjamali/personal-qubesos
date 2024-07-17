@@ -47,8 +47,8 @@ import qubesadmintt.spinner
 
 # todo maxmem: DONE
 Column('MAXMEM',
-    attr=(lambda vm: vm.maxmem if vm.virt_mode=="pvh" else None),
-    doc='Memory currently used by VM')
+    attr=(lambda vm: vm.maxmem if vm.virt_mode != "hvm" else 'N/A'),
+    doc='Maximum memory allocatable to VM')
 
 Column('STATE',
     attr=(lambda vm: vm.get_power_state()),
@@ -68,7 +68,7 @@ Column('MEMORY',
 
 Column('INITIALMEM',
     attr=(lambda vm: vm.memory),
-    doc='Memory currently used by VM')
+    doc='Initial memory allocated to VM')
 
 Column('DISK',
     attr=(lambda vm: vm.get_disk_utilization() // 1024 // 1024),
