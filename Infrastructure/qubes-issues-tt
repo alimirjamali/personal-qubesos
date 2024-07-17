@@ -119,9 +119,12 @@ def main():
     if args.limit:
         issues = issues[:args.limit]
 
+    print('{:^46}{:^11}{:^30}'.format('URL', 'Comments', 'Title'))
     for issue in issues:
-        print('{} : {}'.format(
-            issue['url'].replace('api', 'www').replace('/repos', ''),
+        print('{:<48}:{:^5}: {}'.format(
+            issue['url'].replace('api', 'www').replace('/repos', '').replace(
+                'https://', ''),
+            issue['comments'],
             issue['title']))
 
 if __name__ == '__main__':
