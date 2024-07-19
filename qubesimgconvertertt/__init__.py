@@ -37,6 +37,7 @@ MARKER = """
 <svg height="128" width="128">
     <style>
         path {{fill: {} }}
+        fill-opacity="0.5"
     </style>
     <path d="M 0 32 L 0 0 L 32 0 Q 32 32 0 32 z " />
     <path d="M 96 0 L 128 0 L 128 32 Q 96 32 96 0 z " />
@@ -48,7 +49,7 @@ MARKER = """
 DIAGONAL = """
 <svg height="128" width="128">
     <polygon
-        style="fill:{};"
+        style="fill:{};fill-opacity:0.5;"
         points="0,0 128,0 128,128" />
 </svg>
 """
@@ -246,8 +247,8 @@ class Image(qubesimgconverter.Image):
                 width=self.width, height=self.height,
                 preserve_aspect_ratio=False,
                 cancellable=None)
-        return self.__class__(rgba=pixbuf.get_pixels(),
-                size=self._size).alphacomposite(self)
+        return self.alphacomposite(self.__class__(rgba=pixbuf.get_pixels(),
+                size=self._size))
 
     def diagonal(self, color, direction):
         if color.startswith('0x'):
