@@ -36,21 +36,33 @@ from gi.repository import GdkPixbuf, Gio
 MARKER = """
 <svg height="128" width="128">
     <style>
-        path {{fill: {} }}
-        fill-opacity="0.5"
+        path {{
+            fill: {};
+            fill-opacity: 0.5;
+        }}
     </style>
     <path d="M 0 32 L 0 0 L 32 0 Q 32 32 0 32 z " />
     <path d="M 96 0 L 128 0 L 128 32 Q 96 32 96 0 z " />
     <path d="M 128 96 L 128 128 L 96 128 Q 96 96 128 96 z " />
     <path d="M 0 96 L 0 128 L 32 128 Q 32 96 0 96 z " />
+    <path d="M 0 0   L 128 0  L 128 128 L 0 128 Z
+             M 10 10 L 118 10 L 118 118 L 10 118 Z"
+             fill-rule="evenodd" />
 </svg>
 """
 
 DIAGONAL = """
 <svg height="128" width="128">
-    <polygon
-        style="fill:{};fill-opacity:0.5;"
-        points="0,0 128,0 128,128" />
+    <style>
+        polygon, path {{
+            fill: {};
+            fill-opacity: 0.667;
+        }}
+    </style>
+    <polygon points="0,0 128,0 128,128" />
+    <path d="M 0 0   L 128 0  L 128 128 L 0 128 Z
+             M 10 10 L 118 10 L 118 118 L 10 118 Z"
+             fill-rule="evenodd" />
 </svg>
 """
 
@@ -247,8 +259,8 @@ class Image(qubesimgconverter.Image):
                 width=self.width, height=self.height,
                 preserve_aspect_ratio=False,
                 cancellable=None)
-        return self.alphacomposite(self.__class__(rgba=pixbuf.get_pixels(),
-                size=self._size))
+        marker = self.__class__(rgba=pixbuf.get_pixels(), size=self._size)
+        return marker.alphacomposite(self)
 
     def diagonal(self, color, direction):
         if color.startswith('0x'):
