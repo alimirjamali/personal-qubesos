@@ -25,7 +25,7 @@ not present or is invalid, the default tint effect will be applied. To change
 the Tweak Tool filter effect of any VM:
 
 ```
-qvm-features VMNAME ttfilter <tint|overlay|thin-border|thick-border|untouched|invert|mirror|flip>
+qvm-features VMNAME ttfilter <tint|overlay|thin-border|thick-border|untouched|invert|mirror|flip|marker>
 ```
 
 ### Installation & Removal
@@ -59,16 +59,18 @@ model name	 :  Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz
 cpu MHz		 :  2494.222
 cpu cores	 :  2
 Performing benchmarks on a 32x32 image for 10000 times...
-Untouched Image (no effect):  0.0010012559941969812
-The original tint effect:     1.2361762579967035
-Alpha Compositor:             2.8140470119979
-Overlay Effect:               0.942907433010987
-Border Effects:               3.421544383003493
-Invert Effect:                0.3583571380004287
-Mirror Effect:                0.34388239998952486
-Rotate Effect:                0.24688656700891443
-Image resize (scale):         41.827658419002546
-Image canvas resize (pad):    0.6018662949936697
+Untouched Image (no effect):  0.001457245998608414
+The original tint effect:     1.1380185189991607
+Alpha Compositor:             2.7502541360008763
+Overlay Effect:               0.9338325909993728
+Border Effects:               3.3812881099947845
+Invert Effect:                0.3477331649992266
+Mirror Effect:                0.33721530900220387
+Rotate Effect:                0.2404281990020536
+Marker Effect:                7.658134213001176
+Diagonal Effect:              6.850988145000883
+Image resize (scale):         40.1643057639958
+Image canvas resize (pad):    0.5904967830065289
 ```
 - Performance of the border effects is nearly 3 times slower than tint. This is
 because of the Anti-Aliased Alpha Compositor implementation. Considering the

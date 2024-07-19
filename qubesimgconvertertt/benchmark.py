@@ -37,6 +37,8 @@ class Benchmark(object):
         self.Image1.alphacomposite(self.Image2)
     def testMarker(self):
         self.Image1.marker('0x0000ff')
+    def testDiagonal(self):
+        self.Image1.diagonal('0x0000ff', 'br')
     def testResize(self):
         self.Image1.resize((self.dim*2, int(self.dim/2)))
     def testResizeCanvas(self):
@@ -81,6 +83,8 @@ def main():
             timeit("b.testRotate()",            globals=locals(), number=n))
     print ("Marker Effect:               ", \
             timeit("b.testMarker()",            globals=locals(), number=n))
+    print ("Diagonal Effect:             ", \
+            timeit("b.testDiagonal()",          globals=locals(), number=n))
     print ("Image resize (scale):        ", \
             timeit("b.testResize()",            globals=locals(), number=n))
     print ("Image canvas resize (pad):   ", \

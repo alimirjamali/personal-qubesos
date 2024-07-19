@@ -35,9 +35,21 @@ from gi.repository import GdkPixbuf, Gio
 
 MARKER = """
 <svg height="128" width="128">
-  <path
-     style="fill:{};stroke-width:4;stroke:#ffffff"
-     d="M 64 128 L 128 128 L 128 64 A 64 64 0 0 1 64 128 z " />
+    <style>
+        path {{fill: {} }}
+    </style>
+    <path d="M 0 32 L 0 0 L 32 0 Q 32 32 0 32 z " />
+    <path d="M 96 0 L 128 0 L 128 32 Q 96 32 96 0 z " />
+    <path d="M 128 96 L 128 128 L 96 128 Q 96 96 128 96 z " />
+    <path d="M 0 96 L 0 128 L 32 128 Q 32 96 0 96 z " />
+</svg>
+"""
+
+DIAGONAL = """
+<svg height="128" width="128">
+    <polygon
+        style="fill:{};"
+        points="0,0 128,0 128,128" />
 </svg>
 """
 
@@ -143,7 +155,9 @@ class Image(qubesimgconverter.Image):
         ''' Rotate image 90 degrees X times '''
         pixels = numpy.frombuffer(self._rgba, dtype=numpy.uint32).reshape(\
                 self.height, self.width)
-        pixels = numpy.rot90(pixels)
+        while times < 0:
+            times += 4
+        pixels = numpy.rot90(pixels, k=times, axes=(0, 1))
         return self.__class__(rgba=pixels.tobytes(), \
                 size=(pixels[0].size, pixels[..., 0].size))
 
@@ -234,6 +248,27 @@ class Image(qubesimgconverter.Image):
                 cancellable=None)
         return self.__class__(rgba=pixbuf.get_pixels(),
                 size=self._size).alphacomposite(self)
+
+    def diagonal(self, color, direction):
+        if color.startswith('0x'):
+            color = '#' + color[2:]
+        svg = DIAGONAL.format(color)
+        pixbuf = GdkPixbuf.Pixbuf.new_from_stream_at_scale(
+                Gio.MemoryInputStream.new_from_data(svg.encode()),
+                width=self.width, height=self.height,
+                preserve_aspect_ratio=False,
+                cancellable=None)
+        triangle = self.__class__(rgba=pixbuf.get_pixels(), size=self._size)
+        match direction:
+            case "tr":
+                pass
+            case "tl":
+                triangle = triangle.rot90(1)
+            case "bl":
+                triangle = triangle.rot90(2)
+            case "br":
+                triangle = triangle.rot90(3)
+        return self.alphacomposite(triangle)
 
     def ANSI(self, background="pattern"):
         ''' Representation of image with ANSI esc codes. Default on GIMP-like'''
