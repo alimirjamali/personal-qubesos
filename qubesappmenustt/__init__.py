@@ -27,6 +27,7 @@
 import os
 import os.path
 import itertools
+import re
 
 import xdg.BaseDirectory
  
@@ -113,6 +114,8 @@ class Appmenus(qubesappmenus.Appmenus):
                         img=img.mirror(0)
                     case "marker":
                         img=img.marker(vm.label.color)
+                    case s if re.match(r'^diagonal\+[tb][lr]$', s):
+                        img=img.diagonal(vm.label.color, filter[-2:])
                     case _:
                         img=img.tint(args.colour)
                 img.save_pil(dst_icon)

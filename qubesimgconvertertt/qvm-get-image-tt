@@ -36,22 +36,6 @@ parser.add_argument('color', metavar='COLOR', \
         help='Color for the effects. Will be ignored for untouched & invert filters.')
 parser.add_argument('src', metavar='SRC', help='Path inside source VM')
 
-effectgroup = parser.add_argument_group(title="Image Effects", \
-        description="Effect filter(s) to perform on the image")
-effectgroup.add_argument("--filter", type=str, default="ttfilter", choices= \
-        ["ttfilter", "tint", "overlay","thin-border", "thick-border", \
-        "untouched", "invert", "marker"], \
-        help="'ttfilter' is the default i.e.: program will look for 'ttfilter' " \
-        "key in VM features. If it exists, its value should indicate the effect " \
-        "for that qube. If 'ttfilter' feature key is missing or it contains an " \
-        "invalid value, 'tint' will be the default.")
-effectgroup.add_argument("--mirror", type=str, default="none", choices=\
-        ["vertical", "vertically", "horizontal", "horizontally", "both"], \
-        help="Mirror image in one or both axes.")
-effectgroup.add_argument("--alphacomposite", metavar="SRCALPHA", type=str, \
-        help="Composite filtered image on top of another image. "\
-        "Provide path of background image inside source VM.")
-
 dstoransi = parser.add_argument_group(title="Output Control", \
         description="Image could be saved or printed to the terminal (or both)")
 dstoransi.add_argument('dst', metavar='DST', \
@@ -61,6 +45,26 @@ dstoransi.add_argument("--ANSI", type=str, \
         "X3.64(ISO/IEC 6429) color representation of image in color-capable tty. "\
         "Background could be GIMP-Style transparency representation 'pattern', " \
         "'white', 'black' or 'COLOR' to apply 2nd positional argument as bg.")
+
+effectgroup = parser.add_argument_group(title="Image Effects", \
+        description="Effect filter(s) to perform on the image")
+effectgroup.add_argument("--filter", type=str, default="ttfilter", choices= \
+        ["ttfilter", "tint", "overlay","thin-border", "thick-border", \
+        "untouched", "invert", "marker"], \
+        help="'ttfilter' is the default i.e.: program will look for 'ttfilter' " \
+        "key in VM features. If it exists, its value should indicate the effect " \
+        "for that qube. If 'ttfilter' feature key is missing or it contains an " \
+        "invalid value, Image will be untouched")
+effectgroup.add_argument("--diagonal", type=str, choices= \
+        ["tr", "br", "bl", "tl"], \
+        help="Diagonal fill behind image. Choices are tr, br, bl, tl for " \
+        "top-right, buttom-right, buttom-left, top-left")
+effectgroup.add_argument("--mirror", type=str, default="none", choices=\
+        ["vertical", "vertically", "horizontal", "horizontally", "both"], \
+        help="Mirror image in one or both axes.")
+effectgroup.add_argument("--alphacomposite", metavar="IMAGE", type=str, \
+        help="Composite image on top of another image. "\
+        "Provide path of background image inside source VM.")
 
 def main():
     args = parser.parse_args()
@@ -102,8 +106,9 @@ def main():
             img=img.mirror(0)
         case "marker":
             img=img.marker(args.color)
-        case _:
-            img=img.tint(args.color)
+
+    if args.diagonal:
+        img=img.diagonal(args.color, args.diagonal)
 
     match args.mirror:
         case "vertical" | "vertically":

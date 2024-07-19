@@ -39,6 +39,7 @@ from qubesimgconverter import ICON_MAXSIZE
 # And the Tweak Tool version of qubesimgconverter is loaded
 from qubesimgconvertertt import Image
 import logging
+import re
 
 from qubesadmin import Qubes
 from qubesadmin.exc import QubesException
@@ -94,6 +95,8 @@ class IconReceiver(qubesiconreceiver.IconReceiver):
                 icon_tt=icon.mirror(0)
             case "marker":
                 icon_tt=icon.marker(color)
+            case s if re.match(r'^diagonal\+[tb][lr]$', s):
+                icon_tt=icon.diagonal(color, ttfilter[-2:])
             case _:
                 icon_tt=icon.tint(color)
 
