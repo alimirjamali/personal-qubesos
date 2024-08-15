@@ -91,7 +91,12 @@ def main():
         spinner = TTSpinner.SpinnerTweakToolEdition(sys.stderr, interleave=0)
     spinner.show("processing Qubes open issues...")
     while url:
-        r = requests.get(url, headers=headers, auth=(username, password))
+        try:
+            r = requests.get(url, headers=headers, auth=(username, password))
+        except:
+            spinner.hide()
+            print("Connection error!")
+            exit(1)
         if (r.ok):
             if 'next' in r.links.keys():
                 url = r.links['next']['url']
