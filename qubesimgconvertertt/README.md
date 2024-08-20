@@ -1,10 +1,11 @@
 # `qubesimgconvertertt` & `qvm-get-image-tt` notes
 Library and Utility for custom effects of Qubes OS VM icons. Provided effects 
-are **overlay, thin-border, thick-border** as well as the standard _tint_ which
-use the label color for their effects. Special filters of **untouched, invert,
-mirror, flip** are also available. [Screenshots](#screenshots--demo) of Tweak
-Tools effects are at the bottom of this page. Real-life use cases are 
-documented and explained in [qubesappmenustt](/qubesappmenustt) and
+are **overlay, thin-border, thick-border, marker** as well as the standard
+_tint_ which use the label color for their effects. Special filters of
+**untouched, invert, mirror, flip** are also available.
+[Screenshots](#screenshots--demo) of Tweak Tools effects are at the bottom of
+this page. Real-life use cases are documented and explained in
+[qubesappmenustt](/qubesappmenustt) and
 [window-icon-updater-tt](/window-icon-updater-tt) sub-directories.
 
 ## Internals & Features
@@ -130,6 +131,13 @@ qvm-get-image-tt personal 0x0000FF /usr/share/icons/hicolor/32x32/apps/org.xfce.
 qvm-get-image-tt personal 0x0000FF /usr/share/icons/hicolor/32x32/apps/org.xfce.ristretto.png --ANSI pattern --filter thick-border
 ```
 ![](effect-thick-border.png)
+
+I primarily use the marker effect for TemplateVMs. It makes the xfce-terminal
+icons belonging to templates easily identifiable.
+```
+qvm-get-image-tt personal 0x0000FF /usr/share/icons/hicolor/32x32/apps/org.xfce.ristretto.png --ANSI pattern --filter marker
+```
+![](effect-marker.png)
 
 Special invert effect is very useful for __untrusted__ VM. As it implies a
 paranoid effect.
