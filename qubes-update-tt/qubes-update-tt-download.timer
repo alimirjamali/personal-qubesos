@@ -3,7 +3,7 @@ Description=qubes-update-tt-download timer
 After=qubes-vm@sys-firewall.service
 
 [Timer]
-OnCalendar=*-*-* 5:00
+OnCalendar=Mon *-*-* 5:00
 RandomizedDelaySec=60m
 Persistent=true
 

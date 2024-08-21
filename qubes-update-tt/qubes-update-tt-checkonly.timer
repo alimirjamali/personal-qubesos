@@ -3,7 +3,7 @@ Description=qubes-update-tt-checkonly timer
 After=qubes-vm@sys-firewall.service
 
 [Timer]
-OnCalendar=Mon *-*-* 3:00
+OnCalendar=*-*-* 3:00
 RandomizedDelaySec=60m
 Persistent=true
 
