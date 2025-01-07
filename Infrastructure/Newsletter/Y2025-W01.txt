@@ -1,0 +1,107 @@
+# Qubes OS updates Weekly Review - Y2025-W01
+
+### Introduction
+
+Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w52-year-end-special/31188).
+
+[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+```bash
+i3-settings-qubes-1.12-1.fc37.noarch.rpm
+i3-settings-qubes-1.12-1.fc40.noarch.rpm
+i3-settings-qubes-1.12-1.fc41.noarch.rpm
+i3-settings-qubes_1.12-1+deb12u1_amd64.deb
+i3-settings-qubes_1.12-1+deb13u1_amd64.deb
+i3-settings-qubes_1.12-1+jammy1_amd64.deb
+i3-settings-qubes_1.12-1+noble1_amd64.deb
+kernel-515-5.15.175-1.qubes.fc37.x86_64.rpm
+kernel-515-devel-5.15.175-1.qubes.fc37.x86_64.rpm
+kernel-515-modules-5.15.175-1.qubes.fc37.x86_64.rpm
+kernel-515-qubes-vm-5.15.175-1.qubes.fc37.x86_64.rpm
+kernel-6.6.68-1.qubes.fc37.x86_64.rpm
+kernel-6.6.68-1.qubes.fc41.x86_64.rpm
+kernel-devel-6.6.68-1.qubes.fc37.x86_64.rpm
+kernel-devel-6.6.68-1.qubes.fc41.x86_64.rpm
+kernel-modules-6.6.68-1.qubes.fc37.x86_64.rpm
+kernel-modules-6.6.68-1.qubes.fc41.x86_64.rpm
+kernel-qubes-vm-6.6.68-1.qubes.fc37.x86_64.rpm
+kernel-qubes-vm-6.6.68-1.qubes.fc41.x86_64.rpm
+python3-qubesadmin-4.3.9-1.fc40.noarch.rpm
+python3-qubesadmin-4.3.9-1.fc41.noarch.rpm
+python3-qubesadmin_4.3.9-1+deb12u1_amd64.deb
+python3-qubesadmin_4.3.9-1+deb13u1_amd64.deb
+python3-qubesadmin_4.3.9-1+jammy1_amd64.deb
+python3-qubesadmin_4.3.9-1+noble1_amd64.deb
+python3-splitgpg2_1.1.3+deb12u1_amd64.deb
+python3-splitgpg2_1.1.3+deb13u1_amd64.deb
+python3-splitgpg2_1.1.3+jammy1_amd64.deb
+python3-splitgpg2_1.1.3+noble1_amd64.deb
+python3-xen-4.19.1-1.fc41.x86_64.rpm
+qubes-core-admin-client-4.3.9-1.fc40.noarch.rpm
+qubes-core-admin-client-4.3.9-1.fc41.noarch.rpm
+qubes-core-admin-client_4.3.9-1+deb12u1_amd64.deb
+qubes-core-admin-client_4.3.9-1+deb13u1_amd64.deb
+qubes-core-admin-client_4.3.9-1+jammy1_amd64.deb
+qubes-core-admin-client_4.3.9-1+noble1_amd64.deb
+qubes-gpg-split-tests_2.0.75-1+noble1_amd64.deb
+qubes-gpg-split_2.0.75-1+noble1_amd64.deb
+qubes-img-converter_1.2.18-1+noble1_amd64.deb
+qubes-pdf-converter_2.1.22-1+noble1_amd64.deb
+qubes-usb-proxy_1.3.3+noble1_amd64.deb
+qubes-usb-proxy_4.3.0+noble1_amd64.deb
+qubes-vm-xen-4.19.1-1-x86_64.pkg.tar.zst
+split-gpg2-1.1.3-1.fc40.noarch.rpm
+split-gpg2-1.1.3-1.fc41.noarch.rpm
+split-gpg2-dom0-1.1.3-1.fc37.noarch.rpm
+split-gpg2-dom0-1.1.3-1.fc41.noarch.rpm
+split-gpg2-tests-1.1.3-1.fc40.noarch.rpm
+split-gpg2-tests-1.1.3-1.fc41.noarch.rpm
+split-gpg2-tests_1.1.3+deb12u1_all.deb
+split-gpg2-tests_1.1.3+deb13u1_all.deb
+split-gpg2-tests_1.1.3+jammy1_all.deb
+split-gpg2-tests_1.1.3+noble1_all.deb
+split-gpg2_1.1.3+deb12u1_all.deb
+split-gpg2_1.1.3+deb13u1_all.deb
+split-gpg2_1.1.3+jammy1_all.deb
+split-gpg2_1.1.3+noble1_all.deb
+xen-4.19.1-1.fc41.x86_64.rpm
+xen-devel-4.19.1-1.fc41.x86_64.rpm
+xen-doc-4.19.1-1.fc41.noarch.rpm
+xen-hypervisor-4.19.1-1.fc41.x86_64.rpm
+xen-libs-4.19.1-1.fc41.x86_64.rpm
+xen-licenses-4.19.1-1.fc41.x86_64.rpm
+xen-runtime-4.19.1-1.fc41.x86_64.rpm
+```
+[/details]
+
+### Highlights
+
+* Better support for some AMD laptops
+
+### Details
+In addition to the usual minor fixes and patches (full list [here](https://github.com/QubesOS/updates-status/issues?q=is%3Aissue+created%3A2025-01-01..2025-01-05)):
+
+* linux-kernel-515 v5.15.175-1 (r4.2)
+linux-kernel v6.6.68-1 (r4.2 & r4.3)
+[Announcement](https://lwn.net/Articles/1003609/) by Greg Kroah-Hartman
+
+* app-linux-usb-proxy v1.3.3 (r4.2)
+app-linux-pdf-converter v2.1.22 (r4.2)
+app-linux-img-converter v1.2.18 (r4.2)
+Ubuntu Noble builds
+
+* **desktop-linux-i3-settings-qubes** v1.12-1 (r4.2 & r4.3)
+minor fix
+
+* **app-linux-split-gpg2** [v1.1.3](https://github.com/QubesOS/qubes-app-linux-split-gpg2/compare/v1.1.2...v1.1.3) (r4.2 & r4.3)
+Supporting alternative gpg home directory
+
+* **vmm-xen** [v4.19.1-1](https://github.com/QubesOS/qubes-vmm-xen/compare/v4.19.0-5...v4.19.1-1) (r4.3)
+Backporting some AMD-related patches (found on Framework Laptop 13)
+
+* **core-admin-client** [v4.3.9](https://github.com/QubesOS/qubes-core-admin-client/compare/v4.3.8...v4.3.9) (r4.3)
+. Unix like wildcard support is added to some of `qvm-*` utilities (e.g. `qvm-ls fedora*`).
+. The `x-` prefix is dedicated to end-user custom features and will never be used for Qubes internal features.
+. Better classification of multimedia audio devices (for r4.3 new devices API).
+
+#### Epilogue
+I will write newsletter issues on a Github repo (during week) and paste it later on forum.
