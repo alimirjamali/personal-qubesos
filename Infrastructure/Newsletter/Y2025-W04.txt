@@ -1,0 +1,251 @@
+# Qubes OS updates Weekly Review - Y2025-W03 & W4
+
+### Introduction
+
+Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w02/31520).
+
+[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+```bash
+libnvpair3-2.3.0-1.fc37.x86_64.rpm
+libnvpair3-2.3.0-1.fc41.x86_64.rpm
+libuutil3-2.3.0-1.fc37.x86_64.rpm
+libuutil3-2.3.0-1.fc41.x86_64.rpm
+libzfs6-2.3.0-1.fc37.x86_64.rpm
+libzfs6-2.3.0-1.fc41.x86_64.rpm
+libzfs6-devel-2.3.0-1.fc37.x86_64.rpm
+libzfs6-devel-2.3.0-1.fc41.x86_64.rpm
+libzpool6-2.3.0-1.fc37.x86_64.rpm
+libzpool6-2.3.0-1.fc41.x86_64.rpm
+pipewire-qubes_4.3.5-1+deb12u1_amd64.deb
+pipewire-qubes_4.3.5-1+deb13u1_amd64.deb
+pipewire-qubes-4.3.5-1.fc40.x86_64.rpm
+pipewire-qubes-4.3.5-1.fc41.x86_64.rpm
+pipewire-qubes_4.3.5-1+jammy1_amd64.deb
+pipewire-qubes_4.3.5-1+noble1_amd64.deb
+pipewire-qubes-4.3.5-1-x86_64.pkg.tar.zst
+pipewire-qubes-dbgsym_4.3.5-1+deb12u1_amd64.deb
+pipewire-qubes-dbgsym_4.3.5-1+deb13u1_amd64.deb
+pulseaudio-qubes_4.3.5-1+deb12u1_amd64.deb
+pulseaudio-qubes_4.3.5-1+deb13u1_amd64.deb
+pulseaudio-qubes-4.3.5-1.fc40.x86_64.rpm
+pulseaudio-qubes-4.3.5-1.fc41.x86_64.rpm
+pulseaudio-qubes_4.3.5-1+jammy1_amd64.deb
+pulseaudio-qubes_4.3.5-1+noble1_amd64.deb
+pulseaudio-qubes-dbgsym_4.3.5-1+deb12u1_amd64.deb
+pulseaudio-qubes-dbgsym_4.3.5-1+deb13u1_amd64.deb
+python3-dnf-plugins-qubes-hooks-4.3.16-1.fc40.noarch.rpm
+python3-pyzfs-2.3.0-1.fc37.noarch.rpm
+python3-pyzfs-2.3.0-1.fc41.noarch.rpm
+qubes-core-agent_4.3.16-1+deb12u1_amd64.deb
+qubes-core-agent_4.3.16-1+deb13u1_amd64.deb
+qubes-core-agent-4.3.16-1.fc40.x86_64.rpm
+qubes-core-agent-4.3.16-1.fc41.x86_64.rpm
+qubes-core-agent_4.3.16-1+jammy1_amd64.deb
+qubes-core-agent_4.3.16-1+noble1_amd64.deb
+qubes-core-agent-caja_4.3.16-1+deb12u1_amd64.deb
+qubes-core-agent-caja_4.3.16-1+deb13u1_amd64.deb
+qubes-core-agent-caja-4.3.16-1.fc40.x86_64.rpm
+qubes-core-agent-caja-4.3.16-1.fc41.x86_64.rpm
+qubes-core-agent-caja_4.3.16-1+jammy1_amd64.deb
+qubes-core-agent-caja_4.3.16-1+noble1_amd64.deb
+qubes-core-agent-dbgsym_4.3.16-1+deb12u1_amd64.deb
+qubes-core-agent-dbgsym_4.3.16-1+deb13u1_amd64.deb
+qubes-core-agent-dom0-updates_4.3.16-1+deb12u1_amd64.deb
+qubes-core-agent-dom0-updates_4.3.16-1+deb13u1_amd64.deb
+qubes-core-agent-dom0-updates-4.3.16-1.fc40.noarch.rpm
+qubes-core-agent-dom0-updates-4.3.16-1.fc41.noarch.rpm
+qubes-core-agent-dom0-updates_4.3.16-1+jammy1_amd64.deb
+qubes-core-agent-dom0-updates_4.3.16-1+noble1_amd64.deb
+qubes-core-agent-nautilus_4.3.16-1+deb12u1_amd64.deb
+qubes-core-agent-nautilus_4.3.16-1+deb13u1_amd64.deb
+qubes-core-agent-nautilus-4.3.16-1.fc40.x86_64.rpm
+qubes-core-agent-nautilus-4.3.16-1.fc41.x86_64.rpm
+qubes-core-agent-nautilus_4.3.16-1+jammy1_amd64.deb
+qubes-core-agent-nautilus_4.3.16-1+noble1_amd64.deb
+qubes-core-agent-networking_4.3.16-1+deb12u1_amd64.deb
+qubes-core-agent-networking_4.3.16-1+deb13u1_amd64.deb
+qubes-core-agent-networking-4.3.16-1.fc40.noarch.rpm
+qubes-core-agent-networking-4.3.16-1.fc41.noarch.rpm
+qubes-core-agent-networking_4.3.16-1+jammy1_amd64.deb
+qubes-core-agent-networking_4.3.16-1+noble1_amd64.deb
+qubes-core-agent-network-manager_4.3.16-1+deb12u1_amd64.deb
+qubes-core-agent-network-manager_4.3.16-1+deb13u1_amd64.deb
+qubes-core-agent-network-manager-4.3.16-1.fc40.noarch.rpm
+qubes-core-agent-network-manager-4.3.16-1.fc41.noarch.rpm
+qubes-core-agent-network-manager_4.3.16-1+jammy1_amd64.deb
+qubes-core-agent-network-manager_4.3.16-1+noble1_amd64.deb
+qubes-core-agent-passwordless-root_4.3.16-1+deb12u1_amd64.deb
+qubes-core-agent-passwordless-root_4.3.16-1+deb13u1_amd64.deb
+qubes-core-agent-passwordless-root-4.3.16-1.fc40.noarch.rpm
+qubes-core-agent-passwordless-root-4.3.16-1.fc41.noarch.rpm
+qubes-core-agent-passwordless-root_4.3.16-1+jammy1_amd64.deb
+qubes-core-agent-passwordless-root_4.3.16-1+noble1_amd64.deb
+qubes-core-agent-selinux-4.3.16-1.fc40.noarch.rpm
+qubes-core-agent-selinux-4.3.16-1.fc41.noarch.rpm
+qubes-core-agent-systemd-4.3.16-1.fc40.x86_64.rpm
+qubes-core-agent-systemd-4.3.16-1.fc41.x86_64.rpm
+qubes-core-agent-thunar_4.3.16-1+deb12u1_amd64.deb
+qubes-core-agent-thunar_4.3.16-1+deb13u1_amd64.deb
+qubes-core-agent-thunar-4.3.16-1.fc40.x86_64.rpm
+qubes-core-agent-thunar-4.3.16-1.fc41.x86_64.rpm
+qubes-core-agent-thunar_4.3.16-1+jammy1_amd64.deb
+qubes-core-agent-thunar_4.3.16-1+noble1_amd64.deb
+qubes-core-dom0-linux-4.3.8-1.fc41.x86_64.rpm
+qubes-core-dom0-linux-4.3.9-1.fc41.x86_64.rpm
+qubes-core-dom0-linux-kernel-install-4.3.8-1.fc41.x86_64.rpm
+qubes-core-dom0-linux-kernel-install-4.3.9-1.fc41.x86_64.rpm
+qubes-core-dom0-vaio-fixes-4.3.8-1.fc41.x86_64.rpm
+qubes-core-dom0-vaio-fixes-4.3.9-1.fc41.x86_64.rpm
+qubes-dom0-meta-packages-4.3.1-1.fc41.noarch.rpm
+qubes-dom0-unwanted-packages-4.3.1-1.fc41.noarch.rpm
+qubes-gui-agent_4.3.5-1+deb12u1_amd64.deb
+qubes-gui-agent_4.3.5-1+deb13u1_amd64.deb
+qubes-gui-agent-4.3.5-1.fc40.x86_64.rpm
+qubes-gui-agent-4.3.5-1.fc41.x86_64.rpm
+qubes-gui-agent_4.3.5-1+jammy1_amd64.deb
+qubes-gui-agent_4.3.5-1+noble1_amd64.deb
+qubes-gui-agent-dbgsym_4.3.5-1+deb12u1_amd64.deb
+qubes-gui-agent-dbgsym_4.3.5-1+deb13u1_amd64.deb
+qubes-gui-agent-selinux-4.3.5-1.fc40.noarch.rpm
+qubes-gui-agent-selinux-4.3.5-1.fc41.noarch.rpm
+qubes-gui-agent-xfce_4.3.5-1+deb12u1_amd64.deb
+qubes-gui-agent-xfce_4.3.5-1+deb13u1_amd64.deb
+qubes-gui-agent-xfce-4.3.5-1.fc40.x86_64.rpm
+qubes-gui-agent-xfce-4.3.5-1.fc41.x86_64.rpm
+qubes-gui-agent-xfce_4.3.5-1+jammy1_amd64.deb
+qubes-gui-agent-xfce_4.3.5-1+noble1_amd64.deb
+qubes-gui-vnc_4.3.5-1+deb12u1_amd64.deb
+qubes-gui-vnc_4.3.5-1+deb13u1_amd64.deb
+qubes-gui-vnc-4.3.5-1.fc40.x86_64.rpm
+qubes-gui-vnc-4.3.5-1.fc41.x86_64.rpm
+qubes-gui-vnc_4.3.5-1+jammy1_amd64.deb
+qubes-gui-vnc_4.3.5-1+noble1_amd64.deb
+qubes-pdf-converter_2.1.23-1+deb12u1_amd64.deb
+qubes-pdf-converter_2.1.23-1+deb13u1_amd64.deb
+qubes-pdf-converter-2.1.23-1.fc40.noarch.rpm
+qubes-pdf-converter-2.1.23-1.fc41.noarch.rpm
+qubes-pdf-converter_2.1.23-1+jammy1_amd64.deb
+qubes-pdf-converter_2.1.23-1+noble1_amd64.deb
+qubes-pdf-converter-2.1.23-1-x86_64.pkg.tar.zst
+qubes-pdf-converter-dom0-2.1.23-1.fc37.noarch.rpm
+qubes-pdf-converter-dom0-2.1.23-1.fc41.noarch.rpm
+qubes-repo-contrib_4.3.1-1+deb12u1_amd64.deb
+qubes-repo-contrib_4.3.1-1+deb13u1_amd64.deb
+qubes-repo-contrib-4.3.1-1.fc40.noarch.rpm
+qubes-repo-contrib-4.3.1-1.fc41.noarch.rpm
+qubes-repo-contrib_4.3.1-1+jammy1_amd64.deb
+qubes-repo-contrib_4.3.1-1+noble1_amd64.deb
+qubes-repo-templates_4.3.2-1+deb12u1_amd64.deb
+qubes-repo-templates_4.3.2-1+deb13u1_amd64.deb
+qubes-repo-templates-4.3.2-1.fc40.noarch.rpm
+qubes-repo-templates-4.3.2-1.fc41.noarch.rpm
+qubes-repo-templates_4.3.2-1+jammy1_amd64.deb
+qubes-repo-templates_4.3.2-1+noble1_amd64.deb
+qubes-repo-templates-4.3.2-1-x86_64.pkg.tar.zst
+qubes-template-archlinux-4.3.0-202501201153.noarch.rpm
+qubes-template-fedora-41-xfce-4.2.0-202501220220.noarch.rpm
+qubes-template-fedora-41-xfce-4.3.0-202501220220.noarch.rpm
+qubes-vm-core-4.3.16-1-x86_64.pkg.tar.zst
+qubes-vm-dependencies_4.3.1-1+deb12u1_amd64.deb
+qubes-vm-dependencies_4.3.1-1+deb13u1_amd64.deb
+qubes-vm-dependencies-4.3.1-1.fc40.noarch.rpm
+qubes-vm-dependencies-4.3.1-1.fc41.noarch.rpm
+qubes-vm-dependencies_4.3.1-1+jammy1_amd64.deb
+qubes-vm-dependencies_4.3.1-1+noble1_amd64.deb
+qubes-vm-dependencies-4.3.1-1-x86_64.pkg.tar.zst
+qubes-vm-dom0-updates-4.3.16-1-x86_64.pkg.tar.zst
+qubes-vm-gui-4.3.5-1-x86_64.pkg.tar.zst
+qubes-vm-guivm_4.3.1-1+deb12u1_amd64.deb
+qubes-vm-guivm_4.3.1-1+deb13u1_amd64.deb
+qubes-vm-guivm-4.3.1-1.fc40.noarch.rpm
+qubes-vm-guivm-4.3.1-1.fc41.noarch.rpm
+qubes-vm-guivm_4.3.1-1+jammy1_amd64.deb
+qubes-vm-guivm_4.3.1-1+noble1_amd64.deb
+qubes-vm-keyring-4.3.16-1-x86_64.pkg.tar.zst
+qubes-vm-meta-packages-4.3.1-1.fc40.noarch.rpm
+qubes-vm-meta-packages-4.3.1-1.fc41.noarch.rpm
+qubes-vm-networking-4.3.16-1-x86_64.pkg.tar.zst
+qubes-vm-passwordless-root-4.3.16-1-x86_64.pkg.tar.zst
+qubes-vm-pulseaudio-4.3.5-1-x86_64.pkg.tar.zst
+qubes-vm-recommended_4.3.1-1+deb12u1_amd64.deb
+qubes-vm-recommended_4.3.1-1+deb13u1_amd64.deb
+qubes-vm-recommended-4.3.1-1.fc40.noarch.rpm
+qubes-vm-recommended-4.3.1-1.fc41.noarch.rpm
+qubes-vm-recommended_4.3.1-1+jammy1_amd64.deb
+qubes-vm-recommended_4.3.1-1+noble1_amd64.deb
+qubes-vm-recommended-4.3.1-1-x86_64.pkg.tar.zst
+qubes-vm-repo-4.3.1-1-x86_64.pkg.tar.zst
+xserver-xorg-input-qubes_4.3.5-1+deb12u1_amd64.deb
+xserver-xorg-input-qubes_4.3.5-1+deb13u1_amd64.deb
+xserver-xorg-input-qubes_4.3.5-1+jammy1_amd64.deb
+xserver-xorg-input-qubes_4.3.5-1+noble1_amd64.deb
+xserver-xorg-input-qubes-dbgsym_4.3.5-1+deb12u1_amd64.deb
+xserver-xorg-input-qubes-dbgsym_4.3.5-1+deb13u1_amd64.deb
+xserver-xorg-qubes-common_4.3.5-1+deb12u1_amd64.deb
+xserver-xorg-qubes-common_4.3.5-1+deb13u1_amd64.deb
+xserver-xorg-qubes-common_4.3.5-1+jammy1_amd64.deb
+xserver-xorg-qubes-common_4.3.5-1+noble1_amd64.deb
+xserver-xorg-qubes-common-dbgsym_4.3.5-1+deb12u1_amd64.deb
+xserver-xorg-qubes-common-dbgsym_4.3.5-1+deb13u1_amd64.deb
+xserver-xorg-video-dummyqbs_4.3.5-1+deb12u1_amd64.deb
+xserver-xorg-video-dummyqbs_4.3.5-1+deb13u1_amd64.deb
+xserver-xorg-video-dummyqbs_4.3.5-1+jammy1_amd64.deb
+xserver-xorg-video-dummyqbs_4.3.5-1+noble1_amd64.deb
+xserver-xorg-video-dummyqbs-dbgsym_4.3.5-1+deb12u1_amd64.deb
+xserver-xorg-video-dummyqbs-dbgsym_4.3.5-1+deb13u1_amd64.deb
+zfs-2.3.0-1.fc37.x86_64.rpm
+zfs-2.3.0-1.fc41.x86_64.rpm
+zfs-dkms-2.3.0-1.fc37.noarch.rpm
+zfs-dkms-2.3.0-1.fc41.noarch.rpm
+zfs-dracut-2.3.0-1.fc37.noarch.rpm
+zfs-dracut-2.3.0-1.fc41.noarch.rpm
+zfs-test-2.3.0-1.fc37.x86_64.rpm
+zfs-test-2.3.0-1.fc41.x86_64.rpm
+```
+[/details]
+
+### Highlights
+* Considerable work on Archlinux template as a daily driver.
+* Better OpenZFS support (for any kernel and without third-party repositories).
+
+### Details
+In addition to the usual minor fixes and patches (full list [here](https://github.com/QubesOS/updates-status/issues?q=is%3Aissue+created%3A2025-01-13..2025-01-26)):
+
+* **core-admin** [v4.3.16](https://github.com/QubesOS/qubes-core-admin/compare/v4.3.15...v4.3.16) (r4.3)
+. (New Devices) Admin API parts of Device Interface Denied list. If I am not mistaken, it should be possible to deny attachment of certain devices (or device types) per Qube in the future.
+. Many new unit test. qrexec performance tests is specifically interesting.
+. Many unit tests are specific to Archlinux.
+
+* **core-admin-linux** [v4.3.9](https://github.com/QubesOS/qubes-core-admin-linux/compare/v4.3.8...v4.3.9) (r4.3)
+This one is education and an example case where ordinary Distro package manager update (`pacman -Syu` for Archlinux) is insufficient. To switch from pulseaudio to pipewire, first it would be necessary to remove pulseaudio and only then install pipewire. GUI updater and its CLI equivalent uses this code to automate it.
+
+* **meta-packages** [v4.3.1](https://github.com/QubesOS/qubes-meta-packages/compare/v4.3.0...v4.3.1) (r4.3)
+Switching from pulseaudio to pipewire for Archlinux.
+
+* **gui-agent-linux** [v4.3.5](https://github.com/QubesOS/qubes-gui-agent-linux/compare/v4.3.4...v4.3.5) (r4.3)
+Adding missing dependencies of pipewire for Archlinux.
+
+* **zfs** [v2.3.0-1](https://github.com/QubesOS/qubes-zfs/compare/dd05a09bfd7257df5c29924063301c51ea61f489...v2.3.0-1) (r4.2 & r4.3)
+  **zfs-dkms** [v2.3.0-1](https://github.com/QubesOS/qubes-zfs-dkms/compare/316dc020d72655d6a2eea07f3b146fb988b75bd2...v2.3.0-1) (r4.2 & r4.3)
+OpenZFS Dynamic Kernel Module Support. No third-party repository in dom0 is required anymore.
+
+* **core-agent-linux** [v4.3.16](https://github.com/QubesOS/qubes-core-agent-linux/compare/v4.3.15...v4.3.16) (r4.3)
+. More SELinux context relabeling fixes.
+. If you have the new modern `Ptyxis` terminal emulator installed in a template, `Run Terminal` command will open it instead of `xfce4-terminal`. More info on `Ptyxis` [here](https://www.phoronix.com/news/Ubuntu-Ptyxis-Recommended).
+. Tools for fetching dom0 updates via Archlinux based NetVMs.
+. NetworkManager for Archlinux (to be able to use as a NetVM)
+
+* **app-linux-pdf-converter** [v2.1.23](https://github.com/QubesOS/qubes-app-linux-pdf-converter/compare/v2.1.22...v2.1.23) (r4.2 & r4.3)
+PDF Converter is rebuilt for Archlinux to support new Python version.
+
+* **repo-templates** [v4.3.2](https://github.com/QubesOS/qubes-repo-templates/compare/v4.3.1...v4.3.2) (r4.3)
+
+* **core-admin-linux** [v4.3.8](https://github.com/QubesOS/qubes-core-admin-linux/compare/v4.3.7...v4.3.8) (r4.3)
+Further improvements for recent SELinux memory ballooning issue.
+
+* **qubes-template-archlinux** 4.3.0-202501201153 (r4.3)
+  **qubes-template-fedora-41-xfce** 4.3.0-202501220220 (r4.2 & r4.3)
+Testing templates with the latest updates.
+
+#### Epilogue
+I had limited time this week to review all the commits this week. Please feel free to comment any missing points.
