@@ -1,0 +1,92 @@
+# Qubes OS updates Weekly Review - Y2025-W05
+
+### Introduction
+
+Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w03-w4/31813).
+
+[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+```bash
+kernel-515-5.15.177-1.qubes.fc37.x86_64.rpm
+kernel-515-devel-5.15.177-1.qubes.fc37.x86_64.rpm
+kernel-515-modules-5.15.177-1.qubes.fc37.x86_64.rpm
+kernel-515-qubes-vm-5.15.177-1.qubes.fc37.x86_64.rpm
+kernel-6.6.74-1.qubes.fc37.x86_64.rpm
+kernel-6.6.74-1.qubes.fc41.x86_64.rpm
+kernel-devel-6.6.74-1.qubes.fc37.x86_64.rpm
+kernel-devel-6.6.74-1.qubes.fc41.x86_64.rpm
+kernel-latest-6.12.11-1.qubes.fc37.x86_64.rpm
+kernel-latest-6.12.11-1.qubes.fc41.x86_64.rpm
+kernel-latest-devel-6.12.11-1.qubes.fc37.x86_64.rpm
+kernel-latest-devel-6.12.11-1.qubes.fc41.x86_64.rpm
+kernel-latest-modules-6.12.11-1.qubes.fc37.x86_64.rpm
+kernel-latest-modules-6.12.11-1.qubes.fc41.x86_64.rpm
+kernel-latest-qubes-vm-6.12.11-1.qubes.fc37.x86_64.rpm
+kernel-latest-qubes-vm-6.12.11-1.qubes.fc41.x86_64.rpm
+kernel-modules-6.6.74-1.qubes.fc37.x86_64.rpm
+kernel-modules-6.6.74-1.qubes.fc41.x86_64.rpm
+kernel-qubes-vm-6.6.74-1.qubes.fc37.x86_64.rpm
+kernel-qubes-vm-6.6.74-1.qubes.fc41.x86_64.rpm
+libvchan-xen1_4.2.5-1+deb12u1_amd64.deb
+libvchan-xen1_4.2.5-1+jammy1_amd64.deb
+libvchan-xen1_4.2.5-1+noble1_amd64.deb
+libvchan-xen1_4.2.6-1+deb12u1_amd64.deb
+libvchan-xen1_4.2.6-1+deb13u1_amd64.deb
+libvchan-xen1_4.2.6-1+jammy1_amd64.deb
+libvchan-xen1_4.2.6-1+noble1_amd64.deb
+libvchan-xen1-dbgsym_4.2.5-1+deb12u1_amd64.deb
+libvchan-xen1-dbgsym_4.2.6-1+deb12u1_amd64.deb
+libvchan-xen1-dbgsym_4.2.6-1+deb13u1_amd64.deb
+libvchan-xen-dev_4.2.5-1+deb12u1_amd64.deb
+libvchan-xen-dev_4.2.5-1+jammy1_amd64.deb
+libvchan-xen-dev_4.2.5-1+noble1_amd64.deb
+libvchan-xen-dev_4.2.6-1+deb12u1_amd64.deb
+libvchan-xen-dev_4.2.6-1+deb13u1_amd64.deb
+libvchan-xen-dev_4.2.6-1+jammy1_amd64.deb
+libvchan-xen-dev_4.2.6-1+noble1_amd64.deb
+qubes-core-dom0-4.3.16-1.fc41.noarch.rpm
+qubes-libvchan-xen-4.2.5-1.fc37.x86_64.rpm
+qubes-libvchan-xen-4.2.5-1.fc40.x86_64.rpm
+qubes-libvchan-xen-4.2.5-1.fc41.x86_64.rpm
+qubes-libvchan-xen-4.2.5-1-x86_64.pkg.tar.zst
+qubes-libvchan-xen-4.2.6-1.fc37.x86_64.rpm
+qubes-libvchan-xen-4.2.6-1.fc40.x86_64.rpm
+qubes-libvchan-xen-4.2.6-1.fc41.x86_64.rpm
+qubes-libvchan-xen-4.2.6-1-x86_64.pkg.tar.zst
+qubes-libvchan-xen-devel-4.2.5-1.fc37.x86_64.rpm
+qubes-libvchan-xen-devel-4.2.5-1.fc40.x86_64.rpm
+qubes-libvchan-xen-devel-4.2.5-1.fc41.x86_64.rpm
+qubes-libvchan-xen-devel-4.2.6-1.fc37.x86_64.rpm
+qubes-libvchan-xen-devel-4.2.6-1.fc40.x86_64.rpm
+qubes-libvchan-xen-devel-4.2.6-1.fc41.x86_64.rpm
+qubes-release-4.2-11.fc37.noarch.rpm
+qubes-release-notes-4.2-11.fc37.noarch.rpm
+qubes-template-fedora-41-xfce-4.2.0-202501300253.noarch.rpm
+qubes-template-fedora-41-xfce-4.3.0-202501300317.noarch.rpm
+xen-utils-guest_5.0.2-1+deb12u1_amd64.deb
+xen-utils-guest_5.0.2-1+deb13u1_amd64.deb
+xen-utils-guest_5.0.2-1+jammy1_amd64.deb
+xen-utils-guest_5.0.2-1+noble1_amd64.deb
+```
+[/details]
+
+### Highlights
+- Qubes OS 4.2.4-rc1
+
+### Details
+In addition to the usual minor fixes and patches (full list [here](https://github.com/QubesOS/updates-status/issues?q=is%3Aissue+created%3A2025-01-27..2025-02-02)):
+
+* **qubes-release** [v4.2-11](https://github.com/QubesOS/qubes-qubes-release/compare/v4.2-10...v4.2-11) (r4.2)
+Qubes OS r4.2.4-rc1 build. The announcement on forum [here](https://forum.qubes-os.org/t/qubes-os-4-2-4-rc1-is-available-for-testing/31976). While it is advertised as a patch release, it is still significant as the Fedora templates are finally updated to Fedora 41. This is absolutely necessary since Fedora 40 will be end of life in 3 months and 3 weeks.
+There are also new Fedora 41 XFCE testing templates.
+
+* **linux-kernel-515** (LTS) v5.15.177-1 (r4.2)
+  **linux-kernel** (Stable) v6.6.74-1 (r4.2 & r4.3)
+  **linux-kernel-latest** (Mainline) v6.12.11-1-latest (r4.2 & r4.3)
+Weekly update to Linux kernel. As usual, for the comprehensive list of changes and updates, follow Greg Kroah-Hartman's [announcement](https://lwn.net/Articles/1006009/). There are also specialized resources that analyze Linux Kernel changes from Hardware support prespective, security prespective, networking improvements, etc. But if you look at diff changes in Greg's announcements and you could read and understand the code and commit messages, you might find the big changes to be the most interesting.
+
+* **core-vchan-xen** [v4.2.5 & v4.2.6](https://github.com/QubesOS/qubes-core-vchan-xen/compare/v4.2.4...v4.2.6) (r4.2 & r4.3)
+  **vmm-xen-guest** [v5.0.2-1](https://github.com/QubesOS/qubes-vmm-xen-guest/compare/v5.0.1-1...v5.0.2-1) (r4.3)
+Adding a missing dependency to build it for Debian (13) Trixie.
+
+#### Epilogue
+There has been fewer updates this week, probably due to FOSDEM 2025.

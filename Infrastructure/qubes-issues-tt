@@ -124,11 +124,10 @@ def main():
     if args.limit:
         issues = issues[:args.limit]
 
-    print('{:^46}{:^11}{:^30}'.format('URL', 'Comments', 'Title'))
+    print('{:^51}   {:^9}   {:^30}'.format('URL', 'Comments', 'Title'))
     for issue in issues:
-        print('{:<48}:{:^5}: {}'.format(
-            issue['url'].replace('api', 'www').replace('/repos', '').replace(
-                'https://', ''),
+        print('{:<51} : {:^9} : {}'.format(
+            issue['html_url'],
             issue['comments'],
             issue['title']))
 
