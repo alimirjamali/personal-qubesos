@@ -1,0 +1,89 @@
+# Qubes OS updates Weekly Review - Y2025-W06
+
+### Introduction
+
+Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w05/32006).
+
+[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+```bash
+i3_4.23-2+deb12u1_amd64.deb
+i3-4.23-2.fc37.x86_64.rpm
+i3-4.23-2.fc40.x86_64.rpm
+i3-4.23-2.fc41.x86_64.rpm
+i3_4.23-2+jammy1_amd64.deb
+i3_4.23-2+noble1_amd64.deb
+i3-devel-4.23-2.fc37.x86_64.rpm
+i3-devel-4.23-2.fc40.x86_64.rpm
+i3-devel-4.23-2.fc41.x86_64.rpm
+i3-devel-doc-4.23-2.fc37.noarch.rpm
+i3-devel-doc-4.23-2.fc40.noarch.rpm
+i3-devel-doc-4.23-2.fc41.noarch.rpm
+i3-doc-4.23-2.fc37.noarch.rpm
+i3-doc-4.23-2.fc40.noarch.rpm
+i3-doc-4.23-2.fc41.noarch.rpm
+i3-wm_4.23-2+deb12u1_amd64.deb
+i3-wm_4.23-2+jammy1_amd64.deb
+i3-wm_4.23-2+noble1_amd64.deb
+i3-wm-dbg_4.23-2+deb12u1_amd64.deb
+i3-wm-dbg_4.23-2+jammy1_amd64.deb
+i3-wm-dbg_4.23-2+noble1_amd64.deb
+libqrexec-utils4_4.3.2-1+deb12u1_amd64.deb
+libqrexec-utils4_4.3.2-1+deb13u1_amd64.deb
+libqrexec-utils4_4.3.2-1+jammy1_amd64.deb
+libqrexec-utils4_4.3.2-1+noble1_amd64.deb
+libqrexec-utils4-dbgsym_4.3.2-1+deb12u1_amd64.deb
+libqrexec-utils4-dbgsym_4.3.2-1+deb13u1_amd64.deb
+libqrexec-utils-dev_4.3.2-1+deb12u1_amd64.deb
+libqrexec-utils-dev_4.3.2-1+deb13u1_amd64.deb
+libqrexec-utils-dev_4.3.2-1+jammy1_amd64.deb
+libqrexec-utils-dev_4.3.2-1+noble1_amd64.deb
+python3-qrexec_4.3.2-1+deb12u1_amd64.deb
+python3-qrexec_4.3.2-1+deb13u1_amd64.deb
+python3-qrexec_4.3.2-1+jammy1_amd64.deb
+python3-qrexec_4.3.2-1+noble1_amd64.deb
+qubes-core-qrexec_4.3.2-1+deb12u1_amd64.deb
+qubes-core-qrexec_4.3.2-1+deb13u1_amd64.deb
+qubes-core-qrexec-4.3.2-1.fc40.x86_64.rpm
+qubes-core-qrexec-4.3.2-1.fc41.x86_64.rpm
+qubes-core-qrexec_4.3.2-1+jammy1_amd64.deb
+qubes-core-qrexec_4.3.2-1+noble1_amd64.deb
+qubes-core-qrexec-dbgsym_4.3.2-1+deb12u1_amd64.deb
+qubes-core-qrexec-dbgsym_4.3.2-1+deb13u1_amd64.deb
+qubes-core-qrexec-devel-4.3.2-1.fc40.x86_64.rpm
+qubes-core-qrexec-devel-4.3.2-1.fc41.x86_64.rpm
+qubes-core-qrexec-dom0-4.3.2-1.fc41.x86_64.rpm
+qubes-core-qrexec-libs-4.3.2-1.fc40.x86_64.rpm
+qubes-core-qrexec-libs-4.3.2-1.fc41.x86_64.rpm
+qubes-core-qrexec-vm-4.3.2-1.fc40.x86_64.rpm
+qubes-core-qrexec-vm-4.3.2-1.fc41.x86_64.rpm
+qubes-core-qrexec-vm-selinux-4.3.2-1.fc40.x86_64.rpm
+qubes-core-qrexec-vm-selinux-4.3.2-1.fc41.x86_64.rpm
+qubes-vm-qrexec-4.3.2-1-x86_64.pkg.tar.zst
+```
+[/details]
+
+### Highlights
+- Major qrexec _performance improvements_
+
+### Details
+In addition to the usual minor fixes and patches (full list [here](https://github.com/QubesOS/updates-status/issues?q=is%3Aissue%20created%3A2025-02-03..2025-02-10)):
+
+* **core-admin** [v4.3.17](https://github.com/QubesOS/qubes-core-admin/compare/v4.3.16...v4.3.17) (r4.3)
+. This one is actually released today. See epilogue for more information.
+. qrexec policy evaluation will use cached data. This will have considerable performance improvements. The cache will be invalidated on specific events. Examples are starting/shutting-down domains, adding/removing tags, changing domain labels, ...
+. Fixing Thunderbird support on Fedora 41
+
+* **(qubes) manager** [v4.3.8-1](https://github.com/QubesOS/qubes-manager/compare/v4.3.7-1...v4.3.8-1) (r4.3)
+. While this was released at the latest hours of 2025-W06, build of actual packages happened today.
+. Mostly bug fixes. Notable one is fixing a bug in cloning Qubes to other storage pools. The CLI counterpart (qvm-clone) was not affected. 
+. The old Qt based `qubes-vm-create` dialog is deprecated.
+
+* **core-qrexec** [v4.3.2 & v4.3.3](https://github.com/QubesOS/qubes-core-qrexec/compare/v4.3.1...v4.3.3) (r4.3)
+. Yet another SELinux patch for the Fedora 41 memory ballooning issue.
+. Only for Qubes OS R4.3, RPC calls will be directly executed from c code and `qubes-rpc-multiplexer` is no longer used. It will remain for legacy use cases. This will have some considerable performance improvements.
+
+* **desktop-linux-i3** [v4.23-2](https://github.com/QubesOS/qubes-desktop-linux-i3/compare/v4.23-1...v4.23-2) (r4.2)
+The patch from May 2024 which has been tested on R4.3. Allowing i3 users to change default border width (default is 3 pixels).
+
+#### Epilogue
+Since major qrexec improvements are somewhat related, I decided to include both of them in this week's report. Even though the `core-admin` one is actually released today.
