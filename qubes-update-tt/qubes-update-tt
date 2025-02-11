@@ -237,7 +237,7 @@ synthesize_template_cmds() {
 	fi
 
 	if ${VERBOSE}; then
-		cmd_dnf+=(--verbose)
+		# cmd_dnf+=(--verbose)
 		cmd_emerge+=(--verbose)
 		cmd_pacman+=(--verbose)
 	fi
@@ -348,7 +348,7 @@ synthesize_template_cmds() {
 
 	if ${SKIPBROKEN}; then
 		cmd_apt+=(--ignore-missing)
-		cmd_dnf+=(--skip-broken)
+		cmd_dnf+=(--skip-unavailable)
 		cmd_pacman+=(--nodeps)
 	fi
 
@@ -546,6 +546,12 @@ update_templates() {
 		done
 	done
 	for template in ${templates[@]}; do 
+		skip_update=$(qubesd_admin_api \
+			admin.vm.feature.Get ${template} skip-update)
+		if [[ "$skip_update" == "1" ]]; then
+			$VERBOSE && message "${template} is marked as skipped."
+			continue
+		fi
 		template_os=$(qubesd_admin_api \
 			admin.vm.feature.Get ${template} os)
 		if [[ ! $? == 0 ]]; then
