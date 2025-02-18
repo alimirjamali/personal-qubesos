@@ -1,0 +1,170 @@
+# Qubes OS updates Weekly Review - Y2025-W07
+
+### Introduction
+
+Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w06/32159).
+
+[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+```bash
+amd-gpu-firmware-20250211-1.fc37.noarch.rpm
+amd-gpu-firmware-20250211-1.fc41.noarch.rpm
+amd-ucode-firmware-20250211-1.fc37.noarch.rpm
+amd-ucode-firmware-20250211-1.fc41.noarch.rpm
+atheros-firmware-20250211-1.fc37.noarch.rpm
+atheros-firmware-20250211-1.fc41.noarch.rpm
+brcmfmac-firmware-20250211-1.fc37.noarch.rpm
+brcmfmac-firmware-20250211-1.fc41.noarch.rpm
+cirrus-audio-firmware-20250211-1.fc37.noarch.rpm
+cirrus-audio-firmware-20250211-1.fc41.noarch.rpm
+dvb-firmware-20250211-1.fc37.noarch.rpm
+dvb-firmware-20250211-1.fc41.noarch.rpm
+intel-audio-firmware-20250211-1.fc37.noarch.rpm
+intel-audio-firmware-20250211-1.fc41.noarch.rpm
+intel-gpu-firmware-20250211-1.fc37.noarch.rpm
+intel-gpu-firmware-20250211-1.fc41.noarch.rpm
+intel-vsc-firmware-20250211-1.fc37.noarch.rpm
+intel-vsc-firmware-20250211-1.fc41.noarch.rpm
+iwlegacy-firmware-20250211-1.fc37.noarch.rpm
+iwlegacy-firmware-20250211-1.fc41.noarch.rpm
+iwlwifi-dvm-firmware-20250211-1.fc37.noarch.rpm
+iwlwifi-dvm-firmware-20250211-1.fc41.noarch.rpm
+iwlwifi-mvm-firmware-20250211-1.fc37.noarch.rpm
+iwlwifi-mvm-firmware-20250211-1.fc41.noarch.rpm
+kernel-6.6.75-1.qubes.fc37.x86_64.rpm
+kernel-6.6.75-1.qubes.fc41.x86_64.rpm
+kernel-6.6.77-1.qubes.fc37.x86_64.rpm
+kernel-6.6.77-1.qubes.fc41.x86_64.rpm
+kernel-devel-6.6.75-1.qubes.fc37.x86_64.rpm
+kernel-devel-6.6.75-1.qubes.fc41.x86_64.rpm
+kernel-devel-6.6.77-1.qubes.fc37.x86_64.rpm
+kernel-devel-6.6.77-1.qubes.fc41.x86_64.rpm
+kernel-modules-6.6.75-1.qubes.fc37.x86_64.rpm
+kernel-modules-6.6.75-1.qubes.fc41.x86_64.rpm
+kernel-modules-6.6.77-1.qubes.fc37.x86_64.rpm
+kernel-modules-6.6.77-1.qubes.fc41.x86_64.rpm
+kernel-qubes-vm-6.6.75-1.qubes.fc37.x86_64.rpm
+kernel-qubes-vm-6.6.75-1.qubes.fc41.x86_64.rpm
+kernel-qubes-vm-6.6.77-1.qubes.fc37.x86_64.rpm
+kernel-qubes-vm-6.6.77-1.qubes.fc41.x86_64.rpm
+libertas-firmware-20250211-1.fc37.noarch.rpm
+libertas-firmware-20250211-1.fc41.noarch.rpm
+linux-firmware-20250211-1.fc37.noarch.rpm
+linux-firmware-20250211-1.fc41.noarch.rpm
+linux-firmware-whence-20250211-1.fc37.noarch.rpm
+linux-firmware-whence-20250211-1.fc41.noarch.rpm
+liquidio-firmware-20250211-1.fc37.noarch.rpm
+liquidio-firmware-20250211-1.fc41.noarch.rpm
+microcode_ctl-2.1.20250211-58.qubes1.fc37.x86_64.rpm
+microcode_ctl-2.1.20250211-58.qubes1.fc41.x86_64.rpm
+mlxsw_spectrum-firmware-20250211-1.fc37.noarch.rpm
+mlxsw_spectrum-firmware-20250211-1.fc41.noarch.rpm
+mrvlprestera-firmware-20250211-1.fc37.noarch.rpm
+mrvlprestera-firmware-20250211-1.fc41.noarch.rpm
+mt7xxx-firmware-20250211-1.fc37.noarch.rpm
+mt7xxx-firmware-20250211-1.fc41.noarch.rpm
+netronome-firmware-20250211-1.fc37.noarch.rpm
+netronome-firmware-20250211-1.fc41.noarch.rpm
+nvidia-gpu-firmware-20250211-1.fc37.noarch.rpm
+nvidia-gpu-firmware-20250211-1.fc41.noarch.rpm
+nxpwireless-firmware-20250211-1.fc37.noarch.rpm
+nxpwireless-firmware-20250211-1.fc41.noarch.rpm
+python3-xen-4.17.5-6.fc37.x86_64.rpm
+qcom-firmware-20250211-1.fc37.noarch.rpm
+qcom-firmware-20250211-1.fc41.noarch.rpm
+qed-firmware-20250211-1.fc37.noarch.rpm
+qed-firmware-20250211-1.fc41.noarch.rpm
+qubes-artwork_4.3.4-1+deb12u1_amd64.deb
+qubes-artwork_4.3.4-1+deb13u1_amd64.deb
+qubes-artwork-4.3.4-1.fc40.noarch.rpm
+qubes-artwork-4.3.4-1.fc41.noarch.rpm
+qubes-artwork_4.3.4-1+jammy1_amd64.deb
+qubes-artwork_4.3.4-1+noble1_amd64.deb
+qubes-artwork-anaconda-4.3.4-1.fc40.noarch.rpm
+qubes-artwork-anaconda-4.3.4-1.fc41.noarch.rpm
+qubes-artwork-efi-4.3.4-1.fc40.noarch.rpm
+qubes-artwork-efi-4.3.4-1.fc41.noarch.rpm
+qubes-artwork-plymouth-4.3.4-1.fc40.noarch.rpm
+qubes-artwork-plymouth-4.3.4-1.fc41.noarch.rpm
+qubes-core-dom0-4.2.36-1.fc37.noarch.rpm
+qubes-core-dom0-4.3.17-1.fc41.noarch.rpm
+qubes-core-dom0-linux-4.3.10-1.fc41.x86_64.rpm
+qubes-core-dom0-linux-kernel-install-4.3.10-1.fc41.x86_64.rpm
+qubes-core-dom0-vaio-fixes-4.3.10-1.fc41.x86_64.rpm
+qubes-mgmt-salt-dom0-qvm-4.3.2-1.fc41.noarch.rpm
+qubes-mgmt-salt-dom0-virtual-machines-4.2.20-1.fc41.noarch.rpm
+qubes-release-4.2-12.fc37.noarch.rpm
+qubes-release-4.3-0.4.fc41.noarch.rpm
+qubes-release-notes-4.2-12.fc37.noarch.rpm
+qubes-release-notes-4.3-0.4.fc41.noarch.rpm
+qubes-vm-xen-4.17.5-6-x86_64.pkg.tar.zst
+realtek-firmware-20250211-1.fc37.noarch.rpm
+realtek-firmware-20250211-1.fc41.noarch.rpm
+tiwilink-firmware-20250211-1.fc37.noarch.rpm
+tiwilink-firmware-20250211-1.fc41.noarch.rpm
+xen-4.17.5-6.fc37.x86_64.rpm
+xen-devel-4.17.5-6.fc37.x86_64.rpm
+xen-doc-4.17.5-6.fc37.noarch.rpm
+xen-hypervisor-4.17.5-6.fc37.x86_64.rpm
+xen-libs-4.17.5-6.fc37.x86_64.rpm
+xen-licenses-4.17.5-6.fc37.x86_64.rpm
+xen-runtime-4.17.5-6.fc37.x86_64.rpm
+```
+[/details]
+
+### Highlights
+- Qubes OS R4.2.4
+- Novacustom V540U laptop is certified.
+- Qube Manager new look and feel
+- Downgrade of Thinkpad x230/t430 certification
+
+### Details
+In addition to the usual minor fixes and patches (full list [here](https://github.com/QubesOS/updates-status/issues?q=is%3Aissue%20created%3A2025-02-10..2025-02-16%20)):
+
+* **core-admin** [v4.3.17 & v4.3.18](https://github.com/QubesOS/qubes-core-admin/compare/v4.3.17...v4.3.18) (r4.3)
+. The changes for v4.3.17 were discussed in last week newsletter earlier than usual (qrexec caching)
+. A bug in (New Device API) PCI assignment is fixed (only applicable for R4.3).
+. A test for storage performance is added. This is exciting since this will allow clear performance evaluation and comparison of various file-systems (BTRFS, ext4, XFS, ZFS, ...) for dom0.
+. Novacustom V540u laptop is marked as certified.
+. `qvm-features-request` (mostly used in templates) will be able to send requests with spaces in values to dom0. This is specifically useful for Whonix templates which will be using in-VM kernels with additional security improvements in near future. Space in feature value was needed for Kernel parameters.
+
+* **manager** [v4.3.9-1](https://github.com/QubesOS/qubes-manager/compare/v4.3.8-1...v4.3.9-1) (r4.3)
+. The good old Qube Manager has been using "Crystal" icons from [Everaldo Coelho](https://en.wikipedia.org/wiki/Everaldo_Coelho) for around 15 years. They were due for a change to keep with the current trend of flat icons which is used everywhere these days.
+. The first column of Qube manager (column 0) is deleted. Apparently no one uses it these days since the Qute Cube icons signify the qube type. I personally did not realize this before writing this newsletter.
+. Here are the screenshots:
+
+Y2025-W07-Qube-Manager.png
+
+* **vmm-xen-stubdom-linux** [v4.3.2](https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux/compare/v4.3.1...v4.3.2) (r4.3)
+  **vmm-xen** [v4.19.1-3](https://github.com/QubesOS/qubes-vmm-xen/compare/v4.19.1-2...v4.19.1-3) (r4.3)
+  Fixing 13th generation Intel GPU compatibility with `sys-gui-gpu` and assuring proper GPU pass-through.
+
+* **artwork** [v4.3.4-1](https://github.com/QubesOS/qubes-artwork/compare/v4.3.3-1...v4.3.4-1) (r4.3)
+  The (Qute) Cube icons are improved.
+
+* **mgmt-salt-dom0-virtual-machines** [v4.2.20](https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/compare/v4.2.19...v4.2.20) (r4.3)
+. Fixes for sys-gui-gpu inputs, assuring USB pointing devices will be properly attached to it if necessary.
+. After reducing memory usage for netvm & usbvm, default memory setting is reduced from 425MB to 300MB.
+
+* **qubes-release** [v4.3-0.4](https://github.com/QubesOS/qubes-qubes-release/compare/v4.3-0.3...v4.3-0.4) (r4.3)
+  **qubes-release** [v4.2-12](https://github.com/QubesOS/qubes-qubes-release/compare/v4.2-11...v4.2-12) (r4.2)
+. Qubes Release **R4.2.4**.  Official announcement on forum [here](https://github.com/QubesOS/qubes-qubes-release/compare/v4.2-11...v4.2-12).
+. The offline release notes file (`/usr/share/doc/qubes-release-notes/README.Qubes-Release-Notes`) is updated since it contained R4.1 release notes.
+
+* **core-admin-linux** [v4.3.10](https://github.com/QubesOS/qubes-core-admin-linux/compare/v4.3.9...v4.3.10) (r4.3)
+  Archlinux upgrade (via GUI or CLI updater) did not clean the unused packages. This is fixed.
+
+* **mgmt-salt-dom0-qvm** [v4.3.2](https://github.com/QubesOS/qubes-mgmt-salt-dom0-qvm/compare/v4.3.1...v4.3.2) (r4.3)
+  Salt support for the **new devices API**. You will be able to write salt formulas for example to automatically attach `port_id:*` to specific qube.
+
+* **linux-kernel** v6.6.75-1 v6.6.77-1 (r4.2 & r4.3)
+  It appears that v6.6.77 reverts some of the changes in previous version, mostly related to build failures (no boot problem issues)
+
+* **intel-microcode** [v20250211](https://github.com/QubesOS/qubes-intel-microcode/compare/v20241112...v20250211) (r4.3)
+. The new Intel Microcode covers five security issues. Some details [here](https://www.phoronix.com/news/Intel-Microcode-20250211).
+. Sadly Intel does not provide security patches for older CPUs used in the (currently certified) Thinkpad x230/t430 machines anymore.
+
+* **linux-firmware** [v20250211-1](https://github.com/QubesOS/qubes-linux-firmware/compare/v20250109-1...v20250211-1) (r4.2 & r4.3)
+  Few firmware updates. One might be related to a Qualcomm bluetooth chip used in Lenovo X13 laptops.
+
+#### Epilogue
+Certification status of Thinkpad x230/t430 will be downgraded because of lack of security patches from Intel. Some details [here](https://github.com/QubesOS/qubes-issues/issues/9782). If you heavily depend on Qubes OS because of security concerns and you are currently using one of those old machines, it is time to consider an upgrade. I am personally using an HP EliteBook G1 from the same era (with hyper-threading enabled for some desperately needed performance); however, I am using it as a development machine.
