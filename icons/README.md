@@ -102,7 +102,7 @@ Cube Speaker, Wooden block qubes of
 Gold, Silver & Steel qubes. Prism qube.
 
 ### Qubes which might be possible due to expired patents or trademarks
-Bauhaus qubes, Peter Keler D1, Lego qube
+Bauhaus qubes, Bauhaus [Peter Keler D1](https://www.tecta.de/en/produkt/d1-4/), Lego qube
 
 ### Impossible qubes due to licensing concerns
 WALL.E qube
