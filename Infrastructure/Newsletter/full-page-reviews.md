@@ -1,5 +1,7 @@
 # Qubes OS updates Weekly Reviews Index
 
+## Index of weekly reviews
+
 0. [Qubes OS updates Weekly Review - Y2024-W18](#qubes-os-updates-weekly-review-y2024-w18)
 0. [Qubes OS updates Weekly Review - Y2024-W19](#qubes-os-updates-weekly-review-y2024-w19)
 0. [Qubes OS updates Weekly Review - Y2024-W20](#qubes-os-updates-weekly-review-y2024-w20)
@@ -40,45 +42,49 @@
 0. [Qubes OS updates Weekly Review - Y2025-W06](#qubes-os-updates-weekly-review-y2025-w06)
 0. [Qubes OS updates Weekly Review - Y2025-W07](#qubes-os-updates-weekly-review-y2025-w07)
 
+## Index of Qubes OS Forum links
+
 0. [Qubes OS updates Weekly Review - Y2024-W18 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w18/26298)
-0. [Qubes OS updates Weekly Review - Y2024-W18 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w19/26417)
-0. [Qubes OS updates Weekly Review - Y2024-W19 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w20/26533)
-0. [Qubes OS updates Weekly Review - Y2024-W20 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w21/26670)
-0. [Qubes OS updates Weekly Review - Y2024-W21 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w22/26812)
-0. [Qubes OS updates Weekly Review - Y2024-W22 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w23/26930)
-0. [Qubes OS updates Weekly Review - Y2024-W23 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w24/27078)
-0. [Qubes OS updates Weekly Review - Y2024-W24 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w25/27224)
-0. [Qubes OS updates Weekly Review - Y2024-W25 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w26/27373)
-0. [Qubes OS updates Weekly Review - Y2024-W26 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w27/27521)
-0. [Qubes OS updates Weekly Review - Y2024-W27 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w28-summer-break-edition/27612)
-0. [Qubes OS updates Weekly Review - Y2024-W28 Summer Break Edition on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w29/27819)
-0. [Qubes OS updates Weekly Review - Y2024-W29 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w30/27952)
-0. [Qubes OS updates Weekly Review - Y2024-W30 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w31-w32/28249)
-0. [Qubes OS updates Weekly Review - Y2024-W31 & W32 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w33/28415)
-0. [Qubes OS updates Weekly Review - Y2024-W33 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w34/28523)
-0. [Qubes OS updates Weekly Review - Y2024-W34 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w35/28711)
-0. [Qubes OS updates Weekly Review - Y2024-W35 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w36/28884)
-0. [Qubes OS updates Weekly Review - Y2024-W36 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w37/28989)
-0. [Qubes OS updates Weekly Review - Y2024-W37 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w38/29149)
-0. [Qubes OS updates Weekly Review - Y2024-W38 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w39/29296)
-0. [Qubes OS updates Weekly Review - Y2024-W39 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w40/29407)
-0. [Qubes OS updates Weekly Review - Y2024-W40 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w41/29585)
-0. [Qubes OS updates Weekly Review - Y2024-W41 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w42/29742)
-0. [Qubes OS updates Weekly Review - Y2024-W42 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w43/29853)
-0. [Qubes OS updates Weekly Review - Y2024-W43 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w44-w45/30111)
-0. [Qubes OS updates Weekly Review - Y2024-W44 & W45 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w46/30247)
-0. [Qubes OS updates Weekly Review - Y2024-W46 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w47/30384)
-0. [Qubes OS updates Weekly Review - Y2024-W47 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w48/30509)
-0. [Qubes OS updates Weekly Review - Y2024-W48 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w49/30663)
-0. [Qubes OS updates Weekly Review - Y2024-W49 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w50/30827)
-0. [Qubes OS updates Weekly Review - Y2024-W50 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w51/30990)
-0. [Qubes OS updates Weekly Review - Y2024-W51 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w52-year-end-special/31188)
-0. [Qubes OS updates Weekly Review - Y2024-W52 (year end special) on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w01/31337)
-0. [Qubes OS updates Weekly Review - Y2025-W01 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w02/31520)
-0. [Qubes OS updates Weekly Review - Y2025-W02 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w03-w4/31813)
-0. [Qubes OS updates Weekly Review - Y2025-W03 & W4 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w05/32006)
-0. [Qubes OS updates Weekly Review - Y2025-W05 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w06/32159)
-0. [Qubes OS updates Weekly Review - Y2025-W06 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w07/32372)
+0. [Qubes OS updates Weekly Review - Y2024-W19 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w19/26417)
+0. [Qubes OS updates Weekly Review - Y2024-W20 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w20/26533)
+0. [Qubes OS updates Weekly Review - Y2024-W21 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w21/26670)
+0. [Qubes OS updates Weekly Review - Y2024-W22 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w22/26812)
+0. [Qubes OS updates Weekly Review - Y2024-W23 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w23/26930)
+0. [Qubes OS updates Weekly Review - Y2024-W24 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w24/27078)
+0. [Qubes OS updates Weekly Review - Y2024-W25 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w25/27224)
+0. [Qubes OS updates Weekly Review - Y2024-W26 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w26/27373)
+0. [Qubes OS updates Weekly Review - Y2024-W27 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w27/27521)
+0. [Qubes OS updates Weekly Review - Y2024-W28 Summer Break Edition on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w28-summer-break-edition/27612)
+0. [Qubes OS updates Weekly Review - Y2024-W29 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w29/27819)
+0. [Qubes OS updates Weekly Review - Y2024-W30 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w30/27952)
+0. [Qubes OS updates Weekly Review - Y2024-W31 & W32 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w31-w32/28249)
+0. [Qubes OS updates Weekly Review - Y2024-W33 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w33/28415)
+0. [Qubes OS updates Weekly Review - Y2024-W34 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w34/28523)
+0. [Qubes OS updates Weekly Review - Y2024-W35 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w35/28711)
+0. [Qubes OS updates Weekly Review - Y2024-W36 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w36/28884)
+0. [Qubes OS updates Weekly Review - Y2024-W37 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w37/28989)
+0. [Qubes OS updates Weekly Review - Y2024-W38 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w38/29149)
+0. [Qubes OS updates Weekly Review - Y2024-W39 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w39/29296)
+0. [Qubes OS updates Weekly Review - Y2024-W40 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w40/29407)
+0. [Qubes OS updates Weekly Review - Y2024-W41 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w41/29585)
+0. [Qubes OS updates Weekly Review - Y2024-W42 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w42/29742)
+0. [Qubes OS updates Weekly Review - Y2024-W43 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w43/29853)
+0. [Qubes OS updates Weekly Review - Y2024-W44 & W45 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w44-w45/30111)
+0. [Qubes OS updates Weekly Review - Y2024-W46 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w46/30247)
+0. [Qubes OS updates Weekly Review - Y2024-W47 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w47/30384)
+0. [Qubes OS updates Weekly Review - Y2024-W48 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w48/30509)
+0. [Qubes OS updates Weekly Review - Y2024-W49 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w49/30663)
+0. [Qubes OS updates Weekly Review - Y2024-W50 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w50/30827)
+0. [Qubes OS updates Weekly Review - Y2024-W51 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w51/30990)
+0. [Qubes OS updates Weekly Review - Y2024-W52 (year end special) on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w52-year-end-special/31188)
+0. [Qubes OS updates Weekly Review - Y2025-W01 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w01/31337)
+0. [Qubes OS updates Weekly Review - Y2025-W02 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w02/31520)
+0. [Qubes OS updates Weekly Review - Y2025-W03 & W4 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w03-w4/31813)
+0. [Qubes OS updates Weekly Review - Y2025-W05 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w05/32006)
+0. [Qubes OS updates Weekly Review - Y2025-W06 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w06/32159)
+0. [Qubes OS updates Weekly Review - Y2025-W07 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w07/32372)
+
+## Weekly reviews
 
 # Qubes OS updates Weekly Review - Y2024-W18
 
@@ -835,7 +841,7 @@ There are two major projects going one. One is related to [Dynamic audiovm switc
 - `qubes-app-linux-input-proxy`: Minor changes.
 # Qubes OS updates Weekly Review - Y2024-W19
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W18 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w19/26417)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W19 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w19/26417)
 
 ### Introduction
 Following my previous [weekly updates post](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w18/26298), this is the 2nd instalment of the Qubes OS weekly review of new packages uploaded to Qubes OS repositories. I forgot to post the [link](https://github.com/alimirjamali/personal-qubesos/tree/main/Newsletter) to the script used to fetch the list of new packages per year/week. It needs rsync to run (and network of course). Run it with `--help` to see the syntax.
@@ -1102,7 +1108,7 @@ xserver-xorg-video-dummyqbs-dbgsym_4.2.14-1+deb13u1_amd64.deb
 - [qubes-vmm-xen-stubdom-linux 4.2.13](https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux) - A collection of major fixes for Audio System. Something ordinary users who have issues with sound should care about. Dynamic audiovm switching.
 # Qubes OS updates Weekly Review - Y2024-W20
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W19 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w20/26533)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W20 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w20/26533)
 
 ### Introduction
 This is the 3rd instalment of my weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to prepare this newsletter is available in [previous version](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w19/26417).
@@ -1241,7 +1247,7 @@ AudioVM project and overall Audio sub-system improvements is the major highlight
 These newsletters are usually focused on what is uploaded and available rather than what is going to be initiated soon. But be aware that Fedora 41 templates are next in the pipeline.
 # Qubes OS updates Weekly Review - Y2024-W21
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W20 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w21/26670)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W21 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w21/26670)
 
 ### Introduction
 This is the 4th instalment of my weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to prepare this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w20/26533).
@@ -1586,7 +1592,7 @@ More r4.3 testing templates are built and uploaded to the repositories. I see ma
 - [rpm-oxide v0.2.8](https://github.com/QubesOS/qubes-rpm-oxide/compare/v0.2.7...v0.2.8) - Some work on Fedora 41 template (this should be actually for next week newsletter).
 # Qubes OS updates Weekly Review - Y2024-W22
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W21 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w22/26812)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W22 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w22/26812)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to prepare this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w21/26670).
@@ -1657,7 +1663,7 @@ Major upgrade for Qubes Video Companion. Getting closer to Fedora 40 templates r
 - `debian-12-minimal 4.3.0` is built for Qubes OS r4.3
 # Qubes OS updates Weekly Review - Y2024-W23
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W22 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w23/26930)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W23 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w23/26930)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to prepare this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w22/26812)
@@ -1781,7 +1787,7 @@ This week is relatively quiet. The new Qubes Video Companion v1.1.1.1 from last 
 - [linux-firmware v20240513-1](https://github.com/QubesOS/updates-status/issues/4797) - These are the upstream upgrades, fixes, updates mostly submitted by Hardware vendors (Intel, AMD, et. al) directly to kernel to add better support for their products. Sometimes bug fixes & improvements by individual users & projects. The details of all changes could be found [on Fedora website](https://packages.fedoraproject.org/pkgs/linux-firmware/linux-firmware/fedora-rawhide.html). I have seen a a Github [issue](https://github.com/QubesOS/qubes-issues/issues/9239) on i915 which might be related.
 # Qubes OS updates Weekly Review - Y2024-W24
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W23 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w24/27078)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W24 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w24/27078)
 
 ### Introduction
 
@@ -2020,7 +2026,7 @@ There were some other fixes to qubes-core-admin. Such as fixing a bogous error i
 I take the opportunity here to inform you that Marek has finalized the workflow of building packages for Qubes OS R4.3 and closed the [related issue](https://github.com/QubesOS/qubes-issues/issues/9125) on Github. We do not have a `qubes-dist-upgrade` to migrate from R4.2 to R4.3 testing to follow its development closely. Doing this manually might be possible but I personally do not have the guts to do it yet as I do not want to break my only working Qubes OS machine.
 # Qubes OS updates Weekly Review - Y2024-W25
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W24 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w25/27224)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W25 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w25/27224)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w24/27078)
@@ -2445,7 +2451,7 @@ New set of templates with latest updates & fixes. Preparation for Qubes OS R4.2.
 R4.2 -> R4.3 upgrade tool in-place upgrade tool is [kickstarted](https://github.com/QubesOS/qubes-issues/issues/9317). I have the intention to follow it closely and use its as a blueprint to upgrade my existing Qubes machine (currently using testing repos) to R4.3 as soon as possible.
 # Qubes OS updates Weekly Review - Y2024-W26
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W25 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w26/27373)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W26 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w26/27373)
 
 ### Introduction
 
@@ -2686,7 +2692,7 @@ The unnecessary *"QubesOS Edit In DisposableVM"* in the list of available applic
 A fix for DNS leakage when only one DNS is set in a NetVM.
 # Qubes OS updates Weekly Review - Y2024-W27
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W26 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w27/27521)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W27 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w27/27521)
 
 ### Introduction
 
@@ -3099,7 +3105,7 @@ As usual, Linux Kernel updates include various improvements and fixes which are 
 openssh v9.3-11 is also packaged for dom0. While ordinary users do not need this package for dom0 as it is disconnected, packaging was done to back-port an important security fix for some of the development process requirements.
 # Qubes OS updates Weekly Review - Y2024-W28 Summer Break Edition
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W27 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w28-summer-break-edition/27612)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W28 Summer Break Edition on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w28-summer-break-edition/27612)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w27/27521)
@@ -3127,7 +3133,7 @@ It is the time of the year that many people take breaks from work. There was ver
 The changes for Qubes OS 4.2.2 has been covered in the previous versions of this Newsletter. Or you could  refer to the [official announcement](https://forum.qubes-os.org/t/qubes-os-4-2-2-has-been-released/27607). This version has gone through intensive tests before release and is recommended for anyone who wants a Fresh install of Qubes OS on a new machine.
 # Qubes OS updates Weekly Review - Y2024-W29
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W28 Summer Break Edition on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w29/27819)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W29 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w29/27819)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w27/27521)
@@ -3533,7 +3539,7 @@ Important fix to mask (Keyboard) LED events in sys-usb. Without it, the kworker 
 It should be evident that most of the new changes are packaged for r4.3 and tested there. Many of them may never be ported to r4.2. I will receive the necessary storage to properly backup all of my data on Wednesday. And I will finally upgrade to r4.3 next week.
 # Qubes OS updates Weekly Review - Y2024-W30
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W29 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w30/27952)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W30 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w30/27952)
 
 ### Introduction
 
@@ -3604,7 +3610,7 @@ See last week report (on r4.3 release).
 I have received a lot of heartwarming messages last week. Thank you very much for your messages.
 # Qubes OS updates Weekly Review - Y2024-W31 & W32
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W30 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w31-w32/28249)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W31 & W32 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w31-w32/28249)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w30/27952)
@@ -3938,7 +3944,7 @@ The other of the security fixes for QSB-104 (unexpected key press)
 I finally updated the test machine to R4.3 (development stream) to follow the new changes more closely. It was really easy and painless. Details and more insights (from core team members) [here](https://forum.qubes-os.org/t/qubes-os-r4-3-alpha-preview/27963).
 # Qubes OS updates Weekly Review - Y2024-W33
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W31 & W32 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w33/28415)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W33 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w33/28415)
 
 ### Introduction
 
@@ -4498,7 +4504,7 @@ Work on Microphone (audio input). Using QubesDB to authorize usage of mic and re
 Fedora 41 testing repository (not the template) was created few days ago. Most of its packages are built during last two days. I am going to try an in-place template upgrade in the next few days (but not dom0).
 # Qubes OS updates Weekly Review - Y2024-W34
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W33 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w34/28523)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W34 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w34/28523)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w33/28415)
@@ -4949,7 +4955,7 @@ The installer software receives upgrades to support Fedora 41 (for r4.3). Nightl
 Considering the huge volume of work done during this week (mostly by Marek), I do not expect more packages during the few remaining hours of the weekend. So I am releasing the newsletter earlier this week.
 # Qubes OS updates Weekly Review - Y2024-W35
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W34 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w35/28711)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W35 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w35/28711)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w34/28523).
@@ -4966,7 +4972,7 @@ It was the summer break before the new school/academic [calendar 2024-2025](http
 Last two weeks were extremely busy due to upgrade of dom0 to Fedora 41 for r4.3 with Xen 4.19. I am planning to try an in-place upgrade of dom0 to Fedora 41 on the test machine to see if it breaks anything.
 # Qubes OS updates Weekly Review - Y2024-W36
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W35 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w36/28884)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W36 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w36/28884)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w35/28711).
@@ -5096,7 +5102,7 @@ Qube Manager toolbar will behave better on smaller screens.
 It appears that Qubes OS R4.2.3 is mostly a patch release (no major Xen upgrade or Template release upgrade). It contains the latest Kernel and relevant patches to support new certified Hardware.
 # Qubes OS updates Weekly Review - Y2024-W37
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W36 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w37/28989)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W37 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w37/28989)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w36/28884).
@@ -5201,7 +5207,7 @@ Possibility to add qube setting and start icons to favourites
 r4.2.3 does not need through testing and will be released very soon to certify some of new Novacustom laptops. Close cooperation of certified vendors such a providing hardware to the core team ensures proper functionality and excellent support of their hardware. If you are not re-purposing old hardware for new Qubes OS installation, looking at certified hardware is highly recommended. They are usually well specd and competitively priced compared to alternatives. They also do some sponsorship of the project. Overall it could be a win-win-win situation for you, Qubes OS project and certified vendor.
 # Qubes OS updates Weekly Review - Y2024-W38
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W37 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w38/29149)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W38 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w38/29149)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w37/28989).
@@ -5226,7 +5232,7 @@ Weekly Linux Kernel updates. As usual, refer to [Greg Kroah-Hartman's announceme
 Qubes OS [summit 2024](https://vpub.dasharo.com/e/16/qubes-os-summit-2024) did take place in Berlin from 20th to 22nd September. Link to presentation videos are available in [this post](https://forum.qubes-os.org/t/qubes-os-summit-2024-day-1-2-vods/29122). There are many hints and clues on what is coming to R4.3 and what is not.
 # Qubes OS updates Weekly Review - Y2024-W39
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W38 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w39/29296)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W39 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w39/29296)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w38/29149).
@@ -5556,7 +5562,7 @@ Installing templates from RPMs required absolute path. It is fixed.
 It appears that GNU Project is not doing a good job on reviewing & applying submitted patches to grub2. This has made Fedora to maintain their own fork ([discussion here](https://github.com/QubesOS/qubes-issues/issues/9471)).
 # Qubes OS updates Weekly Review - Y2024-W40
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W39 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w40/29407)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W40 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w40/29407)
 
 ### Introduction
 
@@ -5624,7 +5630,7 @@ DNF5 is the default package manager for Fedora 41
 Making split-gpg compatible with Fedora 41 / Thunderbird 128. Dropping support for r4.1
 # Qubes OS updates Weekly Review - Y2024-W41
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W40 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w41/29585)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W41 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w41/29585)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w39/29296).
@@ -5709,7 +5715,7 @@ weekly Linux Kernel updates. As usual, refer to Greg Kroah-Hartman [announcement
 Support for UUID is not yet added to most of end-user command line (qvm-*) and GUI utilities (Qubes Manager). I guess this will be added in forthcoming weeks.
 # Qubes OS updates Weekly Review - Y2024-W42
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W41 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w42/29742)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W42 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w42/29742)
 
 ### Introduction
 
@@ -5843,7 +5849,7 @@ In addition to the usual minor fixes and patches:
 Fedora 41 is scheduled for release very soon. Most of the work for its support is already done. Fedora 39 will become EOL on Tue 2024-11-26
 # Qubes OS updates Weekly Review - Y2024-W43
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W42 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w43/29853)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W43 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w43/29853)
 
 ### Introduction
 
@@ -6046,7 +6052,7 @@ In addition to the usual minor fixes and patches:
 Patches to global clipboard are the basis for Global Clipboard systray widget. Which should happen in the forthcoming weeks.
 # Qubes OS updates Weekly Review - Y2024-W44 & W45
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W43 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w44-w45/30111)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W44 & W45 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w44-w45/30111)
 
 ### Introduction
 
@@ -6574,7 +6580,7 @@ In addition to the usual minor fixes and patches:
 Backporting of many of the improvements from development branch (r4.3) to the current stable release (r4.2) shows that the users on the existing Qubes OS stable release could happily receive not only bug fixes but also enjoy most functionality improvements after some time. The testing period could be few months. This is the price to pay for best class security and stability.
 # Qubes OS updates Weekly Review - Y2024-W46
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W44 & W45 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w46/30247)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W46 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w46/30247)
 
 ### Introduction
 
@@ -6922,7 +6928,7 @@ Notes for Electronics Engineers: Qubes might be appealing to embedded engineers 
 Notes for Android firmware developers & people who need Android MTP: Assigning a dedicated port to qube with Android Studio might fix issues such as [this one](https://github.com/QubesOS/qubes-issues/issues/6330).
 # Qubes OS updates Weekly Review - Y2024-W47
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W46 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w47/30384)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W47 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w47/30384)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w46/30247).
@@ -7266,7 +7272,7 @@ The below packages are all only specific to r4.2 and mostly **backporting** of e
 Users on r4.2 should receive tons of highly noticeable changes very soon after a short testing period. Be prepared to embrace the changes.
 # Qubes OS updates Weekly Review - Y2024-W48
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W47 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w48/30509)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W48 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w48/30509)
 
 ### Introduction
 
@@ -7390,7 +7396,7 @@ In addition to the usual minor fixes and patches:
 I personally did not recognize the SELinux issue with `qubes-meminfo-writer` service before reading about it on Github. Mostly because my VMs have the required memory precisely calculated and pre-allocated. All of my Fedora 41 templates were upgraded in-place from Fedora 40 templates and were affected by that bug. Since I did not want to reinstall new templates, I tried the [suggested](https://github.com/QubesOS/qubes-issues/issues/9244#issuecomment-2493813085) workaround of relabelling the entire template file-system which sadly did not fix my issue. Neither did re-installation of `qubes-utils-selinux` package and trying the relabelling once more. I was about to **setenforce 0**; but I did not want to [make Dan Walsh weep](https://stopdisablingselinux.com/). So I somehow managed to compile the required additional policies and install it in the templates.
 # Qubes OS updates Weekly Review - Y2024-W49
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W48 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w49/30663)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W49 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w49/30663)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w48/30509).
@@ -7686,7 +7692,7 @@ Based on my observation of the ongoing developments, considerable work is going 
 I have to enable sys-gui with KDE Plasma if I want to properly observe the ongoing developments.
 # Qubes OS updates Weekly Review - Y2024-W50
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W49 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w50/30827)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W50 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w50/30827)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w49/30663).
@@ -8047,7 +8053,7 @@ Reformatting your code with Python Black might be also a good idea as it could b
 Here is [A Comprehensive Guide to Python Linters](https://www.marketcalls.in/python/a-comprehensive-guide-to-python-linters-pylint-black-and-ruff-explained.html#3-4-comparison-with-black-and-ruff-) and [How to Auto-Format Your Python Code with Black](https://www.freecodecamp.org/news/auto-format-your-python-code-with-black/).
 # Qubes OS updates Weekly Review - Y2024-W51
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W50 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w51/30990)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W51 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w51/30990)
 
 ### Introduction
 
@@ -8188,7 +8194,7 @@ Adding a missing dependency for qubes-ctap-proxy
 There has been few remaining bugs for Fedora 41 support which were missed during testing period. And they are being fixed quickly.
 # Qubes OS updates Weekly Review - Y2024-W52 (year end special)
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W51 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w52-year-end-special/31188)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W52 (year end special) on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w52-year-end-special/31188)
 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w51/30990).
@@ -8703,7 +8709,7 @@ I started writing this newsletter around mid 2024. The last few weeks were somew
 I am going to continue writing the newsletter in 2025 as it appears to be useful to some other Qubes OS users. But most importantly, observing the pull-requests, commits and issues is highly educational and interesting for me personally.
 # Qubes OS updates Weekly Review - Y2025-W01
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2024-W52 (year end special) on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w01/31337)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W01 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w01/31337)
 
 # Qubes OS updates Weekly Review - Y2025-W01
 
@@ -8814,7 +8820,7 @@ Backporting some AMD-related patches (found on Framework Laptop 13)
 I will write newsletter issues on a Github repo (during week) and paste it later on forum.
 # Qubes OS updates Weekly Review - Y2025-W02
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W01 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w02/31520)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W02 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w02/31520)
 
 # Qubes OS updates Weekly Review - Y2025-W02
 
@@ -9055,7 +9061,7 @@ Minor changes (removing unnecessary dependencies & using more modern libraries)
 There had been some reluctance from users to install/upgrade to Fedora 41 template due to SELinux issues and other bugs. Hopefully everything will be fully fixed and tested by Fedora 40 eol.
 # Qubes OS updates Weekly Review - Y2025-W03 & W4
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W02 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w03-w4/31813)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W03 & W4 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w03-w4/31813)
 
 # Qubes OS updates Weekly Review - Y2025-W03 & W4
 
@@ -9310,7 +9316,7 @@ Testing templates with the latest updates.
 I had limited time this week to review all the commits this week. Please feel free to comment any missing points.
 # Qubes OS updates Weekly Review - Y2025-W05
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W03 & W4 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w05/32006)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W05 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w05/32006)
 
 # Qubes OS updates Weekly Review - Y2025-W05
 
@@ -9406,7 +9412,7 @@ Adding a missing dependency to build it for Debian (13) Trixie.
 There has been fewer updates this week, probably due to FOSDEM 2025.
 # Qubes OS updates Weekly Review - Y2025-W06
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W05 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w06/32159)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W06 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w06/32159)
 
 # Qubes OS updates Weekly Review - Y2025-W06
 
@@ -9499,7 +9505,7 @@ The patch from May 2024 which has been tested on R4.3. Allowing i3 users to chan
 Since major qrexec improvements are somewhat related, I decided to include both of them in this week's report. Even though the `core-admin` one is actually released today.
 # Qubes OS updates Weekly Review - Y2025-W07
 
-**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W06 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w07/32372)
+**Original forum link:** [Qubes OS updates Weekly Review - Y2025-W07 on Qubes OS Forum](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w07/32372)
 
 # Qubes OS updates Weekly Review - Y2025-W07
 
