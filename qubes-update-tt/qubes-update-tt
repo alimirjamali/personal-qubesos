@@ -348,7 +348,6 @@ synthesize_template_cmds() {
 
 	if ${SKIPBROKEN}; then
 		cmd_apt+=(--ignore-missing)
-		cmd_dnf+=(--skip-unavailable)
 		cmd_pacman+=(--nodeps)
 	fi
 
