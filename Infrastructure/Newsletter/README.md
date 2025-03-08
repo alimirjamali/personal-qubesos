@@ -94,7 +94,9 @@
 Since I wanted to track and observe Qubes OS development changes, A custom
 Python script is rapidly prototyped to fetch list of packages per year/week. There are 529 new zst, deb & yum packages uploaded to Qubes repositories during last week excluding the _Contrib_ packages. This is for all Qubes OS releases (r4.1, r4.2, r4.3, current, testing, ... ).
 
-[details="Sorted package list"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 fwupd-qubes-dom0-1.8.17-1.fc37.noarch.rpm
 fwupd-qubes-dom0-1.8.17-1.fc39.noarch.rpm
@@ -824,7 +826,7 @@ xserver-xorg-input-qubes_4.2.13-1+jammy1_amd64.deb
 xserver-xorg-qubes-common_4.2.13-1+jammy1_amd64.deb
 xserver-xorg-video-dummyqbs_4.2.13-1+jammy1_amd64.deb
 ```
-[/details]
+</details>
 
 Independently, list of last updated repositories could be found at Qubes OS [Github](https://github.com/orgs/QubesOS/repositories?language=&sort=&type=all).
 
@@ -848,7 +850,9 @@ There are two major projects going one. One is related to [Dynamic audiovm switc
 Following my previous [weekly updates post](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w18/26298), this is the 2nd instalment of the Qubes OS weekly review of new packages uploaded to Qubes OS repositories. I forgot to post the [link](https://github.com/alimirjamali/personal-qubesos/tree/main/Newsletter) to the script used to fetch the list of new packages per year/week. It needs rsync to run (and network of course). Run it with `--help` to see the syntax.
 
 
-[details="Alphabetically sorted list of new packages for Y2024-W19"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 disk-password-gui_1.0.0-1+jammy1_amd64.deb
 grubby-dummy-9.0.0-4.fc40.noarch.rpm
@@ -1085,7 +1089,7 @@ xserver-xorg-video-dummyqbs_4.2.14-1+deb13u1_amd64.deb
 xserver-xorg-video-dummyqbs_4.2.14-1+jammy1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.2.14-1+deb13u1_amd64.deb
 ```
-[/details]
+</details>
 
 #### Minor issues while reviewing
 - Some of relatively old software are being packaged and uploaded for Debian/Ubuntu. The 1st item in the above list is `disk-password-gui` which has not received any update in 6 month and is now packaged for Ubuntu Jammy 22.04. Some CI/CD glitch?
@@ -1116,7 +1120,9 @@ xserver-xorg-video-dummyqbs-dbgsym_4.2.14-1+deb13u1_amd64.deb
 This is the 3rd instalment of my weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to prepare this newsletter is available in [previous version](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w19/26417).
 
 
-[details="Alphabetically sorted list of new packages for Y2024-W20"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 i3_4.23-1+deb11u1_amd64.deb
 i3_4.23-1+deb12u1_amd64.deb
@@ -1228,7 +1234,7 @@ qubes-mgmt-salt-base-4.1.7-1.fc39.noarch.rpm
 qubes-mgmt-salt-base-4.1.7-1.fc40.noarch.rpm
 qubes-mgmt-salt-base_4.1.7-1+jammy1_all.deb
 ```
-[/details]
+</details>
 
 ### Highlights
 AudioVM project and overall Audio sub-system improvements is the major highlight. The path to r4.3 is going forward. I wonder if sys-audio would be shipped by default in r4.3.
@@ -1257,7 +1263,9 @@ This is the 4th instalment of my weekly review of new packages uploaded to Qubes
 
 There is small issue with **[qubesos-bot](https://github.com/qubesos-bot)** generated updates-status. The diff links for Kernel Changes is broken. I will try to look into it later as a fun side-project.
 
-[details="Alphabetically sorted list of new packages for Y2024-W21"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 kernel-515-5.15.159-1.qubes.fc32.x86_64.rpm
 kernel-515-5.15.159-1.qubes.fc37.x86_64.rpm
 kernel-515-devel-5.15.159-1.qubes.fc32.x86_64.rpm
@@ -1575,7 +1583,7 @@ xen-hypervisor-4.17.4-3.fc37.x86_64.rpm
 xen-libs-4.17.4-3.fc37.x86_64.rpm
 xen-licenses-4.17.4-3.fc37.x86_64.rpm
 xen-runtime-4.17.4-3.fc37.x86_64.rpm
-[/details]
+</details>
 
 ### Highlights
 More r4.3 testing templates are built and uploaded to the repositories. I see major moves on r4.3 preparations. Some improvements for Archlinux template.
@@ -1601,8 +1609,9 @@ More r4.3 testing templates are built and uploaded to the repositories. I see ma
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to prepare this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w21/26670).
 
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
 
-[details="Alphabetically sorted list of new packages for Y2024-W22"]
 microcode_ctl-2.1.20240531-58.qubes1.fc32.x86_64.rpm
 microcode_ctl-2.1.20240531-58.qubes1.fc37.x86_64.rpm
 qubes-artwork_4.2.1-1+deb12u1_amd64.deb
@@ -1650,7 +1659,7 @@ qubes-usb-proxy_1.2.2+deb13u1_amd64.deb
 qubes-usb-proxy_1.2.2+jammy1_amd64.deb
 qubes-usb-proxy-dom0-1.2.2-1.fc32.noarch.rpm
 qubes-usb-proxy-dom0-1.2.2-1.fc37.noarch.rpm
-[/details]
+</details>
 
 ### Highlights
 Major upgrade for Qubes Video Companion. Getting closer to Fedora 40 templates release. Qubes OS r4.3 preparations. A fix for some Nitrokey dongles. A fix for DispVM tags & features.
@@ -1673,8 +1682,9 @@ Major upgrade for Qubes Video Companion. Getting closer to Fedora 40 templates r
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to prepare this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w22/26812)
 
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
 
-[details="Alphabetically sorted list of new packages for Y2024-W23"]
 ```bash
 amd-gpu-firmware-20240513-1.fc32.noarch.rpm
 amd-gpu-firmware-20240513-1.fc37.noarch.rpm
@@ -1782,7 +1792,7 @@ realtek-firmware-20240513-1.fc37.noarch.rpm
 tiwilink-firmware-20240513-1.fc32.noarch.rpm
 tiwilink-firmware-20240513-1.fc37.noarch.rpm
 ```
-[/details]
+</details>
 
 
 ### Highlights
@@ -1799,7 +1809,9 @@ This week is relatively quiet. The new Qubes Video Companion v1.1.1.1 from last 
 
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w23/26930)
 
-[details="Alphabetically sorted list of new packages for Y2024-W24"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 kernel-510-5.10.218-1.fc32.qubes.x86_64.rpm
 kernel-510-devel-5.10.218-1.fc32.qubes.x86_64.rpm
 kernel-510-qubes-vm-5.10.218-1.fc32.qubes.x86_64.rpm
@@ -1995,7 +2007,7 @@ qubes-vm-networking-4.3.1-1-x86_64.pkg.tar.zst
 qubes-vm-passwordless-root-4.3.1-1-x86_64.pkg.tar.zst
 qubes-vm-qrexec-4.2.20-1-x86_64.pkg.tar.zst
 qubes-vm-utils-4.3.0-1-x86_64.pkg.tar.zst
-[/details]
+</details>
 
 ### Highlights
 Unlike previous week which was relatively quiet (possibly due to [Xen Project Summit 2024](https://forum.qubes-os.org/t/xen-project-summit-2024-vods-are-available-on-youtube/27001) in Lisbon), we have an enormous amount of updates and new packages this week. The highlights are the **new device API**. Proper fixing of VNC GUIVM as well as the usual fixes and cleanups.
@@ -2038,7 +2050,9 @@ I take the opportunity here to inform you that Marek has finalized the workflow 
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w24/27078)
 
-[details="Alphabetically sorted list of new packages for Y2024-W25"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 kernel-6.6.33-1.qubes.fc37.x86_64.rpm
 kernel-devel-6.6.33-1.qubes.fc37.x86_64.rpm
 kernel-latest-6.9.4-1.qubes.fc32.x86_64.rpm
@@ -2443,7 +2457,7 @@ xserver-xorg-video-dummyqbs_4.2.15-1+deb13u1_amd64.deb
 xserver-xorg-video-dummyqbs_4.2.15-1+jammy1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.2.15-1+deb12u1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.2.15-1+deb13u1_amd64.deb
-[/details]
+</details>
 
 ### Highlights
 New set of templates with latest updates & fixes. Preparation for Qubes OS R4.2.2 ISO. Adding some flexibility for non ASCII characters within path/filenames for inner VM transfer operations. This will be highly appreciated by users who need Non-Latin/UTF-8 filenames. This is opt-in.
@@ -2465,7 +2479,9 @@ R4.2 -> R4.3 upgrade tool in-place upgrade tool is [kickstarted](https://github.
 
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w25/27224)
 
-[details="Alphabetically sorted list of new packages for Y2024-W26"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 python3-dnf-plugins-qubes-hooks-4.2.35-1.fc37.noarch.rpm
 python3-dnf-plugins-qubes-hooks-4.2.35-1.fc38.noarch.rpm
 python3-dnf-plugins-qubes-hooks-4.2.35-1.fc39.noarch.rpm
@@ -2661,7 +2677,7 @@ qubes-vm-core-4.3.3-1-x86_64.pkg.tar.zst
 qubes-vm-keyring-4.3.3-1-x86_64.pkg.tar.zst
 qubes-vm-networking-4.3.3-1-x86_64.pkg.tar.zst
 qubes-vm-passwordless-root-4.3.3-1-x86_64.pkg.tar.zst
-[/details]
+</details>
 
 ### Highlights
 Multi-monitor support for Qubes Video Companion screen-sharing.
@@ -2708,7 +2724,9 @@ A fix for DNS leakage when only one DNS is set in a NetVM.
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w26/27373)
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 kernel-510-5.10.220-1.fc32.qubes.x86_64.rpm
 kernel-510-devel-5.10.220-1.fc32.qubes.x86_64.rpm
@@ -3062,7 +3080,7 @@ xserver-xorg-video-dummyqbs_4.2.16-1+jammy1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.2.16-1+deb12u1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.2.16-1+deb13u1_amd64.deb
 ```
-[/details]
+</details>
 
 
 ### Highlights
@@ -3121,7 +3139,9 @@ openssh v9.3-11 is also packaged for dom0. While ordinary users do not need this
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w27/27521)
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 openssh-9.3p1-11.fc37.x86_64.rpm
 openssh-askpass-9.3p1-11.fc37.x86_64.rpm
@@ -3133,7 +3153,7 @@ pam_ssh_agent_auth-0.10.4-9.11.fc37.x86_64.rpm
 qubes-release-4.2-7.fc37.noarch.rpm
 qubes-release-notes-4.2-7.fc37.noarch.rpm
 ```
-[/details]
+</details>
 
 
 ### Highlights
@@ -3150,7 +3170,9 @@ The changes for Qubes OS 4.2.2 has been covered in the previous versions of this
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w27/27521)
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 disk-password-gui_1.0.1-1+deb12u1_amd64.deb
 disk-password-gui_1.0.1-1+deb13u1_amd64.deb
@@ -3467,7 +3489,7 @@ xen-utils-guest_4.14.6-10+deb10u1_amd64.deb
 xen-utils-guest_4.14.6-10+deb11u1_amd64.deb
 xen-utils-guest_4.14.6-10+deb12u1_amd64.deb
 ```
-[/details]
+</details>
 
 ### Highlights
 A busy week after summer breaks.
@@ -3558,7 +3580,9 @@ It should be evident that most of the new changes are packaged for r4.3 and test
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w29/27819)
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 kernel-latest-6.9.10-1.qubes.fc32.x86_64.rpm
 kernel-latest-6.9.10-1.qubes.fc37.x86_64.rpm
@@ -3576,7 +3600,7 @@ qubes-gpg-sign_1.0.0-1+jammy1_amd64.deb
 qubes-gpg-sign-1.0.0-1-x86_64.pkg.tar.zst
 qubes-gpg-sign-debug-1.0.0-1-x86_64.pkg.tar.zst
 ```
-[/details]
+</details>
 
 ### Highlights
 
@@ -3628,7 +3652,9 @@ I have received a lot of heartwarming messages last week. Thank you very much fo
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w30/27952)
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 kernel-6.6.42-1.qubes.fc37.x86_64.rpm
 kernel-devel-6.6.42-1.qubes.fc37.x86_64.rpm
@@ -3927,7 +3953,7 @@ xserver-xorg-video-dummyqbs-dbgsym_4.2.16-1+deb13u1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.2.17-1+deb12u1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.2.17-1+deb13u1_amd64.deb
 ```
-[/details]
+</details>
 
 ### Highlights
 - Fixes for two security bugs
@@ -3965,7 +3991,9 @@ I finally updated the test machine to R4.3 (development stream) to follow the ne
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w31-w32/28249)
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 amd-gpu-firmware-20240811-1.fc37.noarch.rpm
 amd-ucode-firmware-20240811-1.fc37.noarch.rpm
@@ -4480,7 +4508,7 @@ xfwm4_4.18.0-1+jammy1_amd64.deb
 xfwm4-dbgsym_4.18.0-1+deb12u1_amd64.deb
 xfwm4-dbgsym_4.18.0-1+deb13u1_amd64.deb
 ```
-[/details]
+</details>
 
 ### Highlights
 - Extremely busy week.
@@ -4525,7 +4553,9 @@ Fedora 41 testing repository (not the template) was created few days ago. Most o
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w33/28415)
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 amd-gpu-firmware-20240811-1.fc41.noarch.rpm
 amd-ucode-firmware-20240811-1.fc41.noarch.rpm
@@ -4932,7 +4962,7 @@ xserver-xorg-video-dummyqbs_4.2.18-1+jammy1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.2.18-1+deb12u1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.2.18-1+deb13u1_amd64.deb
 ```
-[/details]
+</details>
 
 
 ### Highlights
@@ -4995,7 +5025,9 @@ Last two weeks were extremely busy due to upgrade of dom0 to Fedora 41 for r4.3 
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w35/28711).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 awesome-4.3-15.fc37.x86_64.rpm
 awesome-4.3-15.fc39.x86_64.rpm
@@ -5074,7 +5106,7 @@ xfdesktop-4.18.1-7.fc39.x86_64.rpm
 xfdesktop-4.18.1-7.fc40.x86_64.rpm
 xfdesktop-4.18.1-7.fc41.x86_64.rpm
 ```
-[/details]
+</details>
 
 ### Highlights
 Qubes OS R4.2.3-rc1
@@ -5126,7 +5158,9 @@ It appears that Qubes OS R4.2.3 is mostly a patch release (no major Xen upgrade 
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w36/28884).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 kernel-latest-6.10.7-1.qubes.fc37.x86_64.rpm
 kernel-latest-devel-6.10.7-1.qubes.fc37.x86_64.rpm
@@ -5187,7 +5221,7 @@ qubes-desktop-linux-menu-1.2.1-1.fc40.noarch.rpm
 qubes-desktop-linux-menu-1.2.1-1.fc41.noarch.rpm
 qubes-desktop-linux-menu_1.2.1-1+jammy1_amd64.deb
 ```
-[/details]
+</details>
 
 ### Highlights
 - Qubes OS r4.2.3 will be released very soon
@@ -5257,7 +5291,9 @@ Qubes OS [summit 2024](https://vpub.dasharo.com/e/16/qubes-os-summit-2024) did t
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w38/29149).
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 anaconda-41.28-2.fc41.x86_64.rpm
 anaconda-core-41.28-2.fc41.x86_64.rpm
@@ -5530,7 +5566,7 @@ xscreensaver-gl-base-6.08-3.fc41.x86_64.rpm
 xscreensaver-gl-extras-6.08-3.fc41.x86_64.rpm
 xscreensaver-gl-extras-gss-6.08-3.fc41.x86_64.rpm
 ```
-[/details]
+</details>
 
 ### Highlights
 - Mostly patches & minor new features.
@@ -5590,7 +5626,9 @@ It appears that GNU Project is not doing a good job on reviewing & applying subm
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w39/29296).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 qubes-core-dom0-4.3.7-1.fc41.noarch.rpm
 qubes-core-dom0-linux-4.3.3-1.fc41.x86_64.rpm
@@ -5621,7 +5659,7 @@ qubes-vm-keyring-4.3.7-1-x86_64.pkg.tar.zst
 qubes-vm-networking-4.3.7-1-x86_64.pkg.tar.zst
 qubes-vm-passwordless-root-4.3.7-1-x86_64.pkg.tar.zst
 ```
-[/details]
+</details>
 
 ### Highlights
 
@@ -5658,7 +5696,9 @@ Making split-gpg compatible with Fedora 41 / Thunderbird 128. Dropping support f
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions ](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w39/29296).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 kernel-6.6.54-1.qubes.fc37.x86_64.rpm
 kernel-6.6.54-1.qubes.fc41.x86_64.rpm
@@ -5712,7 +5752,7 @@ qubes-core-qrexec-vm-selinux-4.3.0-1.fc40.x86_64.rpm
 qubes-core-qrexec-vm-selinux-4.3.0-1.fc41.x86_64.rpm
 qubes-vm-qrexec-4.3.0-1-x86_64.pkg.tar.zst
 ```
-[/details]
+</details>
 
 ### Highlights
 - Supports of **UUID** is added to Admin API to target VMs.
@@ -5745,7 +5785,9 @@ Support for UUID is not yet added to most of end-user command line (qvm-*) and G
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w41/29585).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 python3-dnf-plugins-qubes-hooks-4.3.8-1.fc39.noarch.rpm
 python3-dnf-plugins-qubes-hooks-4.3.8-1.fc40.noarch.rpm
@@ -5846,7 +5888,7 @@ xen-licenses-4.19.0-4.fc41.x86_64.rpm
 xen-runtime-4.17.5-3.fc37.x86_64.rpm
 xen-runtime-4.19.0-4.fc41.x86_64.rpm
 ```
-[/details]
+</details>
 
 ### Highlights
 - Security fix for KDE users
@@ -5880,7 +5922,9 @@ Fedora 41 is scheduled for release very soon. Most of the work for its support i
 Weekly review of new packages uploaded to Qubes OS repositories. Notes on how it is prepared and what resources are used to write this newsletter is available in [previous versions](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w42/29742).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 libvirt-10.5.0-2.fc41.x86_64.rpm
 libvirt-client-10.5.0-2.fc41.x86_64.rpm
@@ -6029,7 +6073,7 @@ qubes-vm-networking-4.3.9-1-x86_64.pkg.tar.zst
 qubes-vm-passwordless-root-4.3.9-1-x86_64.pkg.tar.zst
 qubes-vm-xen-4.19.0-4-x86_64.pkg.tar.zst
 ```
-[/details]
+</details>
 
 ### Highlights
 - **KDE** & (some) **Wayland** related patches.
@@ -6084,7 +6128,9 @@ Patches to global clipboard are the basis for Global Clipboard systray widget. W
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w43/29853).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 initial-setup-0.3.101-7.fc41.x86_64.rpm
 initial-setup-gui-0.3.101-7.fc41.x86_64.rpm
@@ -6505,7 +6551,7 @@ xserver-xorg-video-dummyqbs-dbgsym_4.2.19-1+deb13u1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.3.1-1+deb12u1_amd64.deb
 xserver-xorg-video-dummyqbs-dbgsym_4.3.1-1+deb13u1_amd64.deb
 ```
-[/details]
+</details>
 
 
 ### Highlights
@@ -6612,7 +6658,9 @@ Backporting of many of the improvements from development branch (r4.3) to the cu
 
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w44-w45/30111).
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```
 amd-gpu-firmware-20241110-1.fc37.noarch.rpm
 amd-gpu-firmware-20241110-1.fc41.noarch.rpm
@@ -6863,7 +6911,7 @@ xen-libs-4.17.5-4.fc37.x86_64.rpm
 xen-licenses-4.17.5-4.fc37.x86_64.rpm
 xen-runtime-4.17.5-4.fc37.x86_64.rpm
 ```
-[/details]
+</details>
 
 
 
@@ -6961,7 +7009,9 @@ Notes for Android firmware developers & people who need Android MTP: Assigning a
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w46/30247).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 disk-password-gui_1.0.1-1+jammy1_amd64.deb
 fwupd-qubes-vm_1.8.14-5+noble1_amd64.deb
@@ -7247,7 +7297,7 @@ xserver-xorg-video-dummyqbs_4.2.19-1+noble1_amd64.deb
 xserver-xorg-video-dummyqbs_4.3.1-1+jammy1_amd64.deb
 xserver-xorg-video-dummyqbs_4.3.1-1+noble1_amd64.deb
 ```
-[/details]
+</details>
 
 ### Highlights
 - **Backporting** to r4.2
@@ -7307,7 +7357,9 @@ Users on r4.2 should receive tons of highly noticeable changes very soon after a
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w47/30384).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 initial-setup-0.3.101-9.fc41.x86_64.rpm
 initial-setup-gui-0.3.101-9.fc41.x86_64.rpm
@@ -7395,7 +7447,7 @@ qubes-utils-selinux-4.2.18-1.fc39.x86_64.rpm
 qubes-utils-selinux-4.2.18-1.fc40.x86_64.rpm
 qubes-utils-selinux-4.2.18-1.fc41.x86_64.rpm
 ```
-[/details]
+</details>
 
 
 ### Highlights
@@ -7430,7 +7482,9 @@ I personally did not recognize the SELinux issue with `qubes-meminfo-writer` ser
 ### Introduction
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w48/30509).
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 grubby-dummy-9.0.0-4.fc41.noarch.rpm
 libqubes-pure-dev_4.2.18+jammy1_amd64.deb
@@ -7673,7 +7727,7 @@ xorg-x11-server-source-1.20.14-27.fc37.noarch.rpm
 xorg-x11-server-source-21.1.14-3.fc41.noarch.rpm
 
 ```
-[/details]
+</details>
 
 ### Highlights
 - Release of [Fedora 41](https://forum.qubes-os.org/t/fedora-41-templates-available/30618) (GNOME, XFCE, Minimal) templates.
@@ -7728,7 +7782,9 @@ I have to enable sys-gui with KDE Plasma if I want to properly observe the ongoi
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w49/30663).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 amd-gpu-firmware-20241210-1.fc37.noarch.rpm
 amd-gpu-firmware-20241210-1.fc41.noarch.rpm
@@ -8028,7 +8084,7 @@ xserver-xorg-video-dummyqbs_4.3.2-1+jammy1_amd64.deb
 xserver-xorg-video-dummyqbs_4.3.2-1+noble1_amd64.deb
 
 ```
-[/details]
+</details>
 
 ### Highlights
 - Reformatting Python based repositories with **Python Black** (see epilogue for more info).
@@ -8091,7 +8147,9 @@ Here is [A Comprehensive Guide to Python Linters](https://www.marketcalls.in/pyt
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w50/30827).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 python3-fido2_1.1.2-3+deb12u1_all.deb
 python3-fido2_1.1.2-3+deb13u1_all.deb
@@ -8186,7 +8244,7 @@ split-gpg2-tests_1.1.2+deb13u1_all.deb
 split-gpg2-tests_1.1.2+jammy1_all.deb
 split-gpg2-tests_1.1.2+noble1_all.deb
 ```
-[/details]
+</details>
 
 ### Highlights
 - **Sequoia Chameleon support** for Split GPG.
@@ -8232,7 +8290,9 @@ There has been few remaining bugs for Fedora 41 support which were missed during
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w51/30990).
 
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 libqubes-pure-dev_4.2.19+deb12u1_amd64.deb
 libqubes-pure-dev_4.2.19+deb13u1_amd64.deb
@@ -8705,7 +8765,7 @@ xserver-xorg-video-dummyqbs_4.3.4-1+jammy1_amd64.deb
 xserver-xorg-video-dummyqbs_4.3.4-1+noble1_amd64.deb
 
 ```
-[/details]
+</details>
 
 ### Highlights
 - The nasty SELinux label bug (memory ballooning issue on Fedora 41) is fixed.
@@ -8748,7 +8808,9 @@ I am going to continue writing the newsletter in 2025 as it appears to be useful
 
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2024-w52-year-end-special/31188).
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 i3-settings-qubes-1.12-1.fc37.noarch.rpm
 i3-settings-qubes-1.12-1.fc40.noarch.rpm
@@ -8815,7 +8877,7 @@ xen-libs-4.19.1-1.fc41.x86_64.rpm
 xen-licenses-4.19.1-1.fc41.x86_64.rpm
 xen-runtime-4.19.1-1.fc41.x86_64.rpm
 ```
-[/details]
+</details>
 
 ### Highlights
 
@@ -8858,7 +8920,9 @@ I will write newsletter issues on a Github repo (during week) and paste it later
 
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w01/31337).
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 amd-gpu-firmware-20250109-1.fc37.noarch.rpm
 amd-gpu-firmware-20250109-1.fc41.noarch.rpm
@@ -9045,7 +9109,7 @@ xen-libs-4.19.1-2.fc41.x86_64.rpm
 xen-licenses-4.19.1-2.fc41.x86_64.rpm
 xen-runtime-4.19.1-2.fc41.x86_64.rpm
 ```
-[/details]
+</details>
 
 ### Highlights
 * Reworked domains widget.
@@ -9098,7 +9162,9 @@ There had been some reluctance from users to install/upgrade to Fedora 41 templa
 
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w02/31520).
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 libnvpair3-2.3.0-1.fc37.x86_64.rpm
 libnvpair3-2.3.0-1.fc41.x86_64.rpm
@@ -9296,7 +9362,7 @@ zfs-dracut-2.3.0-1.fc41.noarch.rpm
 zfs-test-2.3.0-1.fc37.x86_64.rpm
 zfs-test-2.3.0-1.fc41.x86_64.rpm
 ```
-[/details]
+</details>
 
 ### Highlights
 * Considerable work on Archlinux template as a daily driver.
@@ -9352,7 +9418,9 @@ I had limited time this week to review all the commits this week. Please feel fr
 
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w03-w4/31813).
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 kernel-515-5.15.177-1.qubes.fc37.x86_64.rpm
 kernel-515-devel-5.15.177-1.qubes.fc37.x86_64.rpm
@@ -9415,7 +9483,7 @@ xen-utils-guest_5.0.2-1+deb13u1_amd64.deb
 xen-utils-guest_5.0.2-1+jammy1_amd64.deb
 xen-utils-guest_5.0.2-1+noble1_amd64.deb
 ```
-[/details]
+</details>
 
 ### Highlights
 - Qubes OS 4.2.4-rc1
@@ -9447,7 +9515,9 @@ There has been fewer updates this week, probably due to FOSDEM 2025.
 
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w05/32006).
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 i3_4.23-2+deb12u1_amd64.deb
 i3-4.23-2.fc37.x86_64.rpm
@@ -9503,7 +9573,7 @@ qubes-core-qrexec-vm-selinux-4.3.2-1.fc40.x86_64.rpm
 qubes-core-qrexec-vm-selinux-4.3.2-1.fc41.x86_64.rpm
 qubes-vm-qrexec-4.3.2-1-x86_64.pkg.tar.zst
 ```
-[/details]
+</details>
 
 ### Highlights
 - Major qrexec _performance improvements_
@@ -9539,7 +9609,9 @@ Since major qrexec improvements are somewhat related, I decided to include both 
 
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here](https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-y2025-w06/32159).
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 amd-gpu-firmware-20250211-1.fc37.noarch.rpm
 amd-gpu-firmware-20250211-1.fc41.noarch.rpm
@@ -9644,7 +9716,7 @@ xen-libs-4.17.5-6.fc37.x86_64.rpm
 xen-licenses-4.17.5-6.fc37.x86_64.rpm
 xen-runtime-4.17.5-6.fc37.x86_64.rpm
 ```
-[/details]
+</details>
 
 ### Highlights
 - Qubes OS R4.2.4

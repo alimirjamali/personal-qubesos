@@ -4,11 +4,14 @@
 
 Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here]().
 
-[details="Alphabetically sorted list of new packages uploaded to Qubes OS repositories"]
+<details>
+<summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
+
 ```bash
 
 ```
-[/details]
+
+</details>
 
 ### Highlights
 - Highlight
