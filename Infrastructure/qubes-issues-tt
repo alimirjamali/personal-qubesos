@@ -55,6 +55,14 @@ parser.add_argument('--label', nargs='+', metavar='LABEL', dest='labels',
 
 parser.add_argument('--quiet', '-q', action='store_true', help='Disable spinner')
 
+parser.add_argument(
+    '--repo',
+    metavar="REPOSITORY",
+    dest="repo",
+    default="QubesOS/qubes-issues",
+    help="Custom repository (default = QubesOS/qubes-issues)",
+)
+
 sort_group = parser.add_mutually_exclusive_group()
 sort_group.add_argument('--newest', action='store_true',
     help='Sort issues ascending from newest to oldest')
@@ -80,7 +88,9 @@ def keywords_check(issue: list, keywords: list, key, value) -> bool:
 
 def main():
     args = parser.parse_args()
-    url ='https://api.github.com/repos/QubesOS/qubes-issues/issues?per_page=100'
+    url ='https://api.github.com/repos/{}/issues?per_page=100'.format(
+        args.repo
+    )
     headers={
         'Accept': 'application/vnd.github+json'}
     token = open('token').readline().rstrip()
