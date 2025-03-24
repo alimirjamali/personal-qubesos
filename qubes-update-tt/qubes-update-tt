@@ -77,6 +77,8 @@ options:
                             behavior could be changed to 'shutdown' or keep
                             them 'running|keep-running' after update.
                             paused or transient templates will not be touched!
+  --interactive             Do not filter terminal escape sequences. This is
+                            DANGEROUS when output is a terminal emulator.
   --apt OPTIONS             Additional custom options for apt(8)
   --dnf OPTIONS             Additional custom options for dnf(8)
   --emerge OPTIONS          Additional custom options for emerge(1)
@@ -117,6 +119,7 @@ declare IFUPDATES=false
 declare AFTERUPDATE='revert-state'
 declare SUBCOMMAND=""
 declare NOTIFYSEND=false
+declare INTERACTIVE=false
 
 declare -a template_patterns=()
 declare -a cmd_apt=(apt-get)
@@ -161,6 +164,7 @@ parse_cmd_parameters() {
 		--longoptions autostart,auto,no-autostart,no-auto \
 		--longoptions if-updates-available,notify-send \
 		--longoptions after-update:,after: \
+		--longoptions interactive \
 		--longoptions apt:,dnf:,emerge:,pacman: -- "${@}")
 
 	[[ ${?} -ne 0 ]] && abort 22 "Invalid option!"
@@ -190,6 +194,9 @@ parse_cmd_parameters() {
 				IFUPDATES=true;;
 			--after-update|--after)
 				AFTERUPDATE="${2}"; shift;;
+			--interactive)
+				INTERACTIVE=true;
+				qrexec_agent="qrexec-client";;
 			--apt) cmd_apt+=(${2}); shift;;
 			--dnf) cmd_dnf+=(${2}); shift;;
 			--emerge) cmd_emerge+=(${2}); shift;;
@@ -406,18 +413,23 @@ qrexec() {
 		message "Running as ${user} on ${domain}: ${@}"
 	fi
 	if [ ${qrexec_agent} = "qrexec-client" ]; then
-		qrexec_cmd=(qrexec-client -w 60 -d ${domain} ${user}:"${@}")
+		qrexec_cmd=(qrexec-client -w 60 -d ${domain})
+		if $INTERACTIVE; then
+			qrexec_cmd+=(${user}:"script --quiet --return --command \"${@}\"")
+		else
+			qrexec_cmd+=(${user}:"${@}")
+		fi
 	elif [ ${qrexec_agent} = "qvm-run" ]; then
-		qrexec_cmd=(qvm-run --user=${user} --no-auto --no-gui \
-			--pass-io --filter-escape-chars)
-			if [ -t 1 ]; then
-				qrexec_cmd+=(--color-output=${color_output})
-				qrexec_cmd+=(--color-stderr=${color_stderr})
-			else
-				qrexec_cmd+=(--no-color-output)
-				qrexec_cmd+=(--no-color-stderr)
-			fi
-			qrexec_cmd+=(${domain} -- "${@}")
+		qrexec_cmd=(qvm-run --user=${user} --no-auto --no-gui --pass-io)
+		qrexec_cmd+=(--filter-escape-chars)
+		if [ -t 1 ]; then
+			qrexec_cmd+=(--color-output=${color_output})
+			qrexec_cmd+=(--color-stderr=${color_stderr})
+		else
+			qrexec_cmd+=(--no-color-output)
+			qrexec_cmd+=(--no-color-stderr)
+		fi
+		qrexec_cmd+=(${domain} -- "${@}")
 	else
 		abort 22 "Invalid qrexec agent: ${qrexec_agent}"
 	fi
