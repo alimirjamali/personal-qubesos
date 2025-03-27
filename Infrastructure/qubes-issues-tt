@@ -134,10 +134,10 @@ def main():
     if args.limit:
         issues = issues[:args.limit]
 
-    print('{:^51}   {:^9}   {:^30}'.format('URL', 'Comments', 'Title'))
+    print('{:<10}{:<10}{}'.format('Number', 'Comments', 'Title'))
     for issue in issues:
-        print('{:<51} : {:^9} : {}'.format(
-            issue['html_url'],
+        print('{:<10}{:<10}{}'.format(
+            issue['number'],
             issue['comments'],
             issue['title']))
 
