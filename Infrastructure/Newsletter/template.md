@@ -1,4 +1,4 @@
-# Qubes OS updates Weekly Review - Y2025-W0?
+# Qubes OS updates Weekly Review - Y2025-W??
 
 ### Introduction
 
