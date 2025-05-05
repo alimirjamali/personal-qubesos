@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Weekly review of new packages uploaded to Qubes OS repositories. Link to previous version [here]().
+Weekly review of new packages uploaded to Qubes OS repositories. Link to previous Newsletter [here]().
 
 <details>
 <summary>Alphabetically sorted list of new packages uploaded to Qubes OS repositories</summary>
