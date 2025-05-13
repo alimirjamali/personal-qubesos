@@ -93,7 +93,6 @@ def main():
     )
     headers={
         'Accept': 'application/vnd.github+json'}
-    token = open('token').readline().rstrip()
     issues = list()
     if args.quiet:
         spinner = TTSpinner.DummySpinner(sys.stderr)
