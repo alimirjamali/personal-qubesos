@@ -1,82 +1,118 @@
 #!/usr/bin/env python3
-#                                                                                                                                   
+#
 # The Qubes OS Tweak Tools, https://github.com/alimirjamali/personal-qubesos
 #
-# Copyright (C) 2024  Ali Mirjamali <ali@mirjamali.com>                                                        
-#                                                                                                                                   
-# This program is free software; you can redistribute it and/or modify                                                              
-# it under the terms of the GNU Lesser General Public License as published by                                                       
-# the Free Software Foundation; either version 2.1 of the License, or                                                               
-# (at your option) any later version.                                                                                               
-#                                                                                                                                   
-# This program is distributed in the hope that it will be useful,                                                                   
-# but WITHOUT ANY WARRANTY; without even the implied warranty of                                                                    
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                                                                     
-# GNU Lesser General Public License for more details.                                                                               
-#                                                                                                                                   
-# You should have received a copy of the GNU Lesser General Public License                                                          
-# along with this program; if not, see <http://www.gnu.org/licenses/>.                                                              
-# 
+# Copyright (C) 2024  Ali Mirjamali <ali@mirjamali.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation; either version 2.1 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program; if not, see <http://www.gnu.org/licenses/>.
+#
 
 
 import argparse
-from datetime import datetime
+from datetime import datetime, date, timedelta
+import dateutil.parser
 import io
+import json
 import os
 import random
 import re
+import requests
 import signal
 import sys
 import subprocess
 import time
 
 from importlib.machinery import SourceFileLoader
+
 sys.dont_write_bytecode = True
-TTSpinner = SourceFileLoader("spinner", 
-    "./spinner.py").load_module()
+TTSpinner = SourceFileLoader("spinner", "./spinner.py").load_module()
 
-upstream_servers = ["mirrors.nju.edu.cn/qubes",
-                    "mirrors.qontinuum.space/qubes-os",
-                    "ftp.rnl.tecnico.ulisboa.pt/pub/qubesos",
-                    "mirrors.kernel.org/qubes"]
+try:
+    Credentials = SourceFileLoader('credentials',
+        './credentials.py').load_module()
+    username = Credentials.USER
+    password = Credentials.PASSWORD
+except:
+    username='guest'
+    password='guest'
 
-''' broken rsync servers '''
+upstream_servers = [
+    "mirrors.nju.edu.cn/qubes",
+    "mirrors.qontinuum.space/qubes-os",
+    "ftp.rnl.tecnico.ulisboa.pt/pub/qubesos",
+    "mirrors.kernel.org/qubes",
+]
+
+""" broken rsync servers """
 # "nl.mirror.flokinet.net/qubes",
 # "ro.mirror.flokinet.net/qubes",
+
 
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
+
 def signal_handler(sig, frame):
-    eprint('\nProgram interrupted by user!')
+    eprint("\nProgram interrupted by user!")
     sys.exit(1)
+
+
 signal.signal(signal.SIGINT, signal_handler)
 
 parser = argparse.ArgumentParser(
-        prog='qubes-observer-tt',
-        description='Listing Qubes OS packages of specific week of Year',
-        epilog='Contrib repo is excluded in this version')
-parser.add_argument('year', type=int, help='2 or 4-digit year')
-parser.add_argument('week', type=int, help='week of year')
-parser.add_argument('--release', action="store",
-        choices=['r4.1', 'r4.2', 'r4.3'],
-        help='Limit the results only to one release')
-parser.add_argument('--mirror', action='store',
-        help='Provide rsync mirror address rather than a random one')
-parser.add_argument('--show-misc', action='store_true',
-        help="Do not exclude miscellaneous files")
+    prog="qubes-observer-tt",
+    description="Listing Qubes OS packages of specific week of Year",
+    epilog="Contrib repo is excluded in this version",
+)
+parser.add_argument("year", type=int, help="2 or 4-digit year")
+parser.add_argument("week", type=int, help="week of year")
+parser.add_argument(
+    "--release",
+    action="store",
+    choices=["r4.1", "r4.2", "r4.3"],
+    help="Limit the results only to one release",
+)
+parser.add_argument(
+    "--newsletter",
+    action="store_true",
+    help="Generate weekly newsletter template",
+)
+parser.add_argument(
+    "--mirror",
+    action="store",
+    help="Provide rsync mirror address rather than a random one",
+)
+parser.add_argument(
+    "--show-misc",
+    action="store_true",
+    help="Do not exclude miscellaneous files",
+)
 raw_formats = parser.add_mutually_exclusive_group()
-raw_formats.add_argument('--raw-list', action="store_true",
-        help="Only show directories/filenames")
-raw_formats.add_argument('--raw-files', action="store_true",
-        help="Only show filenames")
-raw_formats.add_argument('--raw-rsync', action="store_true",
-        help="Original rsync output")
+raw_formats.add_argument(
+    "--raw-list", action="store_true", help="Only show directories/filenames"
+)
+raw_formats.add_argument(
+    "--raw-files", action="store_true", help="Only show filenames"
+)
+raw_formats.add_argument(
+    "--raw-rsync", action="store_true", help="Original rsync output"
+)
 args = parser.parse_args()
 
-if not args.week in range(1,53):
-    ''' Technically Marsian year is 668.6 sols. Change if necessary... '''
-    eprint ("Invalid week {}!. Should be between 1 & 53".format(args.week))
+if not args.week in range(1, 53):
+    """Technically Marsian year is 668.6 sols. Change if necessary..."""
+    eprint("Invalid week {}!. Should be between 1 & 53".format(args.week))
     exit(1)
 if args.year < 100:
     args.year += 2000
@@ -90,65 +126,173 @@ else:
     random.seed(time.monotonic_ns())
     upstream_server = random.choice(upstream_servers)
     if not (args.raw_list or args.raw_files):
-        print ("Random mirror: {}".format(upstream_server))
+        print("Random mirror: {}".format(upstream_server))
 
-rsync_cmd = ["rsync", "-rn", "--no-motd", "--list-only",
-             "--exclude=contrib/*",
-             "rsync://{}/repo/".format(upstream_server)]
+rsync_cmd = [
+    "rsync",
+    "-rn",
+    "--no-motd",
+    "--list-only",
+    "--exclude=contrib/*",
+    "rsync://{}/repo/".format(upstream_server),
+]
+
 
 def process_line(line, spinner):
-    ''' Process one line output of rsync dry-run '''
+    """Process one line output of rsync dry-run"""
     columns = line.split()
-    date = datetime.strptime(" ".join(columns[2:4]),"%Y/%m/%d %H:%M:%S")
+    date = datetime.strptime(" ".join(columns[2:4]), "%Y/%m/%d %H:%M:%S")
     week = date.isocalendar()[1]
     year = date.year
     if year != args.year or week != args.week:
-        return
+        return False
     file = columns[4]
     if args.release:
-        if not re.match('.*\\/{}\\/.*'.format(
-                args.release.replace('.', '\\.')), file):
-            return
+        if not re.match(
+            ".*\\/{}\\/.*".format(args.release.replace(".", "\\.")), file
+        ):
+            return False
     if not args.show_misc:
-        ''' Archlinux: Only zstd compressed files '''
-        if re.match('^archlinux.*', file) and not re.match(".*\\.zst$", file):
-            return
-        ''' Fedora: Ignoring source RPMs and debug info/source '''
-        if re.match('^yum.*', file):
+        """Archlinux: Only zstd compressed files"""
+        if re.match("^archlinux.*", file) and not re.match(".*\\.zst$", file):
+            return False
+        """ Fedora: Ignoring source RPMs and debug info/source """
+        if re.match("^yum.*", file):
             if not re.match(".*\\.rpm$", file):
-                return
+                return False
             elif re.match(".*\\.src\\.rpm$", file):
-                return
+                return False
             elif re.match(".*debug(info|source).*", file):
-                return
-        ''' Debian: Only .deb files '''
-        if re.match('^deb.*', file) and not re.match(".*\\.deb$", file):
-            return
+                return False
+        """ Debian: Only .deb files """
+        if re.match("^deb.*", file) and not re.match(".*\\.deb$", file):
+            return False
     spinner.hide()
+    output = ""
     if args.raw_list:
-        print (file)
+        output = file
     elif args.raw_files:
-        print (os.path.basename(file))
+        output = os.path.basename(file)
     elif args.raw_rsync:
-        print (line.rstrip())
+        output = line.rstrip()
     else:
-        print ("{} - {}".format(date, file))
+        output = "{} - {}".format(date, file)
+    print(output)
     spinner.unhide()
+    return output
+
+
+def write_newsletter(year, week, packages):
+    with open("Y{}-W{}.md".format(year, week), "w") as nl:
+        nl.write("# Qubes OS updates Weekly Review - Y{}-W{}".format(year,week))
+        nl.write("\n\n### Introduction\n")
+        previous_week = datetime.isocalendar(
+            datetime.fromisocalendar(year, week, 1)
+            - timedelta(days=7)
+        )
+        url = (
+            "https://forum.qubes-os.org/t/qubes-os-updates-weekly-review-"
+            "y{}-w{}".format(previous_week.year, previous_week.week)
+        )
+        nl.write(
+            "Weekly review of new packages uploaded to Qubes OS repositories. "
+            f"Link to previous Newsletter [here]({url}).\n\n"
+        )
+        nl.write(
+            "<details>\n"
+            "<summary>Alphabetically sorted list of new packages uploaded to "
+            "Qubes OS repositories</summary>\n\n"
+        )
+        nl.write("```bash\n")
+        for package in sorted(packages):
+            nl.write("{}\n".format(package))
+        nl.write("```\n")
+        nl.write("\n</details>\n\n")
+        nl.write("### Highlights\n")
+        nl.write("- Highlight\n\n")
+        nl.write("### Details\n")
+        s = date.fromisocalendar(args.year, args.week, 1)
+        e = s + timedelta(days=6)
+        url = (
+            "https://github.com/QubesOS/updates-status/issues?"
+            "q=is%3Aissue+created%3A"
+            "{}-{:0>2}-{:0>2}..{}-{:0>2}-{:0>2}".format(
+                s.year,
+                s.month,
+                s.day,
+                e.year,
+                e.month,
+                e.day,
+            )
+        )
+        nl.write(
+            "In addition to the usual minor fixes and patches "
+            f"(full list [here]({url})):\n\n"
+        )
+        url = (
+            "https://api.github.com/repos/QubesOS/updates-status/issues?"
+            "state=all"
+        )
+        headers={'Accept': 'application/vnd.github+json'}
+        issues = []
+        while url:
+            try:
+                r = requests.get(
+                    url,
+                    headers=headers,
+                    auth=(username, password)
+                )
+            except:
+                print("Connection error!")
+                exit(1)
+            if (r.ok):
+                if 'next' in r.links.keys():
+                    url = r.links['next']['url']
+                else:
+                    url = None
+                issues = issues + json.loads(r.text or r.content)
+                last = issues[-1]
+                d = dateutil.parser.parse(last["created_at"]).isocalendar()
+                if d.year < year:
+                    break
+            else:
+                print(r.text)
+                print(r.headers)
+                exit(1)
+
+        for issue in issues:
+            d = dateutil.parser.parse(issue["created_at"]).isocalendar()
+            if d.year == year and d.week == week:
+                package, version, release = issue["title"].split(" ")
+                url = issue["html_url"]
+                nl.write(
+                    f"* **{package}** [{version}]({url}) {release}\n\n"
+                )
+        nl.write("#### Epilogue\n")
+        nl.write("Epilogue here")
+
 
 def main():
-    proc = subprocess.Popen(rsync_cmd, stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE)
+    proc = subprocess.Popen(
+        rsync_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+    )
     if args.raw_files or args.raw_list or args.raw_rsync:
         spinner = TTSpinner.DummySpinner(sys.stderr)
     else:
         spinner = TTSpinner.SpinnerTweakToolEdition(sys.stderr, interleave=100)
     spinner.show("processing Qubes OS mirror...")
+    packages = set()
     for line in io.TextIOWrapper(proc.stdout, encoding="utf-8"):
-        process_line(line.rstrip(), spinner)
+        package = process_line(line.rstrip(), spinner)
+        if package:
+            packages.add(package)
         spinner.update()
+    if args.newsletter:
+        write_newsletter(year=args.year, week=args.week, packages=packages)
     spinner.hide()
+
 
 if __name__ == "__main__":
     main()
 
-# vim: fileencoding=utf-8                                                                                                           
+# vim: fileencoding=utf-8
