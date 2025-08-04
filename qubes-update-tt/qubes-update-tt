@@ -518,6 +518,10 @@ update_template() {
 
 	qrexec ${template} root "${cmd_update}"
 
+	if ${DOWNLOADONLY} || ${REFRESH}; then
+	    qrexec ${template} root "/usr/lib/qubes/upgrades-status-notify"
+	fi
+
 	if [ $DRYRUN = false ] && \
 		{ [ $AFTERUPDATE = "shutdown" ] || \
 		{ [ $AFTERUPDATE = "revert-state" ] && \
