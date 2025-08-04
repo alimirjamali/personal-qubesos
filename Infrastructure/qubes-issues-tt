@@ -63,6 +63,12 @@ parser.add_argument(
     help="Custom repository (default = QubesOS/qubes-issues)",
 )
 
+parser.add_argument(
+    '--all',
+    action='store_true',
+    help='List both open and closed issues'
+)
+
 sort_group = parser.add_mutually_exclusive_group()
 sort_group.add_argument('--newest', action='store_true',
     help='Sort issues ascending from newest to oldest')
@@ -88,9 +94,11 @@ def keywords_check(issue: list, keywords: list, key, value) -> bool:
 
 def main():
     args = parser.parse_args()
-    url ='https://api.github.com/repos/{}/issues?per_page=100'.format(
+    url = 'https://api.github.com/repos/{}/issues?per_page=100'.format(
         args.repo
     )
+    if args.all:
+        url += '&state=all'
     headers={
         'Accept': 'application/vnd.github+json'}
     issues = list()
@@ -98,7 +106,7 @@ def main():
         spinner = TTSpinner.DummySpinner(sys.stderr)
     else:
         spinner = TTSpinner.SpinnerTweakToolEdition(sys.stderr, interleave=0)
-    spinner.show("processing Qubes open issues...")
+    spinner.show("processing Qubes issues...")
     while url:
         try:
             r = requests.get(url, headers=headers, auth=(username, password))
