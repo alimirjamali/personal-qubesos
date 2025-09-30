@@ -74,7 +74,7 @@ are linked if available.
 
 | Icon | Color | Hex Value | Distro name & artwork guidelines |
 | :---: | :--- | :---: | :--- |
-| N/A | ![`#0d597f`](https://placehold.co/48x48/0d597f/0d597f.png) | `#0d597f` | Alpine |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/New_Logo_Alpine_Linux.svg" width="48" height="48"> | ![`#0d597f`](https://placehold.co/48x48/0d597f/0d597f.png) | `#0d597f` | Alpine |
 | <img src="https://archlinux.org/static/logos/legacy/arch-legacy-blue2.3b770e580065.svg" width="48" height="48"> | ![`#1793d1`](https://placehold.co/48x48/1793d1/1793d1.png) | `#1793d1` | [Archlinux](https://archlinux.org/art/) |
 | <img src="https://www.debian.org/logos/openlogo-nd.svg" width="48" height="48"> | ![`#DD1155`](https://placehold.co/48x48/DD1155/DD1155.png) | `#DD1155` | [Debian](https://wiki.debian.org/DebianLogo) |
 | <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Fedora_icon_%282021%29.svg" width="48" height="48"> | ![`#3c6eb4`](https://placehold.co/48x48/3c6eb4/3c6eb4.png) ![`#294172`](https://placehold.co/48x48/294172/294172.png) | `#3c6eb4`<br />`#294172` | [Fedora](https://fedoraproject.org/wiki/Logo/UsageGuidelines#Colors) Blue & Dark Blue |
@@ -85,7 +85,7 @@ are linked if available.
 | <img src="https://static.opensuse.org/favicon.svg" width="48" height="48"> | ![`#73ba25`](https://placehold.co/48x48/73ba25/73ba25.png) | `#73ba25` | [openSUSE](https://en.opensuse.org/Help:Colors) |
 | <img src="https://raw.githubusercontent.com/openwrt/branding/master/logo/openwrt_logo_blue_and_dark_blue.svg" width="48" height="48"> | ![`#00B5E2`](https://placehold.co/48x48/00B5E2/00B5E2.png) ![`#002B49`](https://placehold.co/48x48/002B49/002B49.png) | `#00B5E2`<br />`#002B49` | [OpenWrt](https://github.com/openwrt/branding) |
 | <img src="https://styleguide.torproject.org/static/images/tor-browser/stable/stable.svg" width="48" height="48"> | ![`#7D4698`](https://placehold.co/48x48/7D4698/7D4698.png) | `#7D4698` | [Tor](https://styleguide.torproject.org/brand-assets/) |
-| <img src="https://www.whonix.org/favicon.svg?hsversion=2" width="48" height="48"> | ![`#7dcff3`](https://placehold.co/48x48/7dcff3/7dcff3.png) | `#7dcff3` | [Whonix](https://www.whonix.org/wiki/Dev/Logo) |
+| N/A | ![`#7dcff3`](https://placehold.co/48x48/7dcff3/7dcff3.png) | `#7dcff3` | [Whonix](https://www.whonix.org/wiki/Dev/Logo) |
 
 ### Automatic Label Creation & Removal
 A Makefile is included in the current directory which would create my personal
