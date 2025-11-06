@@ -4,13 +4,13 @@ QLTT := $${HOME}/bin/qubes-label-tt -y --ANSI
 ALLLABELS := Maroon Olive Navy Lime Cyan Magenta Apricot Mint Lavender \
 	     Alpine Archlinux Debian Fedora Gentoo Manjaro LinuxMint NixOS \
 	     openSUSE OpenWrt Tor Whonix \
-	     Cubist Qubes2 Qubes3 CAD CAM Cubane Cubicle Dice StickyNotes \
+	     Cubist Qubes2 Qubes3 CAD CAM EDA Cubane Cubicle Dice StickyNotes \
 	     Axonometric Engraved Impossible1 Impossibles ImpossibleHex \
 	     Infinity Isometrics NAS Tesseract OpticalIllusions Webcolors
 CUBIST := qube-cfop-0.svg qube-cfop-cross.svg \
 	  qube-cfop-oll-2.svg qube-cfop-pll.svg qube-cubist.svg
 QUBESTHEME := qube-square2.svg qube-square3.svg
-CAD_CAM := qube-cam.svg qube-isometric.svg
+CAD_CAM := qube-cam.svg qube-isometric.svg qube-pcb.svg
 REALLIFE := qube-cubane.svg qube-cubicle.svg qube-NAS.svg qube-sticky-notes.svg \
 	    qube-dice-1.svg qube-dice-2.svg qube-dice-3.svg qube-dice-4.svg \
 	    qube-dice-5.svg qube-dice-6.svg
@@ -76,6 +76,7 @@ CADCAM: $(CAD_CAM)
 	$(info CAD/CAM lables will be created.)
 	$(QLTT) create CAM 0xBBBBBB --icon allvm=qube-cam.svg
 	$(QLTT) create CAD 0x555555 --icon allvm=qube-isometric.svg
+	$(QLTT) create EDA 0x00ac00 --icon allvm=qube-pcb.svg
 
 RealLife: $(REALLIFE)
 	$(info Real life lables will be created.)

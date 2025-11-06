@@ -44,6 +44,7 @@ VM icons with those colors.
 | ![](qube-NAS.svg) | NAS | CC-BY-SA | Original sketch by myself. |
 | ![](qube-optical-illusion.svg) | Optical<br />Illusion | CC-BY-SA | Original sketch by myself. |
 | ![](qube-puzzle.svg) | Puzzle | CC-BY-SA | Based on [CairdyMakes STL](https://www.printables.com/model/96190-5-piece-support-free-puzzle-cube/files). |
+| ![](qube-pcb.svg) | PCB | CC-BY-SA | Based on Qute Sushi icon and some minor design by myself. |
 | ![](qube-SGI-Crimson.svg) | Silicon Graphics<br />Crimson | CC0 | Based on [星球's design](https://openclipart.org/detail/272140/silicon-graphics-crimson). |
 | ![](qube-square2.svg) | Qube&#x00B2; | CC-BY-SA | Based on [Qubes OS Artwork](https://github.com/QubesOS/qubes-artwork). |
 | ![](qube-square3.svg) | Qube&#x00B3; | CC-BY-SA | Based on [ninavizz's designs](https://github.com/QubesOS/qubes-artwork). |
@@ -92,7 +93,7 @@ A Makefile is included in the current directory which would create my personal
 set of labels. Run `make info` at the current directory for more information.
 
 ### Icons to consider
-PCB qube, [Melting ice qube](https://openclipart.org/detail/182951/ice-cube), 
+[Melting ice qube](https://openclipart.org/detail/182951/ice-cube), 
 Roughing end milling qube, Acoustic qube, 3D puzzle cube,
 Cube Speaker, Wooden block qubes of
 [different species](https://openclipart.org/detail/256779/wood-grain-filter-pack-3), 
